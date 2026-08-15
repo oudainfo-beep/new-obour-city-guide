@@ -10,11 +10,6 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  app.use((_req, res, next) => {
-    res.setHeader("X-New-Obour-Route-Handler", "server-index");
-    next();
-  });
-
   // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"

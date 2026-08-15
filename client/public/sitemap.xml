@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://newobourguide.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://newobourguide.com/about/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/districts/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/transport/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/prices/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/developers/index.html</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://newobourguide.com/buying-guide/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/services/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/schools/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/health/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/investment/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/mistakes/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/compare/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://newobourguide.com/faq/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/districts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/transport.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/prices.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/developers.html</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://newobourguide.com/buying-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/schools.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/health.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/investment.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/mistakes.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/compare.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
