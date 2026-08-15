@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://newobourguide.com/sitemap.xml
+Sitemap: https://obourguide.com/sitemap.xml
