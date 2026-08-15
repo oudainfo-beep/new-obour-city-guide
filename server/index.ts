@@ -19,7 +19,7 @@ async function startServer() {
   app.use(express.static(staticPath));
 
   // Serve each standalone HTML document explicitly so direct route access never falls back to the home page.
-  const staticRoutes = ["about", "districts", "transport", "prices", "developers", "buying-guide", "faq"];
+  const staticRoutes = ["about", "districts", "transport", "prices", "developers", "buying-guide", "services", "schools", "health", "investment", "mistakes", "compare", "faq"];
   for (const route of staticRoutes) {
     app.get(`/${route}`, (_req, res) => {
       res.sendFile(path.join(staticPath, route, "index.html"));
