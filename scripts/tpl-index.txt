@@ -1,0 +1,10 @@
+// فهرس البحث: كل الصفحات + كل مداخل الأدلة، يُقرأ في المتصفح على /search/
+const searchIndex = [
+  ...pages.filter(([slug]) => slug !== "search").map(([slug, title, description]) => ({
+    n: title, d: description, u: slug ? `/${slug}/` : "/", k: "صفحة",
+  })),
+  ...realSchools.map((x) => ({ n: x.name, a: x.area, t: x.type, u: `/schools/${x.slug}/`, k: "مدرسة" })),
+  ...pharmacies.map((x) => ({ n: x.name, a: x.area, t: x.type, u: "/pharmacies/", k: "صيدلية" })),
+  ...restaurants.map((x) => ({ n: x.name, a: x.area, t: x.type, u: "/restaurants/", k: "مطعم" })),
+];
+fs.writeFileSync(path.join(publicDir, "search-index.json"), JSON.stringify(searchIndex));

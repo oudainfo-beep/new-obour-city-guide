@@ -1,0 +1,54 @@
+const searchScript = String.raw`
+(function(){
+  var norm=function(t){return String(t||"").toLowerCase()
+    .replace(/[ً-ْـ]/g,"")
+    .replace(/[أإآٱ]/g,"ا")
+    .replace(/ى/g,"ي").replace(/ة/g,"ه")
+    .replace(/[^\p{L}\p{N}]+/gu," ").trim();};
+  var input=document.getElementById("q"),
+      status=document.getElementById("search-status"),
+      out=document.getElementById("search-results"),
+      idx=null,timer=null;
+  var q=new URLSearchParams(location.search).get("q")||"";
+  if(input&&q)input.value=q;
+  function card(it,i){
+    var a=document.createElement("article");a.className="school-card";
+    var no=document.createElement("div");no.className="school-card-no";no.textContent=("0"+(i+1)).slice(-2);
+    var h=document.createElement("h4");var link=document.createElement("a");
+    link.href=it.u;link.textContent=it.n;h.appendChild(link);
+    a.appendChild(no);a.appendChild(h);
+    if(it.a){var ar=document.createElement("p");ar.className="school-area";ar.textContent="⌘ "+it.a;a.appendChild(ar);}
+    if(it.t){var ty=document.createElement("p");ty.className="school-type";ty.textContent=it.t;a.appendChild(ty);}
+    var sm=document.createElement("small");sm.textContent=it.k;a.appendChild(sm);
+    return a;
+  }
+  function run(query){
+    if(!out||!status)return;
+    var nq=norm(query);out.textContent="";
+    if(!nq){status.textContent="اكتب كلمة وابدأ البحث.";return;}
+    if(!idx){status.textContent="جارٍ التحميل…";return;}
+    var words=nq.split(" ").filter(Boolean),hits=[];
+    for(var i=0;i<idx.length;i++){
+      var it=idx[i];
+      if(!it._s)it._s=norm(it.n+" "+(it.a||"")+" "+(it.t||"")+" "+(it.d||"")+" "+(it.k||""));
+      var sc=0,ok=true;
+      for(var w=0;w<words.length;w++){
+        var pos=it._s.indexOf(words[w]);
+        if(pos<0){ok=false;break;}
+        sc+=pos===0?3:1;
+      }
+      if(ok){if(norm(it.n).indexOf(words[0])===0)sc+=4;if(it.k==="صفحة")sc+=2;hits.push([sc,it]);}
+    }
+    hits.sort(function(a,b){return b[0]-a[0];});
+    if(!hits.length){status.textContent="لا توجد نتيجة.";return;}
+    status.textContent=hits.length+" نتيجة";
+    var f=document.createDocumentFragment();
+    for(var j=0;j<hits.length&&j<60;j++)f.appendChild(card(hits[j][1],j));
+    out.appendChild(f);
+  }
+  fetch("/search-index.json").then(function(r){return r.json();}).then(function(d){idx=d;run(input?input.value:q);}).catch(function(){if(status)status.textContent="تعذر تحميل الفهرس.";});
+  if(input)input.addEventListener("input",function(){clearTimeout(timer);timer=setTimeout(function(){run(input.value);},150);});
+})();
+`;
+
+const searchPage = `<main>${pageHero({tag:"البحث", eyebrow:"كل صفحات الدليل ومداخله", title:"ابحث في دليل العبور", description:"ابحث في الصفحات وفي أدلة المدارس والصيدليات والمطاعم — بالاسم أو المنطقة أو نوع الخدمة."})}<section class="paper section"><div class="wrap"><form class="search-page-form" role="search" action="/search/" method="get"><input type="search" id="q" name="q" placeholder="مثال: صيدلية · مدرسة · مشويات · الحي الأول" aria-label="كلمة البحث" autofocus><button type="submit">ابحث</button></form><p class="caption" id="search-status">اكتب كلمة وابدأ البحث.</p><div id="search-results" class="school-grid"></div><noscript><p class="note">البحث يحتاج تفعيل JavaScript. تصفّح مباشرة: <a href="/schools/">المدارس</a> · <a href="/pharmacies/">الصيدليات</a> · <a href="/restaurants/">المطاعم</a> · <a href="/districts/">الأحياء</a>.</p></noscript></div></section><script>${searchScript}</script></main>`;
