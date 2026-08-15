@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <pattern id="g" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0 V54 M0 54 H54" fill="none" stroke="#3E6B4A" stroke-opacity="0.14" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4F1E8" stop-opacity="0.92"/>
+      <stop offset="0.55" stop-color="#F4F1E8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#F4F1E8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#E9E6D9"/>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g fill="#3E6B4A" fill-opacity="0.10">
+    <rect x="150" y="470" width="130" height="180"/><rect x="300" y="520" width="96" height="130"/>
+    <rect x="416" y="446" width="150" height="204"/><rect x="586" y="536" width="110" height="114"/>
+    <rect x="980" y="500" width="140" height="150"/><rect x="1140" y="452" width="104" height="198"/>
+    <rect x="1264" y="540" width="160" height="110"/>
+  </g>
+  <g fill="#4A9B8E" fill-opacity="0.14">
+    <rect x="150" y="690" width="216" height="70"/><rect x="386" y="690" width="140" height="70"/>
+    <rect x="980" y="690" width="180" height="70"/><rect x="1180" y="690" width="244" height="70"/>
+  </g>
+  <path d="M120 800 C 420 640, 700 700, 900 470 S 1300 240, 1520 210" fill="none" stroke="#3E6B4A" stroke-opacity="0.5" stroke-width="4"/>
+  <path d="M60 640 C 380 560, 620 520, 880 300 S 1280 110, 1560 96" fill="none" stroke="#4A9B8E" stroke-opacity="0.62" stroke-width="3" stroke-dasharray="14 10"/>
+  <path d="M300 880 A 520 520 0 0 1 820 360" fill="none" stroke="#3E6B4A" stroke-opacity="0.32" stroke-width="2.5"/>
+  <path d="M700 900 A 620 620 0 0 1 1320 280" fill="none" stroke="#3E6B4A" stroke-opacity="0.22" stroke-width="2.5"/>
+  <g font-family="Helvetica,Arial,sans-serif" font-size="22" font-weight="700">
+    <circle cx="900" cy="470" r="26" fill="#F4F1E8" stroke="#3E6B4A" stroke-width="3"/>
+    <text x="900" y="478" text-anchor="middle" fill="#2f5b41">01</text>
+    <circle cx="880" cy="300" r="26" fill="#F4F1E8" stroke="#4A9B8E" stroke-width="3"/>
+    <text x="880" y="308" text-anchor="middle" fill="#2f5b41">02</text>
+    <circle cx="1320" cy="280" r="26" fill="#F4F1E8" stroke="#3E6B4A" stroke-width="3"/>
+    <text x="1320" y="288" text-anchor="middle" fill="#2f5b41">03</text>
+  </g>
+  <g stroke="#2f5b41" stroke-opacity="0.55" stroke-width="2">
+    <path d="M1420 760 h120 M1420 752 v16 M1540 752 v16"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#fade)"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img">
+  <rect width="1200" height="900" fill="#F4F1E8"/>
+  <g stroke="#cbd6c8" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200 M0 600 H1200 M0 750 H1200"/>
+    <path d="M150 0 V900 M300 0 V900 M450 0 V900 M600 0 V900 M750 0 V900 M900 0 V900 M1050 0 V900"/>
+  </g>
+  <g fill="none" stroke="#3E6B4A" stroke-opacity="0.35" stroke-width="3">
+    <circle cx="600" cy="450" r="150"/><circle cx="600" cy="450" r="270"/><circle cx="600" cy="450" r="390"/>
+  </g>
+  <g stroke="#3E6B4A" stroke-opacity="0.6" stroke-width="7" stroke-linecap="round">
+    <path d="M600 60 V840"/><path d="M210 450 H990"/>
+  </g>
+  <g stroke="#4A9B8E" stroke-opacity="0.65" stroke-width="5" stroke-dasharray="20 14" stroke-linecap="round">
+    <path d="M325 175 L875 725"/><path d="M875 175 L325 725"/>
+  </g>
+  <g fill="#F4F1E8" stroke="#3E6B4A" stroke-width="4">
+    <circle cx="600" cy="450" r="34"/>
+  </g>
+  <g fill="#F4F1E8" stroke="#4A9B8E" stroke-width="3.5">
+    <circle cx="600" cy="180" r="22"/><circle cx="870" cy="450" r="22"/>
+    <circle cx="600" cy="720" r="22"/><circle cx="330" cy="450" r="22"/>
+  </g>
+  <g font-family="Helvetica,Arial,sans-serif" font-weight="700" fill="#2f5b41" text-anchor="middle">
+    <text x="600" y="458" font-size="26">00</text>
+    <text x="600" y="188" font-size="17">01</text>
+    <text x="870" y="458" font-size="17">02</text>
+    <text x="600" y="728" font-size="17">03</text>
+    <text x="330" y="458" font-size="17">04</text>
+  </g>
+  <g stroke="#2f5b41" stroke-opacity="0.5" stroke-width="2">
+    <path d="M980 830 h140 M980 822 v16 M1120 822 v16"/>
+  </g>
+</svg>
