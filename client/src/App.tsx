@@ -16,8 +16,8 @@ const DistrictsPage = lazy(async () => ({ default: (await import("./pages/GuideP
 const FAQPage = lazy(async () => ({ default: (await import("./pages/GuidePages")).FAQPage }));
 const PricesPage = lazy(async () => ({ default: (await import("./pages/GuidePages")).PricesPage }));
 const TransportPage = lazy(async () => ({ default: (await import("./pages/GuidePages")).TransportPage }));
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return <Suspense fallback={<main className="min-h-screen bg-[#F4F1E8]" aria-busy="true" />}><Switch><Route path="/" component={Home} /><Route path="/about" component={AboutPage} /><Route path="/districts" component={DistrictsPage} /><Route path="/transport" component={TransportPage} /><Route path="/prices" component={PricesPage} /><Route path="/developers" component={DevelopersPage} /><Route path="/buying-guide" component={BuyingGuidePage} /><Route path="/faq" component={FAQPage} /><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch></Suspense>;
 }
 export default function App() { return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><Toaster /><Router /></TooltipProvider></ThemeProvider></ErrorBoundary>; }
