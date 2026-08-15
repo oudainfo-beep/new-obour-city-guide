@@ -18,9 +18,9 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
-  // Handle client-side routing - serve index.html for all routes
+  // Static HTML site: unknown paths should return the static 404 document.
   app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
+    res.status(404).sendFile(path.join(staticPath, "404", "index.html"));
   });
 
   const port = process.env.PORT || 3000;
