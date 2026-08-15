@@ -206,6 +206,8 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginStorageProxy()];
 
 export default defineConfig({
+  // This is a static multi-page site: clean URLs must resolve to their own HTML documents, never the home fallback.
+  appType: "mpa",
   plugins,
   resolve: {
     alias: {
