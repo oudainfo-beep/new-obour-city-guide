@@ -19,7 +19,8 @@ async function startServer() {
   app.use(express.static(staticPath));
 
   // Serve each standalone HTML document explicitly so direct route access never falls back to the home page.
-  const staticRoutes = ["about", "districts", "transport", "prices", "developers", "buying-guide", "services", "schools", "health", "investment", "mistakes", "compare", "faq"];
+  const schoolRoutes = ["shaimaa-educational-complex", "bilal-bin-rabah-secondary", "new-republic-basic-education", "horreya-educational-complex", "osama-bin-zaid-complex", "karama-official-language-school", "nile-egyptian-school-obour", "international-public-school-obour", "ips-rawdet-elobour", "egyptian-japanese-school-obour"].map(s=>`schools/${s}`);
+const staticRoutes = ["about", "districts", "transport", "prices", "developers", "buying-guide", "services", "schools", "health", "investment", "mistakes", "compare", "faq", ...schoolRoutes];
   for (const route of staticRoutes) {
     app.get(`/${route}`, (_req, res) => {
       res.sendFile(path.join(staticPath, route, "index.html"));
