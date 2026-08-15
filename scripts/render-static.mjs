@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const client = path.join(root, "client");
 const publicDir = path.join(client, "public");
-const site = "https://newobourguide.com";
+const site = "https://obourguide.com";
 const logo = "/manus-storage/new-obour-guide-logo_ec68776f.png";
 const hero = "/manus-storage/new-obour-hero-atlas_06362579.png";
 const connectivity = "/manus-storage/new-obour-connectivity-map_406e109a.png";
