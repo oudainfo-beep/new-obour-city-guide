@@ -100,3 +100,7 @@
 .disclosure a{color:#6b4c1c;font-weight:800}
 .footer-pub{color:#a9d6cd;text-decoration:none;border-bottom:1px solid #6f8f7a;font-weight:800}
 .footer-base .footer-pub{color:#c4d5c6}
+
+.crumbs{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
+.crumbs a{color:#285535;text-decoration:none;border-bottom:1px solid #a9c4b0;font-weight:700}
+.crumbs span{font-weight:800;color:var(--deep)}

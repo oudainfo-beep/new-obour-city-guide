@@ -32,6 +32,22 @@
   <url><loc>https://obourguide.com/real-estate-offices/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://obourguide.com/restaurants/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://obourguide.com/shopping/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/clinics/doctors/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/clinics/dentists/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/clinics/labs/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/restaurants/cafes/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/restaurants/bakeries/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/restaurants/fast-food/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/shopping/supermarkets/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/shopping/furniture/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/shopping/appliances/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/fitness/beauty-salons/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/home-services/plumbers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/nurseries/kindergartens/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/automotive/car-dealers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/professional-services/lawyers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/entertainment/malls/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://obourguide.com/banks/atm/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://obourguide.com/schools/shaimaa-educational-complex/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://obourguide.com/schools/bilal-bin-rabah-secondary/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://obourguide.com/schools/new-republic-basic-education/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
