@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://new-obour-city-guide.manus.space/sitemap.xml
