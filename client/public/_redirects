@@ -28,3 +28,9 @@
 /pharmacies/ /pharmacies/index.html 200
 /restaurants /restaurants/index.html 200
 /restaurants/ /restaurants/index.html 200
+
+# مسارات النسخة القديمة من الموقع (Joomla/SobiPro) ما زالت مفهرسة في جوجل
+/index.php /directory/ 301
+/index.php/component/sobipro/* /directory/ 301
+/index.php/* /directory/ 301
+/component/* /directory/ 301
