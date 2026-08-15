@@ -18,6 +18,17 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
+  // Serve each standalone HTML document explicitly so direct route access never falls back to the home page.
+  const staticRoutes = ["about", "districts", "transport", "prices", "developers", "buying-guide", "faq"];
+  for (const route of staticRoutes) {
+    app.get(`/${route}`, (_req, res) => {
+      res.sendFile(path.join(staticPath, route, "index.html"));
+    });
+    app.get(`/${route}/`, (_req, res) => {
+      res.sendFile(path.join(staticPath, route, "index.html"));
+    });
+  }
+
   // Static HTML site: unknown paths should return the static 404 document.
   app.get("*", (_req, res) => {
     res.status(404).sendFile(path.join(staticPath, "404", "index.html"));
