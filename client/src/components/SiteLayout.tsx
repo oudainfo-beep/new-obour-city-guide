@@ -47,7 +47,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <div className="container grid gap-10 lg:grid-cols-[1.2fr_.8fr_.8fr]">
           <section>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logoUrl} alt="" className="h-11 w-11" width="44" height="44" />
+              <img src={logoUrl} alt="رمز دليل مدينة العبور الجديدة" className="h-11 w-11" width="44" height="44" />
               <p className="font-extrabold text-xl">دليل مدينة العبور الجديدة</p>
             </div>
             <p className="footer-disclosure">هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.</p>
