@@ -1,9 +1,16 @@
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const client = path.join(root, "client");
+const cssVer = (file) => {
+  const full = path.join(root, "client", "public", "static", file);
+  return crypto.createHash("md5").update(fs.readFileSync(full)).digest("hex").slice(0, 8);
+};
+const siteCssVer = cssVer("site.css");
+const schoolsCssVer = cssVer("schools-directory.css");
 const projectRoot = root;
 const publicDir = path.join(client, "public");
 const site = "https://obourguide.com";
@@ -147,7 +154,7 @@ function atlasBody(label, note) { return `<section class="atlas-body"><div class
 function layout({ slug = "", title, description, keywords, schema, body }) {
   const canonical = slug ? `${site}/${slug}/` : `${site}/`;
   const active = slug ? `/${slug}/` : "/";
-  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${title} | دليل مدينة العبور الجديدة</title><meta name="description" content="${description}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل مدينة العبور الجديدة"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css"><link rel="stylesheet" href="/static/schools-directory.css"><script type="application/ld+json">${JSON.stringify(schema)}</script>${slug ? `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"الرئيسية",item:`${site}/`},{"@type":"ListItem",position:2,name:title,item:canonical}]})}</script>` : ""}</head><body>${header(active)}${body}${footer()}</body></html>`;
+  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${title} | دليل مدينة العبور الجديدة</title><meta name="description" content="${description}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل مدينة العبور الجديدة"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css?v=${siteCssVer}"><link rel="stylesheet" href="/static/schools-directory.css?v=${schoolsCssVer}"><script type="application/ld+json">${JSON.stringify(schema)}</script>${slug ? `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"الرئيسية",item:`${site}/`},{"@type":"ListItem",position:2,name:title,item:canonical}]})}</script>` : ""}</head><body>${header(active)}${body}${footer()}</body></html>`;
 }
 
 const homeSchema = { "@context": "https://schema.org", "@graph": [{ "@type": "WebSite", name: "دليل مدينة العبور الجديدة", url: `${site}/`, inLanguage: "ar-EG", description: "مرجع عربي محايد للسكن والاستثمار في العبور الجديدة." }, { "@type": "Organization", name: "دليل مدينة العبور الجديدة", url: `${site}/`, logo: `${site}${logoRaster}`, description: "دليل معلوماتي مستقل عن مدينة العبور الجديدة." }] };
