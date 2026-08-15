@@ -205,6 +205,27 @@ function vitePluginStorageProxy(): Plugin {
 // صفحات HTML ثابتة: نحافظ على وسيط التخزين للتطوير المحلي فقط، ولا نحقن أي JavaScript في المستندات المنشورة.
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginStorageProxy()];
 
+// كل ملف client/**/index.html يصبح صفحة في البناء تلقائيًا — لا قائمة يدوية تُنسى.
+function htmlPageInputs(): Record<string, string> {
+  const clientRoot = path.resolve(import.meta.dirname, "client");
+  const inputs: Record<string, string> = {};
+  const walk = (dir: string) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name.startsWith(".") || entry.name === "public" || entry.name === "src") continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+      } else if (entry.name === "index.html") {
+        const rel = path.relative(clientRoot, full);
+        const key = rel === "index.html" ? "home" : rel.replace(/[\\/]index\.html$/, "").replace(/[^a-zA-Z0-9]/g, "_");
+        inputs[key] = full;
+      }
+    }
+  };
+  walk(clientRoot);
+  return inputs;
+}
+
 export default defineConfig({
   // This is a static multi-page site: clean URLs must resolve to their own HTML documents, never the home fallback.
   appType: "mpa",
@@ -223,33 +244,7 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        home: path.resolve(import.meta.dirname, "client/index.html"),
-        about: path.resolve(import.meta.dirname, "client/about/index.html"),
-        districts: path.resolve(import.meta.dirname, "client/districts/index.html"),
-        transport: path.resolve(import.meta.dirname, "client/transport/index.html"),
-        prices: path.resolve(import.meta.dirname, "client/prices/index.html"),
-        developers: path.resolve(import.meta.dirname, "client/developers/index.html"),
-        buyingGuide: path.resolve(import.meta.dirname, "client/buying-guide/index.html"),
-        faq: path.resolve(import.meta.dirname, "client/faq/index.html"),
-        services: path.resolve(import.meta.dirname, "client/services/index.html"),
-        compare: path.resolve(import.meta.dirname, "client/compare/index.html"),
-        schools: path.resolve(import.meta.dirname, "client/schools/index.html"),
-        health: path.resolve(import.meta.dirname, "client/health/index.html"),
-        school1: path.resolve(import.meta.dirname, "client/schools/shaimaa-educational-complex/index.html"),
-        school2: path.resolve(import.meta.dirname, "client/schools/bilal-bin-rabah-secondary/index.html"),
-        school3: path.resolve(import.meta.dirname, "client/schools/new-republic-basic-education/index.html"),
-        school4: path.resolve(import.meta.dirname, "client/schools/horreya-educational-complex/index.html"),
-        school5: path.resolve(import.meta.dirname, "client/schools/osama-bin-zaid-complex/index.html"),
-        school6: path.resolve(import.meta.dirname, "client/schools/karama-official-language-school/index.html"),
-        school7: path.resolve(import.meta.dirname, "client/schools/nile-egyptian-school-obour/index.html"),
-        school8: path.resolve(import.meta.dirname, "client/schools/international-public-school-obour/index.html"),
-        school9: path.resolve(import.meta.dirname, "client/schools/ips-rawdet-elobour/index.html"),
-        school10: path.resolve(import.meta.dirname, "client/schools/egyptian-japanese-school-obour/index.html"),
-        investment: path.resolve(import.meta.dirname, "client/investment/index.html"),
-        mistakes: path.resolve(import.meta.dirname, "client/mistakes/index.html"),
-        notFound: path.resolve(import.meta.dirname, "client/404/index.html"),
-      },
+      input: htmlPageInputs(),
     },
   },
   server: {
