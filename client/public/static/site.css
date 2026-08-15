@@ -93,3 +93,10 @@
 .m-group summary{gap:.6rem;white-space:nowrap;line-height:1.6;min-height:44px}
 .m-group summary::after{flex:0 0 auto}
 .mobile-menu .m-solo{line-height:1.6;min-height:44px;display:flex;align-items:center}
+/* صندوق الإفصاح */
+.disclosure{background:#f3ead8;border-right:4px solid #c69148;padding:1.4rem 1.5rem;margin:1.6rem 0;display:grid;gap:.7rem}
+.disclosure b{font:800 1rem Cairo,Arial,sans-serif;color:#7a5a26}
+.disclosure p{margin:0;font-size:.88rem;line-height:1.95;color:#5c4a30}
+.disclosure a{color:#6b4c1c;font-weight:800}
+.footer-pub{color:#a9d6cd;text-decoration:none;border-bottom:1px solid #6f8f7a;font-weight:800}
+.footer-base .footer-pub{color:#c4d5c6}
