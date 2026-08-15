@@ -84,3 +84,8 @@
 .m-group>div a:last-child{border-bottom:0}
 .m-group>div a[aria-current=page]{color:#17472d;background:#e1ece2}
 @media(max-width:1180px){.nav-item>a,.nav-top{padding:.5rem .45rem;font-size:.78rem}}
+/* إصلاح: لوحة قائمة الموبايل كانت تخرج خارج الشاشة في الاتجاه من اليمين لليسار */
+@media(max-width:1000px){
+.mobile-menu nav{position:fixed;top:66px;left:12px;right:12px;width:auto;max-height:calc(100vh - 86px);overflow:auto;box-shadow:0 18px 44px rgba(36,62,44,.22);border:1px solid #c3d3c6}
+}
+@media(max-width:640px){.mobile-menu nav{top:58px;max-height:calc(100vh - 76px)}}
