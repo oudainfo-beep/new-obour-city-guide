@@ -140,8 +140,8 @@ const faqs = [
 function pathFor(slug) { return slug ? path.join(client, slug, "index.html") : path.join(client, "index.html"); }
 function write(slug, html) { const target = pathFor(slug); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.writeFileSync(target, html.trim() + "\n"); }
 function refsHtml() { return `<section class="sources"><div class="wrap"><h2>مصادر للقراءة والتحقق</h2><ol>${refs.map(([label, href], i) => `<li><a href="${href}" target="_blank" rel="noopener noreferrer">[${i + 1}] ${label} ↗</a></li>`).join("")}</ol></div></section>`; }
-function header(active) { return `<header class="site-header"><div class="wrap header-row"><a class="brand" href="/"><img src="${logo}" width="46" height="46" alt="رمز دليل مدينة العبور الجديدة"><span><b>دليل مدينة</b><em>العبور الجديدة</em><small>مرجع مدني · 2026</small></span></a><nav class="desktop-nav" aria-label="التنقل الرئيسي">${nav.map(([href, label]) => `<a href="${href}"${href === active ? ' aria-current="page"' : ""}>${label}</a>`).join("")}</nav><form class="site-search" role="search" action="/search/" method="get"><input type="search" name="q" placeholder="ابحث في الدليل…" aria-label="ابحث في الدليل" required><button type="submit" aria-label="بحث">⌕</button></form><details class="mobile-menu"><summary aria-label="فتح قائمة التنقل">☰</summary><nav>${nav.map(([href, label]) => `<a href="${href}"${href === active ? ' aria-current="page"' : ""}>${label}</a>`).join("")}</nav></details></div></header>`; }
-function footer() { return `<footer class="site-footer"><div class="wrap footer-grid"><section><div class="footer-brand"><img src="${logo}" width="44" height="44" alt="رمز دليل مدينة العبور الجديدة"><b>دليل مدينة العبور الجديدة</b></div><p>هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.</p></section><section><h2>مسارات الدليل</h2>${nav.slice(1, 6).map(([href,label])=>`<a href="${href}">${label}</a>`).join("")}</section><section><h2>مصادر مفتوحة</h2>${refs.slice(0, 3).map(([label,href])=>`<a href="${href}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`).join("")}</section></div><div class="wrap footer-base"><span>© 2026 دليل مدينة العبور الجديدة</span><span>مستقل · معلوماتي · قابل للمراجعة</span></div></footer>`; }
+function header(active) { return `<header class="site-header"><div class="wrap header-row"><a class="brand" href="/"><img src="${logo}" width="46" height="46" alt="رمز دليل مدينة العبور الجديدة"><span><b>دليل مدينة</b><em>العبور الجديدة</em><small>مرجع مدني · 2026</small></span></a><nav class="desktop-nav" aria-label="التنقل الرئيسي">${navHtml(active)}</nav><form class="site-search" role="search" action="/search/" method="get"><input type="search" name="q" placeholder="ابحث…" aria-label="ابحث في الدليل" required><button type="submit" aria-label="بحث">⌕</button></form><details class="mobile-menu"><summary aria-label="فتح قائمة التنقل">☰</summary><nav aria-label="التنقل الرئيسي للموبايل"><form class="m-search" role="search" action="/search/" method="get"><input type="search" name="q" placeholder="ابحث في الدليل…" aria-label="ابحث في الدليل" required><button type="submit">⌕</button></form>${mobileNavHtml(active)}</nav></details></div></header>`; }
+function footer() { return `<footer class="site-footer"><div class="wrap footer-grid"><section><div class="footer-brand"><img src="${logo}" width="44" height="44" alt="رمز دليل مدينة العبور الجديدة"><b>دليل مدينة العبور الجديدة</b></div><p>هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.</p></section><section><h2>مسارات الدليل</h2>${[["/directory/","دليل الخدمات"],["/districts/","الأحياء"],["/prices/","الأسعار"],["/developers/","دليل المطورين"],["/emergency/","الطوارئ"],["/search/","بحث"]].map(([href,label])=>`<a href="${href}">${label}</a>`).join("")}</section><section><h2>مصادر مفتوحة</h2>${refs.slice(0, 3).map(([label,href])=>`<a href="${href}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`).join("")}</section></div><div class="wrap footer-base"><span>© 2026 دليل مدينة العبور الجديدة</span><span>مستقل · معلوماتي · قابل للمراجعة</span></div></footer>`; }
 function pageHero({ tag, eyebrow, title, description }) { return `<section class="page-hero"><div class="grid-bg" aria-hidden="true"></div><div class="wrap hero-layout"><aside class="route-rail" aria-label="سجل مراجعة الصفحة"><span class="route-no">01</span><div class="route-line" aria-hidden="true"><i></i><b></b><em></em></div><p>سجل الصفحة</p><strong>مراجَع · أغسطس 2026</strong><small>مصدر مرجعي: بيانات منشورة ومخططات معلنة</small></aside><div class="hero-copy-block"><span class="tag">⌖ ${tag}</span><p class="eyebrow">${eyebrow}</p><h1>${title}</h1><p>${description}</p></div></div></section>`; }
 function atlasBody(label, note) { return `<section class="atlas-body"><div class="wrap atlas-body-grid"><div class="atlas-body-no">02</div><div class="atlas-body-route" aria-hidden="true"><i></i><b></b><em></em></div><div><strong>${label}</strong><span>${note}</span></div><div class="atlas-status"><span>مراجَع</span><span>بيانات منشورة</span><span>تتطلب معاينة</span></div></div></section>`; }
 function layout({ slug = "", title, description, keywords, schema, body }) {
@@ -182,6 +182,53 @@ const directories = fs.readdirSync(path.join(root, "data", "directories"))
   .map((f) => JSON.parse(fs.readFileSync(path.join(root, "data", "directories", f), "utf8")));
 const dirBySlug = Object.fromEntries(directories.map((d) => [d.slug, d]));
 const dirManifest = JSON.parse(fs.readFileSync(path.join(root, "data", "directories", "index.json"), "utf8"));
+
+// قوائم منسدلة: المجموعات ثابتة، وقائمة الأدلة تُبنى من dirManifest تلقائيًا
+// فأي دليل جديد يظهر في التنقل من غير أي تعديل يدوي.
+const navGroups = () => [
+  { href: "/", label: "الرئيسية" },
+  { label: "المدينة", items: [
+    ["/about/", "عن المدينة"],
+    ["/districts/", "الأحياء والمناطق"],
+    ["/transport/", "المواصلات والوصول"],
+    ["/compare/", "مقارنة المدن"],
+  ] },
+  { label: "السكن والشراء", items: [
+    ["/prices/", "أسعار العقارات"],
+    ["/buying-guide/", "دليل الشراء"],
+    ["/developers/", "دليل المطورين"],
+    ["/investment/", "الاستثمار العقاري"],
+    ["/mistakes/", "أخطاء شائعة"],
+  ] },
+  { label: "الخدمات والأدلة", wide: true, items: [
+    ["/directory/", "كل الأدلة"],
+    ["/services/", "الخدمات والمرافق"],
+    ["/health/", "الصحة والمستشفيات"],
+    ["/schools/", "المدارس"],
+    ...dirManifest.filter((m) => m.slug !== "schools-all").map((m) => [`/${m.slug}/`, `${m.title} (${m.count})`]),
+  ] },
+  { href: "/emergency/", label: "الطوارئ", accent: true },
+  { href: "/faq/", label: "الأسئلة" },
+];
+
+const navLink = (href, label, active) => `<a href="${href}"${href === active ? ' aria-current="page"' : ""}>${label}</a>`;
+
+function navHtml(active) {
+  return navGroups().map((g) => {
+    if (!g.items) return `<div class="nav-item${g.accent ? " nav-accent" : ""}">${navLink(g.href, g.label, active)}</div>`;
+    const open = g.items.some(([href]) => href === active);
+    const links = g.items.map(([href, label]) => navLink(href, label, active)).join("");
+    return `<div class="nav-item nav-has-drop${open ? " nav-open" : ""}"><span class="nav-top" tabindex="0" role="button" aria-haspopup="true">${g.label} <i aria-hidden="true">▾</i></span><div class="nav-drop${g.wide ? " nav-drop-wide" : ""}">${links}</div></div>`;
+  }).join("");
+}
+
+function mobileNavHtml(active) {
+  return navGroups().map((g) => {
+    if (!g.items) return `<a class="m-solo" href="${g.href}"${g.href === active ? ' aria-current="page"' : ""}>${g.label}</a>`;
+    return `<details class="m-group"${g.items.some(([href]) => href === active) ? " open" : ""}><summary>${g.label}</summary><div>${g.items.map(([href, label]) => navLink(href, label, active)).join("")}</div></details>`;
+  }).join("");
+}
+
 
 const mapsUrl = (it) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${it.n} ${it.a || "مدينة العبور"}`)}`;
 

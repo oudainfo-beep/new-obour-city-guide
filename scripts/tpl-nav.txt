@@ -1,0 +1,45 @@
+// قوائم منسدلة: المجموعات ثابتة، وقائمة الأدلة تُبنى من dirManifest تلقائيًا
+// فأي دليل جديد يظهر في التنقل من غير أي تعديل يدوي.
+const navGroups = () => [
+  { href: "/", label: "الرئيسية" },
+  { label: "المدينة", items: [
+    ["/about/", "عن المدينة"],
+    ["/districts/", "الأحياء والمناطق"],
+    ["/transport/", "المواصلات والوصول"],
+    ["/compare/", "مقارنة المدن"],
+  ] },
+  { label: "السكن والشراء", items: [
+    ["/prices/", "أسعار العقارات"],
+    ["/buying-guide/", "دليل الشراء"],
+    ["/developers/", "دليل المطورين"],
+    ["/investment/", "الاستثمار العقاري"],
+    ["/mistakes/", "أخطاء شائعة"],
+  ] },
+  { label: "الخدمات والأدلة", wide: true, items: [
+    ["/directory/", "كل الأدلة"],
+    ["/services/", "الخدمات والمرافق"],
+    ["/health/", "الصحة والمستشفيات"],
+    ["/schools/", "المدارس"],
+    ...dirManifest.filter((m) => m.slug !== "schools-all").map((m) => [`/${m.slug}/`, `${m.title} (${m.count})`]),
+  ] },
+  { href: "/emergency/", label: "الطوارئ", accent: true },
+  { href: "/faq/", label: "الأسئلة" },
+];
+
+const navLink = (href, label, active) => `<a href="${href}"${href === active ? ' aria-current="page"' : ""}>${label}</a>`;
+
+function navHtml(active) {
+  return navGroups().map((g) => {
+    if (!g.items) return `<div class="nav-item${g.accent ? " nav-accent" : ""}">${navLink(g.href, g.label, active)}</div>`;
+    const open = g.items.some(([href]) => href === active);
+    const links = g.items.map(([href, label]) => navLink(href, label, active)).join("");
+    return `<div class="nav-item nav-has-drop${open ? " nav-open" : ""}"><span class="nav-top" tabindex="0" role="button" aria-haspopup="true">${g.label} <i aria-hidden="true">▾</i></span><div class="nav-drop${g.wide ? " nav-drop-wide" : ""}">${links}</div></div>`;
+  }).join("");
+}
+
+function mobileNavHtml(active) {
+  return navGroups().map((g) => {
+    if (!g.items) return `<a class="m-solo" href="${g.href}"${g.href === active ? ' aria-current="page"' : ""}>${g.label}</a>`;
+    return `<details class="m-group"${g.items.some(([href]) => href === active) ? " open" : ""}><summary>${g.label}</summary><div>${g.items.map(([href, label]) => navLink(href, label, active)).join("")}</div></details>`;
+  }).join("");
+}
