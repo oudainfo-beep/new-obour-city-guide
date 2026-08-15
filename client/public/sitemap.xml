@@ -7,5 +7,11 @@
   <url><loc>https://newobourguide.com/prices/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://newobourguide.com/developers/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://newobourguide.com/buying-guide/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/services/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/schools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/health/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/investment/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/mistakes/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://newobourguide.com/compare/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://newobourguide.com/faq/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
