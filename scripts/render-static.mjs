@@ -282,4 +282,7 @@ write("404", layout({ slug:"404", title:"الصفحة غير موجودة", desc
 fs.mkdirSync(publicDir, { recursive: true });
 fs.writeFileSync(path.join(publicDir, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
 fs.writeFileSync(path.join(publicDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...pages.map(([slug])=>slug), ...realSchools.map(sc=>`schools/${sc.slug}`)].map((slug)=>`  <url><loc>${slug ? `${site}/${slug}/` : `${site}/`}</loc><changefreq>monthly</changefreq><priority>${slug === "" || slug === "developers" ? "1.0" : slug.startsWith("schools/") ? "0.6" : "0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
+// نسخة 404 في جذر الإخراج: Cloudflare Pages يقدّمها بحالة 404 لأي مسار غير موجود
+fs.copyFileSync(pathFor("404"), path.join(publicDir, "404.html"));
+
 console.log(`Rendered ${pages.length} main pages + ${realSchools.length} school pages + a 404 page.`);
