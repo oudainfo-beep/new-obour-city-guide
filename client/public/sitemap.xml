@@ -15,6 +15,11 @@
   <url><loc>https://obourguide.com/mistakes/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://obourguide.com/compare/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://obourguide.com/emergency/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://obourguide.com/living-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://obourguide.com/shopping-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://obourguide.com/dining-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://obourguide.com/education-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://obourguide.com/health-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://obourguide.com/directory/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://obourguide.com/faq/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://obourguide.com/automotive/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
