@@ -227,7 +227,7 @@ function layout({ slug = "", title, description, keywords, schema, body }) {
   return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${seoTitle}</title><meta name="description" content="${seoDesc}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل العبور والعبور الجديدة"><meta property="og:title" content="${seoTitle}"><meta property="og:description" content="${seoDesc}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css?v=${siteCssVer}"><link rel="stylesheet" href="/static/schools-directory.css?v=${schoolsCssVer}"><script type="application/ld+json">${JSON.stringify(schema)}</script>${slug ? `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"الرئيسية",item:`${site}/`},{"@type":"ListItem",position:2,name:seoTitle,item:canonical}]})}</script>` : ""}</head><body>${header(active)}${body}${footer()}</body></html>`;
 }
 
-const homeSchema = { "@context": "https://schema.org", "@graph": [{ "@type": "WebSite", name: "دليل العبور والعبور الجديدة", url: `${site}/`, inLanguage: "ar-EG", description: "دليل شامل لمدينة العبور والعبور الجديدة: خدمات وأدلة وأسعار ومطورون، بمصادر منشورة قابلة للتحقق." }, { "@type": "Organization", name: "دليل العبور والعبور الجديدة", url: `${site}/`, logo: `${site}${logoRaster}`, description: "دليل معلوماتي عن مدينة العبور والعبور الجديدة." }] };
+const homeSchema = { "@context": "https://schema.org", "@graph": [{ "@type": "WebSite", name: "دليل العبور والعبور الجديدة", url: `${site}/`, inLanguage: "ar-EG", description: "دليل شامل لمدينة العبور والعبور الجديدة: خدمات وأدلة وأسعار ومطورون، بمصادر منشورة قابلة للتحقق.", potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${site}/search/?q={search_term_string}` }, "query-input": "required name=search_term_string" } }, { "@type": "Organization", name: "دليل العبور والعبور الجديدة", url: `${site}/`, logo: `${site}${logoRaster}`, description: "دليل معلوماتي عن مدينة العبور والعبور الجديدة.", sameAs: ["https://www.facebook.com/obourguide"] }] };
 const placesSchema = { "@context": "https://schema.org", "@graph": neighborhoods.map((n) => ({ "@type": "Place", name: n[1], description: n[4], containedInPlace: { "@type": "City", name: "مدينة العبور الجديدة" } })) };
 const devSchema = { "@context": "https://schema.org", "@type": "ItemList", name: "دليل مطوري العبور الجديدة", itemListElement: developers.map((dev, index) => ({ "@type": "ListItem", position: index + 1, name: dev.name, description: dev.note })) };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) };
@@ -253,6 +253,65 @@ const servicesPage = `<main>${pageHero({tag:"الخدمات والمرافق", e
 
 const comparePage = `<main>${pageHero({tag:"مقارنة المدن", eyebrow:"أين تشتري؟", title:"العبور الجديدة مقابل التجمع والشروق والعاصمة", description:"مقارنة عملية بين مدن شرق القاهرة من زاوية المشتري: النضج، السعر النسبي، الخدمات، وزمن الوصول — لا ترويج لمدينة على حساب أخرى."})}${atlasBody("محاور المقارنة", "قارن أربع زوايا: نضج المدينة، السعر النسبي، مستوى الخدمات، وزمن الوصول إلى وجهتك اليومية.")}<section class="paper section"><div class="wrap"><h2>جدول مقارنة سريع</h2><div class="data-table"><div><b>المدينة</b><b>الطبيعة</b><b>نقاط القوة</b><b>ما يجب الانتباه له</b></div>${compareCities.map(r=>`<div><span><strong>${r[0]}</strong></span><span>${r[1]}</span><span>${r[2]}</span><span>${r[3]}</span></div>`).join("")}</div><p class="caption">المقارنة عامة وتصف اتجاهات السوق وقت التحديث، ولا تصلح كبديل عن معاينة موقع بعينه أو مقارنة مشروعين محددين.</p></div></section><section class="section"><div class="wrap content-grid"><article><h2>لماذا لا توجد «مدينة أفضل» بشكل مطلق؟</h2><p>كل مدينة في شرق القاهرة تخدم احتياجًا مختلفًا. التجمع الخامس سوق ناضج بخدمات مكتملة وسيولة إعادة بيع أعلى، لكن سعره أعلى وزحامه أكبر. العبور الجديدة تقدم أسعارًا أقل نسبيًا في نطاقات التوسع وقربًا من محاور شرق القاهرة، لكن بعض نطاقاتها يحتاج انتظارًا لاكتمال المرافق. الشروق أهدأ وأقل كثافة لكن خياراتها التجارية أقل. والعاصمة الإدارية حديثة ومخططة لكن مسافاتها الداخلية كبيرة.</p><p>المقارنة الصحيحة تبدأ من سؤال واحد: أين تقضي يومك؟ إذا كان عملك في التجمع، فوحدة أرخص في مدينة أبعد قد تكلفك ساعتين يوميًا — وهي تكلفة حقيقية لا تظهر في العقد. وإذا كان عملك في العاشر من رمضان أو شرق القاهرة الصناعي، فقد تتحول العبور الجديدة إلى الخيار الأكثر منطقية بفارق واضح.</p><h2>كيف تقارن التكلفة الحقيقية؟</h2><p>لا تقارن سعر المتر فقط. احسب: سعر الوحدة، وديعة الصيانة، رسوم الإدارة السنوية، تكلفة التشطيب، ثم أضف تكلفة التنقل اليومية لمدة خمس سنوات. أحيانًا تكون الوحدة الأعلى سعرًا في مدينة أقرب أرخص فعليًا على المدى المتوسط. وأحيانًا يكون فارق السعر كبيرًا لدرجة تبرر رحلة أطول.</p><p>أضف أيضًا عامل السيولة: كم يستغرق بيع وحدة مماثلة في كل مدينة؟ الأسواق الناضجة عادةً أسرع في إعادة البيع، بينما مناطق التوسع قد تحتاج وقتًا أطول أو خصمًا. إذا كنت تشتري للاستثمار قصير أو متوسط الأجل، فهذا العامل قد يكون أهم من فارق سعر المتر.</p><h2>متى تكون العبور الجديدة الخيار الأنسب؟</h2><p>تكون مناسبة عادةً لمن يعمل في شرق القاهرة أو شمالها، ولمن يقبل أفقًا زمنيًا لاكتمال بعض الخدمات مقابل سعر أقل، ولمن يبحث عن كثافة أقل ومساحات أوسع. وتكون أقل ملاءمة لمن يحتاج خدمات مكتملة فورًا، أو لمن يعمل في غرب القاهرة، أو لمن يريد سيولة إعادة بيع سريعة جدًا.</p><p>لا يقدم هذا الدليل توصية بالشراء في مدينة بعينها. الهدف أن تصل إلى قرار مبني على جدولك اليومي وميزانيتك ومستوى المخاطرة الذي تقبله، وأن تحوّل المقارنة من انطباع عام إلى أرقام يمكن مراجعتها.</p><h2>مقارنة زمن الوصول — الرقم الذي يحسم غالبًا</h2><p>زمن الوصول اليومي هو العامل الذي يتغير أثره مع الوقت بدل أن يقل. في السنة الأولى تحتمل رحلة طويلة بحماس الانتقال، وفي السنة الثالثة تصبح عبئًا يوميًا. لذلك قِس الرحلة فعليًا، لا تعتمد على تقدير المسافة على الخريطة.</p><p>الطريقة العملية: اذهب من موقع الوحدة إلى مكان عملك في يوم عمل عادي، مرة صباحًا في السابعة والنصف ومرة عند العودة في الرابعة. سجّل الرقمين. كرر ذلك لكل مدينة تفكر فيها. ستجد أن الفوارق أحيانًا معاكسة تمامًا لما توقعته من الخريطة، لأن الازدحام لا يتناسب مع المسافة.</p><h2>سيولة إعادة البيع بين المدن</h2><p>إذا كنت تفكر في البيع خلال خمس سنوات، فسيولة السوق تصبح عاملًا أساسيًا. الأسواق الناضجة مثل التجمع الخامس تشهد حركة بيع وشراء أكثر، مما يعني عادةً وقتًا أقصر للبيع وفارقًا أقل عن السعر المطلوب. مناطق التوسع الحديثة قد تحتاج وقتًا أطول أو خصمًا أكبر، خصوصًا إذا كان المعروض من المطور نفسه لا يزال متاحًا بأسعار مشابهة.</p><p>سؤال عملي: كم وحدة مشابهة معروضة للبيع حاليًا في نفس المشروع أو المنطقة؟ إذا كان العدد كبيرًا، فأنت ستنافس عليها عند البيع. وإذا كان المطور نفسه لا يزال يبيع في المرحلة نفسها، فمن الصعب أن تبيع بسعر أعلى منه.</p><h2>مرحلة نمو المدينة وأثرها على السعر</h2><p>كل مدينة جديدة تمر بمراحل: تخصيص وبناء، ثم تسليم وإشغال أولي، ثم اكتمال الخدمات، ثم نضج. أعلى نسب ارتفاع في السعر تحدث عادةً بين المرحلة الثانية والثالثة، أي عندما تبدأ الخدمات في الوصول وترتفع نسبة الإشغال. الشراء قبل ذلك يحمل مخاطرة أعلى وعائدًا محتملًا أكبر، والشراء بعده أكثر أمانًا وأقل ربحية.</p><p>حدد أين تقع كل مدينة تفكر فيها على هذا المسار، وأين تقع أنت في تحمل المخاطرة. المشتري الذي سينتقل خلال سنة يحتاج مدينة ناضجة. المستثمر الذي يستطيع الانتظار خمس سنوات قد يجد قيمة أكبر في مرحلة أبكر.</p></article><aside class="fact-rail"><span class="tag">⌖ اختبر بنفسك</span><div><b>القاعدة الأولى</b><span>قِس الرحلة من باب الوحدة إلى عملك في وقت الذروة.</span></div><div><b>القاعدة الثانية</b><span>احسب التكلفة الكلية لخمس سنوات لا سعر المتر فقط.</span></div><div><b>القاعدة الثالثة</b><span>اسأل عن نسبة الإشغال الفعلية في المشروع أو النطاق.</span></div></aside></div></section>${refsHtml()}</main>`;
 
+
+// ===== ENHANCED LOCALBUSINESS SCHEMA HELPER =====
+function localBusinessSchema(it, position, pageSlug, categoryType) {
+  const typeMap = {
+    pharmacies: "Pharmacy",
+    restaurants: "Restaurant",
+    hospitals: "Hospital",
+    clinics: "MedicalClinic",
+    schools: "School",
+    nurseries: "ChildCare",
+    banks: "BankOrCreditUnion",
+    shopping: "Store",
+    "home-services": "HomeAndConstructionBusiness",
+    "professional-services": "ProfessionalService",
+    fitness: "HealthClub",
+    automotive: "AutoRepair",
+    entertainment: "EntertainmentBusiness",
+    hotels: "LodgingBusiness",
+    "real-estate-offices": "RealEstateAgent",
+    "government-services": "GovernmentOffice",
+    logistics: "MovingCompany",
+  };
+  const bizType = typeMap[categoryType] || "LocalBusiness";
+  const baseUrl = `${site}/${pageSlug}/`;
+  const entryId = `${baseUrl}#business-${position}`;
+  const obj = {
+    "@type": bizType,
+    "@id": entryId,
+    name: it.n,
+    url: baseUrl,
+    ...(it.e ? { alternateName: it.e } : {}),
+    ...(it.c ? { description: it.c } : {}),
+    ...(it.t ? { telephone: it.t } : {}),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: it.a || "مدينة العبور",
+      addressLocality: "مدينة العبور",
+      addressRegion: "القليوبية",
+      addressCountry: "EG",
+    },
+    areaServed: { "@type": "City", name: "مدينة العبور" },
+  };
+  if (bizType === "Pharmacy" && /24|ليل|نهار/.test(it.n)) {
+    obj.openingHoursSpecification = {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    };
+  }
+  if (bizType === "Restaurant") {
+    obj.priceRange = "$$";
+    obj.servesCuisine = it.c || "مصري";
+  }
+  if (bizType === "Hospital" || bizType === "MedicalClinic") {
+    obj.medicalSpecialty = it.c || "عام";
+  }
+  return obj;
+}
 
 const directories = fs.readdirSync(path.join(root, "data", "directories"))
   .filter((f) => f.endsWith(".json") && f !== "index.json")
@@ -614,12 +673,7 @@ for (const d of directories) {
       numberOfItems: d.items.length,
       itemListElement: d.items.slice(0, 60).map((it, i) => ({
         "@type": "ListItem", position: i + 1,
-        item: {
-          "@type": "LocalBusiness", name: it.n,
-          ...(it.c ? { description: it.c } : {}),
-          ...(it.t ? { telephone: it.t } : {}),
-          address: { "@type": "PostalAddress", streetAddress: it.a || "مدينة العبور", addressLocality: "مدينة العبور", addressRegion: "القليوبية", addressCountry: "EG" },
-        },
+        item: localBusinessSchema(it, i + 1, d.slug, d.slug),
       })) },
     directoryPage(d),
   ]);
@@ -637,8 +691,7 @@ for (const L of landings) {
     L.kw,
     { "@context": "https://schema.org", "@type": "ItemList", name: L.title, numberOfItems: items.length,
       itemListElement: items.slice(0, 40).map((it, i) => ({ "@type": "ListItem", position: i + 1,
-        item: { "@type": "LocalBusiness", name: it.n, ...(it.t ? { telephone: it.t } : {}),
-          address: { "@type": "PostalAddress", streetAddress: it.a || "مدينة العبور", addressLocality: "مدينة العبور", addressRegion: "القليوبية", addressCountry: "EG" } } })) },
+        item: localBusinessSchema(it, i + 1, `${L.parent}/${L.slug}`, L.parent) })) },
     landingPage(L),
   ]);
 }
