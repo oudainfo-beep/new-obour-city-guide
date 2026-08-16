@@ -180,7 +180,51 @@ function atlasBody(label, note) { return `<section class="atlas-body"><div class
 function layout({ slug = "", title, description, keywords, schema, body }) {
   const canonical = slug ? `${site}/${slug}/` : `${site}/`;
   const active = slug ? `/${slug}/` : "/";
-  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${slug ? `${title} | دليل العبور والعبور الجديدة` : title}</title><meta name="description" content="${description}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل العبور والعبور الجديدة"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css?v=${siteCssVer}"><link rel="stylesheet" href="/static/schools-directory.css?v=${schoolsCssVer}"><script type="application/ld+json">${JSON.stringify(schema)}</script>${slug ? `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"الرئيسية",item:`${site}/`},{"@type":"ListItem",position:2,name:title,item:canonical}]})}</script>` : ""}</head><body>${header(active)}${body}${footer()}</body></html>`;
+  // ===== SEO-OPTIMIZED TITLES (keyword-first) =====
+  const seoTitles = {
+    "about": "مدينة العبور الجديدة 2026: موقع، مساحة، والفرق عن العبور القديمة",
+    "districts": "أحياء العبور الجديدة: دليل الأحياء 1-25 والحي المتميز + الأسعار",
+    "transport": "مواصلات العبور الجديدة: القطار الكهربائي LRT ومحاور الوصول 2026",
+    "prices": "أسعار العقارات في العبور الجديدة 2026: متر بكام؟",
+    "developers": "أفضل مطورين العبور الجديدة 2026: تقييم ومقارنة شاملة",
+    "buying-guide": "دليل شراء شقة في العبور الجديدة: خطوات من الهدف للعقد",
+    "services": "خدمات العبور الجديدة: مدارس، مستشفيات، تسوق، مرافق 2026",
+    "schools": "مدارس العبور الجديدة: حكومي، لغات، دولي، ياباني + المصروفات",
+    "health": "مستشفيات وصيدليات العبور الجديدة: دليل طوارئ 24 ساعة",
+    "investment": "الاستثمار العقاري في العبور الجديدة: عائد، مخاطرة، حالات",
+    "mistakes": "أخطاء شراء عقار في العبور: 8 أخطاء تتجنبها قبل التوقيع",
+    "compare": "العبور الجديدة vs التجمع vs العاصمة: مقارنة شاملة 2026",
+    "emergency": "أرقام طوارئ العبور: إسعاف، شرطة، كهرباء، مياه، غاز",
+    "directory": "دليل خدمات العبور: 1300+ صيدلية ومطعم ومستشفى بالأرقام",
+    "faq": "أسئلة شائعة عن العبور الجديدة: سكن، استثمار، مواصلات، أسعار",
+    "pharmacies": "صيدليات العبور: 42 صيدلية بأرقام التليفون والعناوين 2026",
+    "restaurants": "مطاعم العبور: 300+ مطعم وكافيه بالعناوين والأرقام",
+    "search": "بحث في دليل العبور: مدارس، صيدليات، مطاعم، خدمات",
+  };
+  const seoTitle = slug && seoTitles[slug] ? seoTitles[slug] : (slug ? `${title} | دليل العبور والعبور الجديدة` : title);
+  // ===== SEO-OPTIMIZED DESCRIPTIONS =====
+  const seoDescriptions = {
+    "about": "تعرف على مدينة العبور الجديدة: الموقع، المساحة، مراحل التنفيذ، والفرق بينها وبين العبور القديمة. دليل عملي قبل الشراء.",
+    "districts": "دليل شامل لأحياء العبور الجديدة من 1 إلى 25 والحي المتميز. تعرف على مرحلة كل حي، الخدمات المتاحة، والأسعار التقريبية.",
+    "transport": "مواصلات العبور الجديدة: القطار الكهربائي LRT، الدائري الأوسطي، محور R2، ومحطة العبور. اختبر زمن رحلتك قبل الشراء.",
+    "prices": "أسعار العقارات في العبور الجديدة 2026: متوسط المتر، نطاقات الأسعار، ومقارنة مع التجمع والعاصمة. تحديث أغسطس 2026.",
+    "developers": "تقييم 6 مطورين في العبور الجديدة: عوده، الملتقى، الصفوة، وأكثر. مقارنة شاملة على 5 معايير منشورة وقابلة للتحقق.",
+    "buying-guide": "دليل خطوة بخطوة لشراء شقة في العبور الجديدة: حدد الهدف، قارن المشاريع، فحص العقد، وتجنب الأخطاء الشائعة.",
+    "services": "خدمات العبور الجديدة: مدارس، مستشفيات، صيدليات، مطاعم، بنوك، جيم. دليل 1300+ خدمة بالاسم والعنوان والهاتف.",
+    "schools": "مدارس العبور الجديدة: حكومي، لغات، دولي، ياباني، نيل. أسماء، عناوين، مصروفات، ونصائح قبل التقديم.",
+    "health": "مستشفيات وصيدليات العبور الجديدة: دليل طوارئ 24 ساعة، أرقام الإسعاف، أقرب مستشفى، وصيدليات مناوبة.",
+    "investment": "الاستثمار العقاري في العبور الجديدة: أربع حالات شراء، حساب العائد الإيجاري، مقارنة المخاطرة والعائد.",
+    "mistakes": "تجنب 8 أخطاء شائعة عند شراء عقار في العبور الجديدة. أسئلة تطرحها قبل التوقيع لتحمي استثمارك.",
+    "compare": "قارن بين العبور الجديدة والتجمع والشروق والعاصمة: السعر، الخدمات، المواصلات، والنضج. أي مدينة تناسبك؟",
+    "emergency": "أرقام طوارئ العبور: إسعاف 123، شرطة 122، كهرباء 121، مياه 125، غاز 129. اتصال مباشر بالضغط.",
+    "directory": "دليل خدمات العبور: 1300+ صيدلية، مطعم، مستشفى، بنك، جيم، حضانة. بالاسم والعنوان والهاتف والمصدر.",
+    "faq": "إجابات على أسئلتك عن العبور الجديدة: سكن، استثمار، مواصلات، أسعار، مدارس، ومستشفيات. تحديث مستمر.",
+    "pharmacies": "42 صيدلية في العبور: أرقام تليفون، عناوين، ومواعيد عمل. دليل صيدليات مناوبة وسلاسل صيدليات كبرى.",
+    "restaurants": "300+ مطعم وكافيه في العبور: عناوين، أرقام، تصنيفات. من ماكدونالدز للكبابجي — دليل كامل بالمنطقة.",
+    "search": "ابحث في دليل العبور: مدارس، صيدليات، مطاعم، مستشفيات، خدمات. نتائج فورية من 1300+ مدخل.",
+  };
+  const seoDesc = seoDescriptions[slug] || description;
+  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${seoTitle}</title><meta name="description" content="${seoDesc}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل العبور والعبور الجديدة"><meta property="og:title" content="${seoTitle}"><meta property="og:description" content="${seoDesc}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css?v=${siteCssVer}"><link rel="stylesheet" href="/static/schools-directory.css?v=${schoolsCssVer}"><script type="application/ld+json">${JSON.stringify(schema)}</script>${slug ? `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"الرئيسية",item:`${site}/`},{"@type":"ListItem",position:2,name:seoTitle,item:canonical}]})}</script>` : ""}</head><body>${header(active)}${body}${footer()}</body></html>`;
 }
 
 const homeSchema = { "@context": "https://schema.org", "@graph": [{ "@type": "WebSite", name: "دليل العبور والعبور الجديدة", url: `${site}/`, inLanguage: "ar-EG", description: "دليل شامل لمدينة العبور والعبور الجديدة: خدمات وأدلة وأسعار ومطورون، بمصادر منشورة قابلة للتحقق." }, { "@type": "Organization", name: "دليل العبور والعبور الجديدة", url: `${site}/`, logo: `${site}${logoRaster}`, description: "دليل معلوماتي عن مدينة العبور والعبور الجديدة." }] };
@@ -534,7 +578,7 @@ ${n.system?`<div><span>النظام التعليمي</span><span>${n.system}</sp
 }
 
 const pages = [
-  ["", "دليل العبور والعبور الجديدة 2026: خدمات وأسعار وأحياء ومطورون", "دليل شامل لمدينة العبور والعبور الجديدة: أكثر من 1,300 مدخل خدمة بالاسم والعنوان والهاتف، مع الأحياء والأسعار والمواصلات والمطورين وخطوات الشراء — بمصادر منشورة قابلة للتحقق.", "دليل العبور, مدينة العبور, خدمات العبور, أرقام العبور, دليل العبور الجديدة, أسعار العبور, أحياء العبور, مطورين العبور", homeSchema, home],
+  ["", "دليل العبور والعبور الجديدة 2026: خدمات وأسعار وأحياء ومطورون", "دليل شامل لمدينة العبور والعبور الجديدة: أكثر من 1,300 مدخل خدمة بالاسم والعنوان والهاتف، مع الأحياء والأسعار والمواصلات والمطورين وخطوات الشراء — بمصادر منشورة قابلة للتحقق.", "دليل العبور, مدينة العبور, العبور القديمة, العبور الجديدة, خدمات العبور, أرقام العبور, دليل العبور الجديدة, أسعار العبور, أحياء العبور, مطورين العبور, صيدليات العبور, مطاعم العبور, مدارس العبور, مستشفيات العبور", homeSchema, home],
   ["about", "عن مدينة العبور الجديدة", "نبذة محايدة عن مدينة العبور الجديدة، المساحة والموقع وعلاقتها بمدينة العبور القائمة.", "عن مدينة العبور الجديدة, مساحة العبور الجديدة, موقع العبور الجديدة, العبور القديمة والجديدة", { "@context":"https://schema.org", "@type":"Place", name:"مدينة العبور الجديدة", description:"مدينة جديدة في محافظة القليوبية، مصر." }, about],
   ["districts", "الأحياء والمناطق", "دليل مبسط لأحياء ومناطق مدينة العبور الجديدة، مع طبيعة كل نطاق ومن يناسبه.", "أحياء العبور الجديدة, الحي 24 العبور, الحي 25 العبور, الحي المتميز العبور", placesSchema, districts],
   ["transport", "المواصلات والوصول", "دليل الوصول إلى مدينة العبور الجديدة: القطار الكهربائي الخفيف LRT والمحاور وقراءة مسافة الرحلة.", "مواصلات العبور الجديدة, محطة العبور LRT, القطار الكهربائي العبور, محور R2", { "@context":"https://schema.org", "@type":"ItemList", name:"محاور الوصول إلى العبور الجديدة", itemListElement:["محطة العبور LRT","الدائري الأوسطي","محور R2"].map((name,position)=>({"@type":"ListItem",position:position+1,name})) }, transport],
@@ -615,7 +659,7 @@ for (const sc of realSchools) {
 write("404", layout({ slug:"404", title:"الصفحة غير موجودة", description:"الصفحة المطلوبة غير موجودة في دليل مدينة العبور الجديدة.", keywords:"دليل مدينة العبور الجديدة", schema:{"@context":"https://schema.org","@type":"WebPage",name:"404"}, body:`<main class="not-found section"><div class="wrap"><p class="eyebrow">خطأ 404</p><h1>لم نجد هذا المسار</h1><p>ربما تغير الرابط، أو يمكنك الرجوع إلى خريطة الدليل والبدء من جديد.</p><a class="button" href="/">العودة للرئيسية</a></div></main>` }));
 fs.mkdirSync(publicDir, { recursive: true });
 fs.writeFileSync(path.join(publicDir, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
-fs.writeFileSync(path.join(publicDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...pages.map(([slug])=>slug).filter((slug)=>slug !== "search"), ...realSchools.map(sc=>`schools/${sc.slug}`)].map((slug)=>`  <url><loc>${slug ? `${site}/${slug}/` : `${site}/`}</loc><changefreq>monthly</changefreq><priority>${slug === "" || slug === "developers" ? "1.0" : slug.startsWith("schools/") ? "0.6" : "0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
+fs.writeFileSync(path.join(publicDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...pages.map(([slug])=>slug).filter((slug)=>slug !== "search"), ...realSchools.map(sc=>`schools/${sc.slug}`), ...landings.map(L=>`${L.parent}/${L.slug}`)].map((slug)=>{ const isHome = slug === ""; const isPrices = slug === "prices"; const isDirectory = directories.some(d=>d.slug===slug); const isLanding = landings.some(L=>`${L.parent}/${L.slug}`===slug); const changefreq = isHome || isPrices ? "weekly" : isDirectory || isLanding ? "weekly" : "monthly"; const priority = isHome ? "1.0" : isPrices ? "0.9" : slug === "developers" ? "0.9" : isDirectory || isLanding ? "0.8" : slug.startsWith("schools/") ? "0.6" : "0.7"; return `  <url><loc>${slug ? `${site}/${slug}/` : `${site}/`}</loc><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`; }).join("\n")}\n</urlset>\n`);
 // نسخة 404 في جذر الإخراج: Cloudflare Pages يقدّمها بحالة 404 لأي مسار غير موجود
 fs.copyFileSync(pathFor("404"), path.join(publicDir, "404.html"));
 
