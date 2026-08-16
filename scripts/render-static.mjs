@@ -176,6 +176,100 @@ function refsHtml() { return `<section class="sources"><div class="wrap"><h2>م�
 function header(active) { return `<header class="site-header"><div class="wrap header-row"><a class="brand" href="/"><img src="${logo}" width="46" height="46" alt="رمز دليل العبور والعبور الجديدة"><span><b>دليل</b><em>العبور والعبور الجديدة</em><small>العبور · العبور الجديدة</small></span></a><nav class="desktop-nav" aria-label="التنقل الرئيسي">${navHtml(active)}</nav><form class="site-search" role="search" action="/search/" method="get"><input type="search" name="q" placeholder="ابحث…" aria-label="ابحث في الدليل" required><button type="submit" aria-label="بحث">⌕</button></form><details class="mobile-menu"><summary aria-label="فتح قائمة التنقل">☰</summary><nav aria-label="التنقل الرئيسي للموبايل"><form class="m-search" role="search" action="/search/" method="get"><input type="search" name="q" placeholder="ابحث في الدليل…" aria-label="ابحث في الدليل" required><button type="submit">⌕</button></form>${mobileNavHtml(active)}</nav></details></div></header>`; }
 function footer(lastUpdated = "") { return `<footer class="site-footer"><div class="wrap footer-grid"><section><div class="footer-brand"><img src="${logo}" width="44" height="44" alt="رمز دليل العبور والعبور الجديدة"><b>دليل العبور والعبور الجديدة</b></div><p>هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.</p>${lastUpdated ? `<p class="last-updated">آخر تحديث: ${lastUpdated}</p>` : ""}</section><section><h2>مسارات الدليل</h2>${[["/directory/","دليل الخدمات"],["/districts/","الأحياء"],["/prices/","الأسعار"],["/developers/","دليل المطورين"],["/emergency/","الطوارئ"],["/search/","بحث"]].map(([href,label])=>`<a href="${href}">${label}</a>`).join("")}</section><section><h2>مصادر مفتوحة</h2>${refs.slice(0, 3).map(([label,href])=>`<a href="${href}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`).join("")}</section></div><div class="wrap footer-base"><span>© 2026 دليل العبور والعبور الجديدة</span><span>معلوماتي · قابل للمراجعة · مصادر منشورة</span></div></footer>`; }
 function pageHero({ tag, eyebrow, title, description }) { return `<section class="page-hero"><div class="grid-bg" aria-hidden="true"></div><div class="wrap hero-layout"><aside class="route-rail" aria-label="سجل مراجعة الصفحة"><span class="route-no">01</span><div class="route-line" aria-hidden="true"><i></i><b></b><em></em></div><p>سجل الصفحة</p><strong>مراجَع · أغسطس 2026</strong><small>مصدر مرجعي: بيانات منشورة ومخططات معلنة</small></aside><div class="hero-copy-block"><span class="tag">⌖ ${tag}</span><p class="eyebrow">${eyebrow}</p><h1>${title}</h1><p>${description}</p></div></div></section>`; }
+
+// ===== PAGE NAMES LOOKUP FOR BREADCRUMBS =====
+const pageNames = {
+  "about": "عن المدينة",
+  "obour-vs-obour-new": "الفرق بين العبور والعبور الجديدة",
+  "old-obour": "دليل العبور القديمة",
+  "districts": "الأحياء والمناطق",
+  "transport": "المواصلات والوصول",
+  "prices": "أسعار العقارات",
+  "price-report-q3-2026": "تقرير أسعار الربع الثالث 2026",
+  "developers": "دليل المطورين",
+  "buying-guide": "دليل الشراء",
+  "services": "الخدمات والمرافق",
+  "schools": "المدارس",
+  "health": "الصحة والمستشفيات",
+  "investment": "الاستثمار العقاري",
+  "mistakes": "أخطاء شائعة",
+  "compare": "مقارنة المدن",
+  "emergency": "الطوارئ",
+  "directory": "دليل الخدمات",
+  "faq": "الأسئلة الشائعة",
+  "pharmacies": "الصيدليات",
+  "restaurants": "المطاعم والكافيهات",
+  "hospitals": "المستشفيات",
+  "clinics": "العيادات",
+  "nurseries": "الحضانات",
+  "shopping": "التسوق والمحلات",
+  "home-services": "الخدمات المنزلية",
+  "professional-services": "الخدمات المهنية",
+  "fitness": "اللياقة والتجميل",
+  "automotive": "خدمات السيارات",
+  "banks": "البنوك والصرافات",
+  "real-estate-offices": "المكاتب العقارية",
+  "entertainment": "الترفيه والأنشطة",
+  "government-services": "الخدمات الحكومية",
+  "logistics": "النقل والشحن",
+  "hotels": "الفنادق والإقامة",
+  "search": "البحث",
+  "living-guide": "دليل العيش",
+  "shopping-guide": "دليل التسوق",
+  "dining-guide": "دليل الأكل",
+  "education-guide": "دليل التعليم",
+  "health-guide": "دليل الصحة",
+};
+
+// ===== BREADCRUMB HELPER (visual + schema) =====
+function breadcrumbTrail(slug, seoTitle) {
+  if (!slug) return { html: "", schema: null };
+  const parts = slug.split("/");
+  const trail = [{ name: "الرئيسية", url: `${site}/` }];
+  let buildUrl = "";
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
+    buildUrl += "/" + part;
+    let name = null;
+    // Check main pages lookup
+    const partialSlug = parts.slice(0, i + 1).join("/");
+    if (pageNames[partialSlug]) name = pageNames[partialSlug];
+    if (pageNames[part]) name = pageNames[part];
+    // Check directories (available globally)
+    if (!name && typeof dirBySlug !== "undefined" && dirBySlug[part]) {
+      name = dirBySlug[part].name;
+    }
+    // Check landings
+    if (!name && typeof landings !== "undefined") {
+      const landing = landings.find(L => L.parent === parts[0] && L.slug === part);
+      if (landing) name = landing.title;
+    }
+    // Check schools
+    if (!name && parts[0] === "schools" && typeof realSchools !== "undefined") {
+      const school = realSchools.find(s => s.slug === part);
+      if (school) name = school.name;
+    }
+    // Fallback
+    if (!name) {
+      name = (i === parts.length - 1) ? seoTitle : part;
+    }
+    trail.push({ name, url: `${site}${buildUrl}/` });
+  }
+  // Visual HTML
+  const html = `<nav class="breadcrumb" aria-label="مسار التنقل"><div class="wrap"><ol>${trail.map((item, i) => `<li>${i < trail.length - 1 ? `<a href="${item.url}">${item.name}</a>` : `<span aria-current="page">${item.name}</span>`}</li>`).join("<li class=\"sep\">›</li>")}</ol></div></nav>`;
+  // Schema
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+  return { html, schema };
+}
 function atlasBody(label, note) { return `<section class="atlas-body"><div class="wrap atlas-body-grid"><div class="atlas-body-no">02</div><div class="atlas-body-route" aria-hidden="true"><i></i><b></b><em></em></div><div><strong>${label}</strong><span>${note}</span></div><div class="atlas-status"><span>مراجَع</span><span>بيانات منشورة</span><span>تتطلب معاينة</span></div></div></section>`; }
 function layout({ slug = "", title, description, keywords, schema, body }) {
   const canonical = slug ? `${site}/${slug}/` : `${site}/`;
@@ -225,7 +319,9 @@ function layout({ slug = "", title, description, keywords, schema, body }) {
     "search": "ابحث في دليل العبور: مدارس، صيدليات، مطاعم، مستشفيات، خدمات. نتائج فورية من 1300+ مدخل.",
   };
   const seoDesc = seoDescriptions[slug] || description;
-  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${seoTitle}</title><meta name="description" content="${seoDesc}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل العبور والعبور الجديدة"><meta property="og:title" content="${seoTitle}"><meta property="og:description" content="${seoDesc}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css?v=${siteCssVer}"><link rel="stylesheet" href="/static/schools-directory.css?v=${schoolsCssVer}"><script type="application/ld+json">${JSON.stringify(schema)}</script>${slug ? `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"الرئيسية",item:`${site}/`},{"@type":"ListItem",position:2,name:seoTitle,item:canonical}]})}</script>` : ""}</head><body>${header(active)}${body}${footer(lastUpdated)}</body></html>`;
+  const bc = breadcrumbTrail(slug, seoTitle);
+  const breadcrumbSchema = bc.schema ? `<script type="application/ld+json">${JSON.stringify(bc.schema)}</script>` : "";
+  return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${seoTitle}</title><meta name="description" content="${seoDesc}"><meta name="keywords" content="${keywords}"><meta name="robots" content="${slug === "search" ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"}"><link rel="canonical" href="${canonical}"><meta name="theme-color" content="#3E6B4A"><meta property="og:type" content="website"><meta property="og:locale" content="ar_EG"><meta property="og:site_name" content="دليل العبور والعبور الجديدة"><meta property="og:title" content="${seoTitle}"><meta property="og:description" content="${seoDesc}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site}${ogImage}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="${logo}"><link rel="apple-touch-icon" href="${logoRaster}"><link rel="stylesheet" href="/static/site.css?v=${siteCssVer}"><link rel="stylesheet" href="/static/schools-directory.css?v=${schoolsCssVer}"><script type="application/ld+json">${JSON.stringify(schema)}</script>${breadcrumbSchema}</head><body>${header(active)}${bc.html}${body}${footer(lastUpdated)}</body></html>`;
 }
 
 const homeSchema = { "@context": "https://schema.org", "@graph": [{ "@type": "WebSite", name: "دليل العبور والعبور الجديدة", url: `${site}/`, inLanguage: "ar-EG", description: "دليل شامل لمدينة العبور والعبور الجديدة: خدمات وأدلة وأسعار ومطورون، بمصادر منشورة قابلة للتحقق.", potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${site}/search/?q={search_term_string}` }, "query-input": "required name=search_term_string" } }, { "@type": "Organization", name: "دليل العبور والعبور الجديدة", url: `${site}/`, logo: `${site}${logoRaster}`, description: "دليل معلوماتي عن مدينة العبور والعبور الجديدة.", sameAs: ["https://www.facebook.com/obourguide"] }] };
