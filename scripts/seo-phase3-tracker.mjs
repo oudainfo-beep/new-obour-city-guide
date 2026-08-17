@@ -196,6 +196,37 @@ function trackerPage(chrome) {
 }
 
 // ---------------------------------------------------------------------------
+// حقن رابط /data/ في فوتر جميع الصفحات (idempotent)
+// ---------------------------------------------------------------------------
+function addDataLinkToFooters() {
+  const marker = 'href="/data/"';
+  let touched = 0;
+  let skipped = 0;
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (e.name.startsWith(".") || e.name === "public" || e.name === "src") continue;
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) walk(full);
+      else if (e.name === "index.html") {
+        let html = fs.readFileSync(full, "utf8");
+        if (!html.includes(marker)) {
+          html = html.replace(
+            /(<section>\s*<h2>مسارات الدليل<\/h2>\s*<a href="\/directory\/">دليل الخدمات<\/a>)/,
+            '$1<a href="/data/">البيانات المفتوحة</a>'
+          );
+          fs.writeFileSync(full, html);
+          touched++;
+        } else {
+          skipped++;
+        }
+      }
+    }
+  };
+  walk(clientDir);
+  rep("footer", `أُضيف رابط /data/ في ${touched} صفحة؛ تُخطّى ${skipped} صفحة موجودة مسبقًا.`);
+}
+
+// ---------------------------------------------------------------------------
 // إعادة بناء sitemap.xml (نفس تنسيق render-static.mjs)
 // ---------------------------------------------------------------------------
 const AR_MONTHS = {
@@ -279,6 +310,8 @@ function main() {
   fs.mkdirSync(trackerDir, { recursive: true });
   fs.writeFileSync(path.join(trackerDir, "index.html"), trackerPage(chrome));
   rep("page", "أُنشئت /tracker/index.html");
+
+  addDataLinkToFooters();
 
   rebuildSitemap();
 

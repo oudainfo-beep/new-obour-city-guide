@@ -62,8 +62,8 @@ function buildHead(head, { title, description, url, schemas }) {
   return h;
 }
 
-function makeSchemas({ h1, url, breadcrumbItems }) {
-  return [
+function makeSchemas({ h1, url, breadcrumbItems, appName, appDescription }) {
+  const schemas = [
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -86,10 +86,29 @@ function makeSchemas({ h1, url, breadcrumbItems }) {
     },
     orgNode(),
   ];
+  if (appName && appDescription) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": appName,
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EGP",
+      },
+      "description": appDescription,
+      "url": url,
+      "inLanguage": "ar-EG",
+      "publisher": { "@id": SITE + "/#org" },
+    });
+  }
+  return schemas;
 }
 
-function pageShell(chrome, { title, description, url, h1, tag, breadcrumbItems, body, aside }) {
-  const schemas = makeSchemas({ h1, url, breadcrumbItems });
+function pageShell(chrome, { title, description, url, h1, tag, breadcrumbItems, body, aside, appName, appDescription }) {
+  const schemas = makeSchemas({ h1, url, breadcrumbItems, appName, appDescription });
   const head = buildHead(chrome.head, { title, description, url, schemas });
   const breadcrumb = `<nav class="breadcrumb" aria-label="مسار التنقل"><div class="wrap"><ol>${breadcrumbItems
     .map((it, i) => {
@@ -285,6 +304,8 @@ ${CALC_STYLES}
     ],
     body,
     aside: ASIDE_TOOLS,
+    appName: "حاسبة قسط التمويل العقاري",
+    appDescription: "حاسبة تقديرية لأقصى قسط شهري ومبلغ القرض وقيمة الوحدة بناءً على الدخل والمصروفات ومعدل الفائدة.",
   });
 }
 
@@ -389,6 +410,8 @@ ${CALC_STYLES}
     ],
     body,
     aside: ASIDE_TOOLS,
+    appName: "حاسبة تكلفة المواصلات",
+    appDescription: "حاسبة تقديرية لمقارنة تكلفة السيارة الخاصة والمواصلات العامة شهريًا.",
   });
 }
 
@@ -480,6 +503,8 @@ ${CALC_STYLES}
     ],
     body,
     aside: ASIDE_TOOLS,
+    appName: "حاسبة المصروفات الدراسية",
+    appDescription: "حاسبة تقديرية لإجمالي تكلفة الدراسة على مدى سنوات شاملة الرسوم والمواصلات والكتب.",
   });
 }
 
