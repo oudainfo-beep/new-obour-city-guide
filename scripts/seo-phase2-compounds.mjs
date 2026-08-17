@@ -81,7 +81,7 @@ const COMPOUNDS = [
   },
   {
     slug: "vaily-residence",
-    name: "فيلي ريزيدنس",
+    name: "فيالي ريزيدنس",
     developer: { slug: "mrs", name: "MRS Development" },
     district: { slug: null, name: "العبور الجديدة" },
     status: "مشروع معلن",
