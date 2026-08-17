@@ -1,0 +1,170 @@
+{
+  "generated": "2026-08-17T21:56:30.068Z",
+  "license": "CC BY-SA 4.0",
+  "attribution": "دليل العبور والعبور الجديدة",
+  "count": 13,
+  "developers": [
+    {
+      "slug": "ouda",
+      "name": "عوده للتطوير العقاري",
+      "domain": "https://ouda-developments.com/",
+      "scores": [
+        4.6,
+        4.5,
+        4.5,
+        4.2,
+        4.3
+      ],
+      "total": "4.4",
+      "published": [
+        "قائمة أسعار معلنة.",
+        "نسبة بناء وارتفاعات منشورة (مشروع كناري في الحي 25 — نسبة بناء 25%).",
+        "شريك تشغيل بسجل منشور: برافو لإدارة المرافق والتشغيل (15 مشروعًا حكوميًا منذ 1991، بحسب البيانات المنشورة).",
+        "بحسب موقع الشركة: أكثر من 1,000 وحدة مسلّمة، ومشروعات مفهرسة إضافية (سولانا، سندس، سفاري)."
+      ],
+      "note": "تتصدر عوده أربعة معايير من خمسة لأنها الأكثر نشرًا للبيانات القابلة للفحص — لا لأن المعايير فُصّلت لها؛ الدرجة تقيس ما يُنشر لا الجودة.",
+      "disclosure": true
+    },
+    {
+      "slug": "alsafwa",
+      "name": "الصفوة للتطوير العمراني",
+      "domain": "https://sud.com.eg/",
+      "scores": [
+        4.5,
+        2,
+        4.4,
+        2.8,
+        2.7
+      ],
+      "total": "3.3",
+      "published": [
+        "الأوضح بين المطورين في توثيق التسليم: عدد وحدات وتاريخ محدد لمشروع واحد معلن."
+      ],
+      "note": null
+    },
+    {
+      "slug": "alashraaf",
+      "name": "الأشراف للتطوير العقاري",
+      "domain": "https://alashraaf.com/",
+      "scores": [
+        4.2,
+        2,
+        4.5,
+        2,
+        2.5
+      ],
+      "total": "3.0",
+      "published": [
+        "بيانات تسليم وملاءة منشورة تكفي للتقييم ضمن الجدول الرئيسي."
+      ],
+      "note": null
+    },
+    {
+      "slug": "elmoltqa",
+      "name": "الملتقى للتطوير العقاري",
+      "domain": "https://elmoltqa.com/",
+      "scores": [
+        3.6,
+        2,
+        1.8,
+        3.4,
+        4.5
+      ],
+      "total": "3.1",
+      "published": [
+        "الأعلى بين الستة في معيار الكثافة (4.5) بنسبة بناء ومساحات خضراء معلنة لمشروع بعينه."
+      ],
+      "note": null
+    },
+    {
+      "slug": "valero",
+      "name": "فاليرو للتطوير العقاري",
+      "domain": "https://valerodevelopments.com/",
+      "scores": [
+        2,
+        4.3,
+        2.6,
+        4,
+        2.2
+      ],
+      "total": "3.0",
+      "published": [
+        "أعلى درجاتها في إدارة ما بعد التسليم (4.3) وشفافية التعاقد (4.0) ضمن البيانات المنشورة."
+      ],
+      "note": null
+    },
+    {
+      "slug": "kayan",
+      "name": "كيان للتطوير العقاري",
+      "domain": "https://kayandev.com/",
+      "scores": [
+        2.6,
+        2,
+        1.8,
+        3.6,
+        3.8
+      ],
+      "total": "2.8",
+      "published": [
+        "أعلى درجاتها في الكثافة (3.8) وشفافية التعاقد (3.6) ضمن البيانات المنشورة."
+      ],
+      "note": null
+    },
+    {
+      "slug": "mrs",
+      "name": "MRS Development",
+      "domain": "https://mrsdevelopment.com/",
+      "pending": true,
+      "projects": "فيالي ريزيدنس — العبور الجديدة",
+      "sourceNote": "موقع رسمي منشور"
+    },
+    {
+      "slug": "metwadee",
+      "name": "متواضع جروب",
+      "domain": "https://www.metwadeegroup.com/index_ar.php",
+      "pending": true,
+      "projects": "ذا مارس · مول جدة · اوبو مول",
+      "sourceNote": "موقع رسمي منشور"
+    },
+    {
+      "slug": "mazaya",
+      "name": "مزايا للتطوير العقاري",
+      "domain": "https://mazaya-development.com/",
+      "pending": true,
+      "projects": "Town Ten — عرابي الجديدة/العبور الجديدة",
+      "sourceNote": "موقع رسمي منشور"
+    },
+    {
+      "slug": "eagle",
+      "name": "إيجل جروب للتطوير العقاري",
+      "domain": null,
+      "pending": true,
+      "projects": "جلوري جاردنز — العبور الجديدة",
+      "sourceNote": "لا يوجد موقع رسمي ظاهر — المصدر مصادر صحفية ووسيطة"
+    },
+    {
+      "slug": "foryou",
+      "name": "فور يو للتطوير العقاري",
+      "domain": null,
+      "pending": true,
+      "projects": "أو كارديا — أمام الحي الثامن",
+      "sourceNote": "لا يوجد موقع رسمي ظاهر — المصدر مصادر صحفية ووسيطة"
+    },
+    {
+      "slug": "alraei",
+      "name": "الراعي للتطوير العقاري",
+      "domain": null,
+      "pending": true,
+      "projects": "River Park — الجولدن سكوير",
+      "sourceNote": "لا يوجد موقع رسمي ظاهر — المصدر مصادر صحفية ووسيطة"
+    },
+    {
+      "slug": "ebdaa",
+      "name": "إبداع للتطوير العقاري",
+      "domain": "https://ebdaa-developments.com/",
+      "pending": true,
+      "projects": "جولف سيتي العبور ومجتمعاته",
+      "sourceNote": "موقع رسمي منشور"
+    }
+  ]
+}

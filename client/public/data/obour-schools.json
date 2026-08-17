@@ -1,0 +1,108 @@
+{
+  "generated": "2026-08-17T21:56:30.066Z",
+  "license": "CC BY-SA 4.0",
+  "attribution": "دليل العبور والعبور الجديدة",
+  "count": 10,
+  "schools": [
+    {
+      "group": "داخل العبور الجديدة",
+      "name": "مجمع الشيماء التعليمي",
+      "slug": "shaimaa-educational-complex",
+      "area": "حي المجد · العبور 2 · قطعة 37",
+      "type": "حكومي · رياض أطفال وابتدائي وإعدادي",
+      "sourceLabel": "دليل مدارس العبور الجديدة",
+      "source": "https://www.newobour.city/schools-directory.php",
+      "maps": "مجمع الشيماء التعليمي حي المجد العبور الجديدة"
+    },
+    {
+      "group": "داخل العبور الجديدة",
+      "name": "بلال بن رباح الثانوية المشتركة",
+      "slug": "bilal-bin-rabah-secondary",
+      "area": "حي المجد · قطعة 60",
+      "type": "حكومي · ثانوي · مختلط",
+      "sourceLabel": "دليل مدارس العبور الجديدة",
+      "source": "https://www.newobour.city/schools-directory.php",
+      "maps": "بلال بن رباح الثانوية المشتركة حي المجد العبور الجديدة"
+    },
+    {
+      "group": "داخل العبور الجديدة",
+      "name": "مجمع الجمهورية الجديدة للتعليم الأساسي",
+      "slug": "new-republic-basic-education",
+      "area": "حي الحرية · العبور الجديدة",
+      "type": "حكومي · رياض أطفال وابتدائي وإعدادي",
+      "sourceLabel": "دليل مدارس العبور الجديدة",
+      "source": "https://www.newobour.city/schools-directory.php",
+      "maps": "الجمهورية الجديدة للتعليم الأساسي حي الحرية العبور الجديدة"
+    },
+    {
+      "group": "داخل العبور الجديدة",
+      "name": "مجمع الحرية التعليمي",
+      "slug": "horreya-educational-complex",
+      "area": "حي الحرية · العبور الجديدة",
+      "type": "حكومي · رياض أطفال وابتدائي وإعدادي",
+      "sourceLabel": "دليل مدارس العبور الجديدة",
+      "source": "https://www.newobour.city/schools-directory.php",
+      "maps": "مدرسة الحرية حي الحرية العبور الجديدة"
+    },
+    {
+      "group": "داخل العبور الجديدة",
+      "name": "مجمع أسامة بن زيد التعليمي",
+      "slug": "osama-bin-zaid-complex",
+      "area": "حي الكرامة · الإسكان الاجتماعي",
+      "type": "حكومي · رياض أطفال وابتدائي وإعدادي",
+      "sourceLabel": "دليل مدارس العبور الجديدة",
+      "source": "https://www.newobour.city/schools-directory.php",
+      "maps": "أسامة بن زيد للتعليم الأساسي حي الكرامة العبور الجديدة"
+    },
+    {
+      "group": "داخل العبور الجديدة",
+      "name": "مدارس الكرامة الرسمية للغات",
+      "slug": "karama-official-language-school",
+      "area": "حي الكرامة · العبور الجديدة",
+      "type": "رسمية لغات · إعدادي وثانوي",
+      "sourceLabel": "دليل مدارس العبور الجديدة",
+      "source": "https://www.newobour.city/schools-directory.php",
+      "maps": "مدرسة الكرامة الرسمية لغات العبور الجديدة"
+    },
+    {
+      "group": "مدينة العبور القائمة — قريبة من العبور الجديدة",
+      "name": "مدارس النيل المصرية الدولية — فرع العبور",
+      "slug": "nile-egyptian-school-obour",
+      "area": "مدينة العبور القائمة · الفرع مدرج رسميًا ضمن شبكة مدارس النيل",
+      "type": "مدارس نيل مصرية دولية",
+      "sourceLabel": "الموقع الرسمي لمدارس النيل",
+      "source": "https://nes.moe.gov.eg/branches.html?id=1",
+      "maps": "Nile Egyptian International Schools Obour"
+    },
+    {
+      "group": "مدينة العبور القائمة — قريبة من العبور الجديدة",
+      "name": "المدرسة الرسمية الدولية بالعبور (IPS)",
+      "slug": "international-public-school-obour",
+      "area": "الحي الثالث · قطعة 2 · بلوك 28044 · قرب سور نادي الأطباء",
+      "type": "مدرسة رسمية دولية",
+      "sourceLabel": "Foundation of International Schools in Egypt",
+      "source": "https://fise-eg.org/ips/",
+      "maps": "International Public School El Obour IPS"
+    },
+    {
+      "group": "مدينة العبور القائمة — قريبة من العبور الجديدة",
+      "name": "المدرسة الرسمية الدولية روضة العبور (IPS)",
+      "slug": "ips-rawdet-elobour",
+      "area": "مدينة العبور القائمة · فرع روضة العبور",
+      "type": "مدرسة رسمية دولية",
+      "sourceLabel": "بوابة المدارس الرسمية الدولية",
+      "source": "https://www.ips-schools.com/",
+      "maps": "International Public School Rawdat El Obour"
+    },
+    {
+      "group": "مدينة العبور القائمة — قريبة من العبور الجديدة",
+      "name": "المدرسة المصرية اليابانية بالعبور (EJS)",
+      "slug": "egyptian-japanese-school-obour",
+      "area": "الحي السابع · بعد كارفور العبور",
+      "type": "مدرسة حكومية ضمن شبكة المدارس المصرية اليابانية",
+      "sourceLabel": "دليل مدارس مصر + بوابة EJS",
+      "source": "https://masrschools.com/ejs/",
+      "maps": "Egyptian Japanese School Obour City"
+    }
+  ]
+}
