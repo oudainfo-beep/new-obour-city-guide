@@ -34,3 +34,11 @@
 /index.php/component/sobipro/* /directory/ 301
 /index.php/* /directory/ 301
 /component/* /directory/ 301
+
+# Phase 1 SEO: merge duplicate guides into parent sections (301)
+/dining-guide /restaurants/ 301
+/dining-guide/ /restaurants/ 301
+/shopping-guide /shopping/ 301
+/shopping-guide/ /shopping/ 301
+/health-guide /health/ 301
+/health-guide/ /health/ 301
