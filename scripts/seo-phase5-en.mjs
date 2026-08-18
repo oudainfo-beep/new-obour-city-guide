@@ -93,6 +93,68 @@ function translateInternalLinks(html) {
   return out;
 }
 
+// translate header/footer chrome while keeping the brand name Arabic
+function translateChrome({ header, footer }) {
+  const labelMap = {
+    'aria-label="التنقل الرئيسي"': 'aria-label="Main navigation"',
+    '>المدينة <': '>City <',
+    '>المدينة<': '>City<',
+    '<summary>المدينة</summary>': '<summary>City</summary>',
+    '>عن المدينة<': '>About the City<',
+    '>الأحياء والمناطق<': '>Districts<',
+    '>المواصلات والوصول<': '>Transport<',
+    '>مقارنة المدن<': '>Compare Cities<',
+    '>السكن والشراء <': '>Living & Buying <',
+    '>السكن والشراء<': '>Living & Buying<',
+    '<summary>السكن والشراء</summary>': '<summary>Living & Buying</summary>',
+    '>أسعار العقارات<': '>Prices<',
+    '>دليل الشراء<': '>Buying Guide<',
+    '>دليل المطورين<': '>Developers<',
+    '>الاستثمار العقاري<': '>Investment<',
+    '>أخطاء شائعة<': '>Common Mistakes<',
+    '>الخدمات<': '>Services<',
+    '>التعليم<': '>Education<',
+    '>الصحة<': '>Health<',
+    '>الأسعار والتقارير <': '>Prices & Reports <',
+    '>الأسعار والتقارير<': '>Prices & Reports<',
+    '<summary>الأسعار والتقارير</summary>': '<summary>Prices & Reports</summary>',
+    '>تقرير الأسعار Q3 2026<': '>Price Report Q3 2026<',
+    '>الطوارئ والأسئلة <': '>Emergency & FAQ <',
+    '>الطوارئ والأسئلة<': '>Emergency & FAQ<',
+    '<summary>الطوارئ والأسئلة</summary>': '<summary>Emergency & FAQ</summary>',
+    '>الطوارئ<': '>Emergency<',
+    '>الأسئلة الشائعة<': '>FAQ<',
+    'placeholder="ابحث…"': 'placeholder="Search…"',
+    'aria-label="ابحث في الدليل"': 'aria-label="Search the guide"',
+    'aria-label="بحث"': 'aria-label="Search"',
+    '>مسارات الدليل<': '>Guide Paths<',
+    '>دليل الخدمات<': '>Service Directory<',
+    '>الأحياء<': '>Districts<',
+    '>الأسعار<': '>Prices<',
+    '>بحث<': '>Search<',
+    '>عن الدليل<': '>About the Guide<',
+    '>من نحن<': '>About Us<',
+    '>منهجية التقييم<': '>Methodology<',
+    '>السياسة التحريرية<': '>Editorial Policy<',
+    '>الإفصاح والشفافية<': '>Disclosure<',
+    '>المصادر<': '>Sources<',
+    '>سياسة التصحيح<': '>Corrections<',
+    '>الخصوصية<': '>Privacy<',
+    '>تواصل معنا<': '>Contact<',
+    '>آخر تحديث: أغسطس 2026<': '>Last updated: August 2026<',
+    '>هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.<': '>This guide, ratings, and comparisons are based on published, verifiable criteria. Documented corrections are welcome.<',
+    '>معلوماتي · قابل للمراجعة · مصادر منشورة<': '>Factual · Reviewable · Published Sources<',
+    'alt="رمز دليل العبور والعبور الجديدة"': 'alt="Obour Guide logo"',
+  };
+  let h = header;
+  let f = footer;
+  for (const [ar, en] of Object.entries(labelMap)) {
+    h = h.split(ar).join(en);
+    f = f.split(ar).join(en);
+  }
+  return { header: h, footer: f };
+}
+
 function buildFooter(footer) {
   // used only for English pages: keep the footer consistent with Arabic footer logic
   const marker = 'href="/en/">English';
@@ -157,8 +219,9 @@ function pageShell(chrome, { title, description, url, arUrl, h1, tag, breadcrumb
     orgNode(),
   ];
   const head = buildHead(chrome.head, { title, description, url, schemas, arUrl });
-  const header = translateInternalLinks(chrome.header);
-  const footer = translateInternalLinks(buildFooter(chrome.footer));
+  const translated = translateChrome({ header: chrome.header, footer: buildFooter(chrome.footer) });
+  const header = translateInternalLinks(translated.header);
+  const footer = translateInternalLinks(translated.footer);
   const breadcrumb = `<nav class="breadcrumb" aria-label="Breadcrumb"><div class="wrap"><ol>${breadcrumbItems
     .map((it, i) => {
       if (i === breadcrumbItems.length - 1) {
@@ -514,26 +577,35 @@ const PAIRS = [
   { ar: "compounds/index.html", en: "/en/compounds/" },
 ];
 
+function arUrlOf(fileName) {
+  // canonical Arabic URL must end with a trailing slash to match canonical
+  const rel = fileName.replace(/index\.html$/, "").replace(/\/$/, "");
+  return rel ? `${SITE}/${rel}/` : `${SITE}/`;
+}
+
 function addHreflangToArabicPages() {
   let touched = 0;
+  let skipped = 0;
   for (const pair of PAIRS) {
     const file = path.join(clientDir, pair.ar);
     let html = fs.readFileSync(file, "utf8");
-    if (html.includes('hreflang="en"')) {
+    const arUrl = arUrlOf(pair.ar);
+    const enUrl = SITE + pair.en;
+    const expected = `<link rel="alternate" hreflang="ar" href="${arUrl}"><link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="x-default" href="${arUrl}">`;
+    if (html.includes(expected)) {
+      skipped++;
       continue;
     }
-    const arUrl = SITE + "/" + pair.ar.replace(/index\.html$/, "").replace(/\/$/, "");
-    const enUrl = SITE + pair.en;
-    const hreflang = `<link rel="alternate" hreflang="ar" href="${arUrl}"><link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="x-default" href="${arUrl}">`;
-    html = html.replace(/<link rel="canonical" href="[^"]*">/, (m) => `${m}${hreflang}`);
-    // add og:locale:alternate if missing
+    // remove any existing alternate hreflang block on this page to keep it idempotent and correct
+    html = html.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">/g, "");
+    html = html.replace(/<link rel="canonical" href="[^"]*">/, (m) => `${m}${expected}`);
     if (!html.includes('property="og:locale:alternate"')) {
       html = html.replace(/<meta property="og:locale" content="[^"]*">/, (m) => `${m}<meta property="og:locale:alternate" content="en_US">`);
     }
     fs.writeFileSync(file, html);
     touched++;
   }
-  rep("hreflang", `أُضيفت روابط hreflang على ${touched} صفحة عربية.`);
+  rep("hreflang", `أُضيفت/أُصلحت روابط hreflang على ${touched} صفحة عربية؛ تُخطّى ${skipped} صفحة صحيحة مسبقًا.`);
 }
 
 // ---------------------------------------------------------------------------

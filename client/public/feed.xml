@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>تحديثات دليل العبور والعبور الجديدة</title>
+  <link>https://obourguide.com/updates/</link>
+  <description>تحديثات منشورة على دليل العبور والعبور الجديدة من مصادر رسمية ومنشورة.</description>
+  <language>ar-EG</language>
+  <lastBuildDate>2026-08-18T00:09:26.820Z</lastBuildDate>
+  <atom:link href="https://obourguide.com/feed.xml" rel="self" type="application/rss+xml" />
+
+</channel>
+</rss>
