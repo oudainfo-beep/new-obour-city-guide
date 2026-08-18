@@ -131,12 +131,12 @@ function districtSearchVariants(id, h1) {
     ];
   }
   return [
+    `District ${n} Obour`,
+    `Obour district ${n}`,
     `الحي ${n} مدينة العبور`,
     `الحي ${n} العبور الجديدة`,
     `حي ${n} العبور`,
     `District ${n} Obour New City`,
-    `District ${n} Obour`,
-    `Obour district ${n}`,
     `Al Hayy ${n} Obour`,
   ];
 }
@@ -326,15 +326,23 @@ async function geocodeRaw(query) {
 function isGenericResult(name, displayName) {
   if (!name) return true;
   const lower = name.toLowerCase();
+  const words = lower.split(/\s+/);
   // Generic-only names that Photon returns when it cannot find the requested place
-  const generic = [
+  const genericExact = [
     "العبور", "obour", "مدينة العبور", "new obour city", "el obour",
-    "كمبوند هاى سيتى", "high city", "هاي سيتي", "hay city",
-    "مول سيتي", "mall city", "city mall", "سيتي مول",
     "العبور الجديدة", "obour city",
   ];
-  for (const g of generic) {
-    if (lower === g || lower === g.replace(/\s+/g, "")) return true;
+  for (const g of genericExact) {
+    const cleanG = g.toLowerCase();
+    if (lower === cleanG || lower.replace(/\s+/g, "") === cleanG.replace(/\s+/g, "")) return true;
+  }
+  // Generic commercial names that should never represent a district/school/landmark
+  const genericSubstrings = [
+    "high city", "هاى سيتى", "هاي سيتي", "hay city",
+    "mall city", "city mall", "مول سيتي", "سيتي مول",
+  ];
+  for (const g of genericSubstrings) {
+    if (lower.includes(g.toLowerCase())) return true;
   }
   return false;
 }

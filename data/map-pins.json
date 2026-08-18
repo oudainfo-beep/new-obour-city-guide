@@ -4,9 +4,9 @@
     "slug": "/districts/district-3/",
     "name": "الحي الثالث",
     "category": "districts",
-    "lat": 30.2240417,
-    "lon": 31.4604596,
-    "source": "OpenStreetMap/Photon — «District 3 Obour New City» — High City mall, شارع احمد بدوى, العبور, القليوبية, مصر (licence: ODbL)"
+    "lat": 30.2398287,
+    "lon": 31.4847074,
+    "source": "OpenStreetMap/Photon — «District 3 Obour» — الحى 3, العبور, القليوبية, مصر (licence: ODbL)"
   },
   {
     "id": "district-4",
@@ -49,9 +49,9 @@
     "slug": "/districts/district-9/",
     "name": "الحي التاسع",
     "category": "districts",
-    "lat": 30.216417,
-    "lon": 31.4538958,
-    "source": "OpenStreetMap/Photon — «الحي 9 العبور الجديدة» — إكسبريس ماركت الحي التاسع, شارع عباس العقاد, العبور, القليوبية, مصر (licence: ODbL)"
+    "lat": 30.2224623,
+    "lon": 31.4480334,
+    "source": "OpenStreetMap/Photon — «District 9 Obour» — الحى 9, العبور, القليوبية, مصر (licence: ODbL)"
   },
   {
     "id": "karama-official-language-school",
