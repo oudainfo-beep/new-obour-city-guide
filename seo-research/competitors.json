@@ -1,0 +1,259 @@
+{
+  "generated": "2026-08-18T18:00:00Z",
+  "source": "Google/Bing search research for Obour City + New Obour City local queries",
+  "competitors": [
+    {
+      "domain": "kidsdirectory.com.eg",
+      "website": "https://kidsdirectory.com.eg/",
+      "type": "local-directory",
+      "estimated_relevance": "high",
+      "categories_covered": ["schools", "nurseries"],
+      "important_urls": [
+        "https://kidsdirectory.com.eg/ad-category/schools/in-el-obour-city/",
+        "https://kidsdirectory.com.eg/ad-category/nurseries/el-obour-city/"
+      ],
+      "topics_covered": ["schools in El Obour", "nurseries in El Obour"],
+      "entities_covered": ["St. Joseph School Obour", "Nile Sons International School", "International Public School"]
+    },
+    {
+      "domain": "gludo.org",
+      "website": "https://gludo.org/",
+      "type": "local-business-directory",
+      "estimated_relevance": "high",
+      "categories_covered": ["schools", "businesses"],
+      "important_urls": [
+        "https://gludo.org/en/business-directory/city/al-qalyubiyah/d/el-obour-2/schools/"
+      ],
+      "topics_covered": ["private schools in El Obour", "business listings by city"],
+      "entities_covered": ["Nile Sons International School", "International Public School"]
+    },
+    {
+      "domain": "yellowpages.com.eg",
+      "website": "https://yellowpages.com.eg/",
+      "type": "general-business-directory",
+      "estimated_relevance": "high",
+      "categories_covered": ["schools", "hospitals", "medical", "restaurants", "cafes"],
+      "important_urls": [
+        "https://yellowpages.com.eg/en/category/obour-city-international-schools/3262",
+        "https://yellowpages.com.eg/en/category/obour-city-cafes-and-coffee-shops/3262",
+        "https://yellowpages.com.eg/en/profile/tabarak-children's-hospital/273700",
+        "https://yellowpages.com.eg/en/profile/el-obour-secondary-school-for-boys/338950"
+      ],
+      "topics_covered": ["business listings Obour", "schools Obour", "hospitals Obour"],
+      "entities_covered": ["Tabarak Children's Hospital", "El Obour Secondary School for Boys"]
+    },
+    {
+      "domain": "infoeg.com",
+      "website": "https://en.infoeg.com/",
+      "type": "local-city-directory",
+      "estimated_relevance": "very-high",
+      "categories_covered": ["restaurants", "cafes", "medical", "laboratories", "pharmacies", "businesses"],
+      "important_urls": [
+        "https://en.infoeg.com/qalyubia/section/668/categories",
+        "https://en.infoeg.com/qalyubia/section/668/categories/609",
+        "https://en.infoeg.com/qalyubia/section/668/categories/521"
+      ],
+      "topics_covered": ["Obour City directory", "restaurants and cafes Obour", "medical laboratories Obour"],
+      "entities_covered": ["Youth Silver Mall", "Dr. Abbas Ahmed marriage officiant"]
+    },
+    {
+      "domain": "aqarmap.com.eg",
+      "website": "https://aqarmap.com.eg/",
+      "type": "real-estate-portal",
+      "estimated_relevance": "medium-high",
+      "categories_covered": ["compounds", "apartments", "real-estate"],
+      "important_urls": [
+        "https://aqarmap.com.eg/en/compounds/cairo/obour",
+        "https://advice.aqarmap.com.eg/en/story-of-new-obour-city/"
+      ],
+      "topics_covered": ["compounds in Obour", "New Obour City story", "real estate investment"],
+      "entities_covered": ["Golf City Compound", "Obour compounds"]
+    },
+    {
+      "domain": "realestate.gov.eg",
+      "website": "https://blogs.realestate.gov.eg/",
+      "type": "government-real-estate-blog",
+      "estimated_relevance": "medium",
+      "categories_covered": ["compounds", "malls", "real-estate"],
+      "important_urls": [
+        "https://blogs.realestate.gov.eg/reflect-obour-city-compound-egypt/",
+        "https://blogs.realestate.gov.eg/nxt-mall-obour-city-obour-city-egypt/"
+      ],
+      "topics_covered": ["Reflect Obour City", "Nxt Mall Obour"],
+      "entities_covered": ["Reflect Obour City Compound", "Nxt Mall Obour"]
+    },
+    {
+      "domain": "realestate.eg",
+      "website": "https://realestate.eg/",
+      "type": "real-estate-listings",
+      "estimated_relevance": "medium-high",
+      "categories_covered": ["compounds", "malls", "apartments"],
+      "important_urls": [
+        "https://realestate.eg/en/5060473-glory-gardens-new-obour-city-compound",
+        "https://realestate.eg/en/5054986-okardia",
+        "https://realestate.eg/en/5055031-infinity-mall",
+        "https://realestate.eg/en/5061491-turath-obour-city-compound"
+      ],
+      "topics_covered": ["compound services", "mall services", "new obour compounds"],
+      "entities_covered": ["Glory Gardens", "Okardia", "Infinity Mall", "Turath"]
+    },
+    {
+      "domain": "findapropertyegypt.com",
+      "website": "https://findapropertyegypt.com/",
+      "type": "real-estate-blog",
+      "estimated_relevance": "medium",
+      "categories_covered": ["neighborhoods", "investment", "real-estate"],
+      "important_urls": [
+        "https://findapropertyegypt.com/obour-city/"
+      ],
+      "topics_covered": ["Obour City real estate boom", "top neighborhoods", "investment tips"],
+      "entities_covered": ["Golf City", "First and Fifth Districts"]
+    },
+    {
+      "domain": "realestate-capsule.com",
+      "website": "https://realestate-capsule.com/",
+      "type": "real-estate-portal",
+      "estimated_relevance": "medium",
+      "categories_covered": ["city-guide", "real-estate"],
+      "important_urls": [
+        "https://realestate-capsule.com/en/city/obour-city/"
+      ],
+      "topics_covered": ["Obour City overview", "investment advantages", "Obour districts"],
+      "entities_covered": ["Obour City"]
+    },
+    {
+      "domain": "kayandev.com",
+      "website": "https://kayandev.com/",
+      "type": "developer-blog",
+      "estimated_relevance": "medium",
+      "categories_covered": ["services", "real-estate"],
+      "important_urls": [
+        "https://kayandev.com/blog/Apartments-for-Sale-in-Obour",
+        "https://kayandev.com/blog/advantages-and-disadvantages-of-obour"
+      ],
+      "topics_covered": ["services in Obour City", "advantages and disadvantages of Obour"],
+      "entities_covered": ["Obour City services"]
+    },
+    {
+      "domain": "ouda-developments.com",
+      "website": "https://ouda-developments.com/",
+      "type": "developer-blog",
+      "estimated_relevance": "medium",
+      "categories_covered": ["investment", "neighborhoods", "real-estate"],
+      "important_urls": [
+        "https://ouda-developments.com/en/the-most-promising-areas-inside-new-obour-city-during-2026/",
+        "https://ouda-developments.com/en/best-real-estate-investment-areas-in-al-obour-city-2026-a-comprehensive-guide/"
+      ],
+      "topics_covered": ["promising areas in New Obour", "investment areas"],
+      "entities_covered": ["New Obour City districts"]
+    },
+    {
+      "domain": "ebdaa-developments.com",
+      "website": "https://ebdaa-developments.com/",
+      "type": "developer-blog",
+      "estimated_relevance": "medium",
+      "categories_covered": ["prices", "real-estate"],
+      "important_urls": [
+        "https://ebdaa-developments.com/en/your-ultimate-guide-to-new-obour-city-apartment-prices-and-recent-market-trends/"
+      ],
+      "topics_covered": ["New Obour apartment prices"],
+      "entities_covered": ["New Obour City"]
+    },
+    {
+      "domain": "shary.com.eg",
+      "website": "https://shary.com.eg/",
+      "type": "real-estate-portal",
+      "estimated_relevance": "medium",
+      "categories_covered": ["city-guide", "real-estate"],
+      "important_urls": [
+        "https://shary.com.eg/en/city/obour-city/"
+      ],
+      "topics_covered": ["New Obour City FAQ", "services and facilities"],
+      "entities_covered": ["New Obour City"]
+    },
+    {
+      "domain": "bayut.eg",
+      "website": "https://www.bayut.eg/",
+      "type": "real-estate-portal",
+      "estimated_relevance": "low-medium",
+      "categories_covered": ["commercial-properties"],
+      "important_urls": [
+        "https://www.bayut.eg/en/cairo/restaurants-and-cafes-for-sale-in-obour-city/"
+      ],
+      "topics_covered": ["commercial properties in Obour"],
+      "entities_covered": []
+    },
+    {
+      "domain": "getoccupi.com",
+      "website": "https://getoccupi.com/",
+      "type": "mall-directory",
+      "estimated_relevance": "medium",
+      "categories_covered": ["malls"],
+      "important_urls": [
+        "https://getoccupi.com/malls/obour-plaza-2"
+      ],
+      "topics_covered": ["Obour Plaza 2 stores, map and hours"],
+      "entities_covered": ["Obour Plaza 2"]
+    },
+    {
+      "domain": "newcities.gov.eg",
+      "website": "https://newcities.gov.eg/",
+      "type": "government-official",
+      "estimated_relevance": "very-high",
+      "categories_covered": ["city-authority", "services", "urban-planning"],
+      "important_urls": [
+        "https://newcities.gov.eg/"
+      ],
+      "topics_covered": ["New Urban Communities Authority", "Obour New City Authority"],
+      "entities_covered": ["New Obour City Authority", "NUCA"]
+    },
+    {
+      "domain": "asu.edu.eg",
+      "website": "https://www.asu.edu.eg/",
+      "type": "university-official",
+      "estimated_relevance": "medium",
+      "categories_covered": ["hospitals"],
+      "important_urls": [
+        "https://www.asu.edu.eg/related-news/El+Obour+Hospital"
+      ],
+      "topics_covered": ["El Obour Hospital"],
+      "entities_covered": ["El Obour Hospital"]
+    },
+    {
+      "domain": "misrconsult.com",
+      "website": "https://misrconsult.com/",
+      "type": "consulting-portfolio",
+      "estimated_relevance": "low-medium",
+      "categories_covered": ["urban-planning"],
+      "important_urls": [
+        "https://misrconsult.com/portfolio/new-obour-smart-city/"
+      ],
+      "topics_covered": ["New Obour Smart City master plan"],
+      "entities_covered": ["New Obour Smart City"]
+    },
+    {
+      "domain": "businessmen-eg.com",
+      "website": "https://www.businessmen-eg.com/",
+      "type": "news",
+      "estimated_relevance": "low-medium",
+      "categories_covered": ["news", "real-estate"],
+      "important_urls": [
+        "https://www.businessmen-eg.com/en/5339/housing-minister-reviews-progress-of-residential-projects-in-new-cities"
+      ],
+      "topics_covered": ["New Obour residential projects"],
+      "entities_covered": []
+    },
+    {
+      "domain": "marsadomran.info",
+      "website": "https://marsadomran.info/",
+      "type": "research-database",
+      "estimated_relevance": "low-medium",
+      "categories_covered": ["data", "urban-planning"],
+      "important_urls": [
+        "https://marsadomran.info/en/2024/11/3588/"
+      ],
+      "topics_covered": ["mapping new cities in Egypt"],
+      "entities_covered": ["New Obour"]
+    }
+  ]
+}
