@@ -342,7 +342,7 @@ See full scoring and URLs in `seo-research/content-gap.csv`.
 ## Research Artifacts
 
 - `seo-research/competitors.json` — competitor landscape
-- `seo-research/raw-crawls/` — raw competitor crawls (research only)
+- `seo-research/raw-crawls/` — raw competitor crawls (research only; generated locally, excluded from git due to size)
 - `seo-research/entity-database.json` — master entity database
 - `seo-research/obourguide-audit.json` — local site audit
 - `seo-research/content-gap.csv` — prioritized content gaps
