@@ -23,7 +23,7 @@ const clientDir = path.join(root, "client");
 const report = [];
 const rep = (k, m) => report.push(`[${k}] ${m}`);
 
-const MARKER = "<!-- phase6.4-school-update -->";
+const MARKER = "<!-- phase6.4b-school-update -->";
 
 const UPDATES = [
   {
@@ -31,7 +31,7 @@ const UPDATES = [
     tableChanges: [
       { label: "العنوان", value: "13 شارع مبارك مهران، الحي السابع، مدينة العبور" },
       { label: "الهاتف", value: "01007189791" },
-      { label: "البريد الإلكتروني", value: "info.obour@nes.moe.edu.eg" },
+      { label: "البريد", value: "info.obour@nes.moe.edu.eg" },
     ],
     captionSource: {
       text: "تحديث أغسطس 2026: العنوان والهاتف والبريد منقولون عن الموقع الرسمي لمدارس النيل المصرية الدولية.",
@@ -66,34 +66,31 @@ const UPDATES = [
 ];
 
 function addRowsToTable(html, rows) {
-  // Find the table body: starts after <div><b>البند</b><b>التفاصيل</b></div>
-  const tableStart = html.indexOf('<div><b>البند</b><b>التفاصيل</b></div>');
-  if (tableStart === -1) return { html, added: false };
+  // Match the whole data-table block: <div class="data-table"><div><b>البند</b><b>التفاصيل</b></div> ... </div>
+  const tableRe = /(<div class="data-table"><div><b>البند<\/b><b>التفاصيل<\/b><\/div>)([\s\S]*?)(<\/div>\s*<p class="caption">)/;
+  const m = html.match(tableRe);
+  if (!m) return { html, added: false };
 
-  // Find the end of the table: the closing </div> before the caption <p class="caption">
-  const captionIdx = html.indexOf('<p class="caption">', tableStart);
-  if (captionIdx === -1) return { html, added: false };
-
+  let tableBody = m[2];
   let inserted = 0;
-  let tableSegment = html.slice(tableStart, captionIdx);
 
   for (const row of rows) {
     const rowHtml = `<div><span>${row.label}</span><span>${row.value}</span></div>`;
-    if (tableSegment.includes(`<span>${row.label}</span>`)) {
+    if (tableBody.includes(`<span>${row.label}</span>`)) {
       // Replace existing row value
       const re = new RegExp(`<div><span>${row.label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</span><span>[^<]*</span></div>`);
-      const updated = tableSegment.replace(re, rowHtml);
-      if (updated !== tableSegment) {
-        tableSegment = updated;
+      const updated = tableBody.replace(re, rowHtml);
+      if (updated !== tableBody) {
+        tableBody = updated;
         inserted++;
       }
     } else {
-      tableSegment += rowHtml;
+      tableBody += rowHtml;
       inserted++;
     }
   }
 
-  const newHtml = html.slice(0, tableStart) + tableSegment + html.slice(captionIdx);
+  const newHtml = html.replace(tableRe, `$1${tableBody}$3`);
   return { html: newHtml, added: inserted > 0 };
 }
 
@@ -108,6 +105,15 @@ function updateCaption(html, source) {
   return html.replace(/(<p class="caption">[\s\S]*?<\/p>)/, newCaption);
 }
 
+function cleanupOrphanRows(html) {
+  // Remove rows that were accidentally inserted outside the data-table block
+  // between the table's closing </div> and the caption paragraph.
+  return html.replace(
+    /<\/div>\s*((?:<div><span>[^<]+<\/span><span>[^<]*<\/span><\/div>\s*)+)<p class="caption">/,
+    "</div><p class=\"caption\">"
+  );
+}
+
 function updateSchool(slug, changes) {
   const file = path.join(clientDir, "schools", slug, "index.html");
   if (!fs.existsSync(file)) {
@@ -119,6 +125,9 @@ function updateSchool(slug, changes) {
     rep("skipped", `/schools/${slug}/ مُحدَّثة مسبقًا`);
     return { status: "skipped", slug };
   }
+
+  // Clean up any rows that were previously added outside the table block
+  html = cleanupOrphanRows(html);
 
   const { html: html2, added } = addRowsToTable(html, changes.tableChanges);
   if (!added) {
