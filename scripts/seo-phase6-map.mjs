@@ -3,9 +3,10 @@
  * المرحلة السادسة (6.2): صفحة /map/ التفاعلية.
  *
  * المبادئ:
- *   - idempotent: الملفات تُنشأ مرة واحدة؛ الصفحة تُعاد كتابتها بالكامل.
- *   - الإحداثيات من Nominatim OpenStreetMap مع تسجيل المصدر داخل data/map-pins.json.
- *   - ما لا يُعثر على إحداثي موثوق له لا يُدرج.
+ *   - idempotent: يُعاد الجيوكودينج للدبابيس المفقودة أو الخارجة فقط؛
+ *     الدبابيس الصالحة داخل حدود المدينتين تُحتفظ بها.
+ *   - الإحداثيات من Nominatim OpenStreetMap مع تسجيل صيغة البحث الناجحة.
+ *   - ما لا يُعثر على إحداثي موثوق له داخل الحدود لا يُدرج.
  *   - popup يحتوي رابطًا داخليًا فقط.
  */
 import fs from "node:fs";
@@ -28,8 +29,14 @@ const CATEGORY_COLORS = {
   landmarks: "#8B5A6B",
 };
 
+// حدود العبور / العبور الجديدة التقريبية
+const BOUNDS = { latMin: 30.19, latMax: 30.32, lonMin: 31.43, lonMax: 31.62 };
+function inBounds(lat, lon) {
+  return lat >= BOUNDS.latMin && lat <= BOUNDS.latMax && lon >= BOUNDS.lonMin && lon <= BOUNDS.lonMax;
+}
+
 // ---------------------------------------------------------------------------
-// جمع الأماكن المراد البحث عنها
+// استخراج بيانات من الصفحات
 // ---------------------------------------------------------------------------
 function listSlugs(dir) {
   const out = [];
@@ -49,122 +56,438 @@ function extractH1(file) {
   return m[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function districtSearchName(id, h1) {
+function extractAddressFromSchoolPage(file) {
+  const html = fs.readFileSync(file, "utf8");
+  // look for "العنوان" row added by phase6.4
+  const m = html.match(/<span>العنوان<\/span><span>([^<]+)<\/span>/);
+  return m ? m[1].trim() : null;
+}
+
+// ---------------------------------------------------------------------------
+// أسماء قصيرة للعرض في popup
+// ---------------------------------------------------------------------------
+function shortDistrictName(h1, id) {
+  const numMap = {
+    "district-1": "الحي الأول", "district-2": "الحي الثاني", "district-3": "الحي الثالث",
+    "district-4": "الحي الرابع", "district-5": "الحي الخامس", "district-6": "الحي السادس",
+    "district-7": "الحي السابع", "district-8": "الحي الثامن", "district-9": "الحي التاسع",
+    "district-24-bet-el-watan": "الحي 24 · بيت الوطن", "district-25": "الحي 25",
+    "el-momtaz": "الحي المتميز",
+  };
+  return numMap[id] || h1.replace(/ في العبور الجديدة:.*$/, "").trim();
+}
+
+function shortCompoundName(h1, id) {
+  const names = {
+    canary: "كناري", solana: "سولانا", sundus: "سندس", safari: "سفاري",
+    "vaily-residence": "فيالي ريزيدنس", "the-mars": "ذا مارس", "jeddah-mall": "مول جدة",
+    "obour-mall": "اوبو مول", "town-ten": "Town Ten", "glory-gardens": "جلوري جاردنز",
+    "o-kardia": "أو كارديا", "river-park": "River Park", "golf-city": "جولف سيتي",
+  };
+  return names[id] || h1.replace(/ في العبور.*$/, "").trim();
+}
+
+function shortSchoolName(h1, id) {
+  const names = {
+    "nile-egyptian-school-obour": "مدارس النيل المصرية",
+    "international-public-school-obour": "المدرسة الرسمية الدولية IPS",
+    "egyptian-japanese-school-obour": "المدرسة المصرية اليابانية EJS",
+    "bilal-bin-rabah-secondary": "ثانوية بلال بن رباح",
+    "horreya-educational-complex": "مجمع الحرية التعليمي",
+    "ips-rawdet-elobour": "IPS روضة العبور",
+    "karama-official-language-school": "مدارس الكرامة الرسمية للغات",
+    "new-republic-basic-education": "مجمع الجمهورية الجديدة",
+    "osama-bin-zaid-complex": "مجمع أسامة بن زيد",
+    "shaimaa-educational-complex": "مجمع الشيماء التعليمي",
+  };
+  return names[id] || h1.replace(/ \(EJS\)| \(IPS\)/, "").trim();
+}
+
+function shortLandmarkName(id) {
+  return {
+    "obour-university": "جامعة العبور",
+    "obour-new-city-authority": "جهاز مدينة العبور الجديدة",
+    "obour-stadium": "استاد العبور",
+  }[id] || id;
+}
+
+// ---------------------------------------------------------------------------
+// بناء استعلامات البحث
+// ---------------------------------------------------------------------------
+function districtSearchVariants(id, h1) {
   const numMap = {
     "district-1": "1", "district-2": "2", "district-3": "3", "district-4": "4",
     "district-5": "5", "district-6": "6", "district-7": "7", "district-8": "8", "district-9": "9",
     "district-24-bet-el-watan": "24", "district-25": "25", "el-momtaz": "El Momtaz",
   };
   const n = numMap[id];
-  if (!n) return h1;
-  return n === "El Momtaz" ? "El Momtaz Obour Egypt" : `District ${n} Obour Egypt`;
+  if (id === "el-momtaz") {
+    return [
+      "الحي المتميز مدينة العبور",
+      "حي المتميز العبور",
+      "El Momtaz Obour Egypt",
+      "El Momtaz district Obour city",
+      "Al Momtaz Obour",
+    ];
+  }
+  return [
+    `الحي ${n} مدينة العبور`,
+    `الحي ${n} العبور الجديدة`,
+    `حي ${n} العبور`,
+    `District ${n} Obour New City`,
+    `District ${n} Obour`,
+    `Obour district ${n}`,
+    `Al Hayy ${n} Obour`,
+  ];
 }
 
-function shortName(h1) {
-  return h1
-    .replace(/ في العبور الجديدة/g, "")
-    .replace(/مدارس النيل المصرية الدولية — فرع العبور/g, "Nile Egyptian Schools Obour")
-    .replace(/المدرسة الرسمية الدولية بالعبور \(IPS\)/g, "International Public School Obour")
-    .replace(/المدرسة المصرية اليابانية بالعبور \(EJS\)/g, "Egyptian Japanese School Obour")
-    .replace(/مجمع الحرية التعليمي/g, "Horreya Educational Complex Obour")
-    .replace(/مدارس الكرامة الرسمية للغات/g, "Karama Language School Obour")
-    .replace(/مجمع الجمهورية الجديدة للتعليم الأساسي/g, "New Republic School Obour")
-    .replace(/المدرسة الرسمية الدولية روضة العبور \(IPS\)/g, "IPS Rawdet Obour")
-    .replace(/مجمع أسامة بن زيد التعليمي/g, "Osama Bin Zaid School Obour")
-    .replace(/مجمع الشيماء التعليمي/g, "Shaimaa Educational Complex Obour")
-    .replace(/بلال بن رباح الثانوية المشتركة/g, "Bilal Bin Rabah School Obour")
-    .trim();
-}
-
-function compoundSearchName(id, h1) {
-  const names = {
-    canary: "Canary Compound Obour",
-    solana: "Solana Compound Obour",
-    sundus: "Sundus Compound Obour",
-    safari: "Safari Compound Obour",
-    "vaily-residence": "Vaily Residence Obour",
-    "the-mars": "The Mars Compound Obour",
-    "jeddah-mall": "Jeddah Mall Obour",
-    "obour-mall": "Obour Mall Obour",
-    "town-ten": "Town Ten Compound Obour",
-    "glory-gardens": "Glory Gardens Obour",
-    "o-kardia": "O Kardia Obour",
-    "river-park": "River Park Obour",
-    "golf-city": "Golf City Obour",
+function compoundSearchVariants(id, h1) {
+  const enNames = {
+    canary: "Canary", solana: "Solana", sundus: "Sundus", safari: "Safari",
+    "vaily-residence": "Vaily Residence", "the-mars": "The Mars", "jeddah-mall": "Jeddah Mall",
+    "obour-mall": "Obour Mall", "town-ten": "Town Ten", "glory-gardens": "Glory Gardens",
+    "o-kardia": "O Kardia", "river-park": "River Park", "golf-city": "Golf City",
   };
-  return names[id] || shortName(h1) + " Obour";
+  const arNames = {
+    canary: "كناري", solana: "سولانا", sundus: "سندس", safari: "سفاري",
+    "vaily-residence": "فيالي ريزيدنس", "the-mars": "ذا مارس", "jeddah-mall": "مول جدة",
+    "obour-mall": "اوبو مول", "town-ten": "تاون تن", "glory-gardens": "جلوري جاردنز",
+    "o-kardia": "او كارديا", "river-park": "ريفر بارك", "golf-city": "جولف سيتي",
+  };
+  const base = enNames[id] || h1.replace(/ في العبور.*$/, "").trim();
+  const ar = arNames[id] || shortCompoundName(h1, id);
+  return [
+    `${base} Obour New City`,
+    `كمبوند ${ar} العبور`,
+    `${base} Compound Obour`,
+    `${ar} مدينة العبور الجديدة`,
+    `${base} El Obour`,
+    `${ar} العبور`,
+    `${base} Egypt`,
+  ];
+}
+
+function schoolSearchVariants(q) {
+  const variants = [];
+  // priority: published address
+  if (q.address) {
+    variants.push(`${q.address}، العبور`);
+    variants.push(`${q.address}، مدينة العبور`);
+  }
+  const short = q.displayName;
+  variants.push(`${short}، العبور`);
+  variants.push(`${short}، مدينة العبور`);
+  if (q.englishName) {
+    variants.push(`${q.englishName} Obour`);
+    variants.push(`${q.englishName} El Obour`);
+  }
+  variants.push(`${short} Egypt`);
+  return [...new Set(variants)];
+}
+
+function landmarkSearchVariants(id) {
+  if (id === "obour-university") {
+    return [
+      "جامعة العبور",
+      "Obour University",
+      "Obour University Egypt",
+      "Obour University Qalyubia",
+    ];
+  }
+  if (id === "obour-new-city-authority") {
+    return [
+      "جهاز مدينة العبور الجديدة",
+      "New Obour City Authority",
+      "جهاز العبور الجديدة",
+    ];
+  }
+  if (id === "obour-stadium") {
+    return [
+      "استاد العبور",
+      "Obour Stadium",
+      "Obour Stadium Egypt",
+      "ستاد العبور",
+    ];
+  }
+  return [];
 }
 
 function buildQueries() {
   const queries = [];
   for (const it of listSlugs(path.join(clientDir, "districts"))) {
     const h1 = extractH1(it.file);
-    queries.push({ id: it.id, slug: it.slug, name: h1, category: "districts", search: districtSearchName(it.id, h1) });
+    queries.push({
+      id: it.id,
+      slug: it.slug,
+      name: h1,
+      displayName: shortDistrictName(h1, it.id),
+      category: "districts",
+      variants: districtSearchVariants(it.id, h1),
+    });
   }
   for (const it of listSlugs(path.join(clientDir, "compounds"))) {
     const h1 = extractH1(it.file);
-    queries.push({ id: it.id, slug: it.slug, name: h1, category: "compounds", search: compoundSearchName(it.id, h1) });
+    queries.push({
+      id: it.id,
+      slug: it.slug,
+      name: h1,
+      displayName: shortCompoundName(h1, it.id),
+      category: "compounds",
+      variants: compoundSearchVariants(it.id, h1),
+    });
   }
+  const englishNames = {
+    "nile-egyptian-school-obour": "Nile Egyptian International School Obour",
+    "international-public-school-obour": "International Public School Obour",
+    "egyptian-japanese-school-obour": "Egyptian Japanese School Obour",
+    "bilal-bin-rabah-secondary": "Bilal Bin Rabah School Obour",
+    "horreya-educational-complex": "Horreya Educational Complex Obour",
+    "ips-rawdet-elobour": "IPS Rawdet Obour",
+    "karama-official-language-school": "Karama Language School Obour",
+    "new-republic-basic-education": "New Republic School Obour",
+    "osama-bin-zaid-complex": "Osama Bin Zaid School Obour",
+    "shaimaa-educational-complex": "Shaimaa Educational Complex Obour",
+  };
   for (const it of listSlugs(path.join(clientDir, "schools"))) {
     const h1 = extractH1(it.file);
-    queries.push({ id: it.id, slug: it.slug, name: h1, category: "schools", search: shortName(h1) + " Egypt" });
+    queries.push({
+      id: it.id,
+      slug: it.slug,
+      name: h1,
+      displayName: shortSchoolName(h1, it.id),
+      englishName: englishNames[it.id] || null,
+      address: extractAddressFromSchoolPage(it.file),
+      category: "schools",
+      variants: [], // filled below
+    });
   }
-  queries.push({ id: "obour-university", slug: "/about/", name: "جامعة العبور", category: "landmarks", search: "Obour University Egypt" });
-  queries.push({ id: "obour-new-city-authority", slug: "/about/", name: "جهاز مدينة العبور الجديدة", category: "landmarks", search: "New Obour City Authority Egypt" });
-  queries.push({ id: "obour-stadium", slug: "/about/", name: "استاد العبور", category: "landmarks", search: "Obour Stadium Egypt" });
+  // fill variants for schools after address/englishName are set
+  for (const q of queries.filter((x) => x.category === "schools")) {
+    q.variants = schoolSearchVariants(q);
+  }
+
+  queries.push({
+    id: "obour-university",
+    slug: "/about/",
+    name: "جامعة العبور",
+    displayName: shortLandmarkName("obour-university"),
+    category: "landmarks",
+    variants: landmarkSearchVariants("obour-university"),
+  });
+  queries.push({
+    id: "obour-new-city-authority",
+    slug: "/about/",
+    name: "جهاز مدينة العبور الجديدة",
+    displayName: shortLandmarkName("obour-new-city-authority"),
+    category: "landmarks",
+    variants: landmarkSearchVariants("obour-new-city-authority"),
+  });
+  queries.push({
+    id: "obour-stadium",
+    slug: "/about/",
+    name: "استاد العبور",
+    displayName: shortLandmarkName("obour-stadium"),
+    category: "landmarks",
+    variants: landmarkSearchVariants("obour-stadium"),
+  });
   return queries;
 }
 
 // ---------------------------------------------------------------------------
 // Nominatim geocoding
 // ---------------------------------------------------------------------------
-async function geocodeOne(q) {
-  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q.search)}&format=json&limit=1`;
+async function geocodeRaw(query) {
+  // Use Photon by komoot with a bbox around Obour/New Obour for better local results.
+  const bbox = `${BOUNDS.lonMin},${BOUNDS.latMin},${BOUNDS.lonMax},${BOUNDS.latMax}`;
+  const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=1&bbox=${bbox}`;
   try {
     const res = await fetch(url, { headers: { "User-Agent": "obourguide-bot/1.0" }, signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     const data = await res.json();
-    if (!Array.isArray(data) || data.length === 0) return null;
+    if (!data.features || data.features.length === 0) return null;
+    const f = data.features[0];
+    const coords = f.geometry.coordinates;
+    const p = f.properties;
+    const display = [p.name, p.street, p.district, p.city, p.state, p.country]
+      .filter(Boolean)
+      .join(", ");
     return {
-      id: q.id,
-      slug: q.slug,
-      name: q.name,
-      category: q.category,
-      lat: parseFloat(data[0].lat),
-      lon: parseFloat(data[0].lon),
-      source: `OpenStreetMap Nominatim — ${data[0].display_name} (licence: ${data[0].licence || "ODbL"})`,
+      lat: parseFloat(coords[1]),
+      lon: parseFloat(coords[0]),
+      display_name: display || query,
+      licence: "ODbL",
+      feature: f,
     };
   } catch {
     return null;
   }
 }
 
-async function ensurePinsFile() {
-  fs.mkdirSync(dataDir, { recursive: true });
-  const p = path.join(dataDir, "map-pins.json");
-  if (fs.existsSync(p)) {
-    rep("data", "data/map-pins.json موجود مسبقًا — لم يُعدل");
-    try {
-      return JSON.parse(fs.readFileSync(p, "utf8"));
-    } catch {
-      return [];
-    }
+function isGenericResult(name, displayName) {
+  if (!name) return true;
+  const lower = name.toLowerCase();
+  // Generic-only names that Photon returns when it cannot find the requested place
+  const generic = [
+    "العبور", "obour", "مدينة العبور", "new obour city", "el obour",
+    "كمبوند هاى سيتى", "high city", "هاي سيتي", "hay city",
+    "مول سيتي", "mall city", "city mall", "سيتي مول",
+    "العبور الجديدة", "obour city",
+  ];
+  for (const g of generic) {
+    if (lower === g || lower === g.replace(/\s+/g, "")) return true;
   }
-  const queries = buildQueries();
-  const pins = [];
-  for (const q of queries) {
-    const pin = await geocodeOne(q);
-    if (pin) {
-      pins.push(pin);
-      rep("geocode", `${pin.name} → ${pin.lat}, ${pin.lon}`);
-    } else {
-      rep("geocode", `${q.name} → لم يُعثر على إحداثي موثوق — تُخطّى`);
+  return false;
+}
+
+function resultMatches(feature, q) {
+  const p = feature.properties;
+  const name = (p.name || "").toLowerCase();
+  const street = (p.street || "").toLowerCase();
+  const locality = (p.locality || "").toLowerCase();
+  const district = (p.district || "").toLowerCase();
+  const city = (p.city || "").toLowerCase();
+  const state = (p.state || "").toLowerCase();
+  // Must be in Qalyubia
+  if (state && !state.includes("قليوبية") && !state.includes("qalyubia")) return false;
+  // Must not be a generic-only result
+  if (isGenericResult(p.name, q.displayName)) return false;
+
+  const fullText = `${name} ${street} ${locality} ${district} ${city}`;
+
+  // Districts: accept if locality/district/street/name contains the district number/name
+  // and does NOT contain a different district number/name.
+  if (q.category === "districts") {
+    const numMap = {
+      "district-1": ["1", "الاول", "الأول"], "district-2": ["2", "الثاني"], "district-3": ["3", "الثالث"],
+      "district-4": ["4", "الرابع"], "district-5": ["5", "الخامس"], "district-6": ["6", "السادس"],
+      "district-7": ["7", "السابع"], "district-8": ["8", "الثامن"], "district-9": ["9", "التاسع"],
+      "district-24-bet-el-watan": ["24", "بيت الوطن"], "district-25": ["25"], "el-momtaz": ["المتميز", "momtaz"],
+    };
+    const markers = numMap[q.id] || [];
+    let matched = false;
+    for (const marker of markers) {
+      if (fullText.includes(marker.toLowerCase())) { matched = true; break; }
+    }
+    if (!matched) return false;
+    // Reject if result mentions a different district number (e.g. street 3 for district 5)
+    const allNumbers = ["1","2","3","4","5","6","7","8","9","24","25"];
+    for (const n of allNumbers) {
+      if (markers.includes(n)) continue;
+      if (fullText.includes(` ${n} `) || fullText.includes(`شارع ${n}`) || fullText.includes(`street ${n}`) || fullText.includes(`district ${n}`) || fullText.includes(`حي ${n}`) || fullText.includes(`الحي ${n}`)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // For schools/landmarks/compounds: accept if name/street/locality contains a keyword
+  const keywords = [q.displayName, ...(q.englishName ? [q.englishName] : [])]
+    .filter(Boolean)
+    .flatMap((n) => n.split(/\s+/));
+  for (const kw of keywords) {
+    const clean = kw.replace(/[()]/g, "").toLowerCase();
+    if (clean.length < 3) continue;
+    if (fullText.includes(clean)) return true;
+  }
+  // Compounds: also accept if the Arabic or English compound name appears
+  if (q.category === "compounds") {
+    const ar = shortCompoundName(q.name, q.id).toLowerCase();
+    const enNames = {
+      canary: "canary", solana: "solana", sundus: "sundus", safari: "safari",
+      "vaily-residence": "vaily", "the-mars": "mars", "jeddah-mall": "jeddah",
+      "obour-mall": "obour mall", "town-ten": "town ten", "glory-gardens": "glory",
+      "o-kardia": "kardia", "river-park": "river", "golf-city": "golf",
+    };
+    const en = (enNames[q.id] || "").toLowerCase();
+    if (name.includes(ar) || name.includes(en)) return true;
+  }
+  return false;
+}
+
+function coordKey(lat, lon) {
+  return `${lat.toFixed(6)},${lon.toFixed(6)}`;
+}
+
+async function geocodeOne(q, usedCoords) {
+  for (const variant of q.variants) {
+    const result = await geocodeRaw(variant);
+    if (result && inBounds(result.lat, result.lon) && resultMatches(result.feature, q)) {
+      const key = coordKey(result.lat, result.lon);
+      if (usedCoords.has(key)) {
+        rep("dedup", `${q.displayName}: تُجاهل نتيجة مكررة مع كيان آخر عند ${key}`);
+        continue;
+      }
+      return {
+        id: q.id,
+        slug: q.slug,
+        name: q.displayName,
+        category: q.category,
+        lat: result.lat,
+        lon: result.lon,
+        source: `OpenStreetMap/Photon — «${variant}» — ${result.display_name} (licence: ${result.licence || "ODbL"})`,
+      };
     }
     await new Promise((r) => setTimeout(r, 1100));
   }
+  return null;
+}
+
+// ---------------------------------------------------------------------------
+// إدارة ملف الدبابيس
+// ---------------------------------------------------------------------------
+function loadExistingPins() {
+  const p = path.join(dataDir, "map-pins.json");
+  if (!fs.existsSync(p)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(p, "utf8"));
+  } catch {
+    return [];
+  }
+}
+
+async function ensurePinsFile() {
+  fs.mkdirSync(dataDir, { recursive: true });
+  const p = path.join(dataDir, "map-pins.json");
+  const existing = loadExistingPins();
+  const queries = buildQueries();
+
+  const kept = [];
+  const skipped = [];
+  const added = [];
+  const usedCoords = new Set();
+
+  // Seed used coords from existing valid pins to avoid duplicates across rebuilds
+  for (const pin of existing) {
+    if (inBounds(pin.lat, pin.lon)) usedCoords.add(coordKey(pin.lat, pin.lon));
+  }
+
+  for (const q of queries) {
+    const existingPin = existing.find((p) => p.id === q.id);
+    if (existingPin && inBounds(existingPin.lat, existingPin.lon)) {
+      // keep but ensure short name
+      kept.push({ ...existingPin, name: q.displayName });
+      usedCoords.add(coordKey(existingPin.lat, existingPin.lon));
+      rep("keep", `${q.displayName}: إحداثي موجود داخل الحدود — تُحتفظ به`);
+      continue;
+    }
+    if (existingPin) {
+      rep("drop", `${q.displayName}: إحداثي سابق خارج حدود المدينتين — يُعاد البحث`);
+    }
+    const pin = await geocodeOne(q, usedCoords);
+    if (pin) {
+      added.push(pin);
+      usedCoords.add(coordKey(pin.lat, pin.lon));
+      rep("geocode", `${pin.name} → ${pin.lat}, ${pin.lon} (بحث: ${q.variants.find((v) => pin.source.includes(`«${v}»`)) || q.variants[0]})`);
+    } else {
+      skipped.push({ id: q.id, name: q.displayName, category: q.category, reason: "لم يُعثر على إحداثي موثوق داخل الحدود" });
+      rep("skip", `${q.displayName}: لم يُعثر على إحداثي موثوق داخل الحدود — تُخطّى`);
+    }
+  }
+
+  const pins = [...kept, ...added];
   fs.writeFileSync(p, JSON.stringify(pins, null, 2) + "\n");
-  rep("data", `أُنشئ data/map-pins.json بـ ${pins.length} دبوس`);
-  return pins;
+  rep("data", `أُنشئ/أُحدّث data/map-pins.json: ${pins.length} دبوس (مُحتفظ ${kept.length}، مُضاف ${added.length}، مُخطّى ${skipped.length})`);
+  return { pins, skipped };
 }
 
 // ---------------------------------------------------------------------------
@@ -230,7 +553,7 @@ function mapPage(chrome, pins) {
 (function(){
   const pins = ${pinsJson};
   const colors = ${JSON.stringify(CATEGORY_COLORS)};
-  const map = L.map('map').setView([30.21, 31.47], 12);
+  const map = L.map('map').setView([30.225, 31.50], 12);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/" target="_blank" rel="nofollow noopener">CARTO</a>',
     subdomains: 'abcd',
@@ -296,7 +619,6 @@ function addMapLinkToCityMenu() {
       else if (e.name === "index.html") {
         let html = fs.readFileSync(full, "utf8");
         if (!html.includes(marker)) {
-          // add after "عن المدينة" in city dropdown
           html = html.replace(
             /(<a href="\/about\/">عن المدينة<\/a>)/,
             '$1<a href="/map/">الخريطة</a>'
@@ -315,7 +637,7 @@ function addMapLinkToCityMenu() {
 
 // ---------------------------------------------------------------------------
 async function main() {
-  const pins = await ensurePinsFile();
+  const { pins, skipped } = await ensurePinsFile();
   const chrome = loadChrome();
   const dir = path.join(clientDir, "map");
   fs.mkdirSync(dir, { recursive: true });
@@ -326,6 +648,10 @@ async function main() {
   console.log("=== تقرير المرحلة السادسة: الخريطة التفاعلية (6.2) ===");
   for (const line of report) console.log(line);
   console.log(`=== انتهى: ${report.length} عملية ===`);
+  if (skipped.length) {
+    console.log("=== ماتُخطّى (خارج الخريطة) ===");
+    for (const s of skipped) console.log(`- [${s.category}] ${s.name}: ${s.reason}`);
+  }
 }
 
 main();
