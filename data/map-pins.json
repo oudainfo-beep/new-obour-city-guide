@@ -1,0 +1,119 @@
+[
+  {
+    "id": "district-1",
+    "slug": "/districts/district-1/",
+    "name": "الحي الأول في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2479229,
+    "lon": 31.4884525,
+    "source": "OpenStreetMap Nominatim — 1, شارع نعمان جمعه, عمارات مصر للطيران, العبور, القليوبية, 11828, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-2",
+    "slug": "/districts/district-2/",
+    "name": "الحي الثاني في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2491407,
+    "lon": 31.4867363,
+    "source": "OpenStreetMap Nominatim — 2, شارع نعمان جمعه, عمارات مصر للطيران, العبور, القليوبية, 11828, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-24-bet-el-watan",
+    "slug": "/districts/district-24-bet-el-watan/",
+    "name": "الحي 24 · بيت الوطن في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2451936,
+    "lon": 31.4869099,
+    "source": "OpenStreetMap Nominatim — 24, محور السادات, عمارات مصر للطيران, العبور, القليوبية, 11828, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-25",
+    "slug": "/districts/district-25/",
+    "name": "الحي 25 · الإسكان الفاخر في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2452486,
+    "lon": 31.4870509,
+    "source": "OpenStreetMap Nominatim — 25, محور السادات, عمارات مصر للطيران, العبور, القليوبية, 11828, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-3",
+    "slug": "/districts/district-3/",
+    "name": "الحي الثالث في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2398287,
+    "lon": 31.4847074,
+    "source": "OpenStreetMap Nominatim — الحى 3, العبور, القليوبية, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-4",
+    "slug": "/districts/district-4/",
+    "name": "الحي الرابع في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2353672,
+    "lon": 31.4905381,
+    "source": "OpenStreetMap Nominatim — الحى 4, العبور, القليوبية, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-5",
+    "slug": "/districts/district-5/",
+    "name": "الحي الخامس في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2213383,
+    "lon": 31.4743073,
+    "source": "OpenStreetMap Nominatim — الحى 5, العبور, القليوبية, 11828, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-6",
+    "slug": "/districts/district-6/",
+    "name": "الحي السادس في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2089204,
+    "lon": 31.4650924,
+    "source": "OpenStreetMap Nominatim — الحى 6, العبور, القليوبية, 02000, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-7",
+    "slug": "/districts/district-7/",
+    "name": "الحي السابع في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.1914038,
+    "lon": 31.4739913,
+    "source": "OpenStreetMap Nominatim — الحى 7, العبور, القليوبية, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-8",
+    "slug": "/districts/district-8/",
+    "name": "الحي الثامن في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2491787,
+    "lon": 31.4857918,
+    "source": "OpenStreetMap Nominatim — 8, شارع نعمان جمعه, عمارات مصر للطيران, العبور, القليوبية, 11828, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "district-9",
+    "slug": "/districts/district-9/",
+    "name": "الحي التاسع في العبور الجديدة: الموقع والخدمات والأسعار",
+    "category": "districts",
+    "lat": 30.2224623,
+    "lon": 31.4480334,
+    "source": "OpenStreetMap Nominatim — الحى 9, العبور, القليوبية, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "golf-city",
+    "slug": "/compounds/golf-city/",
+    "name": "جولف سيتي في العبور الجديدة",
+    "category": "compounds",
+    "lat": 30.1800729,
+    "lon": 31.4799307,
+    "source": "OpenStreetMap Nominatim — جولف سيتى, العبور, القليوبية, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  },
+  {
+    "id": "obour-university",
+    "slug": "/about/",
+    "name": "جامعة العبور",
+    "category": "landmarks",
+    "lat": 30.0145238,
+    "lon": 31.5010658,
+    "source": "OpenStreetMap Nominatim — محور الجامعه الامريكيه, أحياء اللوتس, القاهرة, 11865, مصر (licence: Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright)"
+  }
+]
