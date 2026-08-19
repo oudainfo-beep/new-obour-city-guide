@@ -270,6 +270,22 @@ function restaurantsPage(chrome) {
   <li>Visit the area on a Thursday evening to gauge noise and parking.</li>
   <li>Check whether daily groceries, not just restaurants, are within walking distance.</li>
 </ol>
+
+<h2>Delivery coverage: the real test</h2>
+<p>A restaurant 2 km away on a map may refuse delivery to your exact building, especially in newer parts of New Obour where addresses are still being mapped. Open the main delivery apps, pin your prospective unit, and see which restaurants actually appear. Then check estimated delivery time at 8 PM on a Thursday — that is when delays are longest.</p>
+
+<p>Also test the reverse: if you prefer cooking, see whether supermarkets and green grocers deliver to the same address. A district with few restaurants but reliable grocery delivery may suit some families better than a noisy food cluster.</p>
+
+<h2>What the categories mean in practice</h2>
+<ul>
+  <li><strong>Fast food:</strong> widely available, often the first to deliver to new areas.</li>
+  <li><strong>Cafes:</strong> concentrated near commercial axes; useful as a daytime workspace signal.</li>
+  <li><strong>Bakeries:</strong> essential for daily bread; check morning opening hours.</li>
+  <li><strong>Grills and seafood:</strong> usually clustered; expect higher evening traffic around them.</li>
+</ul>
+
+<h2>Red flags to watch</h2>
+<p>Be cautious if a listing has no phone, no exact address, or only a district name. In a rapidly growing city, old locations close and new ones open quickly. Call before visiting, and ask for a nearby landmark if the street name is unfamiliar to your driver.</p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
@@ -305,6 +321,17 @@ function hospitalsPage(chrome) {
 <p>The directory lists 19 major hospitals and medical centers with published addresses and phones. It is a starting point, not a medical recommendation.</p>
 
 <p><a href="/hospitals/">Browse the full Arabic directory →</a> (Arabic) · <a href="/en/clinics/">Clinics</a> · <a href="/en/pharmacies/">Pharmacies</a></p>
+
+<h2>Emergency planning by district</h2>
+<p>If you are considering a unit far from the main Cairo-Ismailia road or the regional ring road, plan the emergency route in advance. Ask a local driver how long the trip takes at 9 PM, not at noon. Some new districts have short map distances to hospitals but require longer exits or unlit connecting roads.</p>
+
+<p>For families with children, note which hospital has a pediatric emergency unit and whether it operates overnight. For older residents, check cardiology and neurology availability. The presence of a hospital nearby matters less if the specialty you need is only available during daytime hours.</p>
+
+<h2>Insurance and payment reality</h2>
+<p>Even if a hospital is technically "nearby," verify that it accepts your health insurance network. Many private centers require cash deposits for emergency admission. Ask neighbors or building security about their real experience with the nearest facilities — they often know which hospital responds fastest at night.</p>
+
+<h2>When to use a hospital versus a clinic</h2>
+<p>Use the hospital directory for emergencies, surgeries, and specialist consultations. For routine dental work, dermatology, physiotherapy, or lab tests, the <a href="/en/clinics/">clinics directory</a> is usually more convenient and faster. The key is knowing which option is appropriate before a crisis happens.</p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
@@ -348,6 +375,17 @@ function schoolsPage(chrome) {
 </ol>
 
 <p><a href="/schools/">Browse the full Arabic directory →</a> (Arabic) · <a href="/en/living-guide/">Living guide</a></p>
+
+<h2>Location matters more than distance</h2>
+<p>A school may be only 3 km away on a map but require 25 minutes during the morning queue. Test the route from your shortlisted building to the school gate at the exact pickup and drop-off times. Ask about school bus routes: some schools cover wide areas, while others expect parents to arrange private transport.</p>
+
+<p>Also confirm which district the school is actually in. Some school names include "Obour" but serve students from both Old Obour and New Obour. The administrative zone can affect admission priority and transport logistics.</p>
+
+<h2>Fee structure: what to ask</h2>
+<p>Published fees are usually the tuition portion only. Ask specifically about application fees, seat deposits, annual activity fees, uniform, books, and bus fees. Some international schools also charge separate exam registration fees for IGCSE or SAT tracks. A quoted fee that looks affordable can double once extras are added.</p>
+
+<h2>Timing and admissions</h2>
+<p>International and Nile schools often open admissions months before government schools. If you are moving mid-year, ask whether the grade you need has an open seat. Government schools may require district-based documentation, so confirm the required papers early rather than waiting until the last week of August.</p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
@@ -377,6 +415,17 @@ function pharmaciesPage(chrome) {
 <p>The directory lists 42 pharmacies with published addresses and phones. Use it to map coverage around your shortlist, then confirm opening hours directly.</p>
 
 <p><a href="/pharmacies/">Browse the full Arabic directory →</a> (Arabic) · <a href="/en/hospitals/">Hospitals</a> · <a href="/en/clinics/">Clinics</a></p>
+
+<h2>24-hour coverage is not universal</h2>
+<p>Many pharmacies in the directory keep standard daytime hours. Night coverage often rotates between a few central locations, especially on main axes. If you have a chronic condition, small children, or elderly family members, identify the nearest 24-hour or late-night option before you need it. Calling the pharmacy after 10 PM is the fastest way to confirm.</p>
+
+<p>In New Obour specifically, retail pharmacy coverage is still developing in some districts. Residents in newer phases often rely on pharmacies in Old Obour, Golf City, or Youth Housing for late-night needs. Factor that distance into your decision if medication access is a priority.</p>
+
+<h2>Delivery vs. in-person</h2>
+<p>Delivery apps can cover some addresses in Obour, but coverage gaps exist in newer blocks. Even when delivery is available, controlled or refrigerated medicines usually require a personal visit. Use delivery for convenience, not as your only plan.</p>
+
+<h2>Stock differences between branches</h2>
+<p>Larger branches on commercial axes usually stock a wider range of medicines, supplements, and medical supplies. Smaller neighborhood branches may need to order less common items. If you take a specific medication regularly, ask your nearest branch whether they keep it in stock or can order it reliably.</p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
@@ -411,6 +460,22 @@ function clinicsPage(chrome) {
 </ol>
 
 <p><a href="/clinics/">Browse the full Arabic directory →</a> (Arabic) · <a href="/en/hospitals/">Hospitals</a> · <a href="/en/pharmacies/">Pharmacies</a></p>
+
+<h2>Specialty concentration by area</h2>
+<p>Dental and dermatology clinics are widely distributed, while pediatric and physiotherapy centers tend to cluster near main roads. Radiology and lab networks usually have a central branch plus smaller collection points. If your doctor orders an MRI or CT scan, you may need to visit a central branch even if a smaller lab is closer.</p>
+
+<p>Use the district filter in the Arabic directory to see which specialties are actually available near your shortlisted area. A district with many general practitioners but no pediatrician or physiotherapist may force long regular trips.</p>
+
+<h2>Verification steps</h2>
+<ul>
+  <li>Ask the clinic for the doctor's syndicate registration number if it is not displayed.</li>
+  <li>For labs, check whether they are accredited by the relevant health authority.</li>
+  <li>Read recent reviews from local residents, not generic ratings.</li>
+  <li>Confirm prices for common procedures before booking.</li>
+</ul>
+
+<h2>Clinic or hospital?</h2>
+<p>Choose a clinic for routine checkups, chronic disease follow-up, dental work, skin treatments, and physiotherapy. Go to a hospital for emergencies, surgeries, overnight admission, or when multiple specialties need to coordinate. Knowing the difference saves time and money, and prevents overcrowding emergency rooms for non-urgent cases.</p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
