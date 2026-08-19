@@ -424,9 +424,9 @@ function developersPage(chrome) {
 <div class="table-wrap"><table class="data-table">
 <thead><tr><th>Developer</th><th>Delivered units</th><th>Management</th><th>Finance</th><th>Transparency</th><th>Density</th><th>Total</th></tr></thead>
 <tbody>
+  <tr><td><a href="/developers/alashraaf/">Al-Ashraaf Real Estate</a> (Arabic)</td><td>4.2</td><td>2.0</td><td>4.5</td><td>2.0</td><td>2.5</td><td>3.0 / 5</td></tr>
   <tr><td><a href="/developers/ouda/">Ouda Real Estate Development</a> (Arabic)</td><td>4.6</td><td>4.5</td><td>4.5</td><td>4.2</td><td>4.3</td><td>4.4 / 5</td></tr>
   <tr><td><a href="/developers/alsafwa/">Al-Safwa Urban Development</a> (Arabic)</td><td>4.5</td><td>2.0</td><td>4.4</td><td>2.8</td><td>2.7</td><td>3.3 / 5</td></tr>
-  <tr><td><a href="/developers/alashraaf/">Al-Ashraaf Real Estate</a> (Arabic)</td><td>4.2</td><td>2.0</td><td>4.5</td><td>2.0</td><td>2.5</td><td>3.0 / 5</td></tr>
   <tr><td><a href="/developers/elmoltqa/">El-Moltqa Real Estate</a> (Arabic)</td><td>3.6</td><td>2.0</td><td>1.8</td><td>3.4</td><td>4.5</td><td>3.1 / 5</td></tr>
   <tr><td><a href="/developers/valero/">Valero Developments</a> (Arabic)</td><td>2.0</td><td>4.3</td><td>2.6</td><td>4.0</td><td>2.2</td><td>3.0 / 5</td></tr>
   <tr><td><a href="/developers/kayan/">Kayan Real Estate</a> (Arabic)</td><td>2.6</td><td>2.0</td><td>1.8</td><td>3.6</td><td>3.8</td><td>2.8 / 5</td></tr>
