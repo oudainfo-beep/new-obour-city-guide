@@ -19,8 +19,16 @@ const dataDir = path.join(root, "data");
 const SITE = "https://obourguide.com";
 const DEFAULT_LASTMOD = "2026-08";
 
+// حدود زمنية لجعل الـ build موثوقًا في بيئات الشبكة البطيئة
+const GLOBAL_GEOCODE_TIMEOUT_MS = 60000; // إجمالي وقت الجيوكودينج
+const PER_REQUEST_TIMEOUT_MS = 8000;     // مهلة كل طلب
+const DELAY_BETWEEN_REQUESTS_MS = 500;   // تأخير بين الطلبات
+const MAX_VARIANTS_PER_QUERY = 3;        // لا نجرب أكثر من 3 صيغ بحث
+
 const report = [];
 const rep = (k, m) => report.push(`[${k}] ${m}`);
+
+let geocodeDeadline = 0;
 
 const CATEGORY_COLORS = {
   districts: "#3E6B4A",
@@ -298,10 +306,13 @@ function buildQueries() {
 // ---------------------------------------------------------------------------
 async function geocodeRaw(query) {
   // Use Photon by komoot with a bbox around Obour/New Obour for better local results.
+  if (Date.now() > geocodeDeadline) {
+    throw new Error("global-timeout");
+  }
   const bbox = `${BOUNDS.lonMin},${BOUNDS.latMin},${BOUNDS.lonMax},${BOUNDS.latMax}`;
   const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=1&bbox=${bbox}`;
   try {
-    const res = await fetch(url, { headers: { "User-Agent": "obourguide-bot/1.0" }, signal: AbortSignal.timeout(15000) });
+    const res = await fetch(url, { headers: { "User-Agent": "obourguide-bot/1.0" }, signal: AbortSignal.timeout(PER_REQUEST_TIMEOUT_MS) });
     if (!res.ok) return null;
     const data = await res.json();
     if (!data.features || data.features.length === 0) return null;
@@ -318,7 +329,8 @@ async function geocodeRaw(query) {
       licence: "ODbL",
       feature: f,
     };
-  } catch {
+  } catch (err) {
+    if (err && err.message === "global-timeout") throw err;
     return null;
   }
 }
@@ -417,7 +429,11 @@ function coordKey(lat, lon) {
 }
 
 async function geocodeOne(q, usedCoords) {
-  for (const variant of q.variants) {
+  const variants = q.variants.slice(0, MAX_VARIANTS_PER_QUERY);
+  for (const variant of variants) {
+    if (Date.now() > geocodeDeadline) {
+      throw new Error("global-timeout");
+    }
     const result = await geocodeRaw(variant);
     if (result && inBounds(result.lat, result.lon) && resultMatches(result.feature, q)) {
       const key = coordKey(result.lat, result.lon);
@@ -435,7 +451,7 @@ async function geocodeOne(q, usedCoords) {
         source: `OpenStreetMap/Photon — «${variant}» — ${result.display_name} (licence: ${result.licence || "ODbL"})`,
       };
     }
-    await new Promise((r) => setTimeout(r, 1100));
+    await new Promise((r) => setTimeout(r, DELAY_BETWEEN_REQUESTS_MS));
   }
   return null;
 }
@@ -463,6 +479,8 @@ async function ensurePinsFile() {
   const skipped = [];
   const added = [];
   const usedCoords = new Set();
+  geocodeDeadline = Date.now() + GLOBAL_GEOCODE_TIMEOUT_MS;
+  let timedOut = false;
 
   // Seed used coords from existing valid pins to avoid duplicates across rebuilds
   for (const pin of existing) {
@@ -481,20 +499,42 @@ async function ensurePinsFile() {
     if (existingPin) {
       rep("drop", `${q.displayName}: إحداثي سابق خارج حدود المدينتين — يُعاد البحث`);
     }
-    const pin = await geocodeOne(q, usedCoords);
-    if (pin) {
-      added.push(pin);
-      usedCoords.add(coordKey(pin.lat, pin.lon));
-      rep("geocode", `${pin.name} → ${pin.lat}, ${pin.lon} (بحث: ${q.variants.find((v) => pin.source.includes(`«${v}»`)) || q.variants[0]})`);
-    } else {
-      skipped.push({ id: q.id, name: q.displayName, category: q.category, reason: "لم يُعثر على إحداثي موثوق داخل الحدود" });
-      rep("skip", `${q.displayName}: لم يُعثر على إحداثي موثوق داخل الحدود — تُخطّى`);
+
+    if (timedOut || Date.now() > geocodeDeadline) {
+      timedOut = true;
+      skipped.push({ id: q.id, name: q.displayName, category: q.category, reason: "انتهى وقت الجيوكودينج الإجمالي" });
+      rep("timeout-skip", `${q.displayName}: تُخطّى — انتهى وقت الجيوكودينج الإجمالي`);
+      continue;
+    }
+
+    try {
+      const pin = await geocodeOne(q, usedCoords);
+      if (pin) {
+        added.push(pin);
+        usedCoords.add(coordKey(pin.lat, pin.lon));
+        rep("geocode", `${pin.name} → ${pin.lat}, ${pin.lon} (بحث: ${q.variants.find((v) => pin.source.includes(`«${v}»`)) || q.variants[0]})`);
+      } else {
+        skipped.push({ id: q.id, name: q.displayName, category: q.category, reason: "لم يُعثر على إحداثي موثوق داخل الحدود" });
+        rep("skip", `${q.displayName}: لم يُعثر على إحداثي موثوق داخل الحدود — تُخطّى`);
+      }
+    } catch (err) {
+      if (err && err.message === "global-timeout") {
+        timedOut = true;
+        skipped.push({ id: q.id, name: q.displayName, category: q.category, reason: "انتهى وقت الجيوكودينج الإجمالي" });
+        rep("timeout-skip", `${q.displayName}: تُخطّى — انتهى وقت الجيوكودينج الإجمالي`);
+      } else {
+        skipped.push({ id: q.id, name: q.displayName, category: q.category, reason: "خطأ غير متوقع في الجيوكودينج" });
+        rep("error", `${q.displayName}: خطأ غير متوقع — ${err && err.message ? err.message : String(err)}`);
+      }
     }
   }
 
   const pins = [...kept, ...added];
   fs.writeFileSync(p, JSON.stringify(pins, null, 2) + "\n");
   rep("data", `أُنشئ/أُحدّث data/map-pins.json: ${pins.length} دبوس (مُحتفظ ${kept.length}، مُضاف ${added.length}، مُخطّى ${skipped.length})`);
+  if (timedOut) {
+    rep("timeout", `انتهى وقت الجيوكودينج بعد ${GLOBAL_GEOCODE_TIMEOUT_MS / 1000} ثانية؛ استُكمل البناء بالدبابيس المتاحة`);
+  }
   return { pins, skipped };
 }
 
