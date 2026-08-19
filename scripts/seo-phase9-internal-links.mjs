@@ -410,6 +410,80 @@ function processSchoolPage(file, slug) {
 }
 
 // ---------------------------------------------------------------------------
+// روابط فوتر عالمية للصفحات المفيدة التي لا تظهر في التنقل الرئيسي
+// ---------------------------------------------------------------------------
+const FOOTER_MARKER = "<!-- phase9-footer-links -->";
+const FOOTER_UTILITY_LINKS = [
+  ['<a href="/directory/">دليل الخدمات</a>', '<a href="/directory/">دليل الخدمات</a><a href="/entities/">فهرس الكيانات</a><a href="/updates/">تحديثات الدليل</a><a href="/tracker/">متابعة أحداث العبور الجديدة</a>'],
+];
+
+function addFooterUtilityLinks() {
+  let touched = 0;
+  let skipped = 0;
+  const walk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (e.name.startsWith(".") || e.name === "public" || e.name === "src") continue;
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) walk(full);
+      else if (e.name === "index.html") {
+        let html = fs.readFileSync(full, "utf8");
+        if (html.includes(FOOTER_MARKER)) { skipped++; continue; }
+        let changed = false;
+        for (const [needle, replacement] of FOOTER_UTILITY_LINKS) {
+          if (html.includes(needle)) {
+            html = html.replace(needle, replacement + FOOTER_MARKER);
+            changed = true;
+          }
+        }
+        if (changed) {
+          fs.writeFileSync(full, html);
+          touched++;
+        }
+      }
+    }
+  };
+  walk(clientDir);
+  rep("footer-links", `أُضيفت روابط فوتر مساعدة في ${touched} صفحة؛ تُخطّى ${skipped} صفحة.`);
+}
+
+// ---------------------------------------------------------------------------
+// ربط صفحات Pillar والمقارنات اليتيمة بصفحاتها الأم
+// ---------------------------------------------------------------------------
+function linkOrphanPillarAndComparePages() {
+  const injections = [
+    { file: path.join(clientDir, "compare", "index.html"), links: [
+      ["/compare/district-1-vs-district-5/", "مقارنة: الحي الأول مقابل الحي الخامس"],
+      ["/compare/canary-vs-solana/", "مقارنة: كناري مقابل سولانا"],
+    ]},
+    { file: path.join(clientDir, "living-guide", "index.html"), links: [
+      ["/roads/", "شوارع ومحاور العبور الجديدة"],
+      ["/university/", "جامعة العبور والتعليم العالي"],
+      ["/lands/", "الأراضي والتخصيص في العبور الجديدة"],
+      ["/industrial-zone/", "المنطقة الصناعية بالعبور"],
+    ]},
+    { file: path.join(clientDir, "shopping", "index.html"), links: [
+      ["/shopping-guide/", "دليل التسوق في العبور"],
+    ]},
+    { file: path.join(clientDir, "restaurants", "index.html"), links: [
+      ["/dining-guide/", "دليل الأكل والمطاعم في العبور"],
+    ]},
+  ];
+  let touched = 0;
+  for (const { file, links } of injections) {
+    if (!fs.existsSync(file)) continue;
+    let html = fs.readFileSync(file, "utf8");
+    if (html.includes(MARKER)) continue;
+    const extra = buildLinkParagraph(links, "أدلة فرعية ذات صلة:");
+    const r = injectRelatedSection(html, extra, path.basename(path.dirname(file)));
+    if (r.changed) {
+      fs.writeFileSync(file, r.html);
+      touched++;
+    }
+  }
+  rep("orphan-links", `أُضيفت روابط لـ ${touched} صفحة أم لصفحات فرعية يتيمة.`);
+}
+
+// ---------------------------------------------------------------------------
 function main() {
   const counts = {
     district: { injected: 0, skipped: 0, noLinks: 0, other: 0 },
@@ -458,6 +532,9 @@ function main() {
   rep("compounds", `أُضيفت روابط سياقية في ${counts.compound.injected} مشروع، تُخطّى ${counts.compound.skipped}، لا روابط ${counts.compound.noLinks}`);
   rep("developers", `أُضيفت روابط سياقية في ${counts.developer.injected} مطوّر، تُخطّى ${counts.developer.skipped}، لا روابط ${counts.developer.noLinks}`);
   rep("schools", `أُضيفت روابط سياقية في ${counts.school.injected} مدرسة، تُخطّى ${counts.school.skipped}، لا روابط ${counts.school.noLinks}`);
+
+  addFooterUtilityLinks();
+  linkOrphanPillarAndComparePages();
 
   console.log("=== تقرير المرحلة التاسعة: محرك الروابط الداخلية ===");
   for (const line of report) console.log(line);

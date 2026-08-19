@@ -144,13 +144,34 @@ function fixTel(html, slug) {
 // ---------------------------------------------------------------------------
 function nofollowMaps(html, slug) {
   let n = 0;
-  html = html.replace(/<a href="(https?:\/\/(?:www\.)?google\.[a-z.]+\/maps[^"]*)"([^>]*)>/g, (all, url, attrs) => {
+  html = html.replace(/<a\s+[^>]*href="(https?:\/\/(?:www\.)?google\.[a-z.]+\/maps[^"]*)"([^>]*)>/g, (all, url, attrs) => {
     if (attrs.includes("nofollow")) return all;
     n++;
-    if (attrs.includes('rel="')) return `<a href="${url}"${attrs.replace('rel="', 'rel="nofollow ')}>`;
-    return `<a href="${url}"${attrs} rel="nofollow noopener">`;
+    if (attrs.includes('rel="')) return all.replace('rel="', 'rel="nofollow ');
+    return all.replace(/>$/, ' rel="nofollow noopener">');
   });
   if (n) rep("maps-nofollow", `${slug}: nofollow لـ ${n} رابط خرائط`);
+  return html;
+}
+
+// ---------------------------------------------------------------------------
+// 1.10b — nofollow لروابط منافسين/أدلة تجارية (لا تمرّ صلاحية لمواقع تنافسية)
+// ---------------------------------------------------------------------------
+function nofollowCompetitorAndDirectoryLinks(html, slug) {
+  const patterns = [
+    /newobour\.city/,
+    /yellowpages\.com\.eg/,
+    /en\.infoeg\.com/,
+    /elmenus\.com/,
+  ];
+  let n = 0;
+  html = html.replace(/<a\s+[^>]*href="(https?:\/\/[^"]*)"([^>]*)>/g, (all, url, attrs) => {
+    if (!patterns.some((p) => p.test(url)) || attrs.includes("nofollow")) return all;
+    n++;
+    if (attrs.includes('rel="')) return all.replace('rel="', 'rel="nofollow ');
+    return all.replace(/>$/, ' rel="nofollow noopener">');
+  });
+  if (n) rep("competitor-nofollow", `${slug}: nofollow لـ ${n} رابط منافس/دليل تجاري`);
   return html;
 }
 
@@ -246,6 +267,44 @@ function fixSchemaDatesAndOrg(html, slug) {
     }
   }
   if (datesAdded) rep("dates", `${slug}: dateModified/datePublished في ${datesAdded} سكيمات (${lastmod})`);
+  return html;
+}
+
+// ---------------------------------------------------------------------------
+// 1.12 — تضمين WebPage/CollectionPage للأدلة التي لا تمتلك سكيما صفحة
+// ---------------------------------------------------------------------------
+function ensurePageSchema(html, slug) {
+  const schemas = [];
+  html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (_, json) => {
+    try { schemas.push(JSON.parse(json)); } catch {}
+    return _;
+  });
+  const hasPageSchema = schemas.some((s) =>
+    s && ["WebPage", "WebSite", "AboutPage", "CollectionPage", "Article"].includes(s["@type"])
+  );
+  if (hasPageSchema) return html;
+
+  const titleMatch = html.match(/<title>(.*?)<\/title>/);
+  const descMatch = html.match(/<meta name="description" content="([^"]*)"/);
+  const canonicalMatch = html.match(/<link rel="canonical" href="([^"]*)"/);
+  const title = titleMatch ? titleMatch[1].replace(/ \| .*/, "") : "دليل العبور";
+  const description = descMatch ? descMatch[1] : "";
+  const canonical = canonicalMatch ? canonicalMatch[1] : SITE + slug;
+  const lastmod = pageLastmod(html);
+
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    url: canonical,
+    inLanguage: "ar-EG",
+    datePublished: lastmod,
+    dateModified: lastmod,
+    description,
+    publisher: { "@id": SITE + "/#org" },
+  };
+  html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(pageSchema)}</script></head>`);
+  rep("page-schema", `${slug}: أُضيفت عقدة CollectionPage للأدلة`);
   return html;
 }
 
@@ -695,8 +754,10 @@ function main() {
     html = interpolatePlaceholders(html, slug);   // 1.5
     html = fixTel(html, slug);                    // 1.2
     html = nofollowMaps(html, slug);              // 1.10
+    html = nofollowCompetitorAndDirectoryLinks(html, slug); // 1.10b
     html = fixBusinessAnchors(html, slug);        // 1.6
     html = fixSchemaDatesAndOrg(html, slug);      // 1.8
+    html = ensurePageSchema(html, slug);          // 1.12
     html = fixFooter(html, slug);                 // 1.10
     html = fixTitleSuffix(html, slug);            // 1.11
     html = injectRelated(html, slug);             // 1.7 + 1.5
