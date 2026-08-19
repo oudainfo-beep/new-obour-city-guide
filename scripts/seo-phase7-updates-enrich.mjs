@@ -91,7 +91,7 @@ const AR_MONTHS = {
   "مايو": "05", "يونيو": "06", "يوليو": "07", "أغسطس": "08", "اغسطس": "08",
   "سبتمبر": "09", "أكتوبر": "10", "نوفمبر": "11", "ديسمبر": "12",
 };
-const SITEMAP_EXCLUDE = new Set(["/404/", "/search/", "/dining-guide/", "/shopping-guide/", "/health-guide/"]);
+const SITEMAP_EXCLUDE = new Set(["/404/", "/search/"]);
 
 function listPageFiles() {
   const out = [];
