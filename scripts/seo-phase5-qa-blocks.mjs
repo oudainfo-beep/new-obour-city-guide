@@ -6,7 +6,6 @@
  * المبادئ:
  *   - idempotent: marker <!-- phase5.2-qa-block --> يمنع التكرار.
  *   - لا معلومات مُختلعة: كل إجابة من النص المنشور في الصفحة نفسها.
- *   - صفحة عوده: الإفصاح إلزامي في الإجابة.
  *   - لا روابط خارجية جديدة ولا schema تقييمات.
  */
 import fs from "node:fs";
@@ -51,8 +50,7 @@ function extractDeveloperData(html) {
     scores[label] = val;
   }
   const published = extractTextBetween(html, "ما هو منشور وقابل للفحص", "ما هو ناقص");
-  const isOuda = name.includes("عوده") || html.includes("دليل العبور يرتبط بعلاقة مع عوده");
-  return { name, scores, published: cleanText(published).slice(0, 200), isOuda };
+  return { name, scores, published: cleanText(published).slice(0, 200) };
 }
 
 function extractDistrictData(html) {
@@ -77,8 +75,7 @@ function extractCompoundData(html) {
     facts[cleanText(r[1])] = cleanText(r[2]);
   }
   const published = extractTextBetween(html, "ما هو منشور وقابل للفحص", "ما هو ناقص");
-  const isOuda = html.includes("دليل العبور يرتبط بعلاقة مع عوده");
-  return { name, facts, published: cleanText(published).slice(0, 200), isOuda };
+  return { name, facts, published: cleanText(published).slice(0, 200) };
 }
 
 // ---------------------------------------------------------------------------
@@ -96,10 +93,7 @@ function buildDeveloperQABlock(data) {
   const total = data.scores["المجموع"] || "";
   const top = scoreKeys.filter((k) => k !== "المجموع" && data.scores[k]).slice(0, 2);
   const topText = top.map((k) => `${k} (${data.scores[k]}/5)`).join("، ");
-  const oudaNote = data.isOuda
-    ? " تنبيه تحريري: الدليل يرتبط بعلاقة مع عوده للتطوير العقاري، ودرجتها محسوبة بنفس المعايير المنشورة المطبقة على الجميع."
-    : "";
-  const answer = `أبرز ما هو منشور عن ${data.name}: المجموع ${total}/5، وأعلى معيارين ${topText}.${oudaNote}`.replace(/\s+/g, " ").trim();
+  const answer = `أبرز ما هو منشور عن ${data.name}: المجموع ${total}/5، وأعلى معيارين ${topText}.`.replace(/\s+/g, " ").trim();
   const source = `مصدر: البيانات المنشورة في صفحة ${data.name} بالدليل.`;
   return { question: `ما أبرز ما هو منشور عن ${data.name}؟`, answer, source, facts: data.scores };
 }
@@ -118,10 +112,7 @@ function buildCompoundQABlock(data) {
   const district = data.facts["الحي / الموقع"] || "غير منشور";
   const status = data.facts["الحالة"] || "غير منشور";
   const sourceName = data.facts["المصدر"] || "غير منشور";
-  const oudaNote = data.isOuda
-    ? " تنبيه تحريري: الدليل يرتبط بعلاقة مع عوده للتطوير العقاري مطوّر هذا المشروع."
-    : "";
-  const answer = `${data.name}: مطوّره ${dev}، الموقع ${district}، الحالة ${status}.${oudaNote}`.replace(/\s+/g, " ").trim();
+  const answer = `${data.name}: مطوّره ${dev}، الموقع ${district}، الحالة ${status}.`.replace(/\s+/g, " ").trim();
   const source = `مصدر: ${sourceName}.`;
   return { question: `ما البيانات المنشورة عن ${data.name}؟`, answer, source, facts: data.facts };
 }

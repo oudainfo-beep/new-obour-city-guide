@@ -41,7 +41,6 @@ const COMPOUNDS = [
       "المشروع على 15 فدانًا بارتفاع أرضي + 4 طوابق.",
       "المطور ينشر قائمة أسعار وأنظمة سداد وموعد تسليم.",
     ],
-    isOuda: true,
   },
   {
     slug: "solana",
@@ -53,7 +52,6 @@ const COMPOUNDS = [
     published: [
       "مشروع مفهرس ضمن مشروعات عوده المنشورة على موقع الشركة.",
     ],
-    isOuda: true,
   },
   {
     slug: "sundus",
@@ -65,7 +63,6 @@ const COMPOUNDS = [
     published: [
       "مشروع مفهرس ضمن مشروعات عوده المنشورة على موقع الشركة.",
     ],
-    isOuda: true,
   },
   {
     slug: "safari",
@@ -77,7 +74,6 @@ const COMPOUNDS = [
     published: [
       "مشروع مفهرس ضمن مشروعات عوده المنشورة على موقع الشركة.",
     ],
-    isOuda: true,
   },
   {
     slug: "vaily-residence",
@@ -250,10 +246,6 @@ function compoundPage(chrome, c) {
   const h1 = `${c.name} في العبور الجديدة`;
   const [p1, p2] = peersOf(c.slug);
 
-  const disclosureNote = c.isOuda
-    ? `<p style="border:1px solid #d8c58a;background:#fdf7e6;padding:.9rem 1rem;border-radius:8px"><strong>تنبيه تحريري:</strong> دليل العبور يرتبط بعلاقة مع عوده للتطوير العقاري، مطوّر هذا المشروع. نعرض البيانات المنشورة فقط ونقيّمها بنفس المعايير المطبقة على كل المشروعات. التفاصيل في <a href="/disclosure/">صفحة الإفصاح</a>.</p>`
-    : "";
-
   const publishedList = `<ul>${c.published.map((x) => `<li>${x}</li>`).join("")}</ul>`;
 
   const missingList = `<h2>ما هو ناقص عند الجميع</h2>
@@ -269,7 +261,6 @@ ${c.district ? "" : "<li>الحي / الموقع الدقيق داخل العب�
     : (c.district ? c.district.name : "دليل الأحياء");
 
   const body = `
-${disclosureNote}
 <h2>ملخص المشروع من البيانات المنشورة</h2>
 ${dataTable(c)}
 <h2>ما هو منشور وقابل للفحص</h2>

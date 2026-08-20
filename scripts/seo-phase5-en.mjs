@@ -299,7 +299,7 @@ function homePage(chrome) {
 <p><a href="/en/buying-guide/">Read the full buying guide →</a></p>
 
 <h2>Independence and transparency</h2>
-<p>This guide applies the same verification standards to everyone without exception. Obour Guide has a relationship with Ouda Real Estate Development, one of the developers rated in the directory. The relationship is disclosed fully, the company was not excluded from evaluation, and it was not given different criteria. <a href="/disclosure/">Read the disclosure page (Arabic) →</a></p>
+<p>This guide applies the same verification standards to everyone without exception. Obour Guide is an independent information resource: there is no ownership, funding, management, commercial partnership, or endorsement relationship between the guide and any developer, business, or school listed in the directory. <a href="/disclosure/">Read the disclosure page (Arabic) →</a></p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
@@ -490,10 +490,6 @@ function developersPage(chrome) {
   const description = "Obour and New Obour developers: the guide comes before the grade. We evaluate what is published and verifiable, and state the limits of available information clearly.";
   const h1 = "Developers in Obour & New Obour";
   const body = `
-<div class="editorial-disclosure" style="background:#f3ead8;border-right:4px solid #c69148;padding:1rem 1.1rem;margin:1.2rem 0;font-size:.9rem;line-height:1.9;color:#5c4a30">
-  <strong>Editorial notice:</strong> Obour Guide has a relationship with Ouda Real Estate Development, one of the companies rated in this table. We did not exclude it because removing an existing developer in the city would weaken the guide; its score is calculated using the same five published criteria applied to everyone, with the same verification sources. Full details are on the <a href="/disclosure/">disclosure page</a> (Arabic).
-</div>
-
 <h2>Verification path</h2>
 <p>Follow delivery track record, post-delivery management, financial standing, contract transparency, and build density — instead of judging from one ad or title.</p>
 <ul>
