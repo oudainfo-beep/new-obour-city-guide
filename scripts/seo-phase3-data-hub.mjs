@@ -185,7 +185,7 @@ function buildDirectoriesCsv() {
   return lines.join("\n") + "\n";
 }
 
-function buildDistrictsData() {
+function buildDistrictsData(filePath) {
   const districtObjects = neighborhoods.map((n) => ({
     id: n[0],
     name: n[1],
@@ -193,7 +193,8 @@ function buildDistrictsData() {
     targetAudience: n[3],
     note: n[4],
   }));
-  return { ...jsonMeta(), count: districtObjects.length, districts: districtObjects };
+  const payload = { count: districtObjects.length, districts: districtObjects };
+  return { ...jsonMeta(payload, filePath), ...payload };
 }
 
 function buildSchoolsData(filePath) {
