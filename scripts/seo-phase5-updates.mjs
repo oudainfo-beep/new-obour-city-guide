@@ -139,9 +139,8 @@ function escapeXml(str) {
     .replace(/'/g, "&apos;");
 }
 
-function buildFeedXML(updates) {
-  const now = new Date().toISOString();
-  const items = updates
+function buildItemsString(updates) {
+  return updates
     .map((u) => {
       const date = u.date || DEFAULT_LASTMOD;
       const title = escapeXml(u.title || "تحديث");
@@ -150,6 +149,27 @@ function buildFeedXML(updates) {
       return `  <item>\n    <title>${title}</title>\n    <link>${url}</link>\n    <guid>${url}</guid>\n    <pubDate>${formatDate(date)}</pubDate>\n    <description>${desc}</description>\n  </item>`;
     })
     .join("\n");
+}
+
+function stableLastBuildDate(updates, outPath) {
+  const newItems = buildItemsString(updates);
+  if (fs.existsSync(outPath)) {
+    try {
+      const existing = fs.readFileSync(outPath, "utf8");
+      const m = existing.match(/<lastBuildDate>([^<]+)<\/lastBuildDate>/);
+      const existingItems = existing.match(/<item>[\s\S]*?<\/item>/g)?.join("\n") ?? "";
+      if (m && existingItems === newItems) {
+        return m[1];
+      }
+    } catch {}
+  }
+  return new Date().toISOString();
+}
+
+function buildFeedXML(updates) {
+  const feedPath = path.join(publicDir, "feed.xml");
+  const now = stableLastBuildDate(updates, feedPath);
+  const items = buildItemsString(updates);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n  <title>تحديثات دليل العبور والعبور الجديدة</title>\n  <link>${SITE}/updates/</link>\n  <description>تحديثات منشورة على دليل العبور والعبور الجديدة من مصادر رسمية ومنشورة.</description>\n  <language>ar-EG</language>\n  <lastBuildDate>${now}</lastBuildDate>\n  <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml" />\n${items}\n</channel>\n</rss>\n`;
 }
 

@@ -41,12 +41,31 @@ function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-function nowIso() {
+const META_KEYS = new Set(["generated", "license", "attribution"]);
+
+function stableGenerated(payload, filePath) {
+  const payloadStr = JSON.stringify(payload);
+  if (fs.existsSync(filePath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      const existingPayload = {};
+      for (const [k, v] of Object.entries(existing)) {
+        if (!META_KEYS.has(k)) existingPayload[k] = v;
+      }
+      if (JSON.stringify(existingPayload) === payloadStr && existing.generated) {
+        return existing.generated;
+      }
+    } catch {}
+  }
   return new Date().toISOString();
 }
 
-function jsonMeta() {
-  return { generated: nowIso(), license: LICENSE, attribution: ATTRIBUTION };
+function jsonMeta(payload, filePath) {
+  return {
+    generated: stableGenerated(payload, filePath),
+    license: LICENSE,
+    attribution: ATTRIBUTION,
+  };
 }
 
 // يستخرج مصفوفة const NAME = [...] من ملف JS بشكل آمن نسبيًا
@@ -116,7 +135,7 @@ const DEVELOPERS = extractArray(path.join(root, "scripts", "seo-phase2-developer
 // ---------------------------------------------------------------------------
 // تحضير البيانات القابلة للتحميل
 // ---------------------------------------------------------------------------
-function buildDirectoriesData() {
+function buildDirectoriesData(filePath) {
   const items = directories
     .filter((d) => Array.isArray(d.items))
     .flatMap((d) =>
@@ -132,12 +151,12 @@ function buildDirectoriesData() {
       }))
     );
 
-  return {
-    ...jsonMeta(),
+  const payload = {
     count: items.length,
     directories: directories.map((d) => ({ slug: d.slug, title: d.title, count: d.count, lead: d.lead })),
     items,
   };
+  return { ...jsonMeta(payload, filePath), ...payload };
 }
 
 function csvEscape(val) {
@@ -177,16 +196,19 @@ function buildDistrictsData() {
   return { ...jsonMeta(), count: districtObjects.length, districts: districtObjects };
 }
 
-function buildSchoolsData() {
-  return { ...jsonMeta(), count: realSchools.length, schools: realSchools };
+function buildSchoolsData(filePath) {
+  const payload = { count: realSchools.length, schools: realSchools };
+  return { ...jsonMeta(payload, filePath), ...payload };
 }
 
-function buildCompoundsData() {
-  return { ...jsonMeta(), count: COMPOUNDS.length, compounds: COMPOUNDS };
+function buildCompoundsData(filePath) {
+  const payload = { count: COMPOUNDS.length, compounds: COMPOUNDS };
+  return { ...jsonMeta(payload, filePath), ...payload };
 }
 
-function buildDevelopersData() {
-  return { ...jsonMeta(), count: DEVELOPERS.length, developers: DEVELOPERS };
+function buildDevelopersData(filePath) {
+  const payload = { count: DEVELOPERS.length, developers: DEVELOPERS };
+  return { ...jsonMeta(payload, filePath), ...payload };
 }
 
 // ---------------------------------------------------------------------------
@@ -204,7 +226,8 @@ function writeDataset(filename, content, rows, fields, format) {
 function writeDownloadables() {
   ensureDir(dataPublicDir);
 
-  const directoriesData = buildDirectoriesData();
+  const directoriesPath = path.join(dataPublicDir, "obour-directories.json");
+  const directoriesData = buildDirectoriesData(directoriesPath);
   writeDataset(
     "obour-directories.json",
     JSON.stringify(directoriesData, null, 2),
@@ -221,7 +244,8 @@ function writeDownloadables() {
     "CSV"
   );
 
-  const schoolsData = buildSchoolsData();
+  const schoolsPath = path.join(dataPublicDir, "obour-schools.json");
+  const schoolsData = buildSchoolsData(schoolsPath);
   writeDataset(
     "obour-schools.json",
     JSON.stringify(schoolsData, null, 2),
@@ -230,7 +254,8 @@ function writeDownloadables() {
     "JSON"
   );
 
-  const districtsData = buildDistrictsData();
+  const districtsPath = path.join(dataPublicDir, "obour-districts.json");
+  const districtsData = buildDistrictsData(districtsPath);
   writeDataset(
     "obour-districts.json",
     JSON.stringify(districtsData, null, 2),
@@ -239,7 +264,8 @@ function writeDownloadables() {
     "JSON"
   );
 
-  const compoundsData = buildCompoundsData();
+  const compoundsPath = path.join(dataPublicDir, "obour-compounds.json");
+  const compoundsData = buildCompoundsData(compoundsPath);
   writeDataset(
     "obour-compounds.json",
     JSON.stringify(compoundsData, null, 2),
@@ -248,7 +274,8 @@ function writeDownloadables() {
     "JSON"
   );
 
-  const developersData = buildDevelopersData();
+  const developersPath = path.join(dataPublicDir, "obour-developers.json");
+  const developersData = buildDevelopersData(developersPath);
   writeDataset(
     "obour-developers.json",
     JSON.stringify(developersData, null, 2),
