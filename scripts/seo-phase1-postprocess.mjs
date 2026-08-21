@@ -31,6 +31,7 @@ const cssVer = (file) =>
   crypto.createHash("md5").update(fs.readFileSync(path.join(clientDir, "public", "static", file))).digest("hex").slice(0, 8);
 const siteCssVer = cssVer("site.css");
 const schoolsCssVer = cssVer("schools-directory.css");
+const uiJsVer = cssVer("ui.js");
 
 const report = [];
 function rep(key, msg) {
@@ -510,7 +511,7 @@ function siteHeader() {
 }
 
 function siteFooter() {
-  return `<footer class="site-footer"><div class="wrap footer-grid"><section><div class="footer-brand"><img src="/brand/logo.svg" width="44" height="44" alt="رمز دليل العبور والعبور الجديدة"><b>دليل العبور والعبور الجديدة</b></div><p>هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.</p><p class="last-updated">آخر تحديث: أغسطس 2026</p></section><section><h2>مسارات الدليل</h2><a href="/directory/">دليل الخدمات</a><a href="/districts/">الأحياء</a><a href="/prices/">الأسعار</a><a href="/developers/">دليل المطورين</a><a href="/emergency/">الطوارئ</a><a href="/search/">بحث</a></section>${FOOTER_ABOUT}</div><div class="wrap footer-base"><span>© 2026 دليل العبور والعبور الجديدة</span><span>معلوماتي · قابل للمراجعة · مصادر منشورة</span></div><script src="/static/ui.js" defer></script></footer>`;
+  return `<footer class="site-footer"><div class="wrap footer-grid"><section><div class="footer-brand"><img src="/brand/logo.svg" width="44" height="44" alt="رمز دليل العبور والعبور الجديدة"><b>دليل العبور والعبور الجديدة</b></div><p>هذا الدليل والتقييمات والمقارنات مبنية على معايير منشورة قابلة للتحقق، ونرحّب بأي تصحيح موثّق.</p><p class="last-updated">آخر تحديث: أغسطس 2026</p></section><section><h2>مسارات الدليل</h2><a href="/directory/">دليل الخدمات</a><a href="/districts/">الأحياء</a><a href="/prices/">الأسعار</a><a href="/developers/">دليل المطورين</a><a href="/emergency/">الطوارئ</a><a href="/search/">بحث</a></section>${FOOTER_ABOUT}</div><div class="wrap footer-base"><span>© 2026 دليل العبور والعبور الجديدة</span><span>معلوماتي · قابل للمراجعة · مصادر منشورة</span></div><script src="/static/ui.js?v=${uiJsVer}" defer></script></footer>`;
 }
 
 function makePage({ slug, title, description, h1, tag, crumb, body, extraSchemas = [] }) {
