@@ -23,9 +23,9 @@
   d.body.appendChild(progressBar);
   const updateProgress = () => {
     const doc = d.documentElement;
-    const scroll = doc.scrollTop || d.body.scrollTop;
+    const scroll = window.scrollY || doc.scrollTop || d.body.scrollTop || 0;
     const max = doc.scrollHeight - doc.clientHeight;
-    const pct = max > 0 ? scroll / max : 0;
+    const pct = max > 0 ? Math.min(1, Math.max(0, scroll / max)) : 0;
     progressBar.style.transform = `scaleX(${pct})`;
   };
   addEventListener("scroll", updateProgress, { passive: true });
