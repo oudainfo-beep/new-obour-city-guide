@@ -196,8 +196,12 @@ img { max-width: 100%; }
 .pwa-install:disabled { opacity: .7; cursor: default; transform: none !important; }
 .pwa-install[hidden] { display: none !important; }
 @media (max-width: 640px) {
-  .header-row > .pwa-install { width: 42px; height: 42px; padding: 0; justify-content: center; border-radius: var(--r-sm); font-size: 0; }
-  .header-row > .pwa-install span { font-size: 1.05rem; margin: 0; }
+  .header-row > .pwa-install { height: 40px; padding: .35rem .7rem; border-radius: var(--r-pill); font-size: .72rem; gap: .3rem; }
+  .header-row > .pwa-install span { font-size: .9rem; margin: 0; }
+}
+@media (max-width: 360px) {
+  .header-row > .pwa-install { padding: .35rem .5rem; font-size: 0; gap: 0; }
+  .header-row > .pwa-install span { font-size: 1rem; }
 }
 
 /* تذكير بتثبيت التطبيق — غير مزعج وقابل للإغلاق */
@@ -1017,7 +1021,15 @@ td a { color: var(--olive-600); font-weight: 700; }
 .m-group > div a:hover { background: #f1f5f9; }
 .m-group > div a[aria-current=page] { color: var(--deep); background: #e0e7ff; }
 .mobile-menu .m-solo { line-height: 1.6; min-height: 44px; display: flex; align-items: center; }
-.mobile-menu .pwa-install { width: 100%; justify-content: center; margin-bottom: .55rem; border-radius: var(--r-sm); }
+.mobile-menu .pwa-install {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: .75rem;
+  border-radius: var(--r-pill);
+  padding: .7rem 1rem;
+  font-size: .88rem;
+  box-shadow: 0 4px 14px rgba(20, 83, 45, .22);
+}
 
 /* صندوق الإفصاح */
 .disclosure {
