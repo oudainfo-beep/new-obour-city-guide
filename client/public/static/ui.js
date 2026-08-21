@@ -6,6 +6,7 @@
   de.classList.add("js");
 
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isTouch = matchMedia("(pointer: coarse)").matches;
 
   // ظل الهيدر عند التمرير
   const header = d.querySelector(".site-header");
@@ -46,8 +47,8 @@
     });
   }
 
-  // حركات الظهور عند التمرير
-  const revealEls = d.querySelectorAll("[data-reveal]");
+  // حركات الظهور عند التمرير + تدرج داخل المجموعات
+  const revealEls = d.querySelectorAll("[data-reveal], [data-reveal-group]");
   if (!revealEls.length) return;
   if (reduced || !("IntersectionObserver" in window)) {
     revealEls.forEach((el) => el.classList.add("in"));
@@ -66,8 +67,28 @@
   );
   revealEls.forEach((el) => {
     if (el.hasAttribute("data-reveal-group")) {
-      [...el.children].forEach((k, i) => k.style.setProperty("--d", `${Math.min(i * 70, 420)}ms`));
+      [...el.children].forEach((k, i) =>
+        k.style.setProperty("--d", `${Math.min(i * 70, 420)}ms`)
+      );
     }
     io.observe(el);
   });
+
+  // تأثير مغناطيسي خفيف للأزرار والبطاقات التفاعلية
+  if (!reduced && !isTouch) {
+    const magneticSelector =
+      ".magnetic, .button, .top-cta, .hero-search button, .pwa-install, .quick-card, .hero-chips a, .dir-hub-card, .dir-item";
+    const magneticEls = d.querySelectorAll(magneticSelector);
+    magneticEls.forEach((el) => {
+      el.addEventListener("mousemove", (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        el.style.transform = `translate(${x * 0.14}px, ${y * 0.14}px) scale(1.03)`;
+      });
+      el.addEventListener("mouseleave", () => {
+        el.style.transform = "";
+      });
+    });
+  }
 })();
