@@ -6,24 +6,24 @@
 @import url('/static/atlas-body.css');
 
 :root {
-  /* الألوان — لوحة حديثة عالية التباين بعيدة عن الشكل "الآمن" */
-  --primary: #0f172a;
-  --primary-600: #1e293b;
-  --primary-700: #334155;
-  --primary-light: #e0e7ff;
-  --accent: #f43f5e;
-  --accent-600: #e11d48;
+  /* الألوان — لوحة مدنية غنيّة: كحليّ عميق + ذهبيّ كهرماني + تركواز */
+  --primary: #0a1628;
+  --primary-600: #152238;
+  --primary-700: #27364f;
+  --primary-light: #e8f0fe;
+  --accent: #f59e0b;
+  --accent-600: #b45309;
   --teal: #14b8a6;
   --teal-600: #0d9488;
-  --paper: #fafaf9;
+  --paper: #f8fafc;
   --surface: #ffffff;
-  --surface-2: #f5f5f4;
-  --surface-3: #e7e5e4;
-  --ink: #1c1917;
-  --ink-2: #44403c;
-  --muted: #78716c;
-  --line: #e7e5e4;
-  --line-strong: #d6d3d1;
+  --surface-2: #f1f5f9;
+  --surface-3: #e2e8f0;
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
   /* توافقية مع الأصناف القديمة */
   --olive: var(--primary);
   --olive-600: var(--primary-600);
@@ -34,10 +34,10 @@
   --r-md: 16px;
   --r-lg: 24px;
   --r-pill: 999px;
-  --sh-sm: 0 1px 2px rgba(15, 23, 42, .07), 0 2px 8px rgba(15, 23, 42, .06);
-  --sh-md: 0 4px 14px rgba(15, 23, 42, .09), 0 16px 44px rgba(15, 23, 42, .11);
-  --sh-lg: 0 10px 28px rgba(15, 23, 42, .12), 0 36px 80px rgba(15, 23, 42, .16);
-  --sh-glow: 0 0 0 4px rgba(244, 63, 94, .18);
+  --sh-sm: 0 1px 2px rgba(10, 22, 40, .07), 0 2px 8px rgba(10, 22, 40, .06);
+  --sh-md: 0 4px 14px rgba(10, 22, 40, .09), 0 16px 44px rgba(10, 22, 40, .11);
+  --sh-lg: 0 10px 28px rgba(10, 22, 40, .12), 0 36px 80px rgba(10, 22, 40, .16);
+  --sh-glow: 0 0 0 4px rgba(245, 158, 11, .18);
   --ease: cubic-bezier(.22, .68, .26, .99);
   --ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
   --ease-elastic: cubic-bezier(.68, -.55, .265, 1.55);
@@ -57,8 +57,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 img { max-width: 100%; }
-::selection { background: rgba(244, 63, 94, .18); color: var(--primary-700); }
-:focus-visible { outline: 2.5px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+::selection { background: rgba(245, 158, 11, .22); color: var(--primary-700); }
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 /* ==========================================================================
    الحركات المسبقة
@@ -76,9 +76,9 @@ img { max-width: 100%; }
   50% { transform: translateY(-14px) rotate(calc(var(--rot, 0deg) + 2deg)); }
 }
 @keyframes pulse-ring {
-  0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, .35); }
-  70% { box-shadow: 0 0 0 14px rgba(42, 157, 143, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(42, 157, 143, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, .35); }
+  70% { box-shadow: 0 0 0 14px rgba(20, 184, 166, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0); }
 }
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
@@ -101,24 +101,45 @@ img { max-width: 100%; }
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
+@keyframes count-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+@keyframes scroll-shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
 
 .wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+
+/* شريط تقدّم التمرير */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px;
+  z-index: 1001; pointer-events: none;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--teal) 50%, var(--accent) 100%);
+  background-size: 200% 100%;
+  transform-origin: right;
+  transform: scaleX(0);
+  animation: scroll-shine 2.5s linear infinite;
+}
+[dir="rtl"] .scroll-progress { transform-origin: left; }
 
 /* ==========================================================================
    الهيدر
    ========================================================================== */
 .site-header {
   position: sticky; top: 0; z-index: 40;
-  background: rgba(250, 248, 243, .82);
+  background: rgba(248, 250, 252, .82);
   backdrop-filter: blur(16px) saturate(1.5);
   -webkit-backdrop-filter: blur(16px) saturate(1.5);
   border-bottom: 1px solid transparent;
   transition: border-color .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease);
 }
 .site-header.is-scrolled {
-  background: rgba(250, 248, 243, .94);
+  background: rgba(248, 250, 252, .94);
   border-bottom-color: var(--line);
-  box-shadow: 0 10px 30px rgba(13, 42, 33, .08);
+  box-shadow: 0 10px 30px rgba(10, 22, 40, .08);
 }
 .header-row { min-height: 74px; display: flex; align-items: center; gap: 1.1rem; }
 .brand { display: flex; align-items: center; gap: .65rem; color: var(--ink); text-decoration: none; line-height: 1.15; flex: none; }
@@ -142,8 +163,8 @@ img { max-width: 100%; }
   transition: background .2s var(--ease), color .2s var(--ease), box-shadow .2s var(--ease);
 }
 .desktop-nav a:hover, .desktop-nav a[aria-current=page] {
-  background: #e0e7ff; color: var(--deep);
-  box-shadow: inset 0 -2px var(--olive);
+  background: var(--primary-light); color: var(--deep);
+  box-shadow: inset 0 -2px var(--accent);
 }
 
 .top-cta, .button {
@@ -165,14 +186,19 @@ img { max-width: 100%; }
   background: var(--olive); color: #fff; border: 1px solid var(--olive);
   padding: .55rem .9rem; border-radius: var(--r-pill);
   font: 800 .78rem var(--font-head); cursor: pointer; white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, .22);
+  box-shadow: 0 4px 12px rgba(10, 22, 40, .22);
   transition: transform .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+  flex-shrink: 0;
 }
 .pwa-install:hover { background: var(--olive-600); transform: translateY(-2px); }
 .pwa-install span { font-size: .9rem; }
-.pwa-install.is-ready { box-shadow: 0 0 0 3px rgba(244, 63, 94, .35), 0 4px 12px rgba(15, 23, 42, .22); }
+.pwa-install.is-ready { box-shadow: 0 0 0 3px rgba(245, 158, 11, .35), 0 4px 12px rgba(10, 22, 40, .22); }
 .pwa-install:disabled { opacity: .7; cursor: default; transform: none !important; }
 .pwa-install[hidden] { display: none !important; }
+@media (max-width: 640px) {
+  .header-row > .pwa-install { width: 42px; height: 42px; padding: 0; justify-content: center; border-radius: var(--r-sm); font-size: 0; }
+  .header-row > .pwa-install span { font-size: 1.05rem; margin: 0; }
+}
 
 /* تذكير بتثبيت التطبيق — غير مزعج وقابل للإغلاق */
 .pwa-banner {
@@ -273,7 +299,7 @@ img { max-width: 100%; }
 }
 .home-hero h1 span {
   color: var(--olive);
-  background: linear-gradient(180deg, transparent 58%, rgba(244, 63, 94, .30) 58%);
+  background: linear-gradient(180deg, transparent 58%, rgba(245, 158, 11, .32) 58%);
   padding-inline: .08em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -328,7 +354,7 @@ img { max-width: 100%; }
 }
 .atlas-marks i { position: absolute; border: 2px solid rgba(15,23,42,.34); border-left: 0; border-bottom: 0; border-radius: 0 100% 0 0; }
 .atlas-marks i:first-child { right: -2%; top: 6%; width: 34vw; height: 22vw; transform: rotate(-16deg); }
-.atlas-marks i:nth-child(2) { right: 6%; top: 36%; width: 26vw; height: 16vw; transform: rotate(9deg); border-color: rgba(244,63,94,.38); border-top-style: dashed; }
+.atlas-marks i:nth-child(2) { right: 6%; top: 36%; width: 26vw; height: 16vw; transform: rotate(9deg); border-color: rgba(245, 158, 11, .38); border-top-style: dashed; }
 .atlas-marks b {
   position: absolute; display: grid; place-items: center;
   border: 1px solid var(--olive); border-radius: 50%; width: 28px; height: 28px;
@@ -387,8 +413,8 @@ img { max-width: 100%; }
   background-size: 10px 10px; opacity: .3; pointer-events: none;
 }
 .paper > * { position: relative; }
-.cream { background: #f5f5f4; }
-.green, .olive { background: linear-gradient(160deg, #0f172a 0%, var(--deep) 55%, #1e293b 100%); color: #fff; position: relative; overflow: hidden; }
+.cream { background: #f1f5f9; }
+.green, .olive { background: linear-gradient(160deg, var(--primary) 0%, var(--deep) 55%, var(--primary-600) 100%); color: #fff; position: relative; overflow: hidden; }
 .green:after {
   content: ""; position: absolute; inset: 0;
   background-image:
@@ -479,8 +505,8 @@ img { max-width: 100%; }
 .question-list strong { display: inline; margin-left: .4rem; color: var(--olive); }
 
 /* بطاقة الدرجات */
-.mint { background: #f0fdfa; }
-.mint article > p { color: #475569; line-height: 2; }
+.mint { background: #eef6ff; }
+.mint article > p { color: var(--ink-2); line-height: 2; }
 .score-card {
   background: var(--surface); border: 1px solid #cbd5e1;
   border-radius: var(--r-lg); padding: 1.6rem; box-shadow: var(--sh-md);
@@ -675,11 +701,11 @@ td a { color: var(--olive-600); font-weight: 700; }
 .caption { font-size: .76rem; color: var(--muted); }
 
 .olive { background: linear-gradient(155deg, var(--olive), var(--olive-600)); }
-.olive article > p { color: #ccfbf1; line-height: 2; }
+.olive article > p { color: #e2e8f0; line-height: 2; }
 
 .evidence {
-  background: #fafaf9; color: var(--ink); padding: 1.5rem;
-  display: grid; gap: .8rem; border-radius: var(--r-md); border: 1px solid #e7e5e4;
+  background: var(--surface-2); color: var(--ink); padding: 1.5rem;
+  display: grid; gap: .8rem; border-radius: var(--r-md); border: 1px solid var(--line);
 }
 .evidence h2 { font: 800 1.12rem var(--font-head); color: var(--deep); margin: 0; }
 .evidence span { font-size: .86rem; }
@@ -718,7 +744,7 @@ td a { color: var(--olive-600); font-weight: 700; }
 .faq-list details p { margin: 0; padding: 0 0 1.2rem; color: #475569; line-height: 2; font-size: .94rem; }
 
 /* المصادر */
-.sources { background: #f5f5f4; border-top: 1px solid #d6d3d1; padding: 2.2rem 0; }
+.sources { background: var(--surface-2); border-top: 1px solid var(--line-strong); padding: 2.2rem 0; }
 .sources h2 { font: 800 .98rem var(--font-head); color: var(--olive); margin: 0 0 .6rem; }
 .sources ol { margin: 0; padding-right: 1.15rem; }
 .sources li { font-size: .8rem; margin: .25rem 0; }
@@ -1023,8 +1049,8 @@ td a { color: var(--olive-600); font-weight: 700; }
   100% { transform: scale(1); opacity: 1; }
 }
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, .35); }
-  50% { box-shadow: 0 0 0 12px rgba(232, 160, 67, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, .35); }
+  50% { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
 }
 @keyframes breathe {
   0%, 100% { transform: scale(1) rotate(var(--rot, 0deg)); }
@@ -1083,7 +1109,7 @@ td a { color: var(--olive-600); font-weight: 700; }
   animation: gradient-shift 4s linear infinite;
 }
 .home-hero h1 span {
-  background: linear-gradient(180deg, transparent 62%, rgba(244, 63, 94, .28) 62%);
+  background: linear-gradient(180deg, transparent 62%, rgba(245, 158, 11, .30) 62%);
   padding-inline: .08em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -1094,9 +1120,9 @@ td a { color: var(--olive-600); font-weight: 700; }
   content: "";
   position: absolute; inset: 0; z-index: -3;
   background:
-    radial-gradient(circle at 20% 30%, rgba(244, 63, 94, .10) 0%, transparent 40%),
+    radial-gradient(circle at 20% 30%, rgba(245, 158, 11, .12) 0%, transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(20, 184, 166, .10) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, .06) 0%, transparent 50%);
+    radial-gradient(circle at 50% 50%, rgba(10, 22, 40, .05) 0%, transparent 50%);
   animation: breathe 14s ease-in-out infinite;
   pointer-events: none;
 }
@@ -1108,7 +1134,7 @@ td a { color: var(--olive-600); font-weight: 700; }
 .js .spotlight:before {
   content: "";
   position: absolute; inset: 0; z-index: 0;
-  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(244, 63, 94, .12), transparent 40%);
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(245, 158, 11, .14), transparent 40%);
   opacity: 0;
   transition: opacity .3s var(--ease);
   pointer-events: none;

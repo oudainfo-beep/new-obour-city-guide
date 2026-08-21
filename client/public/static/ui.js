@@ -16,6 +16,64 @@
     onScroll();
   }
 
+  // شريط تقدّم التمرير
+  const progressBar = d.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.setAttribute("aria-hidden", "true");
+  d.body.appendChild(progressBar);
+  const updateProgress = () => {
+    const doc = d.documentElement;
+    const scroll = doc.scrollTop || d.body.scrollTop;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const pct = max > 0 ? scroll / max : 0;
+    progressBar.style.transform = `scaleX(${pct})`;
+  };
+  addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+
+  // عدّادات متحركة للأرقام في الرئيسية
+  const countUp = (el, target, suffix = "", duration = 1400) => {
+    const start = performance.now();
+    const startVal = 0;
+    const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const val = startVal + (target - startVal) * easeOutQuart(p);
+      const isInt = Number.isInteger(target);
+      el.textContent = (isInt ? Math.round(val) : val.toFixed(1)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else {
+        el.textContent = target + suffix;
+        el.style.animation = "count-pop .35s var(--ease-bounce)";
+      }
+    };
+    requestAnimationFrame(step);
+  };
+  const parseMetric = (text) => {
+    const m = text.trim().match(/^([0-9\.]+)(.*)$/);
+    if (!m) return null;
+    const n = parseFloat(m[1]);
+    return Number.isFinite(n) ? { n, suffix: m[2] } : null;
+  };
+  const counterEls = d.querySelectorAll(".metrics b, .neighborhood-strip b, .score-card div b");
+  if (counterEls.length && !reduced && "IntersectionObserver" in window) {
+    const counterIo = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const original = el.textContent;
+          const parsed = parseMetric(original);
+          if (parsed) {
+            el.textContent = "0" + parsed.suffix;
+            countUp(el, parsed.n, parsed.suffix);
+          }
+          counterIo.unobserve(el);
+        }
+      }
+    }, { threshold: 0.4 });
+    counterEls.forEach((el) => counterIo.observe(el));
+  }
+
   // تسجيل Service Worker للتطبيق التقدمي
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js").catch(() => {});
