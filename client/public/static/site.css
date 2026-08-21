@@ -169,6 +169,8 @@ img { max-width: 100%; }
 }
 .pwa-install:hover { background: var(--olive-600); transform: translateY(-2px); }
 .pwa-install span { font-size: .9rem; }
+.pwa-install.is-ready { box-shadow: 0 0 0 3px rgba(232, 160, 67, .35), 0 4px 12px rgba(13, 92, 70, .22); }
+.pwa-install:disabled { opacity: .7; cursor: default; transform: none !important; }
 .pwa-install[hidden] { display: none !important; }
 .mobile-menu { display: none; }
 

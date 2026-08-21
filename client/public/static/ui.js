@@ -25,24 +25,35 @@
   const installBtns = d.querySelectorAll(".pwa-install");
   let installPrompt = null;
   if (installBtns.length) {
-    const setVisible = (visible) => installBtns.forEach((b) => (b.hidden = !visible));
+    const setReady = (ready) => installBtns.forEach((b) => b.classList.toggle("is-ready", ready));
     addEventListener("beforeinstallprompt", (e) => {
       e.preventDefault();
       installPrompt = e;
-      setVisible(true);
+      setReady(true);
     });
     addEventListener("appinstalled", () => {
       installPrompt = null;
-      setVisible(false);
+      installBtns.forEach((b) => {
+        b.classList.remove("is-ready");
+        b.textContent = "تم التثبيت";
+        b.disabled = true;
+      });
     });
     installBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
-        if (!installPrompt) return;
-        installPrompt.prompt();
-        installPrompt.userChoice.then((choice) => {
-          if (choice.outcome === "accepted") setVisible(false);
-          installPrompt = null;
-        });
+        if (installPrompt) {
+          installPrompt.prompt();
+          installPrompt.userChoice.then((choice) => {
+            if (choice.outcome === "accepted") {
+              installBtns.forEach((b) => (b.hidden = true));
+            }
+            installPrompt = null;
+            setReady(false);
+          });
+        } else {
+          // المتصفح لم يُطلق الحدث بعد أو لا يدعم التثبيت المباشر
+          alert("لتثبيت دليل العبور:\n• Chrome / Edge / Android: استخدم خيار 'تثبيت' في شريط العنوان أو القائمة.\n• iPhone / Safari: اضغط زر المشاركة ثم 'Add to Home Screen'.");
+        }
       });
     });
   }
