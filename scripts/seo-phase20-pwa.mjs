@@ -40,7 +40,7 @@ const offlineHtml = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أنت غير متصل | دليل العبور والعبور الجديدة</title>
   <meta name="description" content="يبدو أنك غير متصل بالإنترنت. بعض صفحات دليل العبور متاحة حتى بدون اتصال.">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://obourguide.com/offline/">
   <link rel="stylesheet" href="/static/site.css?v=${siteCssVer}">
   <link rel="manifest" href="/manifest.webmanifest">
