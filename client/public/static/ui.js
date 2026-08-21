@@ -1,5 +1,5 @@
 /* Obour Guide — تحسينات تفاعلية خفيفة (Progressive Enhancement)
-   المحتوى يعمل بالكامل بدون هذا الملف؛ هو فقط يضيف الحركة وحالة الهيدر. */
+   المحتوى يعمل بالكامل بدون هذا الملف؛ هو فقط يضيف الحركة وحالة الهيدر وتثبيت التطبيق. */
 (() => {
   const d = document;
   const de = d.documentElement;
@@ -13,6 +13,37 @@
     const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
     addEventListener("scroll", onScroll, { passive: true });
     onScroll();
+  }
+
+  // تسجيل Service Worker للتطبيق التقدمي
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  }
+
+  // زر تثبيت التطبيق (PWA install prompt)
+  const installBtns = d.querySelectorAll(".pwa-install");
+  let installPrompt = null;
+  if (installBtns.length) {
+    const setVisible = (visible) => installBtns.forEach((b) => (b.hidden = !visible));
+    addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      installPrompt = e;
+      setVisible(true);
+    });
+    addEventListener("appinstalled", () => {
+      installPrompt = null;
+      setVisible(false);
+    });
+    installBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (!installPrompt) return;
+        installPrompt.prompt();
+        installPrompt.userChoice.then((choice) => {
+          if (choice.outcome === "accepted") setVisible(false);
+          installPrompt = null;
+        });
+      });
+    });
   }
 
   // حركات الظهور عند التمرير

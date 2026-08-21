@@ -105,6 +105,17 @@ img { max-width: 100%; }
   box-shadow: 0 10px 24px rgba(46, 107, 78, .34);
 }
 .button:active { transform: translateY(0); }
+.pwa-install {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--olive); color: #fff; border: 1px solid var(--olive);
+  padding: .55rem .9rem; border-radius: var(--r-pill);
+  font: 800 .78rem var(--font-head); cursor: pointer; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(46, 107, 78, .22);
+  transition: transform .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+}
+.pwa-install:hover { background: var(--olive-600); transform: translateY(-2px); }
+.pwa-install span { font-size: .9rem; }
+.pwa-install[hidden] { display: none !important; }
 .mobile-menu { display: none; }
 
 /* ==========================================================================
@@ -806,6 +817,7 @@ td a { color: var(--olive-600); font-weight: 700; }
 .m-group > div a:hover { background: #eef4ea; }
 .m-group > div a[aria-current=page] { color: var(--deep); background: #e7efe7; }
 .mobile-menu .m-solo { line-height: 1.6; min-height: 44px; display: flex; align-items: center; }
+.mobile-menu .pwa-install { width: 100%; justify-content: center; margin-bottom: .55rem; border-radius: var(--r-sm); }
 
 /* صندوق الإفصاح */
 .disclosure {
