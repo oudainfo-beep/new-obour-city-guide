@@ -88,7 +88,7 @@
   // تأثير مغناطيسي خفيف للأزرار والبطاقات التفاعلية
   if (!reduced && !isTouch) {
     const magneticSelector =
-      ".magnetic, .button, .top-cta, .hero-search button, .pwa-install, .quick-card, .hero-chips a, .dir-hub-card, .dir-item";
+      ".magnetic, .button, .top-cta, .hero-search button, .pwa-install, .hero-chips a";
     const magneticEls = d.querySelectorAll(magneticSelector);
     magneticEls.forEach((el) => {
       el.addEventListener("mousemove", (e) => {
@@ -101,5 +101,63 @@
         el.style.transform = "";
       });
     });
+  }
+
+  // Cursor spotlight — تتبع المؤشر داخل البطاقات
+  if (!reduced && !isTouch) {
+    const spotlightSelector = ".quick-card, .criteria div, .buy-grid article, .emergency-card, .dir-item, .dir-hub-card, .action-card, .score-card";
+    const spotlightEls = d.querySelectorAll(spotlightSelector);
+    spotlightEls.forEach((el) => {
+      el.classList.add("spotlight");
+      el.addEventListener("mousemove", (e) => {
+        const rect = el.getBoundingClientRect();
+        el.style.setProperty("--x", `${e.clientX - rect.left}px`);
+        el.style.setProperty("--y", `${e.clientY - rect.top}px`);
+      });
+    });
+  }
+
+  // تأثير tilt خفيف للبطاقات
+  if (!reduced && !isTouch) {
+    const tiltSelector = ".quick-card, .dir-hub-card, .buy-grid article";
+    const tiltEls = d.querySelectorAll(tiltSelector);
+    tiltEls.forEach((el) => {
+      el.classList.add("tilt");
+      el.addEventListener("mousemove", (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-6px) scale(1.01)`;
+      });
+      el.addEventListener("mouseleave", () => {
+        el.style.transform = "";
+      });
+    });
+  }
+
+  // Parallax خفيف للصور أثناء التمرير
+  if (!reduced && !isTouch) {
+    const parallaxImgs = d.querySelectorAll(".split-image img, .home-hero > img");
+    parallaxImgs.forEach((img) => img.classList.add("parallax-img"));
+    let ticking = false;
+    addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        parallaxImgs.forEach((img) => {
+          const rect = img.getBoundingClientRect();
+          const vh = window.innerHeight;
+          const progress = (rect.top + rect.height / 2) / vh - 0.5;
+          img.style.transform = `translateY(${progress * 18}px) scale(1.04)`;
+        });
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  // Animated text — تدرج على العناوين داخل الأقسام الداكنة فقط
+  if (!reduced) {
+    const gradientTargets = d.querySelectorAll(".green h2, .green h3, .olive h2, .olive h3, .district-grid article > b");
+    gradientTargets.forEach((el) => el.classList.add("gradient-text"));
   }
 })();
