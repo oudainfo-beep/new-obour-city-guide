@@ -136,14 +136,20 @@ img { max-width: 100%; }
   z-index: -1;
   background: linear-gradient(90deg, var(--paper) 6%, rgba(247,245,238,.97) 32%, rgba(247,245,238,.72) 56%, rgba(247,245,238,.08) 86%);
 }
-.home-hero-content { position: relative; padding: 5.5rem 0 6rem; max-width: 1180px; }
+.home-hero-content { position: relative; z-index: 1; padding: 5.5rem 0 6rem; max-width: 1180px; }
 .home-hero-content > *:not(.tag) { max-width: 720px; }
 .home-hero h1, .page-hero h1, h2 { font-family: var(--font-head); letter-spacing: -.045em; }
-.home-hero h1 { font-size: clamp(2.6rem, 5.6vw, 5.2rem); line-height: 1.12; margin: .9rem 0 1rem; color: var(--ink); }
+.home-hero h1 {
+  font-size: clamp(2.6rem, 5.6vw, 5.2rem); line-height: 1.12;
+  margin: .9rem 0 1rem; color: var(--ink);
+  text-shadow: 0 1px 0 rgba(247,245,238,.7), 0 2px 10px rgba(247,245,238,.5);
+}
 .home-hero h1 span {
   color: var(--olive);
-  background: linear-gradient(180deg, transparent 62%, rgba(198, 145, 72, .28) 62%);
-  padding-inline: .06em;
+  background: linear-gradient(180deg, transparent 58%, rgba(198, 145, 72, .34) 58%);
+  padding-inline: .08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .home-hero-content > p:last-of-type { font-size: 1.14rem; line-height: 2; color: var(--ink-2); }
 
@@ -187,22 +193,26 @@ img { max-width: 100%; }
 }
 .button-light:hover { background: var(--surface); color: var(--deep); }
 
-/* علامات الأطلس الزخرفية */
-.atlas-marks { position: absolute; inset: 0; pointer-events: none; }
-.atlas-marks i { position: absolute; border: 2px solid rgba(46,107,78,.45); border-left: 0; border-bottom: 0; border-radius: 0 100% 0 0; }
-.atlas-marks i:first-child { right: 6%; top: 13%; width: 44vw; height: 28vw; transform: rotate(-20deg); }
-.atlas-marks i:nth-child(2) { right: 24%; top: 39%; width: 38vw; height: 22vw; transform: rotate(13deg); border-color: rgba(62,155,138,.5); border-top-style: dashed; }
+/* علامات الأطلس الزخرفية — تبقى في أقصى الجانب الأيمن بعيدًا عن النص */
+.atlas-marks {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 50%, black 72%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 50%, black 72%);
+}
+.atlas-marks i { position: absolute; border: 2px solid rgba(46,107,78,.34); border-left: 0; border-bottom: 0; border-radius: 0 100% 0 0; }
+.atlas-marks i:first-child { right: -2%; top: 6%; width: 34vw; height: 22vw; transform: rotate(-16deg); }
+.atlas-marks i:nth-child(2) { right: 6%; top: 36%; width: 26vw; height: 16vw; transform: rotate(9deg); border-color: rgba(62,155,138,.38); border-top-style: dashed; }
 .atlas-marks b {
   position: absolute; display: grid; place-items: center;
-  border: 1px solid var(--olive); border-radius: 50%; width: 30px; height: 30px;
-  background: var(--paper); font: 800 .68rem var(--font-head); color: var(--olive-600);
+  border: 1px solid var(--olive); border-radius: 50%; width: 28px; height: 28px;
+  background: var(--paper); font: 800 .65rem var(--font-head); color: var(--olive-600);
   box-shadow: var(--sh-sm);
 }
-.atlas-marks b:nth-of-type(1) { right: 17%; top: 22%; }
-.atlas-marks b:nth-of-type(2) { right: 38%; top: 43%; }
-.atlas-marks b:nth-of-type(3) { right: 27%; bottom: 20%; }
+.atlas-marks b:nth-of-type(1) { right: 6%; top: 16%; }
+.atlas-marks b:nth-of-type(2) { right: 20%; top: 42%; }
+.atlas-marks b:nth-of-type(3) { right: 10%; bottom: 20%; }
 .atlas-marks em {
-  position: absolute; right: 7%; bottom: 22%;
+  position: absolute; right: 2%; bottom: 20%;
   background: rgba(247,245,238,.92); border-right: 3px solid var(--teal);
   color: var(--deep); padding: .45rem .7rem; font-style: normal; font-weight: 800; font-size: .72rem;
   border-radius: var(--r-sm); box-shadow: var(--sh-sm);
@@ -925,9 +935,10 @@ td a { color: var(--olive-600); font-weight: 700; }
   .home-hero-content > p:last-of-type { font-size: 1.02rem; }
   .hero-search { flex-direction: row; }
   .hero-search button { padding: 0 1.2rem; }
-  .atlas-marks { opacity: .6; }
-  .atlas-marks em { right: 3%; bottom: 20%; }
-  .atlas-marks b:nth-of-type(3) { display: none; }
+  .atlas-marks { opacity: .22; mask-image: linear-gradient(90deg, transparent 0%, transparent 62%, black 85%); -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 62%, black 85%); }
+  .atlas-marks i, .atlas-marks b, .atlas-marks em { transform: translateX(14vw); }
+  .atlas-marks em { right: 3%; bottom: 20%; display: none; }
+  .atlas-marks b:nth-of-type(2), .atlas-marks b:nth-of-type(3) { display: none; }
   .section { padding: 3.6rem 0; }
   .quick-grid { margin-top: -1.6rem; }
   .quick-grid, .neighborhood-strip, .split, .content-grid, .principles, .comparison, .district-grid, .criteria, .buy-grid, .footer-grid, .dir-list, .dir-hub, .emergency-grid { grid-template-columns: 1fr; }
