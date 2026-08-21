@@ -111,7 +111,7 @@ const DEVELOPERS = [
   {
     slug: "ebdaa", name: "إبداع للتطوير العقاري", domain: "https://ebdaa-developments.com/",
     pending: true, projects: "جولف سيتي العبور ومجتمعاته",
-    sourceNote: "موقع رسمي منشور",
+    sourceNote: "موقع رسمي منشور — إبداع إحدى شركات عودة للتطوير العقاري، وشريكة المهندسون المصريون في جولف سيتي العبور",
   },
 ];
 
