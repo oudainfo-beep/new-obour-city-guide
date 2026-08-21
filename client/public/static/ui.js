@@ -25,12 +25,77 @@
   const installBtns = d.querySelectorAll(".pwa-install");
   let installPrompt = null;
   if (installBtns.length) {
+    const STORAGE_KEY = "obour-pwa-dismissed";
+    const isDismissed = () => {
+      try { return localStorage.getItem(STORAGE_KEY) === "1"; } catch { return false; }
+    };
+    const markDismissed = () => {
+      try { localStorage.setItem(STORAGE_KEY, "1"); } catch {}
+    };
+
+    // تأكد إن الأزرار ظاهرة حتى لو كان HTML القديم مخزّن بـ hidden
+    installBtns.forEach((b) => b.removeAttribute("hidden"));
+
     const setReady = (ready) => installBtns.forEach((b) => b.classList.toggle("is-ready", ready));
+
+    function createBanner() {
+      if (d.getElementById("pwa-banner") || isDismissed()) return;
+      const banner = d.createElement("aside");
+      banner.id = "pwa-banner";
+      banner.className = "pwa-banner";
+      banner.setAttribute("role", "status");
+      banner.setAttribute("aria-live", "polite");
+      banner.innerHTML = `
+        <div class="pwa-banner__body">
+          <span class="pwa-banner__icon" aria-hidden="true">📲</span>
+          <p><strong>ثبّت دليل العبور</strong> للوصول السريع حتى بدون إنترنت.</p>
+          <button class="pwa-banner__install" type="button">تثبيت</button>
+          <button class="pwa-banner__close" type="button" aria-label="إغلاق">✕</button>
+        </div>
+      `;
+      d.body.appendChild(banner);
+
+      const install = banner.querySelector(".pwa-banner__install");
+      const close = banner.querySelector(".pwa-banner__close");
+
+      install.addEventListener("click", () => {
+        if (installPrompt) {
+          installPrompt.prompt();
+          installPrompt.userChoice.then((choice) => {
+            if (choice.outcome === "accepted") {
+              banner.remove();
+              installBtns.forEach((b) => b.setAttribute("hidden", ""));
+            }
+            installPrompt = null;
+            setReady(false);
+          });
+        } else {
+          banner.remove();
+          alert("لتثبيت دليل العبور:\n• Chrome / Edge / Android: استخدم خيار 'تثبيت' في شريط العنوان أو القائمة.\n• iPhone / Safari: اضغط زر المشاركة ثم 'Add to Home Screen'.");
+        }
+      });
+
+      close.addEventListener("click", () => {
+        markDismissed();
+        banner.remove();
+      });
+
+      // يختفي تلقائيًا بعد 12 ثانية إذا لم يتفاعل المستخدم
+      setTimeout(() => {
+        if (banner.isConnected) {
+          banner.classList.add("pwa-banner--fading");
+          setTimeout(() => banner.remove(), 400);
+        }
+      }, 12000);
+    }
+
     addEventListener("beforeinstallprompt", (e) => {
       e.preventDefault();
       installPrompt = e;
       setReady(true);
+      createBanner();
     });
+
     addEventListener("appinstalled", () => {
       installPrompt = null;
       installBtns.forEach((b) => {
@@ -38,20 +103,23 @@
         b.textContent = "تم التثبيت";
         b.disabled = true;
       });
+      const banner = d.getElementById("pwa-banner");
+      if (banner) banner.remove();
+      markDismissed();
     });
+
     installBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         if (installPrompt) {
           installPrompt.prompt();
           installPrompt.userChoice.then((choice) => {
             if (choice.outcome === "accepted") {
-              installBtns.forEach((b) => (b.hidden = true));
+              installBtns.forEach((b) => b.setAttribute("hidden", ""));
             }
             installPrompt = null;
             setReady(false);
           });
         } else {
-          // المتصفح لم يُطلق الحدث بعد أو لا يدعم التثبيت المباشر
           alert("لتثبيت دليل العبور:\n• Chrome / Edge / Android: استخدم خيار 'تثبيت' في شريط العنوان أو القائمة.\n• iPhone / Safari: اضغط زر المشاركة ثم 'Add to Home Screen'.");
         }
       });

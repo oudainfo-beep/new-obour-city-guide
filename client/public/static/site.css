@@ -173,6 +173,65 @@ img { max-width: 100%; }
 .pwa-install.is-ready { box-shadow: 0 0 0 3px rgba(244, 63, 94, .35), 0 4px 12px rgba(15, 23, 42, .22); }
 .pwa-install:disabled { opacity: .7; cursor: default; transform: none !important; }
 .pwa-install[hidden] { display: none !important; }
+
+/* تذكير بتثبيت التطبيق — غير مزعج وقابل للإغلاق */
+.pwa-banner {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 1000;
+  padding: .6rem;
+  background: transparent;
+  pointer-events: none;
+}
+.pwa-banner__body {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: .7rem .9rem;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-lg);
+  pointer-events: auto;
+  font: 600 .85rem/1.5 var(--font-body);
+  color: var(--ink);
+  animation: bannerSlideUp .45s var(--ease) both;
+}
+.pwa-banner__body p { margin: 0; flex: 1; }
+.pwa-banner__icon { font-size: 1.1rem; }
+.pwa-banner__install {
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+  font: 800 .82rem var(--font-head);
+  padding: .45rem .9rem;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform .2s var(--ease), background .2s var(--ease);
+}
+.pwa-banner__install:hover { background: var(--accent); transform: translateY(-1px); }
+.pwa-banner__close {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: .25rem;
+  line-height: 1;
+}
+.pwa-banner__close:hover { color: var(--ink); }
+.pwa-banner--fading .pwa-banner__body { animation: bannerFadeOut .4s var(--ease) both; }
+@keyframes bannerSlideUp {
+  from { opacity: 0; transform: translateY(20px) scale(.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes bannerFadeOut {
+  to { opacity: 0; transform: translateY(12px); }
+}
+
 .mobile-menu { display: none; }
 
 /* ==========================================================================
