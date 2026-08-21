@@ -2,15 +2,21 @@
    يخزّن الأصول الأساسية ويقدّمها بسرعة، مع التأكد من عرض أحدث إصدار من الصفحات. */
 
 const CACHE_NAME = "obour-guide-v2-20260821";
+const OFFLINE_PAGE = "/offline/";
 const PRECACHE = [
   "/",
   "/index.html",
+  "/offline/",
+  "/offline/index.html",
   "/search/",
+  "/emergency/",
   "/brand/icon-192.png",
   "/brand/icon-512.png",
   "/brand/logo.svg",
   "/brand/logo.png"
 ];
+
+/* phase20-pwa */
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -55,6 +61,8 @@ async function networkFirst(request) {
     const cached = await caches.match(request);
     if (cached) return cached;
     if (request.mode === "navigate") {
+      const offline = await caches.match(OFFLINE_PAGE);
+      if (offline) return offline;
       return caches.match("/").then((fallback) => fallback || new Response("", { status: 503 }));
     }
     throw err;
