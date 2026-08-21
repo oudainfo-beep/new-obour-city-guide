@@ -115,3 +115,6 @@ client/public/__manus__/version.json
 
 # SEO research raw crawls (large HTML artifacts, generated locally)
 seo-research/raw-crawls/
+
+# Local screenshots
+.screenshots/

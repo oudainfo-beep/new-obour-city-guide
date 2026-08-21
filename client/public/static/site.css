@@ -41,8 +41,8 @@
   --ease: cubic-bezier(.22, .68, .26, .99);
   --ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
   --ease-elastic: cubic-bezier(.68, -.55, .265, 1.55);
-  --font-head: "Alexandria", "Tajawal", Arial, sans-serif;
-  --font-body: "Vazirmatn", "Mada", Arial, sans-serif;
+  --font-head: "Tajawal", "Cairo", Arial, sans-serif;
+  --font-body: "Mada", "Vazirmatn", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
