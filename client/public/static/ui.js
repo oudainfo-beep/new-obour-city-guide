@@ -74,6 +74,122 @@
     counterEls.forEach((el) => counterIo.observe(el));
   }
 
+  // اقتراحات البحث في الهيدر
+  function initSearchSuggest() {
+    if (location.pathname === "/search/") return;
+    const inputs = d.querySelectorAll(".site-search input[name='q'], .m-search input[name='q']");
+    if (!inputs.length) return;
+
+    const norm = (t) =>
+      String(t || "")
+        .toLowerCase()
+        .replace(/[ً-ْـ]/g, "")
+        .replace(/[أإآٱ]/g, "ا")
+        .replace(/ى/g, "ي")
+        .replace(/ة/g, "ه")
+        .replace(/[^\p{L}\p{N}]+/gu, " ")
+        .trim();
+
+    let idx = null;
+    fetch("/search-index.json")
+      .then((r) => r.json())
+      .then((data) => {
+        idx = data.map((it) => ({ ...it, _s: norm([it.n, it.a, it.t, it.d, it.k].filter(Boolean).join(" ")) }));
+      })
+      .catch(() => {});
+
+    function renderBox(input, list, query) {
+      let box = input.parentElement.querySelector(".search-suggest");
+      if (!box) {
+        box = d.createElement("div");
+        box.className = "search-suggest";
+        box.setAttribute("role", "listbox");
+        input.parentElement.style.position = "relative";
+        input.parentElement.appendChild(box);
+      }
+      box.innerHTML = "";
+      if (!list.length) {
+        box.classList.remove("is-open");
+        return box;
+      }
+      list.forEach((it, i) => {
+        const a = d.createElement("a");
+        a.href = it.u;
+        a.setAttribute("role", "option");
+        a.setAttribute("data-index", i);
+        a.innerHTML = `<strong>${it.n}</strong><small>${[it.k, it.a].filter(Boolean).join(" · ")}</small>`;
+        a.addEventListener("click", () => { box.classList.remove("is-open"); });
+        box.appendChild(a);
+      });
+      box.classList.add("is-open");
+      return box;
+    }
+
+    function move(input, delta) {
+      const box = input.parentElement.querySelector(".search-suggest");
+      if (!box || !box.classList.contains("is-open")) return;
+      const items = [...box.querySelectorAll("a")];
+      const active = box.querySelector("a.is-selected");
+      let pos = active ? items.indexOf(active) : -1;
+      pos = Math.max(0, Math.min(items.length - 1, pos + delta));
+      items.forEach((el) => el.classList.remove("is-selected"));
+      items[pos].classList.add("is-selected");
+      items[pos].scrollIntoView({ block: "nearest" });
+    }
+
+    function search(query, input) {
+      if (!idx || !query) return;
+      const qWords = norm(query).split(" ").filter(Boolean);
+      if (!qWords.length) { renderBox(input, []); return; }
+      const hits = [];
+      for (const it of idx) {
+        let score = 0, ok = true;
+        for (const w of qWords) {
+          const pos = it._s.indexOf(w);
+          if (pos < 0) { ok = false; break; }
+          score += pos === 0 ? 3 : 1;
+        }
+        if (ok) {
+          if (norm(it.n).indexOf(qWords[0]) === 0) score += 4;
+          hits.push({ score, item: it });
+        }
+      }
+      hits.sort((a, b) => b.score - a.score);
+      renderBox(input, hits.slice(0, 7).map((h) => h.item), query);
+    }
+
+    inputs.forEach((input) => {
+      let timer = null;
+      input.addEventListener("input", () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => search(input.value, input), 180);
+      });
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown") { e.preventDefault(); move(input, 1); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); move(input, -1); }
+        else if (e.key === "Escape") {
+          const box = input.parentElement.querySelector(".search-suggest");
+          if (box) box.classList.remove("is-open");
+        }
+        else if (e.key === "Enter") {
+          const box = input.parentElement.querySelector(".search-suggest");
+          const active = box && box.querySelector("a.is-selected");
+          if (active) {
+            e.preventDefault();
+            location.href = active.href;
+          }
+        }
+      });
+      input.addEventListener("focus", () => { if (input.value.trim()) search(input.value, input); });
+    });
+
+    d.addEventListener("click", (e) => {
+      if (e.target.closest(".site-search, .m-search")) return;
+      d.querySelectorAll(".search-suggest").forEach((b) => b.classList.remove("is-open"));
+    });
+  }
+  initSearchSuggest();
+
   // تسجيل Service Worker للتطبيق التقدمي
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/sw.js").catch(() => {});

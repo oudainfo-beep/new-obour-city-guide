@@ -800,6 +800,32 @@ td a { color: var(--olive-600); font-weight: 700; }
 }
 .site-search button:hover { color: var(--deep); transform: scale(1.12); }
 
+/* اقتراحات البحث في الهيدر */
+.site-search, .m-search { position: relative; }
+.search-suggest {
+  position: absolute; top: calc(100% + 8px); right: 0; left: 0;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: var(--r-md); box-shadow: var(--sh-lg);
+  max-height: 360px; overflow: auto; z-index: 100;
+  display: none; text-align: right;
+}
+.search-suggest.is-open { display: block; }
+.search-suggest a {
+  display: block; padding: .75rem 1rem; color: var(--ink);
+  text-decoration: none; border-bottom: 1px solid var(--line);
+  transition: background .15s var(--ease);
+}
+.search-suggest a:last-child { border-bottom: 0; }
+.search-suggest a:hover, .search-suggest a.is-selected {
+  background: var(--surface-2);
+}
+.search-suggest a strong {
+  display: block; font: 700 .9rem/1.4 var(--font-head); color: var(--ink);
+}
+.search-suggest a small {
+  display: block; color: var(--muted); font-size: .72rem; margin-top: .15rem;
+}
+
 .search-page-form { display: flex; gap: .6rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
 .search-page-form input {
   flex: 1; min-width: 240px; border: 1px solid var(--line-strong);
