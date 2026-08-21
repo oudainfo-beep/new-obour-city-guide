@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://obourguide.com/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/about-us/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/about/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/after-purchase/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/automotive/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/automotive/car-ac/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/automotive/car-dealers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/automotive/car-rental/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/automotive/service-centers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/automotive/spare-parts/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/automotive/tires/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/automotive/workshops/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/banks/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/banks/atm/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/banks/bank-branches/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/banks/money-transfer/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/best-compounds-new-obour/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/best-compounds-obour/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/buying-guide/</loc><lastmod>2026-08</lastmod></url>
@@ -16,6 +23,8 @@
   <url><loc>https://obourguide.com/clinics/dentists/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/clinics/doctors/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/clinics/labs/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/clinics/physiotherapy/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/clinics/veterinary/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/compare/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/compare/canary-vs-solana/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/compare/district-1-vs-district-5/</loc><lastmod>2026-08</lastmod></url>
@@ -88,16 +97,30 @@
   <url><loc>https://obourguide.com/en/restaurants/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/en/schools/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/entertainment/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/entertainment/clubs/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/entertainment/commercial-centers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/entertainment/kids-entertainment/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/entertainment/malls/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/entities/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/faq/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/fitness/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/fitness/beauty-salons/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/fitness/gyms/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/fitness/spas/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/fitness/sports-clubs/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/future-developments/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/government-services/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/government-services/emergency-numbers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/government-services/fire-stations/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/government-services/government-offices/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/government-services/post-offices/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/health-guide/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/health/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/home-services/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/home-services/contractors/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/home-services/dry-cleaning/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/home-services/electricians/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/home-services/pest-control/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/home-services/plumbers/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/hospitals/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/hospitals/ain-shams-specialized-hospital/</loc><lastmod>2026-08</lastmod></url>
@@ -109,11 +132,15 @@
   <url><loc>https://obourguide.com/hospitals/misr-el-amal-hospital/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/hospitals/tabarak-childrens-hospital-obour/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/hotels/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/hotels/hotels-list/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/index.html/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/industrial-zone/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/investment/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/lands/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/living-guide/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/logistics/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/logistics/express-shipping/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/logistics/transport-logistics/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/lrt-obour/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/malls/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/malls/abou-el-maaty-center/</loc><lastmod>2026-08</lastmod></url>
@@ -144,7 +171,10 @@
   <url><loc>https://obourguide.com/new-obour-services/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/new-obour/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/nurseries/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/nurseries/daycare/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/nurseries/kindergartens/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/nurseries/language-centers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/nurseries/training-centers/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/obour-city-hospitals/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/obour-city-malls/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/obour-city-pharmacies/</loc><lastmod>2026-08</lastmod></url>
@@ -207,14 +237,28 @@
   <url><loc>https://obourguide.com/procedures/handover-utilities/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/procedures/unit-swap/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/professional-services/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/accountants/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/advertising/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/architects/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/digital-marketing/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/engineers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/it-services/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/professional-services/lawyers/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/professional-services/printing/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/real-estate-offices/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/real-estate-offices/compounds-marketing/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/real-estate-offices/real-estate-ads/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/real-estate-offices/real-estate-companies/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/rent/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/restaurants/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/restaurants/bakeries/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/restaurants/cafes/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/restaurants/fast-food/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/restaurants/juice-shops/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/restaurants/mashawi/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/restaurants/restaurants-list/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/restaurants/roasters/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/restaurants/tea-coffee/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/roads/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/school-fees/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/schools/</loc><lastmod>2026-08</lastmod></url>
@@ -229,11 +273,18 @@
   <url><loc>https://obourguide.com/schools/osama-bin-zaid-complex/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/schools/shaimaa-educational-complex/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/schools/st-joseph-school-obour/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/search/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/services/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/shopping-guide/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/shopping/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/shopping/appliances/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/shopping/building-tools/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/shopping/clothing/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/shopping/electronics/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/shopping/furniture/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/shopping/kids-clothing/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/shopping/kitchens/</loc><lastmod>2026-08</lastmod></url>
+  <url><loc>https://obourguide.com/shopping/mobile-shops/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/shopping/supermarkets/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/sources/</loc><lastmod>2026-08</lastmod></url>
   <url><loc>https://obourguide.com/tools/</loc><lastmod>2026-08</lastmod></url>
