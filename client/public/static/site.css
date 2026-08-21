@@ -918,10 +918,11 @@ td a { color: var(--olive-600); font-weight: 700; }
 .m-group summary {
   list-style: none; padding: .75rem .65rem; font-weight: 800; color: var(--ink);
   cursor: pointer; display: flex; justify-content: space-between; align-items: center;
-  gap: .6rem; white-space: nowrap; line-height: 1.6; min-height: 44px;
+  gap: .6rem; line-height: 1.6; min-height: 44px;
 }
 .m-group summary::-webkit-details-marker { display: none; }
-.m-group summary::after { content: "▾"; color: var(--olive); font-size: .78rem; flex: 0 0 auto; transition: transform .25s var(--ease); }
+.m-group summary::marker { content: ""; }
+.m-group summary::after { content: "▾"; color: var(--olive); font-size: .78rem; flex: 0 0 auto; margin-inline-start: auto; transition: transform .25s var(--ease); }
 .m-group[open] summary::after { transform: rotate(180deg); }
 .m-group > div { padding: 0 0 .55rem .65rem; }
 .m-group > div a {
