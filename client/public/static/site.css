@@ -573,6 +573,8 @@ img { max-width: 100%; }
   -webkit-mask-image: linear-gradient(90deg, transparent, black 28%, black 76%, transparent);
 }
 .hero-layout { position: relative; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 4rem; padding: 5rem 0; }
+/* fix: hero بدون عنصر بصري — كتلة النص تمتد على عمودي الشبكة بدل الحبس في عمود 190px */
+.hero-layout > .hero-copy-block:only-child { grid-column: 1 / -1; }
 .route-rail {
   border-left: 1px solid rgba(15,23,42,.32); position: relative;
   padding: 1rem 0 1rem 1rem; display: flex; flex-direction: column;
