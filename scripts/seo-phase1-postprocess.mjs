@@ -48,6 +48,8 @@ const AR_MONTHS = {
 };
 
 function pageLastmod(html) {
+  const ld = html.match(/"dateModified":"(\d{4}-\d{2}(-\d{2})?)"/);
+  if (ld) return ld[1];
   const m = html.match(/آخر تحديث: ([\u0600-\u06FF]+) (\d{4})/);
   if (!m) return DEFAULT_LASTMOD;
   const mm = AR_MONTHS[m[1]];
