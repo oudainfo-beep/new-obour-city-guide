@@ -298,8 +298,8 @@ function homePage(chrome) {
 </ol>
 <p><a href="/en/buying-guide/">Read the full buying guide →</a></p>
 
-<h2>Independence and transparency</h2>
-<p>This guide applies the same verification standards to everyone without exception. Obour Guide is an independent information resource: there is no ownership, funding, management, commercial partnership, or endorsement relationship between the guide and any developer, business, or school listed in the directory. <a href="/disclosure/">Read the disclosure page (Arabic) →</a></p>
+<h2>Standards and transparency</h2>
+<p>This guide applies the same verification standards to everyone without exception, including the developers, businesses and schools listed in the directory. Listings, rankings and editorial coverage are never sold, and no entry receives preferential placement in exchange for payment. <a href="/disclosure/">Read the disclosure page (Arabic) →</a></p>
 `;
   return pageShell(chrome, {
     title, description, url, arUrl, h1,
