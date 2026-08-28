@@ -23,7 +23,7 @@ const connectivity = "/brand/access-schematic.svg";
 
 const neighborhoodsImage = "/brand/districts-plan.svg";
 
-const nav = [["/", "الرئيسية"], ["/about/", "عن المدينة"], ["/districts/", "الأحياء"], ["/transport/", "الوصول"], ["/prices/", "الأسعار"], ["/developers/", "دليل المطورين"], ["/buying-guide/", "دليل الشراء"], ["/services/", "الخدمات"], ["/schools/", "المدارس"], ["/health/", "الصحة"], ["/emergency/", "الطوارئ"], ["/directory/", "دليل الخدمات"], ["/investment/", "الاستثمار"], ["/mistakes/", "أخطاء شائعة"], ["/compare/", "مقارنة المدن"], ["/faq/", "الأسئلة"]];
+const nav = [["/", "الرئيسية"], ["/about/", "عن المدينة"], ["/districts/", "الأحياء"], ["/transport/", "الوصول"], ["/prices/", "الأسعار"], ["/developers/", "دليل المطورين"], ["/buying-guide/", "دليل الشراء"], ["/services/", "الخدمات"], ["/schools/", "المدارس"], ["/health/", "الصحة"], ["/emergency/", "الطوارئ"], ["/directory/", "دليل الخدمات"], ["/investment/", "الاستثمار"], ["/mistakes/", "أخطاء شائعة"], ["/compare/", "مقارنة المدن"], ["/faq/", "الأسئلة"], ["/news/", "الأخبار"]];
 const refs = [
   ["هيئة المجتمعات العمرانية الجديدة — مخطط مدينة العبور الجديدة", "https://lands.nuca.gov.eg/ar/ViewCity.aspx?ID=16"],
   ["الهيئة القومية للأنفاق — القطار الكهربائي الخفيف", "http://www.nat.gov.eg/LocationActivity.aspx?id=2085"],
