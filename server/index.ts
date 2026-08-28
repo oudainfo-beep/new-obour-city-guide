@@ -1,4 +1,5 @@
 import express from "express";
+import { qaRouter } from "./qa";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -16,6 +17,8 @@ async function startServer() {
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
+  app.use(express.json());
+  app.use("/api/qa", qaRouter());
   app.use(express.static(staticPath));
 
   // Serve each standalone HTML document explicitly so direct route access never falls back to the home page.
