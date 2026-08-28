@@ -229,6 +229,42 @@ function writeLlmsTxt() {
 - [الطوارئ والأرقام الرسمية](${SITE}/emergency/)
 - [دليل العيش في العبور](${SITE}/living-guide/)
 
+## أدلة الأحياء
+- [أفضل أحياء العبور حسب الاحتياج](${SITE}/best-districts/)
+- أدلة كل حي: [الأول](${SITE}/district-1/) · [الثاني](${SITE}/district-2/) · [الثالث](${SITE}/district-3/) · [الرابع](${SITE}/district-4/) · [الخامس](${SITE}/district-5/) · [السادس](${SITE}/district-6/) · [السابع](${SITE}/district-7/) · [الثامن](${SITE}/district-8/) · [التاسع](${SITE}/district-9/)
+
+## أدلة الإسكان والشراء (2026)
+- [دار مصر في العبور](${SITE}/dar-misr-obour/) · [سكن مصر](${SITE}/sakan-misr-obour/) · [التقسيط](${SITE}/installments-obour/)
+- [كيف تختار شقتك](${SITE}/choose-apartment/) · [فيلات للبيع](${SITE}/villas-for-sale-obour/) · [عقارات العبور الجديدة](${SITE}/new-obour-real-estate/)
+- [توقعات الأسعار وقراءة السوق](${SITE}/price-forecast-obour/) · [العقارات التجارية](${SITE}/commercial-real-estate/)
+
+## الإيجارات
+- [فيلات](${SITE}/villas-rent-obour/) · [محلات](${SITE}/shops-rent-obour/) · [مكاتب](${SITE}/offices-rent-obour/) · [مخازن](${SITE}/warehouses-obour/) · [شقق مفروشة](${SITE}/furnished-apartments/) · [استوديو](${SITE}/studio-rent-obour/)
+
+## المواصلات والوصول
+- [مواصلات العبور من القاهرة](${SITE}/transport-from-cairo/) · [الدائري الأوسطي](${SITE}/middle-ring-road-obour/) · [النقل الداخلي](${SITE}/internal-transport/)
+
+## الأسواق والتسوق
+- [سوق الجمعة](${SITE}/friday-market/) · [السوق المركزي](${SITE}/central-market/) · [الهايبر ماركت](${SITE}/supermarkets/)
+- [انفينتي مول](${SITE}/infinity-mall/) · [جولف سيتي مول](${SITE}/golf-city-mall/) · [مولات العبور الجديدة](${SITE}/new-obour-malls/)
+
+## الصحة
+- [خدمات 24 ساعة والطوارئ](${SITE}/hospital-24-hours/) · [صيدليات مناوبة](${SITE}/pharmacies-24-hours/)
+- [معامل التحاليل والأشعة](${SITE}/labs-radiology/) · [عيادات الأسنان](${SITE}/dentists-obour/) · [العلاج الطبيعي](${SITE}/physical-therapy-obour/)
+
+## التعليم
+- [مدارس اللغات](${SITE}/language-schools/) · [مدارس العبور الجديدة](${SITE}/new-obour-schools/) · [المصرية اليابانية](${SITE}/japanese-school-obour/) · [الجامعات القريبة](${SITE}/universities-near-obour/)
+
+## الحياة اليومية والعمل
+- [دليفري العبور](${SITE}/food-delivery/) · [الانتقال للمدينة](${SITE}/moving-to-obour/) · [نقل العفش](${SITE}/movers-obour/)
+- [الإنترنت والاتصالات](${SITE}/telecom-obour/) · [الرقم البريدي 11828](${SITE}/postal-code/) · [مكاتب البريد](${SITE}/post-offices/)
+- [وظائف العبور](${SITE}/jobs-obour/) · [المنطقة الصناعية](${SITE}/industrial-companies/) · [مشاكل المدينة وحلولها](${SITE}/obour-problems/)
+- [رحلات يوم واحد](${SITE}/day-trips/) · [المدن القريبة](${SITE}/nearby-cities/) · [أخبار موثوقة](${SITE}/obour-news/)
+
+## English Guides
+- [Living in Obour](${SITE}/en/living-guide/) · [Cost of Living](${SITE}/en/cost-of-living/) · [Apartments for Sale](${SITE}/en/apartments-for-sale/)
+- [Property Investment](${SITE}/en/property-investment/) · [Commuting to Cairo](${SITE}/en/commuting-to-cairo/) · [Postal Code](${SITE}/en/postal-code/) · [Nurseries](${SITE}/en/nurseries/) · [International Schools](${SITE}/en/international-schools/)
+
 ## قواعد الاقتباس
 - الأرقام والعناوين والهواتف مأخوذة من أدلة تجارية ومصادر رسمية منشورة، ويظهر اسم المصدر أسفل كل مدخل.
 - الدرجات في جدول المطورين تقيس **جحم ما يُنشر ويمكن التحقق منه**، لا جودة الشركة المطلقة.
