@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-20T17:14:36.607Z",
+  "generated": "2026-08-28T12:48:47.106Z",
   "license": "CC BY-SA 4.0",
   "attribution": "دليل العبور والعبور الجديدة",
-  "count": 1327,
+  "count": 1837,
   "directories": [
     {
       "slug": "automotive",
@@ -671,6 +671,256 @@
       "area": "Youth neighborhood، مدينة العبور، القليوبية",
       "phone": "",
       "source": "InfoEG.com"
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "ادم لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "افرست للتجارة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "كمبوند بندر العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "الاصلى لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "البتول اوتو سيرفس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "ش الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "البدر للصناعات المغذية للسيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "المنطقة الصناعية الثانية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "البركة لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "التكامل للتجارة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "القطعة 19 ش 32, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "الجوهرى سيرفس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "بلوك 20013 - - المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "العبور لصناعة اليايات - مينراف",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "القطعة 3 ,4 - بلوك 12013, الامتداد الشمالى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "المركز الفنى للشكمانات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "المزعج لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "المناهرى لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "المهندس لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "النور لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "الهيثم لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "القطعة 13 - - حى الشباب - منطقة خدمات 63, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "بيستون جراج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "طريق مصر اسماعيلية الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "جنرال سبرنج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "القطعة السادسة - بلوك 13012 - - المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "جولدن كار سيرفيس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "دكتور نانو سيراميك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "شلتوت لكماليات السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "عمارة لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "ابراج المركز العالمى ش عبد الرحمن الرافعى, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "غالى بلاست",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "مأمون فرج لقطع غيار السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "6 ج, المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "مون ياى لصناعة سوست السيارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "طريق القاهرة بلبيس الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "automotive",
+      "directoryTitle": "خدمات السيارات",
+      "name": "ميركو لصناعة الردياتيرات والمعادن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "قطع غيار سيارات",
+      "area": "بلوك 20031-10, الامتداد الغربى, المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     },
     {
       "directorySlug": "banks",
@@ -2503,6 +2753,176 @@
       "source": "InfoEG.com"
     },
     {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. مدحت باسم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "فيلا 11 - القطعة 15066, الحى السابع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "المركز المصرى الاول لطب الاسنان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "محلية 6, الحى الاول - عمارة 60, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "الوسيلة لطب الاسنان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. احمد محمد سرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. حسام خاطر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. خالد توفيق",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. عمرو شحاتة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. عمرو صلاح الدين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "540 ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. محمد حامد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. محمد رفاعى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "532 ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. مصطفى سامى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. هانى رشدى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. هبة محيى حافظ",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "د. هدى جميل يوسف",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "عيادة الترا للاسنان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "القطعة السابعة - بلوك 16080, الدور 2, الحى الخامس - عمارة 7, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "مركز وندرز لعلاج الاسنان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "clinics",
+      "directoryTitle": "العيادات والمراكز الطبية",
+      "name": "ويندرز دينتال كير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عيادات أسنان",
+      "area": "395 أ - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
       "directorySlug": "entertainment",
       "directoryTitle": "الترفيه والأنشطة",
       "name": "City Club",
@@ -3241,6 +3661,516 @@
       "area": "شارع الشعراوي، Youth District، 100 متر، مدينة العبور، داخل Al-Reda Center، Third الدور، القليوبية",
       "phone": "",
       "source": "InfoEG.com"
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "اتش تو او جيم اند سبا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "جيم",
+      "area": "القطعة الثالثة, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "او تو جيم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "جيم",
+      "area": "منطقة 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "برفكت جيم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "جيم",
+      "area": "اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "جولدز جيم ايجيبت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "جيم",
+      "area": "القطعة 7 - بلوك 12001, المنطقة الصناعية الاولى - الامتداد الشمالى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "بيوتكس صالونز سيكريتس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "بيوتى سنتر الحرملك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "538 ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "عادل واسامة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير احمد سعد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير اس ام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 12 - ش خالد بن الوليد - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير اميرة بلقيس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ش الشباب - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير بيوتيفول جيرلز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير تمر حنة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير جمالك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير جومانا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير جى جى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير حريم السلطان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير دودى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير سمر وزوزو",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير صفاء",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير فيوليت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ش الشباب - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير لجين وجنى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير ميس ندى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "لا في",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "طريق مصر اسماعيلية الصحراوى - جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "مساج سنتر ايجيبت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صالونات تجميل",
+      "area": "ميدان الامام, الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير ابن البلد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير ابن الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير ارت مان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير افرست",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير افندينا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير الاصدقاء",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير البروفيسير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير البنهاوى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير البوب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير السورى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير اللورد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير بيوتى هير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش المشير ابو غزالة - الحى السابع - المنطقة الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير حليم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير رومانى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير عبد الرحمن السورى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير فريش كاتس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير كايرو هير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الامام الشافعى - الحى السادس - المنطقة الثانية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير كلاسيك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير لمسات الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير مأمون",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير محسن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 12 - ش خالد بن الوليد - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير نور الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير نيو لوك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "القطعة 13 - - حى الشباب - منطقة خدمات 63, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير وزة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 12 - ش خالد بن الوليد - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير ويجا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "كوافير ياسمين الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "fitness",
+      "directoryTitle": "اللياقة والتجميل",
+      "name": "نمبر وان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "حلاقة رجالي",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     },
     {
       "directorySlug": "government-services",
@@ -4213,6 +5143,16 @@
       "source": "Yellow.com.eg"
     },
     {
+      "directorySlug": "home-services",
+      "directoryTitle": "الخدمات المنزلية",
+      "name": "السعد لنقل الاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "نقل أثاث",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
       "directorySlug": "hospitals",
       "directoryTitle": "المستشفيات والمراكز الطبية",
       "name": "دار اليسر",
@@ -4401,6 +5341,106 @@
       "area": "محلية 8، قطعة 78،، الحي الأول، مدينة العبور، القليوبية",
       "phone": "01022213599",
       "source": "يلو بيدجز مصر (Yellow.com.eg)"
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "انلايت يور سكاى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "عيادات تداوى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "ش البستان - الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "عيادات دار اليسر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "الطريق السريع - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "عيادات لايف سنتر التخصصية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "الحى الخامس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "مستشفى الجمعية الشرعية للحروق والاورام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "خط 5 شمال متفرع من طريق مصر اسماعيلية الصحراوى - جمعية احمد عرابى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "مستشفى العبور التخصصى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "محلية 5 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "مستشفى ايوان للطب النفسى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "الحى السابع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "مستشفى تبارك للاطفال",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "مستشفى عين شمس التخصصى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "محلية 1, الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "hospitals",
+      "directoryTitle": "المستشفيات والمراكز الطبية",
+      "name": "مستشفى مصر الامل",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مستشفيات ومراكز طبية",
+      "area": "محلية 8 - القطعة 78 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     },
     {
       "directorySlug": "hotels",
@@ -5313,6 +6353,76 @@
       "source": "يلو بيدجز مصر (Yellow.com.eg)"
     },
     {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدليات العزبى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "محلية 6, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدليات المغربى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "محلية 8 ش صالح سليم, الحى الاول - عمارة 112, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدليات ايليت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدليات د. لؤى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "ش البستان, تقاطع ش قطر الندى, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدليات د. محمد اسلام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدلية اسلام نور الدين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "61 أ محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "pharmacies",
+      "directoryTitle": "الصيدليات",
+      "name": "صيدلية حجازى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "صيدليات",
+      "area": "الحى الخامس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
       "directorySlug": "professional-services",
       "directoryTitle": "الخدمات المهنية",
       "name": "Al Fayad For Advertising & Digital Printing",
@@ -6021,6 +7131,416 @@
       "area": "محلية 6،، الحي الأول، مدينة العبور، القليوبية",
       "phone": "01018325313",
       "source": "Yellow.com.eg"
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "السويدى للادوات والكابلات الكهربائية - احمد صادق",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "كم 26 طريق مصر اسماعيلية الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ابن العبور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ادم ديزاين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ال عثمان للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "الحى الخامس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "التاج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "شارع 110 الشباب, مركز ابو شبانة, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "التاجورى لمستلزمات المنزل - عماد التاجورى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "3 بلوك 40 طريق مصر اسماعيلية الصحراوى, منتجع النخيل, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "الرياض للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "مساكن الشباب ش الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "الشركة السويدية للديكورات الحديثة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "العصرية للديكور والتوريدات العامة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "45 ب محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "المرسم اكسبو للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "بلوك 18022, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "المصنع المصرى وسور الصين العظيم للاستانلس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "جرام للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "حورس للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ديبل اركتيكتس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "فيلا 22 - بلوك 19064 - - الحى الرابع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ديكوريشن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "سامبو للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "فنون للديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "لايتيلا جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "ش 112, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ماستر كومى للديكورات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "اسكان الشباب -, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "هوم.ديزاين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "5 طريق العبور - مدينة جسر السويس الجديدة, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "هيدرا للانشاءات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "فيلا 1 - ش رابعة العدوية - الحى السادس - المنطقة الرابعة, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "يوتن العبور - بداية للدهانات والديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "24 ش عباس العقاد, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "يوتن العوضى للدهانات والديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "تصميم داخلي",
+      "area": "داخل سنتر العبور - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ارب ايجلز للدعاية والاعلان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "فيلا 7 ش احمد بن طولون, الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "البراء للدعاية والاعلان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "فيلا 2 - ش ريحانة العبور - الحى السابع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "الفياض للاعلان والطباعة الرقمية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "ايديا للدعاية والاعلان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "بينك جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "قطعة 4 - بلوك 20011, المنطقة الصناعية - العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "جريس تيم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "بلوك 13025 - قطعة 2 ش 51, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "سيمبل للاعلان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "لايف سايكل للاعلان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "ش الشعراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "مصنع البدر للصناعات الخفيفة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "إعلان",
+      "area": "القطعة 19 - بلوك 12200 ش 112, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "اكاديمية العبور للغات والترجمة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "الاكاديمية الرياضية المتكاملة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "المركز الالمانى المصرى للحام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "القطعة 20 - بلوك 12002 - - المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "اى بلانيت للخدمات التعليمية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "19 ش 44, الحى الاول - منطقة 800 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "براح للتدريبات الفنية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "13 بلوك 18013 - - الحى التاسع شقة 1, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "سمارت تكنو ستويدينت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "22 ش الفريق عزيز المصرى متفرع من محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "مركز الواثق التعليمى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "مركز بيتر لايف للغات والتنمية البشرية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "14 ميدان النافورة - الحى الاول - الدور 1, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "professional-services",
+      "directoryTitle": "الخدمات المهنية",
+      "name": "يو سى ماس ايجيبت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مراكز تدريب",
+      "area": "القطعة 13 - بلوك 22009 ش 88, منطقة الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     },
     {
       "directorySlug": "real-estate-offices",
@@ -7261,6 +8781,696 @@
       "area": "Ahmed Orabi Sq.، الحي الأول، مدينة العبور، القليوبية",
       "phone": "19231",
       "source": "Yellow.com.eg"
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ابداع للاستثمار والتطوير العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "4 عمارات الاسكان الفاخر - - الحى السادس شقة 2, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ابداع للتطوير العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "فيلا 11 طريق مصر اسماعيلية الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ابو وش بشوش للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "اجياد لتنمية العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "القطعة 32 - محلية 33 ب - عمارة ربوة العبور - - الحى الثانى شقة 1, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "اصول للتطوير العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "39 محلية 6 ج محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الاتحاد للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش صلاح سالم, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الاتحاد للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الارقم للتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الاسراء للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "اسكان الشباب 92 -, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الاصول المصرية الحديثة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "91 عمارات 48 متر - ش الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الاكرم للتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الاهرام للتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "برج مكة - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الجاسر للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الجزيرة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 8 - - الحى الاول , مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الجوهرى للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الحرة للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الرحمن للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الروضة للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "- الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الشامى للاستثمار والتطوير العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الشريف للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الطاحونة للتنمية العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "القطعة 29 ش احمد بن طلال, ميدان عمر بن الخطاب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الطيار العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 8 - ش سليمان الفارسى ميدان النافورة - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "العاصمة جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "27 - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "العاليا للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الفايد للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "اسكان الشباب 94 -, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "المجد السورية للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "المصرية المتحدة للانشاء والتعمير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "فيلا 10, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "المصرية الوطنية للانشاءات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "4, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "المهند للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الناصر للتجارة والاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول - الدور 3, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الندى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "النيل للتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "57 ب ش انور السادات - حليم - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "النيل للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الهادى للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "الياسمين للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "امجاد للاستثمار والتنمية العقارية والسياحية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "206 فيلا الصفا والمروة - ش المدينة - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "اولاد بدوى للتنمية العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "برج 13018 - ش ابوغالى - المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ايماك للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "اية للتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "بداية للتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "تراث العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ثروت للتنمية العقارية والزراعية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش قسم العبور - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "جرين هاوس للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "دار العزوة للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "داون تاون للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "فيلا 6 ش نجيب محفوظ, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "دليلك للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "رؤية للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "روضة العبور للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "سما لاند للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "سما للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "شركة التوحيد للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "شركة الحمد للاستثمار العقارى وتقسيم الاراضى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - عمارات ابو الدهب - فيلا 14 - ناصية ش 53 - الدور 2, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "شركة المنار للاستثمار العقارى والمقاولات العامة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "عباد المعين للمقاولات والاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "55 طريق بلبيس الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "عقارات جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "عمارات المركز العالمى, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "قصور العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 8الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "مؤسسة النور للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "مجموعة المنشاوى للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول - محلية 8 - عمارة 98, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "محروس انور محروس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "اسكان الشباب - - منطقة 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "مدينة نصر للتنمية العقارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "مريم للاستثمار العقارى والمقاولات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ملاكيا للتطوير العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش انور المفتى, الحى الخامس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ملك للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "ميشو للاستثمار والتسويق العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "19 المجاورة ب - الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "نما للاستثمار العقارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "نمرة للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "نور الهدى للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "نور على نور للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "real-estate-offices",
+      "directoryTitle": "المكاتب والشركات العقارية",
+      "name": "نيو سيتى للعقارات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مكاتب عقارات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     },
     {
       "directorySlug": "restaurants",
@@ -10261,6 +12471,1136 @@
       "area": "الحي الأول، مدينة العبور، القليوبية",
       "phone": "01114791667",
       "source": "Yellow.com.eg"
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "41 ايس كريم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش 100, المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ابو نايل للاسماك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "كم 25 طريق مصر اسماعيلية الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ارابياتا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اربيا الشبراوى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "18 سور نادى العبور الرياضى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اسماك ابو على",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اسماك البحار",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "القطعة 55، ش الامام ابو حنيفة النعمانالحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اسماك التونى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "10 سور نادى العبور الرياضى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اسماك الريس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش عبد الرحمن الرافعى, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اكلة سمك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "الساقية كافيه",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "بلوك 22009 - القطعة الاولى - ش الشباب - المنطقة الصناعية ب، ج, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "السلطان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الزراعى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "المالكى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "الواحة البدوية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "خط 10, جمعية عرابى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اما سوشى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش 100, المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ان تو لاب ايس كريم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اونيونز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "اى فروت للايس كريم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ايس كريم السلطان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ايس كريم باب الحارة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ايلينا كيكس اند سويتس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ب لبن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بابا جونز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "القطعة السابعة - بلوك 12001, المنطقة الصناعية الاولى - الامتداد الشمالى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بازوكا فرايد تشيكن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "باسكن روبنز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بافلو برجر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "برجر ريببليك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "برجر كنج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "القطعة السابعة - بلوك 12001 ش 100, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بريجو جريلد تشيكن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بطاطس اند زلابيا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "القطعة السابعة - بلوك 12001 ش 100, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بوخاريست بلاك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بونابيتيتو",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيت الدمشقى للحلويات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "الدور 2, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيت الكريب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا 88",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا الامور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا بريموس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا بوز الجدى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا بومباى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا تايم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "سور جولف سيتى مول طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا تكات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا خير الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا دهب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محليه 8, محور السادات, الحى الاول - عمارة 8, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا كينج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا ليالى الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا ماستر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "سور نادى العبور الرياضى, محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا هاوس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "بيتزا هت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "تسيباس ام جى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ميدان امون, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "تيا ريستوران اند كافيه",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى - جولف سيتى - مجمع البنوك, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "تيكوس فرايد تشيكن اند مور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "سور جولف سيتى مول طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "جمهورية الجمبرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "جيلاتيريا روما",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "وحدة 223مجمع العبور الصناعى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حاتى التيسير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش شجرة الدر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حاتى الحريف",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حاتى المجنون",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حاتى المدينة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حاتى ورقة لحمة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حضر موت بيت المندى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشعراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى ابو الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش المشير ابو غزالة - الحى السابع - المنطقة الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى ابو محرم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى اكسبشن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى العبد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى ايتوال",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى زانونى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى ساليه سوكريه",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى فريدم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "القطعة 23 - بلوك 22006 ش الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى قصر الهنا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى كريستال",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى لابوتيه",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "ش الشباب, حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلوانى لو دو",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلويات ابو اللبن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلويات الاصيل",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلويات الميدانى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حلويات محمود الشامى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "حواوشى الرفاعى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دانكن دونتس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "الحى التاسع - المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دبل ديز بيتزا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دجاج بندق",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دجاج سفير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "درويش الكبابجي",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "سور جولف سيتى مول طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كبابجى ابو على",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "سور نادى العبور الرياضى, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كبابجى العربى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كبابجى الماحى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كبابجى صقر العرب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "ش ابو حنيفة النعمان, الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كوفتا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مشويات ابو اياد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مشويات ابو حمزة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "ش عباس العقاد, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مشويات ابو ربيع",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مشويات الحرمين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مشويات المصرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مطعم مشاوى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "طريق مصر اسماعيلية الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مطعم ميكس مشوى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مشويات",
+      "area": "محلية 5 ش عزيز المصرى, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دودز فرايد تشيكن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "ش ابو حنيفة النعمان, الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دوشكا برجر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "سور نادى العبور الرياضى, محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "سبليندر برجر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "القطعة السابعة - بلوك 12001 - - المنطقة الصناعية الاولى - الامتداد الشمالى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "فولت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كنتاكى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كوك دوور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "ليستو للوجبات السريعة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مؤمن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "وجبات سريعة",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "مطعم كلوب هاوس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطاعم عالمية",
+      "area": "طريق مصر اسماعيلية الصحراوى - جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "دراجون مارت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "ش الامام ابو حنيفة النعمان, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه العمدة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه النوفرة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه سفارى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "محلية 34 - - الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه سوريانا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه ومطعم بابلو",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "ش 100, المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه ومطعم بيلا فيستا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "ش قطر الندى، متفرع من ش الصحافة، الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كافيه ومطعم تورى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "القطعة السابعة - بلوك 12001 - - المنطقة الصناعية الاولى - الامتداد الشمالى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كوستا كوفى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كوفى شوب العائلات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كوفى شوب زمزم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "القطعة 13 - - حى الشباب - منطقة خدمات 63, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "restaurants",
+      "directoryTitle": "المطاعم والكافيهات",
+      "name": "كوفى ليشيوس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "كافيهات وكوفي شوب",
+      "area": "طريق مصر اسماعيلية الصحراوى - جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     },
     {
       "directorySlug": "schools-all",
@@ -13361,6 +16701,1766 @@
       "area": "محلية 6، الحي الأول، مدينة العبور، القليوبية",
       "phone": "",
       "source": "InfoEG.com"
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الخير للتوريدات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "كم 25، طريق القاهرة الاسماعيلية الصحراوىعنبر 9, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الدعاء للتوريدات",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "سوق العبور - عنبر14, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "خضروات الاسراء",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "زين للخضار والفاكهة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "سوق العبور - عنبر 9 - محل 311, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فواكه ابناء سوهاج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فواكه الايمان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "ش المشير ابو غزالة - الحى السابع - المنطقة الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فواكه العوضى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فواكه اهل الشام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فواكه مؤمن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "ش المشير ابو غزالة - الحى السابع - المنطقة الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فواكه مكة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "فاكهة وخضروات",
+      "area": "القطعة 13 - - حى الشباب - منطقة خدمات 63, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ابو السيد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "القطعة السابعة - بلوك 12001 ش 100, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسماك تبارك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسماك دولفين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسماك سمكيكو",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ال عبد الله لتجارة الاسماك والجمبرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "سوق العبور - عنبر 3 - محل 9, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الرضا جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "سوق العبور - عنبر 2, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "انديان شريمبس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "سوق العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "عباد الرحمن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "سوق العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "نيو سامكو",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "محلات أسماك",
+      "area": "طريق مصر اسماعيلية الصحراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "العزة الالكترونية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "الدور 2, وحدة 30 - العبور سنتر - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الصقر للادوات الكهربائية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "العبور لتجارة الادوات الكهربائية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "المنطقة الصناعية - الدور 2, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الكترو الهانى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "المنطقة الصناعية ب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المصرية للادوات الكهربائية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "ش المشير ابو غزالة - الحى السابع - المنطقة الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المهندس للصيانة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "النحاس جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "ش 500, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "باور لينك جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "126 ش سليمان الفارسى - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "بى تك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "تو بى ايجيبت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "شرق اسيا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مؤسسة الفاتح الالكترونية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "القطعة 91, المنطقة الصناعية الثانية - ارض المحاجر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مركز الكينج",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مكة لتجارة وتوزيع الادوات الكهربائية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "نور الاسلام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "ش فاطمة الزهراء, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "وايت لايت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "يونايتد اليكرتيك جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أجهزة منزلية وكهربائية",
+      "area": "4 محلية 12, الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اجياد ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 12 - ش خالد بن الوليد - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسواق التحرير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسواق كرامة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 12 - ش خالد بن الوليد - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الامانة ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "137 اسكان مبارك - امتداد منطقة 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الشاعر ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الشجرة الطيبة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 8 - , مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الصباغ مينى ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الصفا ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "575 - اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الفرجانى هايبر ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 6, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المحلاوى ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الامام احمد بن حنبل, الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الوليد ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 8 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "بنده مصر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 8 ش سليمان الفارسى, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "بيم مصر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "القطعة 12011 - بلوك 16080, الحى الخامس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سبينيس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سماهر ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت ابو على",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الاصيل",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "عمارة 212 - , مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الامام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت البركة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشعراوى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الثورة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش المشير ابو غزالة - الحى السابع - المنطقة الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الجعفرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "622 عمارات اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الحريرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الخير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الرحاب 6",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الرحمة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الشباب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشعراوى - حى الشباب 70 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الطيب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "مساكن الشباب - , مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الكابتن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت الملكى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "مدينة الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت المنى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 12, الحى الاول - عمارة 162, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت النور والايمان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت اولاد النجار",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت بيت الجملة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "القطعة السابعة - بلوك 12001 ش 100, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت تبارك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت حبش",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "القطعة 13 - - حى الشباب - منطقة خدمات 63, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت خير زمان",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ميدان امون, الحى السابع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت درايا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت زهرة الياسمين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت عباد الرحمن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوبر ماركت نجمة السابع",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "الحى السابع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سيركل كيه",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "شبل ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "شريبة ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فاملى ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فريش مارت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "القطعة 21 - اسكان الشباب - ميدان الصورة, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "كارفور هايبر ماركت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "كازيون",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "القطعة 21 - اسكان الشباب, ميدان الصورة, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ماركت الاسراء",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "ش حافظ ابراهيم , مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "هيلثى اند تيستى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "سوبرماركت",
+      "area": "القطعة السابعة - بلوك 12001 ش 100, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مصنع المستقبل - لى لى سكارف",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "100% قطن للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ابريل",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ابو سعيد للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ابو سعيد للملابس الرياضية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اخر الموسم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اديداس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسبرانزا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "بلوك 13007 - القطعة الثالثة - - المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اكتف ابو علاء",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اكس لارج للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ال سى وايكيكى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ال عقبة للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الاخلاص للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الامير السورى للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الاناقة الشامية للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "البادى جينز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش 600, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "البيت المسلم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الحلبية لصناعة الجوارب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "بلوك 162 - - المنطقة الصناعية - اسكان الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الركن السورى للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "السرور للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "السوق الاوروبى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الشركة العربية للصناعات النسيجية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "قطعة 10 - بلوك 13002المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الكابتن للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اللؤلؤة للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المانطو السورى للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المصرية جروب شوز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "القطعة 114 - - المنطقة الصناعية ب، ج, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الملكة للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "القطعة 13 - - حى الشباب - منطقة خدمات 63, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ام النور للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اميسا للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "انجى لانجيرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "انجى للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اندلسية للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اوت قطن للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اوتليت زون",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "بافلى للملابس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "بى اس ستوكس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "ملابس",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ديبوينت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سينابون",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "القطعة السابعة - بلوك 12001 ش 100, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "صافى فودز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "سور نادى العبور الرياضى الاجتماعى, محور العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "عبد الرحيم قويدر",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "طريق مصر اسماعيلية الصحراوى - جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فوالا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "كرسبى كريم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "الحى التاسع - المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "كنافة بيكرى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "لابوار",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "لوكسير",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ليدام",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "السوق التجارى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مخبوزات الارزاق بالله",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مخبوزات الفتح",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "محلية 34 - - الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مخبوزات حماد",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "محور السادات, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مخبوزات روزين",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "محلية 5, محور السادات, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مخبوزات قصر الدروبى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مونجينى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مخابز وحلوانيات",
+      "area": "محلية 8 - القطعة 11, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "هانيمكس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "ش احمد عرابى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ارت جروب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "القطعة التاسعة - ش 38 متفرع من ش 200 - المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اريج للاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "113 ش الصحافة, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اريكا كومفورت",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "بلوك 13039 ش 73, متفرع من ش 400, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اس جروب ال سالم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "ش الثقافة, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اسبيشيال للاثاث المكتبى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "22 ب اسكان الشباب ش الشباب, الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "البدر للمطابخ والاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الجريدلى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "مدخل مدينة العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الجودة الشامية للاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "الحى الاول - محلية 6, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الدورا هاوس",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "القطعة 18- بلوك 22006, المنطقة الصناعية ب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "السورى لدهانات الاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الشركة المصرية للاثاث المكتبى",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "العمدة للاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "ش الشعراوى - حى الشباب 100 متر, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الفنية للاثاث والديكور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "القطعة 81 - - مساكن الشباب - المنطقة الصناعية, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المتحدة لتشغيل المعادن",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "المنطقة الصناعية السادسة, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المنصورة للاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "الوكالة التجارية",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "طريق مصر اسماعيلية الصحراوى, كمباوند امنحتب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اليونانى للاثاث",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "أثاث",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "المروة للتجارة",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "ش رابعة العدوية, الحى السادس, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ام ام تى للاثاث والمطابخ",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "ش البريد, الحى الاول - سنتر دوحة العبور, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "اوفيس تيك",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "القطعة 1/5- بلوك 13008 ش ابو غالى, المنطقة الصناعية الاولى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "جروميل للمطابخ",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "جلو ستيل",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "بلوك 34 - - الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "فلورينس للمطابخ",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "بلوك 18925 ش البستان, تقاطع ش قصر الندى, الحى التاسع, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "لاريجينا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "ش 87, مدينة مبارك للشباب - الحى الثانى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مودرن وود للمطابخ",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "القطعة 198, المنطقة الصناعية ب ، ج, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "يونى تال لمطابخ الالومنيوم",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "مطابخ",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ام اس ايه برفيومز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "انفاسك عطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "حامل المسك للعطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "محلية 6 - - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "سوريا للعطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "شريف للعطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "عطور كليوباترا",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "عطور ماء الذهب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "محلية 6 - محور السادات - الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "عمر للعطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "ماء الذهب",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "الحى الاول, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مزايا ستورز",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "طريق مصر اسماعيلية الصحراوى, جولف سيتى, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "مونتانا للعطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
+    },
+    {
+      "directorySlug": "shopping",
+      "directoryTitle": "التسوق والمحلات",
+      "name": "نور اليقين للعطور",
+      "englishName": "المصدر: يلوبيدجز مصر",
+      "category": "عطور",
+      "area": "ش الشباب - حى الشباب, مدينة العبور, القليوبية",
+      "phone": "",
+      "source": ""
     }
   ]
 }
