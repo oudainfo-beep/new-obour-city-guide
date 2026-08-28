@@ -441,6 +441,7 @@ const navGroups = () => [
     ["/schools/", "المدارس"],
     ...dirManifest.filter((m) => m.slug !== "schools-all").map((m) => [`/${m.slug}/`, `${m.title} (${m.count})`]),
   ] },
+  { href: "/news/", label: "الأخبار" },
   { href: "/emergency/", label: "الطوارئ", accent: true },
   { href: "/faq/", label: "الأسئلة" },
 ];
