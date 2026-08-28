@@ -15,7 +15,7 @@ css += `
 .dir-chips b{background:var(--olive);color:#fff;font-size:.68rem;padding:.05rem .35rem}
 .dir-group{margin-top:2.2rem;scroll-margin-top:90px}
 .dir-group h3{display:flex;align-items:center;gap:.6rem;font:800 1.15rem Cairo,Arial,sans-serif;color:var(--deep);margin:0 0 .8rem;padding-bottom:.5rem;border-bottom:2px solid var(--teal)}
-.dir-group h3 small{background:#dcebe3;color:#285535;font:800 .72rem Tajawal,Arial,sans-serif;padding:.15rem .45rem}
+.dir-group h3 small{background:#dcebe3;color:#285535;font:800 .72rem 'Noto Kufi Arabic',Arial,sans-serif;padding:.15rem .45rem}
 .dir-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .dir-item{background:#fbfaf4;padding:.9rem 1rem;display:grid;gap:.25rem;align-content:start}
 .dir-item h4{margin:0;font:800 .95rem/1.5 Cairo,Arial,sans-serif;color:var(--ink)}

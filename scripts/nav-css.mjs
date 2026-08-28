@@ -28,7 +28,7 @@ css += `
 /* قائمة الموبايل */
 .mobile-menu nav{width:min(320px,88vw);max-height:78vh;overflow:auto;padding:.6rem}
 .m-search{display:flex;margin-bottom:.5rem;border:1px solid #b6c9ba;background:#fbfaf4}
-.m-search input{flex:1;border:0;background:transparent;padding:.6rem;font:600 .85rem Tajawal,Arial,sans-serif;outline:none}
+.m-search input{flex:1;border:0;background:transparent;padding:.6rem;font:600 .85rem 'IBM Plex Sans Arabic',Arial,sans-serif;outline:none}
 .m-search button{border:0;background:var(--olive);color:#fff;padding:.6rem .8rem;font-size:1rem;cursor:pointer}
 .mobile-menu .m-solo{display:block;padding:.7rem .6rem;font-weight:800;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
 .m-group{border-bottom:1px solid var(--line)}

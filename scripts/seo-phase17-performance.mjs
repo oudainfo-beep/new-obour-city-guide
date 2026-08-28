@@ -47,9 +47,9 @@ function optimize(file) {
   });
 
   // 3) تحويل خطوط Google إلى تحميل غير محجوب إذا كانت قديمة
-  const oldFont = /<link rel="stylesheet" href="https:\/\/fonts\.googleapis\.com\/css2\?family=Tajawal:[^"]*&display=swap">/;
+  const oldFont = /<link rel="stylesheet" href="https:\/\/fonts\.googleapis\.com\/css2\?family=IBM\+Plex\+Sans\+Arabic:[^"]*&display=swap">/;
   if (oldFont.test(html)) {
-    const fontUrl = html.match(/https:\/\/fonts\.googleapis\.com\/css2\?family=Tajawal:[^"]*&display=swap/)[0];
+    const fontUrl = html.match(/https:\/\/fonts\.googleapis\.com\/css2\?family=IBM\+Plex\+Sans\+Arabic:[^"]*&display=swap/)[0];
     html = html.replace(
       oldFont,
       `<link rel="preload" as="style" href="${fontUrl}"><link rel="stylesheet" href="${fontUrl}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="${fontUrl}"></noscript>`

@@ -11,7 +11,7 @@ if (css.includes(".site-search")) throw new Error("أنماط البحث مضا�
 css += `
 /* بحث الهيدر وصفحة البحث وبطاقات الطوارئ */
 .site-search{display:flex;align-items:center;gap:0;flex:none;border:1px solid #b6c9ba;background:#fbfaf4}
-.site-search input{border:0;background:transparent;padding:.55rem .7rem;font:600 .8rem Tajawal,Arial,sans-serif;color:var(--ink);width:170px;outline:none}
+.site-search input{border:0;background:transparent;padding:.55rem .7rem;font:600 .8rem 'IBM Plex Sans Arabic',Arial,sans-serif;color:var(--ink);width:170px;outline:none}
 .site-search input::placeholder{color:#8a9a8e}
 .site-search button{border:0;background:var(--olive);color:#fff;font-size:1rem;line-height:1;padding:.6rem .7rem;cursor:pointer}
 .site-search button:hover{background:#285535}
