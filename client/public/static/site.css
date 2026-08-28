@@ -582,7 +582,7 @@ img { max-width: 100%; }
 }
 .route-rail:before {
   content: ""; position: absolute; width: 11px; height: 11px; border-radius: 50%;
-  background: var(--teal); left: -6px; top: 2.3rem; box-shadow: 0 0 0 4px #e0e7ff;
+  background: var(--teal); left: -6px; top: 2.3rem; box-shadow: 0 0 0 4px #d8e8d2;
 }
 .route-no { font: 800 2.1rem/1 var(--font-head); color: var(--olive); }
 .route-line { position: relative; height: 58px; width: 100%; margin: .3rem 0; }
@@ -652,7 +652,7 @@ img { max-width: 100%; }
 
 /* بطاقة جانبية */
 .action-card {
-  background: linear-gradient(160deg, #e0e7ff, #dbeafe);
+  background: linear-gradient(160deg, #e6efdf, #dcead4);
   border: 1px solid #d3c9b4; border-radius: var(--r-lg);
   align-self: start; padding: 1.5rem; display: grid; gap: .55rem;
   box-shadow: var(--sh-sm);
