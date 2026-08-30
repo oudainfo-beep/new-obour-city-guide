@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Obour Guide — حزمة تحسينات تجربة الاستخدام (UX Pack) — 2026-08
+   ملف مستقل يُحقن عبر scripts/seo-phase34-ux-pack.mjs
+   يضيف: رابط تخطٍّ، زر العودة للأعلى، فهرس محتويات الصفحة اللاصق،
+   فلترة فورية لقوائم الدليل والجداول، تلميح تمرير الجداول،
+   حركة قائمة الموبايل، وأنماط طباعة نظيفة.
+   كلها تحسينات تدريجية: العناصر المحقونة لا تظهر بلا JavaScript.
+   ========================================================================== */
+
+/* رابط التخطي إلى المحتوى — يظهر عند التركيز بلوحة المفاتيح */
+.skip-link {
+  position: fixed; top: -60px; inset-inline-start: 14px; z-index: 1200;
+  background: var(--primary); color: #fff; text-decoration: none;
+  font: 800 .85rem var(--font-head); padding: .6rem 1.1rem;
+  border-radius: 0 0 var(--r-sm) var(--r-sm); box-shadow: var(--sh-md);
+  transition: top .25s var(--ease);
+}
+.skip-link:focus-visible { top: 0; outline: 3px solid var(--accent); }
+
+/* زر العودة للأعلى */
+.to-top {
+  position: fixed; bottom: 1.1rem; inset-inline-start: 1.1rem; z-index: 900;
+  width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line-strong);
+  background: var(--surface); color: var(--olive); cursor: pointer;
+  display: grid; place-items: center; font-size: 1.15rem; line-height: 1;
+  box-shadow: var(--sh-md);
+  opacity: 0; visibility: hidden; transform: translateY(14px) scale(.9);
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s,
+              background .2s var(--ease), color .2s var(--ease);
+}
+.to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--olive); color: #fff; transform: translateY(-3px); }
+.to-top svg { width: 20px; height: 20px; }
+@media (max-width: 640px) {
+  .to-top { bottom: .9rem; inset-inline-start: .9rem; width: 42px; height: 42px; }
+}
+
+/* ==========================================================================
+   فهرس محتويات الصفحة — شريط شرائح لاصق تحت الهيدر
+   ========================================================================== */
+.page-toc {
+  position: sticky; top: 75px; z-index: 35;
+  background: rgba(250, 247, 241, .88);
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 6px 18px rgba(18, 63, 51, .05);
+  animation: fadeIn .4s var(--ease) both;
+}
+.page-toc__row {
+  display: flex; align-items: center; gap: .45rem;
+  overflow-x: auto; overscroll-behavior-inline: contain;
+  padding: .55rem 0; scrollbar-width: none;
+  scroll-behavior: smooth;
+  mask-image: linear-gradient(90deg, transparent 0, black 26px, black calc(100% - 26px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, black 26px, black calc(100% - 26px), transparent 100%);
+}
+.page-toc__row::-webkit-scrollbar { display: none; }
+.page-toc__label {
+  flex: none; display: inline-flex; align-items: center; gap: .35rem;
+  font: 800 .72rem var(--font-head); color: var(--muted); letter-spacing: .02em;
+  padding-inline-end: .35rem; border-inline-end: 1px solid var(--line-strong);
+}
+.page-toc a {
+  flex: none; display: inline-flex; align-items: center;
+  padding: .42rem .85rem; font-size: .78rem; font-weight: 800;
+  color: var(--ink-2); text-decoration: none; white-space: nowrap;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-pill); box-shadow: var(--sh-sm);
+  transition: background .2s var(--ease), color .2s var(--ease),
+              border-color .2s var(--ease), transform .2s var(--ease);
+}
+.page-toc a:hover { border-color: var(--teal); color: var(--deep); transform: translateY(-1px); }
+.page-toc a[aria-current="true"] {
+  background: var(--olive); border-color: var(--olive); color: #fff;
+  box-shadow: 0 4px 12px rgba(18, 63, 51, .22);
+}
+@media (max-width: 1000px) { .page-toc { top: 67px; } }
+@media (max-width: 640px) {
+  .page-toc { top: 63px; }
+  .page-toc__label { display: none; }
+  .page-toc__row { padding: .5rem 0; }
+}
+
+/* ==========================================================================
+   فلترة فورية — قوائم الدليل والجداول
+   ========================================================================== */
+.ux-filter {
+  display: flex; align-items: center; gap: 0; flex-wrap: wrap;
+  margin: 1.2rem 0 .4rem; max-width: 560px;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: var(--r-pill); box-shadow: var(--sh-sm); overflow: hidden;
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.ux-filter:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(62, 142, 108, .14); }
+.ux-filter__icon {
+  flex: none; display: grid; place-items: center;
+  padding-inline-start: 1rem; color: var(--olive);
+}
+.ux-filter__icon svg { width: 17px; height: 17px; }
+.ux-filter input {
+  flex: 1; min-width: 160px; border: 0; background: transparent; outline: none;
+  padding: .8rem .6rem; font: 600 .92rem var(--font-body); color: var(--ink);
+}
+.ux-filter input::placeholder { color: #94a3b8; }
+.ux-filter__count {
+  flex: none; margin-inline-end: .45rem;
+  background: var(--primary-light); color: var(--deep);
+  font: 800 .72rem var(--font-head); padding: .3rem .65rem;
+  border-radius: var(--r-pill); transition: opacity .2s var(--ease);
+}
+.ux-filter__count:empty, .ux-filter__count[hidden] { display: none; }
+.ux-filter__clear {
+  flex: none; border: 0; background: transparent; cursor: pointer;
+  color: var(--muted); font-size: .95rem; padding: .5rem .8rem; line-height: 1;
+  transition: color .2s var(--ease);
+}
+.ux-filter__clear:hover { color: var(--accent); }
+.ux-filter__clear[hidden] { display: none; }
+.ux-filter-empty {
+  display: none; margin: 1rem 0; padding: 1rem 1.2rem;
+  background: var(--surface-2); border: 1px dashed var(--line-strong);
+  border-radius: var(--r-md); color: var(--muted);
+  font: 700 .88rem var(--font-body); text-align: center;
+}
+.ux-filter-empty.is-visible { display: block; animation: fadeIn .25s var(--ease) both; }
+/* إخفاء العناصر غير المطابقة */
+.ux-hidden { display: none !important; }
+/* تمييز نتائج الفلترة بحركة خفيفة */
+@keyframes ux-hit { from { opacity: .35; } to { opacity: 1; } }
+.ux-filtering .dir-item:not(.ux-hidden),
+.ux-filtering tbody tr:not(.ux-hidden),
+.ux-filtering .data-table > div:not(.ux-hidden) { animation: ux-hit .3s var(--ease) both; }
+
+/* ==========================================================================
+   تلميح تمرير الجداول أفقيًا + حواف متلاشية
+   ========================================================================== */
+.table-wrap, .data-table { position: relative; }
+.table-hint {
+  display: none; align-items: center; gap: .4rem;
+  margin: .45rem 0 0; color: var(--muted); font: 700 .72rem var(--font-body);
+}
+.table-hint.is-visible { display: inline-flex; animation: fadeIn .3s var(--ease) both; }
+.table-hint svg { width: 15px; height: 15px; animation: hint-swipe 1.6s var(--ease) infinite; }
+@keyframes hint-swipe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-6px); }
+}
+.table-wrap.is-scrollable, .data-table.is-scrollable {
+  background:
+    linear-gradient(270deg, var(--surface) 30%, rgba(255,255,255,0)) local right / 42px 100% no-repeat,
+    linear-gradient(90deg, var(--surface) 30%, rgba(255,255,255,0)) local left / 42px 100% no-repeat,
+    var(--surface);
+}
+.table-wrap.is-scrollable:not(.at-end), .data-table.is-scrollable:not(.at-end) {
+  box-shadow: var(--sh-sm), inset -14px 0 14px -14px rgba(18, 63, 51, .35);
+}
+.table-wrap.is-scrollable:not(.at-start), .data-table.is-scrollable:not(.at-start) {
+  box-shadow: var(--sh-sm), inset 14px 0 14px -14px rgba(18, 63, 51, .35);
+}
+.table-wrap.is-scrollable:not(.at-start):not(.at-end), .data-table.is-scrollable:not(.at-start):not(.at-end) {
+  box-shadow: var(--sh-sm),
+    inset -14px 0 14px -14px rgba(18, 63, 51, .35),
+    inset 14px 0 14px -14px rgba(18, 63, 51, .35);
+}
+
+/* ==========================================================================
+   قائمة الموبايل — دخول ناعم عند الفتح
+   ========================================================================== */
+.mobile-menu[open] > nav { animation: menuIn .28s var(--ease) both; transform-origin: top center; }
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-10px) scale(.98); }
+  to { opacity: 1; transform: none; }
+}
+.mobile-menu[open] > summary { background: var(--primary-light); color: var(--deep); }
+
+/* ==========================================================================
+   الطباعة — صفحة نظيفة للأدلة
+   ========================================================================== */
+@media print {
+  .site-header, .site-footer, .pwa-banner, .to-top, .page-toc,
+  .ux-filter, .table-hint, .scroll-progress, .mobile-menu,
+  .breadcrumb, .skip-link { display: none !important; }
+  body { background: #fff; font-size: 12pt; }
+  .home-hero, .page-hero { min-height: 0; }
+  .section { padding: 1rem 0; }
+  a { color: inherit; text-decoration: none; }
+  .quick-card, .dir-item, .buy-grid article, .criteria div { box-shadow: none; break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-toc, .table-hint, .mobile-menu[open] > nav { animation: none !important; }
+  .table-hint svg { animation: none !important; }
+}
