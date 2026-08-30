@@ -195,7 +195,7 @@ function main() {
     p: d.n_projects || 0,
     projs: d.projects.map((p) => p.name),
   }));
-  fs.writeFileSync(path.join(dataDir, "developers-all.json"), JSON.stringify({ items }, null, 1));
+  fs.writeFileSync(path.join(root, "data", "raw", "developers-directory.json"), JSON.stringify({ items }, null, 1));
   rep("OK", `data file: ${items.length} developers`);
 
   // hub
