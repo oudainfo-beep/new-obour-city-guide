@@ -89,6 +89,19 @@ const TITLES = {
   "home-nursing-obour": "التمريض المنزلي", "koshary-obour": "الكشري",
   "syrian-restaurants-obour": "المطبخ السوري", "specialty-coffee-obour": "القهوة المختصة",
   "butchers-obour": "الملاحم",
+  "id-card-obour": "بطاقة الرقم القومي", "civil-registry-obour": "السجل المدني",
+  "birth-certificates-obour": "شهادة الميلاد", "notary-obour": "التوثيق والشهر العقاري",
+  "traffic-office-obour": "معاملات المرور", "padel-obour": "البادل",
+  "swimming-obour": "تعليم السباحة", "martial-arts-obour": "الفنون القتالية",
+  "yoga-obour": "يوجا وبيلاتس", "dance-classes-obour": "دروس الرقص",
+  "pest-control-obour": "مكافحة الحشرات", "drain-cleaning-obour": "تسليك المجاري",
+  "waterproofing-obour": "عزل الأسطح", "satellite-obour": "الستلايت",
+  "cctv-obour": "كاميرات المراقبة", "solar-obour": "الطاقة الشمسية",
+  "water-tanks-obour": "خزانات المياه", "gas-connection-obour": "الغاز الطبيعي",
+  "electricity-meter-obour": "عداد الكهرباء", "tailors-obour": "الخياطون",
+  "jewelry-obour": "الذهب والمجوهرات", "gifts-obour": "محلات الهدايا",
+  "pet-shops-obour": "مستلزمات الحيوانات", "plant-nurseries-obour": "المشاتل",
+  "upholstery-obour": "التنجيد",
 };
 
 const CLUSTERS = {
@@ -97,9 +110,9 @@ const CLUSTERS = {
   rent: ["villas-rent-obour", "shops-rent-obour", "offices-rent-obour", "warehouses-obour", "furnished-apartments", "studio-rent-obour", "tenant-rights-obour"],
   transport: ["transport-from-cairo", "internal-transport", "middle-ring-road-obour", "day-trips", "nearby-cities", "uber-obour", "airport-transfers-obour", "new-roads-obour"],
   shopping: ["friday-market", "central-market", "supermarkets", "supermarkets-list", "carrefour-obour", "infinity-mall", "golf-city-mall", "new-obour-malls", "furniture-obour", "appliances-stores", "electronics-obour", "kitchens-obour", "kids-clothing", "clothing-stores", "building-materials"],
-  health: ["hospital-24-hours", "pharmacies-24-hours", "labs-radiology", "labs-list", "dentists-obour", "vets-obour", "physical-therapy-obour", "new-obour-hospitals", "nutrition-obour", "pediatricians-obour", "gynecologists-obour", "elderly-care-obour", "optics-obour", "dermatologists-obour", "orthopedists-obour", "ent-obour", "psychiatrists-obour", "mri-obour", "obour-specialized-hospital", "home-nursing-obour"],
-  education: ["language-schools", "new-obour-schools", "japanese-school-obour", "universities-near-obour", "schools-gov-vs-private", "school-transport-obour", "private-lessons-obour", "stationery-obour"],
-  life: ["moving-to-obour", "movers-obour", "telecom-obour", "postal-code", "post-offices", "jobs-obour", "obour-news", "obour-problems", "food-delivery", "restaurants-district-9", "car-service-centers", "tires-obour", "car-parts-obour", "car-dealers-obour", "plumbers-obour", "electricians-obour", "dry-clean-obour", "maintenance-companies", "shipping-companies", "lawyers-obour", "accountants-obour", "it-services-obour", "print-services", "gyms-obour", "beauty-salons-obour", "kids-activities", "wedding-halls", "parks-obour", "movers-obour", "car-rental-obour", "mobile-repair-obour", "insurance-money-obour", "driving-schools-obour", "marble-ceramic-obour", "ac-services-obour", "carpenters-obour", "painters-obour", "blacksmiths-obour", "wedding-services-obour", "gaming-cafes-obour", "football-fields-obour", "photographers-obour", "parking-obour", "koshary-obour", "syrian-restaurants-obour", "specialty-coffee-obour", "butchers-obour"],
+  health: ["hospital-24-hours", "pharmacies-24-hours", "labs-radiology", "labs-list", "dentists-obour", "vets-obour", "physical-therapy-obour", "new-obour-hospitals", "nutrition-obour", "pediatricians-obour", "gynecologists-obour", "elderly-care-obour", "optics-obour", "dermatologists-obour", "orthopedists-obour", "ent-obour", "psychiatrists-obour", "mri-obour", "obour-specialized-hospital", "home-nursing-obour", "swimming-obour", "martial-arts-obour", "yoga-obour", "padel-obour"],
+  education: ["language-schools", "new-obour-schools", "japanese-school-obour", "universities-near-obour", "schools-gov-vs-private", "school-transport-obour", "private-lessons-obour", "stationery-obour", "dance-classes-obour"],
+  life: ["moving-to-obour", "movers-obour", "telecom-obour", "postal-code", "post-offices", "jobs-obour", "obour-news", "obour-problems", "food-delivery", "restaurants-district-9", "car-service-centers", "tires-obour", "car-parts-obour", "car-dealers-obour", "plumbers-obour", "electricians-obour", "dry-clean-obour", "maintenance-companies", "shipping-companies", "lawyers-obour", "accountants-obour", "it-services-obour", "print-services", "gyms-obour", "beauty-salons-obour", "kids-activities", "wedding-halls", "parks-obour", "movers-obour", "car-rental-obour", "mobile-repair-obour", "insurance-money-obour", "driving-schools-obour", "marble-ceramic-obour", "ac-services-obour", "carpenters-obour", "painters-obour", "blacksmiths-obour", "wedding-services-obour", "gaming-cafes-obour", "football-fields-obour", "photographers-obour", "parking-obour", "koshary-obour", "syrian-restaurants-obour", "specialty-coffee-obour", "butchers-obour", "id-card-obour", "civil-registry-obour", "birth-certificates-obour", "notary-obour", "traffic-office-obour", "pest-control-obour", "drain-cleaning-obour", "waterproofing-obour", "satellite-obour", "cctv-obour", "solar-obour", "water-tanks-obour", "gas-connection-obour", "electricity-meter-obour", "tailors-obour", "jewelry-obour", "gifts-obour", "pet-shops-obour", "plant-nurseries-obour", "upholstery-obour"],
   en: ["en/nurseries", "en/postal-code", "en/property-investment", "en/apartments-for-sale", "en/cost-of-living", "en/commuting-to-cairo", "en/obour-city-mall", "en/international-schools", "en/24-hour-pharmacies"],
 };
 
