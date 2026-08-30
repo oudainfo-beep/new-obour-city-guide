@@ -63,6 +63,19 @@ const TITLES = {
   "en/cost-of-living": "Cost of living in Obour", "en/commuting-to-cairo": "Commuting Obour–Cairo",
   "en/obour-city-mall": "Obour City Mall guide", "en/international-schools": "International schools in Obour",
   "en/24-hour-pharmacies": "24-hour pharmacies in Obour",
+  "spa-obour": "السبا والاسترخاء", "clubs-obour": "الأندية",
+  "car-rental-obour": "تأجير السيارات", "nutrition-obour": "أخصائيو التغذية",
+  "mobile-repair-obour": "صيانة الموبايلات", "insurance-money-obour": "التأمين والحوالات",
+  "parks-obour": "حدائق العبور", "schools-gov-vs-private": "حكومي أم خاص؟",
+  "school-transport-obour": "باص المدرسة", "private-lessons-obour": "الدروس الخصوصية",
+  "elderly-care-obour": "رعاية كبار السن", "driving-schools-obour": "تعليم القيادة",
+  "pediatricians-obour": "أطباء الأطفال", "gynecologists-obour": "النساء والتوليد",
+  "optics-obour": "البصريات والنظارات", "stationery-obour": "المكتبات المدرسية",
+  "marble-ceramic-obour": "رخام وسيراميك", "ac-services-obour": "خدمات التكييف",
+  "carpenters-obour": "النجارة", "painters-obour": "الدهانات",
+  "blacksmiths-obour": "الحدادة", "wedding-services-obour": "تجهيزات الفرح",
+  "gaming-cafes-obour": "مراكز الألعاب", "football-fields-obour": "ملاعب الكرة",
+  "photographers-obour": "استوديوهات التصوير",
 };
 
 const CLUSTERS = {
@@ -71,9 +84,9 @@ const CLUSTERS = {
   rent: ["villas-rent-obour", "shops-rent-obour", "offices-rent-obour", "warehouses-obour", "furnished-apartments", "studio-rent-obour"],
   transport: ["transport-from-cairo", "internal-transport", "middle-ring-road-obour", "day-trips", "nearby-cities"],
   shopping: ["friday-market", "central-market", "supermarkets", "supermarkets-list", "carrefour-obour", "infinity-mall", "golf-city-mall", "new-obour-malls", "furniture-obour", "appliances-stores", "electronics-obour", "kitchens-obour", "kids-clothing", "clothing-stores", "building-materials"],
-  health: ["hospital-24-hours", "pharmacies-24-hours", "labs-radiology", "labs-list", "dentists-obour", "vets-obour", "physical-therapy-obour", "new-obour-hospitals"],
-  education: ["language-schools", "new-obour-schools", "japanese-school-obour", "universities-near-obour"],
-  life: ["moving-to-obour", "movers-obour", "telecom-obour", "postal-code", "post-offices", "jobs-obour", "obour-news", "obour-problems", "food-delivery", "restaurants-district-9", "car-service-centers", "tires-obour", "car-parts-obour", "car-dealers-obour", "plumbers-obour", "electricians-obour", "dry-clean-obour", "maintenance-companies", "shipping-companies", "lawyers-obour", "accountants-obour", "it-services-obour", "print-services", "gyms-obour", "beauty-salons-obour", "kids-activities", "wedding-halls"],
+  health: ["hospital-24-hours", "pharmacies-24-hours", "labs-radiology", "labs-list", "dentists-obour", "vets-obour", "physical-therapy-obour", "new-obour-hospitals", "nutrition-obour", "pediatricians-obour", "gynecologists-obour", "elderly-care-obour", "optics-obour"],
+  education: ["language-schools", "new-obour-schools", "japanese-school-obour", "universities-near-obour", "schools-gov-vs-private", "school-transport-obour", "private-lessons-obour", "stationery-obour"],
+  life: ["moving-to-obour", "movers-obour", "telecom-obour", "postal-code", "post-offices", "jobs-obour", "obour-news", "obour-problems", "food-delivery", "restaurants-district-9", "car-service-centers", "tires-obour", "car-parts-obour", "car-dealers-obour", "plumbers-obour", "electricians-obour", "dry-clean-obour", "maintenance-companies", "shipping-companies", "lawyers-obour", "accountants-obour", "it-services-obour", "print-services", "gyms-obour", "beauty-salons-obour", "kids-activities", "wedding-halls", "parks-obour", "movers-obour", "car-rental-obour", "mobile-repair-obour", "insurance-money-obour", "driving-schools-obour", "marble-ceramic-obour", "ac-services-obour", "carpenters-obour", "painters-obour", "blacksmiths-obour", "wedding-services-obour", "gaming-cafes-obour", "football-fields-obour", "photographers-obour"],
   en: ["en/nurseries", "en/postal-code", "en/property-investment", "en/apartments-for-sale", "en/cost-of-living", "en/commuting-to-cairo", "en/obour-city-mall", "en/international-schools", "en/24-hour-pharmacies"],
 };
 
