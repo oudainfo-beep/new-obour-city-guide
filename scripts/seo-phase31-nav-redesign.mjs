@@ -40,7 +40,7 @@ function main() {
       if (e.isDirectory()) { walk(full); continue; }
       if (e.name !== "index.html") continue;
       let html = fs.readFileSync(full, "utf8");
-      if (html.includes("اسأل وأجب — مجتمع العبور")) { skipped++; continue; }
+      if (html.includes("اسأل وأجب — مجتمع العبور") && html.includes("/developers-directory/")) { skipped++; continue; }
       if (!DESKTOP_RE.test(html)) continue;
       html = html.replace(DESKTOP_RE, NEW_DESKTOP_NAV);
       if (MOBILE_RE.test(html)) html = html.replace(MOBILE_RE, NEW_MOBILE_NAV);
