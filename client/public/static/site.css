@@ -801,7 +801,7 @@ td a { color: var(--olive-600); font-weight: 700; }
 .site-footer h2 { font: 800 .92rem var(--font-head); color: #99f6e4; margin: 0 0 .7rem; letter-spacing: .02em; }
 .site-footer section > a {
   display: block; color: #e7e0d2; text-decoration: none; font-size: .8rem;
-  margin: .4rem 0; transition: color .2s var(--ease), padding .2s var(--ease);
+  margin: .4rem 0; transition: color .2s var(--ease);
 }
 .site-footer section > a:hover { color: #fff; padding-inline-start: .3rem; }
 .footer-base {
@@ -1008,6 +1008,8 @@ td a { color: var(--olive-600); font-weight: 700; }
   list-style: none; padding: .75rem .65rem; font-weight: 800; color: var(--ink);
   cursor: pointer; display: flex; justify-content: space-between; align-items: center;
   gap: .6rem; line-height: 1.6; min-height: 44px;
+  /* حماية: لا ترث مجموعة القائمة تنسيق زر الهامبرغر */
+  width: auto; height: auto; border: 0; box-shadow: none; background: transparent;
 }
 .m-group summary::-webkit-details-marker { display: none; }
 .m-group summary::marker { content: ""; }
@@ -1287,15 +1289,15 @@ td a { color: var(--olive-600); font-weight: 700; }
   .desktop-nav { display: none; }
   .top-cta { margin-right: auto; }
   .mobile-menu { display: block; position: relative; }
-  .mobile-menu summary {
+  .mobile-menu > summary {
     list-style: none; display: grid; place-items: center;
     width: 42px; height: 42px; border: 1px solid var(--line-strong);
     border-radius: var(--r-sm); color: var(--ink); cursor: pointer;
     background: var(--surface); box-shadow: var(--sh-sm);
     transition: background .2s var(--ease);
   }
-  .mobile-menu summary:hover { background: #f3eee5; }
-  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .mobile-menu > summary:hover { background: #f3eee5; }
+  .mobile-menu > summary::-webkit-details-marker { display: none; }
   .mobile-menu nav {
     position: absolute; left: 0; top: 50px; width: 250px;
     background: var(--surface); border: 1px solid var(--line-strong);
