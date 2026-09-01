@@ -73,7 +73,7 @@ const footer0 = donor.match(/<\/main>([\s\S]*?)<\/body>/)[1];
 const orgNode = () => ({ "@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#org",
   name: "دليل العبور والعبور الجديدة", url: SITE + "/",
   logo: "https://obourguide.com/brand/logo.png", foundingDate: "2026",
-  publishingPrinciples: SITE + "/editorial-policy/" });
+  publishingPrinciples: "https://obourguide.com/editorial-policy/" });
 
 function buildHead(title, desc, url, schemas) {
   let h = head0;
@@ -134,8 +134,8 @@ ${official}
 <p>مطورون آخرون بنفس القالب: <a href="/developers/${p1.slug}/">${p1.name}</a> · <a href="/developers/${p2.slug}/">${p2.name}</a></p>`;
   const aside = '<aside class="action-card"><p>دليل المطورين</p><a class="text-link" href="/developers/">الجدول الكامل ↖</a>'
     + '<a class="text-link" href="/methodology/">منهجية التقييم ↖</a><a class="text-link" href="/disclosure/">الإفصاح والشفافية ↖</a>'
-    + '<a class="text-link" href="/corrections/">اطلب تصحيح بيانات ↖</a><a class="text-link" href="/prices/">الأسعار ↖</a>'
-    + '<a class="text-link" href="/districts/">الأحياء والمناطق ↖</a></aside>';
+    + '<a class="text-link" href="/corrections/">اطلب تصحيح بيانات ↖</a><a href="/prices/">الأسعار ↖</a>'
+    + '<a href="/districts/">الأحياء والمناطق ↖</a></aside>';
   const devNode = { "@context": "https://schema.org", "@type": "Organization", "@id": `${url}#developer`,
     name: d.name, ...(d.domain ? { url: d.domain } : {}),
     description: "مطوّر عقاري له مشروعات معلنة في العبور/العبور الجديدة. الحالة: قيد الاستكمال." };
@@ -215,6 +215,57 @@ if (fs.existsSync(smPath)) {
   }
 } else {
   console.warn("[phase44] sitemap.xml غير موجود — تخطى");
+}
+
+// ---------- 4) ربط مقال «أفضل 10 مطورين في مدينة العبور» بالصفحات المحورية (idempotent) ----------
+const BEST_DEV = "/best-developers-obour/";
+const BEST_DEV_MARKER = 'data-best-dev-link="true"';
+const bestDevBlock = `<section class="paper section" ${BEST_DEV_MARKER}><div class="wrap"><div class="related">
+<a href="${BEST_DEV}">أفضل 10 مطورين في مدينة العبور — ترتيب تحريري بالدرجات ↖</a>
+</div></div></section>\n`;
+
+// 4.1 الرئيسية: شريحة ضمن hero-chips
+{
+  const homePath = path.join(clientDir, "index.html");
+  if (fs.existsSync(homePath)) {
+    let home = fs.readFileSync(homePath, "utf8");
+    if (!home.includes(BEST_DEV)) {
+      const m = home.match(/<div class="hero-chips"[^>]*>/);
+      if (m) {
+        const i = home.indexOf("</div>", m.index);
+        if (i !== -1) {
+          home = home.slice(0, i) + `<a href="${BEST_DEV}">أفضل 10 مطورين</a>` + home.slice(i);
+          fs.writeFileSync(homePath, home);
+          console.log("[phase44] home: أُضيفت شريحة أفضل 10 مطورين إلى hero-chips");
+        }
+      }
+    }
+  }
+}
+
+// 4.2 صفحات محورية: بلوك روابط قبل نهاية main
+const hubTargets = [
+  "developers/index.html",
+  "prices/index.html",
+  "buying-guide/index.html",
+  "compounds/index.html",
+  "investment/index.html",
+  "districts/index.html",
+  "new-obour/index.html",
+  "old-obour/index.html",
+  "obour-city/index.html",
+  "new-obour-districts/index.html",
+  "best-compounds-obour/index.html",
+  "best-compounds-new-obour/index.html",
+];
+for (const rel of hubTargets) {
+  const fp = path.join(clientDir, rel);
+  if (!fs.existsSync(fp)) continue;
+  let html = fs.readFileSync(fp, "utf8");
+  if (html.includes(BEST_DEV_MARKER) || !html.includes("</main>")) continue;
+  html = html.replace("</main>", bestDevBlock + "</main>");
+  fs.writeFileSync(fp, html);
+  console.log(`[phase44] ${rel}: رابط أفضل 10 مطورين`);
 }
 
 // ملاحظة: فهرس البحث يلتقط الصفحات الجديدة تلقائيًا في phase24 (مسح نظام الملفات).
