@@ -602,6 +602,7 @@ newCfg.schemas = pageSchemas(newCfg);
 // ---------------------------------------------------------------------------
 const LINK_BLOCK = `${MARKER}
 <section class="paper section" data-authority-links="true"><div class="wrap"><div class="related">
+<a href="/best-developers-obour/">أفضل 10 مطورين في مدينة العبور — ترتيب تحريري ↖</a>
 <a href="/best-compounds-obour/">أفضل كمبوندات العبور — ترتيب تحريري ↖</a>
 <a href="/best-compounds-new-obour/">أفضل كمبوندات العبور الجديدة — ترتيب تحريري ↖</a>
 </div></div></section>`;

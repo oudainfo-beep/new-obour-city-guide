@@ -229,6 +229,7 @@ const strategicInjections = [
   {
     file: path.join(clientDir, "developers", "index.html"),
     links: [
+      ["/best-developers-obour/", "أفضل 10 مطورين في مدينة العبور"],
       ["/best-compounds-obour/", "أفضل كمبوندات العبور"],
       ["/best-compounds-new-obour/", "أفضل كمبوندات العبور الجديدة"],
       ["/real-estate-developers-in-obour/", "دليل مطوري العبور"],
@@ -405,6 +406,7 @@ let homeHtml = fs.readFileSync(homeFile, "utf8");
 if (!homeHtml.includes(MARKER)) {
   const existing = extractLinks(homeHtml, "/");
   const homeLinks = [
+    ["/best-developers-obour/", "أفضل 10 مطورين في مدينة العبور"],
     ["/best-compounds-obour/", "أفضل كمبوندات العبور"],
     ["/best-compounds-new-obour/", "أفضل كمبوندات العبور الجديدة"],
     ["/new-obour-districts/", "أحياء العبور الجديدة"],

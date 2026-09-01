@@ -218,6 +218,7 @@ function writeLlmsTxt() {
 - [تقرير أسعار الربع الثالث 2026](${SITE}/price-report-q3-2026/)
 - [دليل الشراء](${SITE}/buying-guide/)
 - [دليل المطورين والمعايير الخمسة](${SITE}/developers/)
+- [أفضل 10 مطورين في مدينة العبور — ترتيب تحريري](${SITE}/best-developers-obour/)
 - [الاستثمار العقاري](${SITE}/investment/)
 - [أخطاء شائعة قبل التوقيع](${SITE}/mistakes/)
 
