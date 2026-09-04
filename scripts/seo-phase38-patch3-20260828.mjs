@@ -1133,7 +1133,7 @@ addPage("internal-medicine-obour", AR({
 </ul>
 
 <h2>الخلاصة</h2>
-<p>صحتك في العبور تُدار بطبيب باطنة قريب يعرف ملفك وفحص سنوي ثابت وقياس منزلي منتظم. ابنِ العلاقة قبل الحاجة — و<a href="/health-guide/">دليل الصحة</a> معك.</p>
+<p>صحتك في العبور تُدار بطبيب باطنة قريب يعرف ملفك وفحص سنوي ثابت وقياس منزلي منتظم. ابنِ العلاقة قبل الحاجة — و<a href="/health/">دليل الصحة</a> معك.</p>
 `,
   faq: [
     { q: "متى أحتاج طبيب باطنة في العبور؟", a: "في ثلاث حالات: فحصك السنوي الدوري (أرخص استثمار صحي على الإطلاق — يكشف قبل الأعراض)، وإدارة أي مرض مزمن كالسكر والضغط والغدة (مراجعة منتظمة لا جرعة قديمة متجمدة)، وعندما تتعدد أدويتك أو تخصصاتك — الباطني يقرأ الصورة كاملة ويوازن التعارضات. ابنِ العلاقة قبل الحاجة." },
@@ -1150,7 +1150,7 @@ addPage("vaccination-centers-obour", AR({
   tag: "⌖ صحة",
   crumbs: [
     { name: "الرئيسية", path: "/", url: SITE + "/" },
-    { name: "دليل الصحة", path: "/health-guide/", url: SITE + "/health-guide/" },
+    { name: "دليل الصحة", path: "/health/", url: SITE + "/health/" },
     { name: "التطعيمات", path: "/vaccination-centers-obour/", url: `${SITE}/vaccination-centers-obour/` },
   ],
   body: `
@@ -1197,7 +1197,7 @@ addPage("speech-therapy-obour", AR({
   tag: "⌖ صحة",
   crumbs: [
     { name: "الرئيسية", path: "/", url: SITE + "/" },
-    { name: "الصحة", path: "/health-guide/", url: SITE + "/health-guide/" },
+    { name: "الصحة", path: "/health/", url: SITE + "/health/" },
     { name: "التخاطب", path: "/speech-therapy-obour/", url: `${SITE}/speech-therapy-obour/` },
   ],
   body: `
@@ -1244,7 +1244,7 @@ addPage("allergy-asthma-obour", AR({
   tag: "⌖ صحة",
   crumbs: [
     { name: "الرئيسية", path: "/", url: SITE + "/" },
-    { name: "الصحة", path: "/health-guide/", url: SITE + "/health-guide/" },
+    { name: "الصحة", path: "/health/", url: SITE + "/health/" },
     { name: "الحساسية والربو", path: "/allergy-asthma-obour/", url: `${SITE}/allergy-asthma-obour/` },
   ],
   body: `

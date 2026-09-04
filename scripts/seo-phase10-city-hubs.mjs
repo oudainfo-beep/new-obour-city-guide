@@ -178,7 +178,7 @@ function obourCityPage(chrome) {
 <ul>
   <li><a href="/clinics/">العيادات والمعامل والأشعة</a></li>
   <li><a href="/emergency/">أرقام الطوارئ</a></li>
-  <li><a href="/health-guide/">دليل الصحة</a></li>
+  <li><a href="/health/">دليل الصحة</a></li>
 </ul>
 
 <h2>النقل بين المدينتين</h2>

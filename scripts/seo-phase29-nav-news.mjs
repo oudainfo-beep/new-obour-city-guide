@@ -13,9 +13,9 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const clientDir = path.join(root, "client");
 
-const DESKTOP_ANCHOR = '<div class="nav-item"><a href="/health-guide/">الصحة</a></div>';
+const DESKTOP_ANCHOR = '<div class="nav-item"><a href="/health/">الصحة</a></div>';
 const DESKTOP_ADD = `${DESKTOP_ANCHOR}<div class="nav-item"><a href="/news/">الأخبار</a></div>`;
-const MOBILE_ANCHOR = '<a class="m-solo" href="/health-guide/">الصحة</a>';
+const MOBILE_ANCHOR = '<a class="m-solo" href="/health/">الصحة</a>';
 const MOBILE_ADD = `${MOBILE_ANCHOR}<a class="m-solo" href="/news/">الأخبار</a>`;
 
 let updated = 0, skipped = 0, noNav = 0;

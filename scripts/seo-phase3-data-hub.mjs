@@ -498,7 +498,7 @@ const AR_MONTHS = {
   "مايو": "05", "يونيو": "06", "يوليو": "07", "أغسطس": "08", "اغسطس": "08",
   "سبتمبر": "09", "أكتوبر": "10", "نوفمبر": "11", "ديسمبر": "12",
 };
-const SITEMAP_EXCLUDE = new Set(["/404/", "/search/", "/dining-guide/", "/shopping-guide/", "/health-guide/"]);
+const SITEMAP_EXCLUDE = new Set(["/404/", "/search/", "/restaurants/", "/shopping/", "/health/"]);
 const KNOWN_DIRECTORIES = new Set(directories.filter((d) => d.slug !== "schools-all").map((d) => `/${d.slug}/`));
 const KNOWN_LANDINGS = new Set(landings.map((L) => `/${L.parent}/${L.slug}/`));
 

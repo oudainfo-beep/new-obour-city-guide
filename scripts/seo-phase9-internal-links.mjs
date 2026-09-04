@@ -462,10 +462,10 @@ function linkOrphanPillarAndComparePages() {
       ["/industrial-zone/", "المنطقة الصناعية بالعبور"],
     ]},
     { file: path.join(clientDir, "shopping", "index.html"), links: [
-      ["/shopping-guide/", "دليل التسوق في العبور"],
+      ["/shopping/", "دليل التسوق في العبور"],
     ]},
     { file: path.join(clientDir, "restaurants", "index.html"), links: [
-      ["/dining-guide/", "دليل الأكل والمطاعم في العبور"],
+      ["/restaurants/", "دليل الأكل والمطاعم في العبور"],
     ]},
   ];
   let touched = 0;

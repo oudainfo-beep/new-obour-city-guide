@@ -314,7 +314,7 @@ const strategicInjections = [
     file: path.join(clientDir, "restaurants", "index.html"),
     links: [
       ["/obour-city-restaurants/", "دليل مطاعم العبور"],
-      ["/dining-guide/", "دليل الأكل والمطاعم"],
+      ["/restaurants/", "دليل الأكل والمطاعم"],
     ],
     heading: "أدلة مطاعم",
   },
@@ -330,7 +330,7 @@ const strategicInjections = [
     file: path.join(clientDir, "shopping", "index.html"),
     links: [
       ["/obour-city-malls/", "دليل مولات العبور"],
-      ["/shopping-guide/", "دليل التسوق في العبور"],
+      ["/shopping/", "دليل التسوق في العبور"],
     ],
     heading: "أدلة تسوق",
   },
@@ -355,7 +355,7 @@ const strategicInjections = [
     file: path.join(clientDir, "cafes", "index.html"),
     links: [
       ["/obour-city-restaurants/", "دليل مطاعم العبور"],
-      ["/dining-guide/", "دليل الأكل والمطاعم"],
+      ["/restaurants/", "دليل الأكل والمطاعم"],
     ],
     heading: "أدلة مطاعم",
   },

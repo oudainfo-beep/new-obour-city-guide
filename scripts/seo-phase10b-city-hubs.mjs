@@ -130,9 +130,9 @@ const PAGES = [
   <li>إذا كان عنوانك في العبور الجديدة، لا تفترض أن جميع التطبيقات تغطيه؛ بعض الأحياء الجديدة لم تُدرج بعد.</li>
 </ul>
 
-<p><a href="/restaurants/">تصفّح دليل المطاعم الكامل →</a> · <a href="/dining-guide/">دليل الأكل في العبور →</a></p>
+<p><a href="/restaurants/">تصفّح دليل المطاعم الكامل →</a> · <a href="/restaurants/">دليل الأكل في العبور →</a></p>
 `,
-    aside: [["/restaurants/", "كل المطاعم"], ["/dining-guide/", "دليل الأكل"], ["/new-obour/", "دليل العبور الجديدة"]],
+    aside: [["/restaurants/", "كل المطاعم"], ["/restaurants/", "دليل الأكل"], ["/new-obour/", "دليل العبور الجديدة"]],
   },
   {
     slug: "obour-city-hospitals",
@@ -185,9 +185,9 @@ const PAGES = [
   <li>في العبور الجديدة، معظم الخدمات الطبية الكبرى لا تزال في العبور القائمة.</li>
 </ul>
 
-<p><a href="/hospitals/">كل المستشفيات والمراكز الطبية →</a> · <a href="/health-guide/">دليل الصحة →</a></p>
+<p><a href="/hospitals/">كل المستشفيات والمراكز الطبية →</a> · <a href="/health/">دليل الصحة →</a></p>
 `,
-    aside: [["/hospitals/", "كل المستشفيات"], ["/clinics/", "العيادات"], ["/health-guide/", "دليل الصحة"]],
+    aside: [["/hospitals/", "كل المستشفيات"], ["/clinics/", "العيادات"], ["/health/", "دليل الصحة"]],
   },
   {
     slug: "obour-city-schools",
@@ -310,7 +310,7 @@ const PAGES = [
 
 <p><a href="/pharmacies/">كل الصيدليات →</a> · <a href="/hospitals/">المستشفيات →</a></p>
 `,
-    aside: [["/pharmacies/", "كل الصيدليات"], ["/hospitals/", "المستشفيات"], ["/health-guide/", "دليل الصحة"]],
+    aside: [["/pharmacies/", "كل الصيدليات"], ["/hospitals/", "المستشفيات"], ["/health/", "دليل الصحة"]],
   },
   {
     slug: "obour-city-malls",
@@ -365,9 +365,9 @@ const PAGES = [
   <li>في العبور الجديدة، معظم المولات الكبرى لا تزال في العبور القائمة.</li>
 </ul>
 
-<p><a href="/entertainment/malls/">دليل المولات →</a> · <a href="/shopping/">دليل التسوق →</a> · <a href="/shopping-guide/">دليل التسوق الشامل →</a></p>
+<p><a href="/entertainment/malls/">دليل المولات →</a> · <a href="/shopping/">دليل التسوق →</a> · <a href="/shopping/">دليل التسوق الشامل →</a></p>
 `,
-    aside: [["/entertainment/malls/", "المولات"], ["/shopping/", "التسوق"], ["/shopping-guide/", "دليل التسوق"]],
+    aside: [["/entertainment/malls/", "المولات"], ["/shopping/", "التسوق"], ["/shopping/", "دليل التسوق"]],
   },
   {
     slug: "new-obour-services",

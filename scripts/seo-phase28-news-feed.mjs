@@ -172,13 +172,13 @@ function addNavLink() {
     rep("SKIP", "nav already links /news/");
     return;
   }
-  const marker = '<div class="nav-item"><a href="/health-guide/">الصحة</a></div>';
+  const marker = '<div class="nav-item"><a href="/health/">الصحة</a></div>';
   if (!html.includes(marker)) {
     rep("WARN", "nav marker not found — skipped nav link");
     return;
   }
   html = html.replace(marker, `${marker}<div class="nav-item"><a href="/news/">الأخبار</a></div>`);
-  const mMarker = '<a class="m-solo" href="/health-guide/">الصحة</a>';
+  const mMarker = '<a class="m-solo" href="/health/">الصحة</a>';
   if (html.includes(mMarker)) {
     html = html.replace(mMarker, `${mMarker}<a class="m-solo" href="/news/">الأخبار</a>`);
   }

@@ -1229,7 +1229,7 @@ addPage("air-purifier-obour", AR({
   tag: "⌖ صحة",
   crumbs: [
     { name: "الرئيسية", path: "/", url: SITE + "/" },
-    { name: "الصحة", path: "/health-guide/", url: SITE + "/health-guide/" },
+    { name: "الصحة", path: "/health/", url: SITE + "/health/" },
     { name: "منقيات الهواء", path: "/air-purifier-obour/", url: `${SITE}/air-purifier-obour/` },
   ],
   body: `

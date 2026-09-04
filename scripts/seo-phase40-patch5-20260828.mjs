@@ -783,7 +783,7 @@ addPage("blood-donation-obour", AR({
   tag: "⌖ صحة",
   crumbs: [
     { name: "الرئيسية", path: "/", url: SITE + "/" },
-    { name: "الصحة", path: "/health-guide/", url: SITE + "/health-guide/" },
+    { name: "الصحة", path: "/health/", url: SITE + "/health/" },
     { name: "التبرع بالدم", path: "/blood-donation-obour/", url: `${SITE}/blood-donation-obour/` },
   ],
   body: `

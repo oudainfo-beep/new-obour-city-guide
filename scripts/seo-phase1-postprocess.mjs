@@ -715,7 +715,7 @@ function buildMashawiPage() {
 // ---------------------------------------------------------------------------
 const SITEMAP_EXCLUDE = new Set([
   "/404/", "/search/",
-  "/dining-guide/", "/shopping-guide/", "/health-guide/", // دُمجت بتحويلات 301
+  "/restaurants/", "/shopping/", "/health/", // دُمجت بتحويلات 301
 ]);
 
 function rebuildSitemap(files) {
