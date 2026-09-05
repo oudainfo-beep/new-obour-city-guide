@@ -232,7 +232,7 @@ const strategicInjections = [
       ["/best-developers-obour/", "أفضل 10 مطورين في مدينة العبور"],
       ["/best-compounds-obour/", "أفضل كمبوندات العبور"],
       ["/best-compounds-new-obour/", "أفضل كمبوندات العبور الجديدة"],
-      ["/real-estate-developers-in-obour/", "دليل مطوري العبور"],
+      ["/developers-directory/", "دليل مطوري العبور"],
     ],
     heading: "أدلة المطورين والمشاريع",
   },
@@ -295,8 +295,8 @@ const strategicInjections = [
   {
     file: path.join(clientDir, "tools", "index.html"),
     links: [
-      ["/mortgage-affordability/", "حاسبة تمويل العقار"],
-      ["/commute-cost/", "حاسبة تكلفة التنقل"],
+      ["/tools/mortgage-affordability/", "حاسبة تمويل العقار"],
+      ["/tools/commute-cost/", "حاسبة تكلفة التنقل"],
       ["/school-fees/", "حاسبة الرسوم الدراسية"],
       ["/cost-of-living/", "تكلفة المعيشة"],
     ],
