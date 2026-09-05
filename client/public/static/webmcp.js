@@ -3,6 +3,11 @@
   if (!("modelContext" in navigator) || !navigator.modelContext || !navigator.modelContext.registerTool) return;
   var mc = navigator.modelContext;
 
+  // AbortController: all tools unregister cleanly when no longer needed
+  // (e.g., page teardown / SPA navigation). signal is passed per registration.
+  var controller = new AbortController();
+  var signal = controller.signal;
+
   mc.registerTool({
     name: "search_obour_services",
     description: "Search the verified Obour / New Obour local-services directory (2,040 listings: name, category, area, phone). Arabic or English query.",
@@ -28,7 +33,7 @@
         .slice(0, limit);
       return { content: [{ type: "text", text: JSON.stringify(hits, null, 1) }] };
     },
-  });
+  }, { signal: signal });
 
   mc.registerTool({
     name: "list_obour_datasets",
@@ -40,7 +45,7 @@
       var sets = Object.keys(spec.paths || {}).filter(function (p) { return p.endsWith(".json"); });
       return { content: [{ type: "text", text: JSON.stringify(sets.map(function (p) { return "https://obourguide.com" + p; }), null, 1) }] };
     },
-  });
+  }, { signal: signal });
 
   mc.registerTool({
     name: "navigate_obour_guide",
@@ -56,5 +61,8 @@
       window.location.assign(path);
       return { content: [{ type: "text", text: "Navigating to " + path }] };
     },
-  });
+  }, { signal: signal });
+
+  // Expose teardown for hosts that support it (and for future SPA navigation)
+  window.addEventListener("pagehide", function () { controller.abort(); });
 })();
