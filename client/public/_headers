@@ -18,3 +18,13 @@
 /.well-known/agent-card.json
   Content-Type: application/json; charset=utf-8
   Cache-Control: public, max-age=86400
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/ai-catalog.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=86400
