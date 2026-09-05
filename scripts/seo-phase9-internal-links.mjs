@@ -197,7 +197,9 @@ for (const s of schools) {
 // معالجة الصفحات
 // ---------------------------------------------------------------------------
 function makeLink(href, text) {
-  return [href.replace(/\/$/, ""), cleanName(text)];
+  // Ahrefs audit 2026-09-06: keep the trailing slash — slash-less URLs 301 to the
+  // canonical slash form, and linking to redirects wastes crawl budget.
+  return [href, cleanName(text)];
 }
 
 function processDistrictPage(file, slug) {
@@ -483,6 +485,31 @@ function linkOrphanPillarAndComparePages() {
   rep("orphan-links", `أُضيفت روابط لـ ${touched} صفحة أم لصفحات فرعية يتيمة.`);
 }
 
+
+// ---------------------------------------------------------------------------
+// Ahrefs audit 2026-09-06: slash-less internal URLs 301 to their slash form.
+// Pages with an existing MARKER block are skipped above, so stale slash-less
+// hrefs would survive the build — normalize every internal href to the final
+// canonical (trailing-slash) URL whenever the target directory exists.
+function healTrailingSlashes() {
+  let healed = 0;
+  for (const f of listIndexFiles(clientDir)) {
+    const html = fs.readFileSync(f, "utf8");
+    const out = html.replace(/href="((?:https:\/\/obourguide\.com)?\/[^"#?]*?)"/g, (m, url) => {
+      const prefix = url.startsWith("https://") ? "https://obourguide.com" : "";
+      const p = url.slice(prefix.length);
+      if (p === "" || p.endsWith("/") || /\.[a-z0-9]+$/i.test(p)) return m;
+      if (fs.existsSync(path.join(clientDir, p, "index.html"))) return `href="${prefix}${p}/"`;
+      return m;
+    });
+    if (out !== html) {
+      fs.writeFileSync(f, out);
+      healed++;
+    }
+  }
+  rep("slash-heal", `سُوّيت روابط بلا شرطة مائلة أخيرة في ${healed} صفحة.`);
+}
+
 // ---------------------------------------------------------------------------
 function main() {
   const counts = {
@@ -535,6 +562,7 @@ function main() {
 
   addFooterUtilityLinks();
   linkOrphanPillarAndComparePages();
+  healTrailingSlashes();
 
   console.log("=== تقرير المرحلة التاسعة: محرك الروابط الداخلية ===");
   for (const line of report) console.log(line);
