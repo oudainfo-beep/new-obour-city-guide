@@ -11,6 +11,7 @@
  *     المسار فقط — يقضي على "no return-tag" ووسوم تشير لصفحات غير مكافئة.
  *  5ب) روابط أشقاء داخل كل قسم — صفحات التفاصيل كانت تعيش على رابط واحد من دليلها.
  *  6) sitemap.xml: استبعاد صفحات noindex (مثل /search/ و/offline/) ومصادر 301.
+ *  7) شبكة أمان أخيرة: أي صفحة يتبقّى لها ≤1 رابط داخلي تُرفع تلقائيًا.
  */
 
 import fs from "node:fs";
@@ -147,7 +148,7 @@ function insertModule(html, marker, block) {
 
 const hasLink = (html, route) => html.includes(`href="${route}"`) || html.includes(`href="${route.slice(0, -1)}"`);
 
-// --- 5ب — روابط أشقاء داخل كل قسم: صفحات التفاصيل كانت تعيش على رابط واحد من الدليل ---
+// --- 5ب — روابط أشقاء داخل كل قسم: صفحات التفاصيل كانت تعيش على رابط واحد من دليلها ---
 const SIBLING_DENY = new Set(["districts", "en", "guides", "compare", "public", "brand", "static", "404", "data", "search", "ask", "developers-directory"]);
 
 function fixSiblingLinks(pages) {
@@ -180,6 +181,57 @@ function fixSiblingLinks(pages) {
   rep("siblings", `روابط أشقاء داخل الأقسام: ${added} صفحة`);
 }
 
+/** رسم روابط نهائي — يحسب الروابط النسبية والمطلقة معًا */
+function buildAbsLinkGraph(pages) {
+  const routes = new Set(pages.map((p) => p.route));
+  const inlinks = new Map([...routes].map((r) => [r, new Set()]));
+  for (const p of pages) {
+    const html = read(p.file);
+    for (const m of html.matchAll(/href="((?:https:\/\/obourguide\.com)?\/[^"#?]*?)"/g)) {
+      let u = m[1].replace("https://obourguide.com", "");
+      if (!u.endsWith("/")) u += "/";
+      if (routes.has(u) && u !== p.route) inlinks.get(u).add(p.route);
+    }
+  }
+  return inlinks;
+}
+
+// --- 7 — الشبكة الأخيرة: أي صفحة بقي لها ≤1 رابط بعد كل الوحدات تُرفع ---
+function fixStragglers(pages) {
+  const byRoute = new Map(pages.map((p) => [p.route, p]));
+  const inlinks = buildAbsLinkGraph(pages);
+  const redirSrcs = new Set([...redirectMap().keys()]);
+  const guidesFile = path.join(clientDir, "guides", "index.html");
+  let guidesHtml = fs.existsSync(guidesFile) ? read(guidesFile) : null;
+  const extraItems = [];
+  let hubLinks = 0;
+  const SKIP = new Set(["/", "/404/", "/offline/", "/search/", "/guides/"]);
+  for (const p of pages) {
+    if (SKIP.has(p.route) || redirSrcs.has(p.route) || p.route.startsWith("/en/")) continue;
+    const n = inlinks.get(p.route)?.size ?? 0;
+    if (n > 1) continue;
+    const parts = p.route.split("/").filter(Boolean);
+    let done = false;
+    if (parts.length === 2) {
+      const hub = byRoute.get("/" + parts[0] + "/");
+      if (hub && !hasLink(read(hub.file), p.route)) {
+        const block = `<section class="dir-full-list" aria-label="القائمة الكاملة"><h2>القائمة الكاملة</h2><ul class="dir-full-grid"><li><a href="${p.route}">${pageName(p.file, p.route)}</a></li></ul></section><!-- phase53-hub -->`;
+        const res = insertModule(read(hub.file), "phase53-hub", block);
+        if (res.inserted) { write(hub.file, res.html); hubLinks++; done = true; }
+      }
+    }
+    if (!done && guidesHtml && !guidesHtml.includes(`href="${p.route}"`)) {
+      extraItems.push(`<li><a href="${p.route}">${pageName(p.file, p.route)}</a></li>`);
+    }
+  }
+  if (extraItems.length && guidesHtml) {
+    const block = `<section><h2>صفحات إضافية</h2><ul class="dir-full-grid">${extraItems.join("")}</ul></section>`;
+    guidesHtml = guidesHtml.replace("</main>", block + "\n</main>");
+    write(guidesFile, guidesHtml);
+  }
+  rep("stragglers", `أُنقذت صفحات ضعيفة الروابط: ${hubLinks} عبر أدلة الأقسام + ${extraItems.length} عبر /guides/`);
+}
+
 // --- 6 — sitemap بدون noindex وبدون مصادر 301 ---
 function rebuildSitemap(pages) {
   const ex = new Set(["/404/"]);
@@ -198,7 +250,7 @@ function rebuildSitemap(pages) {
       return `<url><loc>${loc}</loc><lastmod>${oldLastmod.get(loc) || LASTMOD}</lastmod></url>`;
     });
   write(file, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`);
-  rep("sitemap", `sitemap.xml: ${urls.length} عنوانًا (بدون noindex أو مُحوَّلات) — مستبعد: ${[...ex].join("، ")}`);
+  rep("sitemap", `sitemap.xml: ${urls.length} عنوانًا (بدون noindex أو مُحوَّلات)`);
 }
 
 function main() {
@@ -236,6 +288,7 @@ function main() {
   rep("social", `OG/Twitter أُضيفت: ${og} — عناوين قُصّت: ${titles} — أوصاف عُزّزت: ${descs}`);
   rep("rlinks", `صفحات أُعيدت كتابة روابط 301 فيها: ${rlinks}`);
   fixSiblingLinks(listPages());
+  fixStragglers(listPages());
   fixHreflang(listPages());
   rebuildSitemap(listPages());
   console.log("phase53c (Ahrefs round 2) — تمّت:");
