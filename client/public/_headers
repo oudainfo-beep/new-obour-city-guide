@@ -4,3 +4,7 @@
 
 /
   Link: </.well-known/api-catalog>; rel="api-catalog", </data/openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json", </data/>; rel="service-doc"; type="text/html", </llms.txt>; rel="describedby"; type="text/plain", </sitemap.xml>; rel="sitemap"; type="application/xml"
+
+/auth.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://obourguide.com/auth.md>; rel="help"; type="text/markdown"
