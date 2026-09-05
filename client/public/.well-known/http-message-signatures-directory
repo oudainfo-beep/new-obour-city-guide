@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "OKP",
+      "crv": "Ed25519",
+      "x": "U789UOcqGS3Qtst1p8M-dK7YjsesYrxf0IlgidwsfaM",
+      "kid": "obq-webbot-2026-09",
+      "use": "sig",
+      "alg": "EdDSA"
+    }
+  ]
+}
