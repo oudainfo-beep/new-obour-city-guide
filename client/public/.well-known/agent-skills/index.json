@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "obour-city-data",
+      "type": "skill-md",
+      "description": "Answer factual questions about Obour City & New Obour (Egypt) using Obour Guide's verified open datasets, MCP tools, and markdown-negotiated pages.",
+      "url": "https://obourguide.com/skills/obour-city-data/SKILL.md",
+      "digest": "sha256:d9f5d682799c3513821042c2ffa4b9f58206e140dfd267fce8baff867ea69d38"
+    }
+  ]
+}

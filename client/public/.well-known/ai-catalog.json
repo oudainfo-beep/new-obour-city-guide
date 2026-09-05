@@ -1,0 +1,58 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Obour Guide — دليل العبور والعبور الجديدة",
+    "identifier": "did:web:obourguide.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:obourguide.com:a2a:data-agent",
+      "displayName": "Obour Guide Data Agent (A2A)",
+      "type": "application/agent-card+json",
+      "url": "https://obourguide.com/.well-known/agent-card.json",
+      "capabilities": ["city-services-directory", "district-compound-data", "city-guide-reference"],
+      "description": "Read-only A2A data agent for Obour City & New Obour: 2,000+ verified local service listings, districts, compounds, developers, schools, prices, and bilingual city guides.",
+      "representativeQueries": [
+        "find a pharmacy in Obour with its phone number",
+        "compare districts in New Obour",
+        "what developers build in Obour"
+      ]
+    },
+    {
+      "identifier": "urn:air:obourguide.com:mcp:data-server",
+      "displayName": "Obour Guide Data MCP Server",
+      "type": "application/mcp-server+json",
+      "url": "https://obourguide.com/mcp",
+      "capabilities": ["get_dataset", "search_directory"],
+      "description": "MCP server (Streamable HTTP) exposing Obour Guide's open datasets as tools: full dataset download and directory search.",
+      "representativeQueries": [
+        "search the Obour services directory",
+        "download the Obour districts dataset"
+      ]
+    },
+    {
+      "identifier": "urn:air:obourguide.com:skill:obour-city-data",
+      "displayName": "Obour City Data skill",
+      "type": "text/markdown",
+      "url": "https://obourguide.com/skills/obour-city-data/SKILL.md",
+      "capabilities": ["city-knowledge", "directory-lookup", "dataset-access"],
+      "description": "Agent skill teaching how to answer questions about Obour City from Obour Guide's datasets and agent-friendly endpoints.",
+      "representativeQueries": [
+        "how do I answer questions about Obour City",
+        "obour guide data access skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:obourguide.com:api:open-data",
+      "displayName": "Obour Guide Open Data API",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://obourguide.com/data/openapi.json",
+      "capabilities": ["static-json-datasets"],
+      "description": "Static open-data API: CC BY-SA 4.0 JSON datasets refreshed on every deploy.",
+      "representativeQueries": [
+        "open data for Obour city",
+        "list of schools in Obour as JSON"
+      ]
+    }
+  ]
+}
