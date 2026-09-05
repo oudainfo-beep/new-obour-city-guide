@@ -391,7 +391,7 @@ function main() {
       const slug = resolveSlug(name, usedSlugs, dir);
 
       const title = `${name} | ${cat.title} العبور`;
-      const description = `بيانات منشورة عن ${name} في العبور: العنوان، الهاتف، والتصنيف. بدون تقييمات أو مراجعات وهمية.`;
+      const description = `بيانات منشورة عن ${name} في العبور ضمن دليل ${cat.title}: العنوان، الهاتف، والتصنيف. بدون تقييمات أو مراجعات وهمية.`;
 
       const entity = {
         chrome,
