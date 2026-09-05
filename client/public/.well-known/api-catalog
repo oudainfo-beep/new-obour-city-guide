@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://obourguide.com/data/",
+      "service-desc": [
+        {
+          "href": "https://obourguide.com/data/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://obourguide.com/data/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://obourguide.com/data/status.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}
