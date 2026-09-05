@@ -226,13 +226,19 @@ function selectTopItems(items, dir) {
 
 function buildEntity(e, related) {
   const url = `${SITE}/${e.dir}/${e.slug}/`;
+  const canonicalUrl = e.canonicalOverride || url;
   const schemas = [
     orgNode(),
     webPageSchema(e, url),
     localBusinessSchema(e, url),
     breadcrumbSchema(e.category.name, e.category.url, e.entity.name, url),
   ];
-  const head = buildHead(e.chrome.head, { title: e.title, description: e.description, url, schemas }).replace(
+  let head = buildHead(e.chrome.head, { title: e.title, description: e.description, url: canonicalUrl, schemas });
+  if (e.canonicalOverride) {
+    // og:url stays on the page's own URL; only rel=canonical consolidates.
+    head = head.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`);
+  }
+  head = head.replace(
     /<\/head>/,
     "<!-- phase14-entity-page -->\n</head>"
   );
@@ -357,6 +363,11 @@ function main() {
   const categories = JSON.parse(fs.readFileSync(path.join(dataDir, "index.json"), "utf8"));
 
   const allEntities = [];
+  // Ahrefs audit 2026-09-06: the same real-world entity can appear in several
+  // category directories (e.g. a club listed under both entertainment and
+  // fitness), producing near-duplicate pages. The first category keeps the
+  // indexable page; later ones canonical to it.
+  const entityCanonical = new Map();
 
   for (const cat of categories) {
     if (SKIP_DIRS.has(cat.slug)) {
@@ -390,6 +401,15 @@ function main() {
       const source = item.s || "دليل العبور";
       const slug = resolveSlug(name, usedSlugs, dir);
 
+      const pageUrl = `${SITE}/${dir}/${slug}/`;
+      const dedupeKey = name.trim().toLowerCase();
+      let canonicalOverride;
+      if (entityCanonical.has(dedupeKey)) {
+        canonicalOverride = entityCanonical.get(dedupeKey);
+      } else {
+        entityCanonical.set(dedupeKey, pageUrl);
+      }
+
       const title = `${name} | ${cat.title} العبور`;
       const description = `بيانات منشورة عن ${name} في العبور ضمن دليل ${cat.title}: العنوان، الهاتف، والتصنيف. بدون تقييمات أو مراجعات وهمية.`;
 
@@ -397,6 +417,7 @@ function main() {
         chrome,
         slug,
         dir,
+        canonicalOverride,
         schemaType,
         category: { name: cat.title, url: categoryUrl },
         title,
