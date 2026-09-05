@@ -1,0 +1,6 @@
+{
+  "resource": "https://obourguide.com",
+  "authorization_servers": ["https://obourguide.com"],
+  "scopes_supported": ["public:read"],
+  "bearer_methods_supported": ["header"]
+}

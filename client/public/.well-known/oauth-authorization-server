@@ -1,0 +1,14 @@
+{
+  "issuer": "https://obourguide.com",
+  "agent_auth": {
+    "skill": "https://obourguide.com/auth.md",
+    "register_uri": "https://obourguide.com/agent/auth",
+    "claim_uri": "https://obourguide.com/agent/auth/claim",
+    "revocation_uri": "https://obourguide.com/agent/auth/revoke",
+    "identity_types_supported": ["anonymous"],
+    "anonymous": {
+      "credential_types_supported": ["api_key"],
+      "claim_uri": "https://obourguide.com/agent/auth/claim"
+    }
+  }
+}
