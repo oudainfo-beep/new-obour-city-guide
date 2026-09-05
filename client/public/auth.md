@@ -1,60 +1,89 @@
 # auth.md
 
-**Obour Guide (دليل العبور والعبور الجديدة)** — agent authentication & registration policy for `https://obourguide.com`.
+**Obour Guide (دليل العبور والعبور الجديدة)** — agent registration walkthrough for `https://obourguide.com`. Follow top to bottom; every step is machine-actionable.
 
-## 1. Agent audience
+## 1. Discover the metadata
 
-This document is for AI agents, LLM crawlers, answer engines, and other automated clients that read or reference Obour Guide content — the Arabic/English city guide for Obour City & New Obour (Qalyubia, Egypt): services directory, prices, districts, developers, and open datasets.
+Fetch the Protected Resource Metadata (RFC 9728):
 
-## 2. Access model — no authentication required
+```
+GET https://obourguide.com/.well-known/oauth-protected-resource
+```
 
-All published resources are **public and read-only**. No account, API key, token, or login is required:
+You get the `resource`, the `authorization_servers` list, `scopes_supported` (`public:read`), and `bearer_methods_supported` (`header`).
 
-| Resource | Access |
-|---|---|
-| All guide pages (`/…`) | Public `GET` |
-| Open Data API — `GET /data/*.json` (see `/.well-known/api-catalog`) | Public, keyless |
-| `/llms.txt`, `/sitemap.xml`, `/feed.xml`, `/.well-known/api-catalog` | Public, keyless |
+## 2. Read the authorization-server metadata
 
-There is **no write API** exposed to agents or third parties. Community Q&A accounts (when offered) are created exclusively through the human web UI at `/ask/` — agents must not attempt to register or post programmatically.
+```
+GET https://obourguide.com/.well-known/oauth-authorization-server
+```
 
-## 3. Registration / provisioning
+Read the `agent_auth` block: `skill` (this file), `register_uri`, `claim_uri`, `revocation_uri`, and `identity_types_supported`.
 
-- **Read access:** no registration. Fetch what you need, subject to the usage policy below.
-- **High-volume or commercial reuse:** email `info@obourguide.com` with your organization, purpose, and expected request volume to provision a usage arrangement (optional; public rates are generous).
-- **Credential issuance:** not applicable — this service issues no credentials and accepts none.
+## 3. Register
 
-## 4. Credential use
+One registration method is supported: **`anonymous`**.
 
-Not applicable. Requests should be plain HTTPS `GET`/`HEAD` without `Authorization` headers. If you previously received a key from us by private arrangement, send it as `Authorization: Bearer <key>` (header method) — but none is needed for the public surface.
+```
+POST https://obourguide.com/agent/auth
+```
 
-## 5. Content usage policy (robots.txt Content Signals)
+No request body is required. You receive `201` with:
 
-The site-wide policy is machine-readable in `/robots.txt`:
+```json
+{
+  "credential": "obq_anon_…",
+  "credential_type": "api_key",
+  "scopes": ["public:read"],
+  "status": "active",
+  "claim_uri": "https://obourguide.com/agent/auth/claim",
+  "revocation_uri": "https://obourguide.com/agent/auth/revoke"
+}
+```
 
-- `search=yes` — indexing and search results allowed
-- `ai-input=yes` — real-time grounding/answers allowed for permitted search bots
-- `ai-train=no` — **model training is prohibited** (training crawlers are blocked in robots.txt)
-- `use=reference` — quote/reference with attribution
+Skip any user-consent gate — there is no user identity to assert in the anonymous flow.
 
-Attribution: «دليل العبور والعبور الجديدة» — https://obourguide.com/
+## 4. Use the credential
 
-## 6. Fair use & rate guidance
+Send it on requests as a bearer token in the header:
 
-- Stay under ~2 requests/second; crawl `/sitemap.xml` rather than blind crawling.
-- Identify yourself honestly in `User-Agent`. Spoofing another bot may get you rate-limited.
-- Datasets carry **CC BY-SA 4.0**.
+```
+Authorization: Bearer <credential>
+```
 
-## 7. Discovery
+**Honest note:** Obour Guide is a public, read-only resource. The credential is an *optional identification token* used for fair-use rate tracking — every public URL answers identically with or without it. If you never call `register_uri`, you lose nothing.
 
-- API catalog: `/.well-known/api-catalog` (RFC 9727, `application/linkset+json`)
-- OpenAPI description of datasets: `/data/openapi.json`
-- LLM-oriented site summary: `/llms.txt`
+## 5. Claim (optional)
 
-## 8. Contact
+To bind a contact email to your registration (so we can reach you about rate or usage questions):
 
-`info@obourguide.com` — corrections, provisioning questions, abuse reports.
+```
+POST https://obourguide.com/agent/auth/claim
+Content-Type: application/json
 
----
+{ "email": "you@example.org" }
+```
 
-*ملاحظة بالعربية: كل محتوى الدليل والبيانات المفتوحة متاح للقراءة العامة دون تسجيل أو مفاتيح. التدريب على المحتوى ممنوع (انظر robots.txt)، والاقتباس مع الإسناد مسموح. للاستخدام التجاري المكثّف راسلنا على info@obourguide.com.*
+Scopes do not change after claiming — `public:read` is already full access.
+
+## 6. Revocation & recovery
+
+```
+POST https://obourguide.com/agent/auth/revoke
+```
+
+Revocation is a stateless acknowledgment: discard the credential. If a credential ever returns an error, drop it and restart at Step 1 — re-registration is free.
+
+## 7. Content usage policy
+
+Machine-readable in `/robots.txt` (Content Signals): `search=yes`, `ai-input=yes`, `ai-train=no` (model training prohibited), `use=reference`. Attribution: «دليل العبور والعبور الجديدة» — https://obourguide.com/. Datasets under `/data/` carry CC BY-SA 4.0.
+
+## 8. Rate guidance
+
+Stay under ~2 requests/second, crawl `/sitemap.xml` rather than blind crawling, and identify yourself honestly in `User-Agent`. High-volume or commercial reuse: `info@obourguide.com`.
+
+## 9. Related discovery documents
+
+- `/.well-known/api-catalog` — API catalog (RFC 9727)
+- `/data/openapi.json` — OpenAPI description of the open datasets
+- `/llms.txt` — LLM-oriented site summary

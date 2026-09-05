@@ -8,3 +8,9 @@
 /auth.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://obourguide.com/auth.md>; rel="help"; type="text/markdown"
+
+/.well-known/oauth-protected-resource
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/oauth-authorization-server
+  Content-Type: application/json; charset=utf-8
