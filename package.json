@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "node scripts/build-all.mjs && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "node scripts/build-all.mjs && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && node scripts/seo-phase54-post-build.mjs",
     "seo:phase1": "node scripts/seo-phase1-postprocess.mjs",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc --noEmit",
