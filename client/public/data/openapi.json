@@ -1,0 +1,130 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Obour Guide Open Data API",
+    "description": "Static open-data API for Obour City & New Obour (Egypt): districts, compounds, developers, schools, and the services directory. Datasets are published JSON documents, refreshed with each site deploy.",
+    "version": "2026.09.05",
+    "license": {
+      "name": "CC BY-SA 4.0"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://obourguide.com"
+    }
+  ],
+  "paths": {
+    "/data/obour-compounds.json": {
+      "get": {
+        "summary": "Download obour-compounds.json",
+        "description": "JSON dataset — 13 records. License: CC BY-SA 4.0.",
+        "responses": {
+          "200": {
+            "description": "JSON dataset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/obour-developers.json": {
+      "get": {
+        "summary": "Download obour-developers.json",
+        "description": "JSON dataset — 13 records. License: CC BY-SA 4.0.",
+        "responses": {
+          "200": {
+            "description": "JSON dataset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/obour-directories.json": {
+      "get": {
+        "summary": "Download obour-directories.json",
+        "description": "JSON dataset — 2040 records. License: CC BY-SA 4.0.",
+        "responses": {
+          "200": {
+            "description": "JSON dataset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/obour-districts.json": {
+      "get": {
+        "summary": "Download obour-districts.json",
+        "description": "JSON dataset — 4 records. License: CC BY-SA 4.0.",
+        "responses": {
+          "200": {
+            "description": "JSON dataset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/obour-schools.json": {
+      "get": {
+        "summary": "Download obour-schools.json",
+        "description": "JSON dataset — 10 records. License: CC BY-SA 4.0.",
+        "responses": {
+          "200": {
+            "description": "JSON dataset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/status.json": {
+      "get": {
+        "summary": "Service health/status",
+        "responses": {
+          "200": {
+            "description": "Status document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
