@@ -1,0 +1,69 @@
+{
+  "name": "Obour Guide Data Agent",
+  "description": "Read-only data agent for Obour City & New Obour (Qalyubia, Egypt): verified directory of local services (2,000+ listings with addresses and phones), districts, compounds, developers, schools, prices, and city guides in Arabic and English. Agents use it to answer factual questions about the city from published, reviewable sources. This is a data service, not a task executor — no task lifecycle, streaming, or push notifications.",
+  "version": "2026.09.05",
+  "provider": {
+    "organization": "دليل العبور والعبور الجديدة (Obour Guide)",
+    "url": "https://obourguide.com/"
+  },
+  "documentationUrl": "https://obourguide.com/data/",
+  "iconUrl": "https://obourguide.com/brand/logo.png",
+  "supportedInterfaces": [
+    {
+      "url": "https://obourguide.com/data/",
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "securitySchemes": {
+    "anonymousApiKey": {
+      "apiKeySecurityScheme": {
+        "location": "header",
+        "name": "Authorization",
+        "description": "Optional. Obour Guide is public & read-only; anonymous keys (POST /agent/auth, see /auth.md) are identification tokens for fair-use rate tracking and gate nothing. Send as: Authorization: Bearer obq_anon_…"
+      }
+    }
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["application/json", "text/html"],
+  "skills": [
+    {
+      "id": "city-services-directory",
+      "name": "City services directory lookup",
+      "description": "Look up local businesses and services in Obour & New Obour — pharmacies, hospitals, banks, restaurants, schools, gyms, home services — with published addresses and phone numbers, via the open datasets at /data/ (see /.well-known/api-catalog).",
+      "tags": ["directory", "local-services", "obour", "lookup", "businesses"],
+      "examples": [
+        "List pharmacies in Obour District 1 with phone numbers",
+        "Find hospitals in Obour City",
+        "Which banks have branches in New Obour?"
+      ]
+    },
+    {
+      "id": "district-compound-data",
+      "name": "Districts, compounds & developer data",
+      "description": "Retrieve structured data on Obour/New Obour districts, residential compounds, and real-estate developers — for comparisons, price context, and buyer guidance.",
+      "tags": ["districts", "compounds", "developers", "real-estate", "datasets"],
+      "examples": [
+        "Compare District 1 vs District 3 services",
+        "List developers active in New Obour",
+        "What compounds exist in Obour?"
+      ]
+    },
+    {
+      "id": "city-guide-reference",
+      "name": "City guide content reference",
+      "description": "Reference the published Arabic/English guides (buying, prices, transport, procedures, comparisons) for grounded answers with attribution, per the site's content signals (use=reference, ai-train=no).",
+      "tags": ["guides", "reference", "grounding", "attribution", "arabic"],
+      "examples": [
+        "Steps to register a property contract in Obour",
+        "Cost of living in Obour vs New Cairo",
+        "How to commute from Obour to Cairo"
+      ]
+    }
+  ]
+}

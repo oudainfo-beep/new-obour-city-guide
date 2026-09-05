@@ -14,3 +14,7 @@
 
 /.well-known/oauth-authorization-server
   Content-Type: application/json; charset=utf-8
+
+/.well-known/agent-card.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=86400
