@@ -1,0 +1,16 @@
+{
+  "serverInfo": {
+    "name": "obour-guide-data",
+    "title": "Obour Guide Data MCP",
+    "version": "2026.09.05"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://obourguide.com/mcp"
+  },
+  "endpoint": "https://obourguide.com/mcp",
+  "capabilities": {
+    "tools": { "listChanged": false }
+  },
+  "documentationUrl": "https://obourguide.com/auth.md"
+}
