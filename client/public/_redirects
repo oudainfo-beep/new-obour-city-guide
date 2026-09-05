@@ -42,3 +42,11 @@
 /shopping-guide/ /shopping/ 301
 /health-guide /health/ 301
 /health-guide/ /health/ 301
+
+# Ahrefs audit 2026-09-06: merge duplicate entity pages (301)
+/entertainment/cinderella-ballroom-2/ /entertainment/cinderella-ballroom/ 301
+/entertainment/cinderella-ballroom-2 /entertainment/cinderella-ballroom/ 301
+/hotels/club-house-hotel-2/ /hotels/club-house-hotel/ 301
+/hotels/club-house-hotel-2 /hotels/club-house-hotel/ 301
+/logistics/b-express-2/ /logistics/b-express/ 301
+/logistics/b-express-2 /logistics/b-express/ 301
