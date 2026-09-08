@@ -186,74 +186,9 @@ function trimMeta(html, route) {
 // ---------------------------------------------------------------------------
 
 const ROBOTS = `# Obour Guide — robots.txt
-# السياسة (موحدة على مستوى الموقع): الفهرسة ومحركات إجابات الذكاء الاصطناعي مسموحة؛
-# زواحف تدريب النماذج محظورة. لا تُضف قواعد Allow يدوية لهذه الزواحف — طبقة
-# Cloudflare المُدارة تحظرها أيضًا، وأي تناقض Allow/Disallow يُعيد تحذير
-# "Inconsistent AI training bot policy" في التدقيق.
-
+# سياسة مفتوحة: الفهرسة ومحركات الإجابات وزواحف تدريب النماذج كلها مسموحة.
 User-agent: *
-Content-Signal: search=yes, ai-train=no, use=reference
 Allow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-User-agent: Meta-ExternalAgent
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: DeepseekBot
-Disallow: /
-
-User-agent: xAI-Bot
-Disallow: /
-
-User-agent: cohere-ai
-Disallow: /
-
-User-agent: cohere-training-data-crawler
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-User-agent: AI2Bot
-Disallow: /
-
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: Timpibot
-Disallow: /
-
-User-agent: ImagesiftBot
-Disallow: /
 
 Sitemap: https://obourguide.com/sitemap.xml
 `;
@@ -305,7 +240,7 @@ function main() {
   rep("schema", `ItemList نُظّفت من التواريخ: ${ilf} كتلة — telephone تحولت لمصفوفات: ${pf}`);
   rep("meta", `أوصاف قُلّمت: ${metas} — ما زالت >160: ${stillLong.length}${stillLong.length ? " → " + stillLong.slice(0, 12).join("، ") : ""}`);
   write(path.join(clientDir, "public", "robots.txt"), ROBOTS);
-  rep("robots", "robots.txt أُعيد كتابته بسياسة موحدة (حظر تدريب AI، سماح ببحث/إجابات AI)");
+  rep("robots", "robots.txt أُعيد كتابته بالسياسة المفتوحة (سماح كامل لكل الزواحف)");
   fixRedirects();
   console.log("phase53 audit fixes (schema/meta/robots/redirects) — تمّت:");
   console.log(report.map((r) => "  " + r).join("\n"));

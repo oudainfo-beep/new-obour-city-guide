@@ -246,7 +246,7 @@ function updateRobotsTxt() {
   if (fs.existsSync(p)) {
     content = fs.readFileSync(p, "utf8");
   }
-  if (content.includes("User-agent: GPTBot")) {
+  if (content.includes("User-agent: GPTBot") || content.includes("سياسة مفتوحة")) {
     rep("robots", "robots.txt يحتوي على السطور الصريحة مسبقًا — لم يُعدل");
     return;
   }
