@@ -485,7 +485,7 @@ function findEntityPage(item, entityDir) {
   const file = path.join(clientDir, entityDir, base, "index.html");
   if (!fs.existsSync(file)) return null;
   const html = fs.readFileSync(file, "utf8");
-  if (!html.includes("<!-- phase14-entity-page -->")) return null;
+  if (!/phase14-entity-page|data-b="[^"]*\bb14-entity-page\b/.test(html)) return null;
   return `/${entityDir}/${base}/`;
 }
 

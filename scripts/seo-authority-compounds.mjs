@@ -625,7 +625,7 @@ function injectLinks() {
     const file = path.join(clientDir, rel);
     if (!fs.existsSync(file)) continue;
     let html = fs.readFileSync(file, "utf8");
-    if (html.includes(MARKER)) continue;
+    if (html.includes(MARKER) || /data-b="[^"]*\bbacl\b/.test(html)) continue;
     if (!html.includes("</main>")) continue;
     html = html.replace("</main>", `${LINK_BLOCK}\n</main>`);
     fs.writeFileSync(file, html);

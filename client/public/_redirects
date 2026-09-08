@@ -51,7 +51,7 @@
 /logistics/b-express-2/ /logistics/b-express/ 301
 /logistics/b-express-2 /logistics/b-express/ 301
 
-# phase53: توحيد مسار صيدليات الأحياء (النسخة المسطحة هي القانونية)
+# redir-53
 /districts/district-1/pharmacies/ /pharmacies-district-1/ 301
 /districts/district-1/pharmacies /pharmacies-district-1/ 301
 /districts/district-2/pharmacies/ /pharmacies-district-2/ 301

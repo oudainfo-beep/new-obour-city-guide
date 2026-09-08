@@ -182,7 +182,7 @@ function updatesPage(chrome, updates) {
   let body;
   if (updates.length === 0) {
     body = `
-<p>لا توجد تحديثات منشورة حاليًا. هذه الصفحة تُملأ فقط من ملف <code>data/updates.json</code> عندما تتوفر تحديثات مُوثَّقة بمصادر منشورة.</p>
+<p>لا توجد تحديثات منشورة حاليًا. هذه الصفحة تُملأ فقط عندما تتوفر تحديثات مُوثَّقة بمصادر منشورة.</p>
 <p><a href="/feed.xml">اشترك عبر RSS ↗</a></p>
 <div class="action-card">
   <p>هل لديك تحديث مُوثَّق؟</p>

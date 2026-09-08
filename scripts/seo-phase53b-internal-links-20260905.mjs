@@ -289,7 +289,7 @@ ${body}
     for (let i = 0; i < group.length; i++) {
       const p = group[i];
       let h = read(p.file);
-      if (h.includes("phase53-rel")) continue;
+      if (/phase53-rel|data-b="[^"]*\bb53-rel\b/.test(h)) continue;
       const neighbors = [i - 2, i - 1, i + 1, i + 2]
         .filter((j) => j >= 0 && j < group.length && j !== i)
         .map((j) => group[j]);

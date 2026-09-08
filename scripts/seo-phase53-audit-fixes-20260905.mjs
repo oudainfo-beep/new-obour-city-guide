@@ -200,9 +200,9 @@ Sitemap: https://obourguide.com/sitemap.xml
 function fixRedirects() {
   const file = path.join(clientDir, "public", "_redirects");
   let content = fs.existsSync(file) ? read(file) : "";
-  if (content.includes("phase53")) return rep("redirects", "موجودة مسبقًا — تخطّي");
+  if (content.includes("redir-53")) return rep("redirects", "موجودة مسبقًا — تخطّي");
   const block = `
-# phase53: توحيد مسار صيدليات الأحياء (النسخة المسطحة هي القانونية)
+# redir-53
 /districts/district-1/pharmacies/ /pharmacies-district-1/ 301
 /districts/district-1/pharmacies /pharmacies-district-1/ 301
 /districts/district-2/pharmacies/ /pharmacies-district-2/ 301

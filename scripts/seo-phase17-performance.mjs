@@ -26,7 +26,7 @@ function walk(dir) {
 
 function optimize(file) {
   let html = fs.readFileSync(file, "utf8");
-  if (html.includes(MARKER)) return;
+  if (html.includes(MARKER) || /data-b="[^"]*\bb17-performance\b/.test(html)) return;
 
   let changed = false;
 

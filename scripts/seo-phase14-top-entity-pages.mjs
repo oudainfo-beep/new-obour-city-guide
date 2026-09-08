@@ -179,7 +179,7 @@ function localBusinessSchema(e, url) {
 function isPhase14Page(slug, dir) {
   const file = path.join(clientDir, dir, slug, "index.html");
   if (!fs.existsSync(file)) return false;
-  return fs.readFileSync(file, "utf8").includes("<!-- phase14-entity-page -->");
+  return /phase14-entity-page|data-b="[^"]*\bb14-entity-page\b/.test(fs.readFileSync(file, "utf8"));
 }
 
 function isBlockedSlug(slug, dir) {
@@ -299,7 +299,7 @@ function injectCategoryLinks(dir, entities) {
     .join(" · ");
   const block = `<section class="paper section wrap" aria-label="صفحات كيانات فردية">${marker}<h2>صفحات كيانات فردية</h2><p>${links}</p></section>`;
 
-  if (html.includes("<!-- phase2.6-enriched -->")) {
+  if (/phase2\.6-enriched|data-b="[^"]*\bb2\.6-enriched\b/.test(html)) {
     html = html.replace(
       /<!-- phase2\.6-enriched -->/,
       `${block}\n<!-- phase2.6-enriched -->`

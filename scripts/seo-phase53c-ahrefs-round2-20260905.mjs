@@ -168,7 +168,7 @@ function fixSiblingLinks(pages) {
     for (let i = 0; i < children.length; i++) {
       const p = byRoute.get(children[i]);
       let html = read(p.file);
-      if (html.includes("phase53-sib")) continue;
+      if (/phase53-sib|data-b="[^"]*\bb53-sib\b/.test(html)) continue;
       const sibs = [children[i - 1], children[(i + 1) % children.length]]
         .filter((r, idx, arr) => r && arr.indexOf(r) === idx && r !== p.route)
         .filter((r) => !hasLink(html, r));
