@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-04T11:18:42.911Z",
+  "generated": "2026-09-08T15:44:00.655Z",
   "license": "CC BY-SA 4.0",
   "attribution": "دليل العبور والعبور الجديدة",
-  "count": 2040,
+  "count": 2037,
   "directories": [
     {
       "slug": "automotive",
@@ -3175,16 +3175,6 @@
     {
       "directorySlug": "entertainment",
       "directoryTitle": "الترفيه والأنشطة",
-      "name": "Cinderella Ballroom",
-      "englishName": "",
-      "category": "قاعات زفاف",
-      "area": "الطريق الصحراوي مصر-الإسماعيلية، جولف سيتي، مدينة العبور، القليوبية",
-      "phone": "0244828159",
-      "source": "Yellow.com.eg"
-    },
-    {
-      "directorySlug": "entertainment",
-      "directoryTitle": "الترفيه والأنشطة",
       "name": "Al Nasser",
       "englishName": "",
       "category": "مراكز تجارية",
@@ -5653,16 +5643,6 @@
       "source": "Yellow.com.eg"
     },
     {
-      "directorySlug": "hotels",
-      "directoryTitle": "الفنادق والإقامة",
-      "name": "Club House Hotel",
-      "englishName": "",
-      "category": "فنادق ومنتجعات",
-      "area": "Cairo Ismailia Desert طريق جولف سيتي، مدينة العبور، بجوار جولف سيتي Mall، القليوبية",
-      "phone": "",
-      "source": "InfoEG.com"
-    },
-    {
       "directorySlug": "logistics",
       "directoryTitle": "النقل والشحن",
       "name": "B Express",
@@ -5711,16 +5691,6 @@
       "area": "31 إسكان الشباب شارع الشباب، منطقة 70 متر، مدينة العبور، القليوبية",
       "phone": "01011620367",
       "source": "Yellow.com.eg"
-    },
-    {
-      "directorySlug": "logistics",
-      "directoryTitle": "النقل والشحن",
-      "name": "B Express",
-      "englishName": "",
-      "category": "شركات شحن",
-      "area": "بجوار Al-Fayoumi Hospital، مدينة العبور، القليوبية",
-      "phone": "",
-      "source": "InfoEG.com"
     },
     {
       "directorySlug": "logistics",

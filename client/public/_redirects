@@ -50,3 +50,15 @@
 /hotels/club-house-hotel-2 /hotels/club-house-hotel/ 301
 /logistics/b-express-2/ /logistics/b-express/ 301
 /logistics/b-express-2 /logistics/b-express/ 301
+
+# phase53: توحيد مسار صيدليات الأحياء (النسخة المسطحة هي القانونية)
+/districts/district-1/pharmacies/ /pharmacies-district-1/ 301
+/districts/district-1/pharmacies /pharmacies-district-1/ 301
+/districts/district-2/pharmacies/ /pharmacies-district-2/ 301
+/districts/district-2/pharmacies /pharmacies-district-2/ 301
+/districts/district-5/pharmacies/ /pharmacies-district-5/ 301
+/districts/district-5/pharmacies /pharmacies-district-5/ 301
+/districts/district-6/pharmacies/ /pharmacies-district-6/ 301
+/districts/district-6/pharmacies /pharmacies-district-6/ 301
+/districts/district-9/pharmacies/ /pharmacies-district-9/ 301
+/districts/district-9/pharmacies /pharmacies-district-9/ 301

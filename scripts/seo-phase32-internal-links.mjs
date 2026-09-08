@@ -23,7 +23,7 @@ const TITLES = {
   "district-1": "الحي الأول", "district-2": "الحي الثاني", "district-3": "الحي الثالث",
   "district-4": "الحي الرابع", "district-5": "الحي الخامس", "district-6": "الحي السادس",
   "district-7": "الحي السابع", "district-8": "الحي الثامن", "district-9": "الحي التاسع",
-  "best-districts": "أفضل الأحياء حسب احتياجك",
+  "best-districts": "أفضل الأحياء حسب احتياجك", "best-developer-by-city": "أفضل شركة عقارية في كل مدينة",
   "villas-rent-obour": "فيلات للإيجار", "shops-rent-obour": "محلات للإيجار",
   "offices-rent-obour": "مكاتب للإيجار", "warehouses-obour": "مخازن للإيجار",
   "furnished-apartments": "شقق مفروشة", "studio-rent-obour": "استوديو للإيجار",
@@ -145,7 +145,7 @@ const TITLES = {
 };
 
 const CLUSTERS = {
-  housing: ["dar-misr-obour", "sakan-misr-obour", "villas-for-sale-obour", "installments-obour", "choose-apartment", "golf-city-obour", "quest-obour", "new-obour-real-estate", "new-obour-lands", "new-obour-utilities", "new-obour-transport", "new-obour-shopping-daily", "obour-history", "neighbors-disputes-obour", "building-management-obour", "elevator-problems-obour", "mortgage-vs-rent-obour", "home-insurance-obour", "price-forecast-obour", "commercial-real-estate", "mortgage-finance-obour", "studio-sale-obour", "duplex-obour", "ground-floor-garden-obour", "offplan-obour", "resale-obour", "rental-yield-obour", "rent-to-own-obour", "social-housing-obour"],
+  housing: ["dar-misr-obour", "sakan-misr-obour", "villas-for-sale-obour", "installments-obour", "choose-apartment", "golf-city-obour", "quest-obour", "new-obour-real-estate", "new-obour-lands", "new-obour-utilities", "new-obour-transport", "new-obour-shopping-daily", "obour-history", "neighbors-disputes-obour", "building-management-obour", "elevator-problems-obour", "mortgage-vs-rent-obour", "home-insurance-obour", "price-forecast-obour", "commercial-real-estate", "best-developer-by-city", "mortgage-finance-obour", "studio-sale-obour", "duplex-obour", "ground-floor-garden-obour", "offplan-obour", "resale-obour", "rental-yield-obour", "rent-to-own-obour", "social-housing-obour"],
   districts: ["district-1", "district-2", "district-3", "district-4", "district-5", "district-6", "district-7", "district-8", "district-9", "best-districts"],
   rent: ["villas-rent-obour", "shops-rent-obour", "offices-rent-obour", "warehouses-obour", "furnished-apartments", "studio-rent-obour", "tenant-rights-obour"],
   transport: ["transport-from-cairo", "internal-transport", "middle-ring-road-obour", "day-trips", "nearby-cities", "uber-obour", "airport-transfers-obour", "new-roads-obour"],
