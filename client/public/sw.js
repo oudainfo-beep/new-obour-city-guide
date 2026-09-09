@@ -1,7 +1,7 @@
 /* Obour Guide — Service Worker (Progressive Web App)
    يخزّن الأصول الأساسية ويقدّمها بسرعة، مع التأكد من عرض أحدث إصدار من الصفحات. */
 
-const CACHE_NAME = "obour-guide-v2-20260908";
+const CACHE_NAME = "obour-guide-v2-20260909";
 const OFFLINE_PAGE = "/offline/";
 const PRECACHE = [
   "/",
