@@ -103,6 +103,9 @@ function main() {
 <p>إذا كان <a href="/district-25-new-obour/">الحي 25</a> هو أرقى أحياء العبور الجديدة، فإن <strong>الحي 24</strong> هو وصيفه المباشر — ويطلق عليه <strong>حي بيت الوطن</strong> (للمصريين المغتربين). حيٌّ يجمع نفس معادلة الموقع الذهبية مع ميزة إضافية: ملكية صُممت لمن يبني بيت عمره، لا لمن يضارب بسرعة.</p>
 <h2>لماذا الحي 24؟ خمسة أسباب</h2>
 ${reasons}
+
+<h2>خريطة الحي 24 بالتفصيل</h2>
+<figure style="margin:1.5rem 0"><a href="/infographics/hay-24-district-map.webp" target="_blank" rel="noopener"><img src="/infographics/hay-24-district-map.webp" alt="خريطة الحي 24 (بيت الوطن) بالتفصيل من المخطط الرسمي للعبور الجديدة" width="1600" height="1600" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;border:1px solid #e3ddd0"></a><figcaption class="caption" style="text-align:center;margin-top:.5rem">خريطة الحي 24 من المخطط التفصيلي الرسمي — انقر للتكبير · <a href="/downloads/obour-new-obour-master-plan.dwg">ملف الأوتوكاد الكامل DWG</a></figcaption></figure>
 <h2>بيت الوطن باختصار</h2>
 <p>مبادرة وزارة الإسكان المخصصة للمصريين المقيمين بالخارج: أراضٍ سكنية مميزة في المدن الجديدة تُخصص للمغتربين ليبنوا عليها — بشروط تعلنها هيئة المجتمعات العمرانية في مراحل متتابعة. الحي 24 هو حصة العبور الجديدة منها. شروط الحجز الحالية تُراجع من موقع الهيئة مباشرة، ووحدات التمليك الحر من المالكين تظهر على المنصات بين الحين والآخر.</p>
 <h2>الخدمات اليوم: الصدق أولًا</h2>
