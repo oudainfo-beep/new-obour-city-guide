@@ -15,7 +15,7 @@
   --accent-600: #96501a;
   --teal: #3e8e6c;
   --teal-600: #2f7456;
-  --paper: #faf7f1;
+  --paper: #eef4ef;
   --surface: #ffffff;
   --surface-2: #f3eee5;
   --surface-3: #e7e0d2;
@@ -291,7 +291,7 @@ img { max-width: 100%; }
 }
 .hero-fade {
   z-index: -1;
-  background: linear-gradient(100deg, var(--paper) 5%, rgba(250,247,241,.96) 28%, rgba(250,247,241,.78) 52%, rgba(250,247,241,.12) 82%);
+  background: linear-gradient(100deg, var(--paper) 5%, rgba(238,244,239,.96) 28%, rgba(238,244,239,.78) 52%, rgba(238,244,239,.12) 82%);
 }
 .home-hero-content { position: relative; z-index: 1; padding: 5.5rem 0 6rem; max-width: 1180px; }
 .home-hero-content > *:not(.tag) { max-width: 860px; }
@@ -1371,4 +1371,23 @@ td a { color: var(--olive-600); font-weight: 700; }
   .emergency-card { padding: 1.2rem .55rem; }
   .emergency-card b { font-size: 1.8rem; }
   .mobile-menu nav { top: 58px; max-height: calc(100vh - 76px); }
+}
+
+
+/* === إتاحة الموبايل: جداول وعناصر عريضة === */
+.responsive-table {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line-strong); border-radius: var(--r-md);
+  box-shadow: var(--sh-sm); background: var(--surface);
+}
+.table-wrap, .responsive-table { max-width: 100%; }
+pre, code { max-width: 100%; overflow-x: auto; }
+video, iframe, svg { max-width: 100%; }
+img { height: auto; }
+
+@media (max-width: 640px) {
+  table { min-width: 540px; }
+  th, td { padding: .6rem .65rem; font-size: .78rem; }
+  td:first-child { min-width: 140px; }
+  .wrap { padding-inline: 1rem; }
 }
