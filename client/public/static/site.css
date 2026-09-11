@@ -1391,3 +1391,12 @@ img { height: auto; }
   td:first-child { min-width: 140px; }
   .wrap { padding-inline: 1rem; }
 }
+
+/* === إصلاح كسر الشبكة على الموبايل (جذري) === */
+/* عناصر الجريد كانت تتمدد لمحتوى الجداول وتكسر عرض الصفحة */
+html { overflow-x: clip; }
+.content-grid > *, .hero-layout > *, .footer-grid > *, main, article, aside, .wrap { min-width: 0; }
+
+@media (max-width: 640px) {
+  table { min-width: 480px; }
+}
