@@ -75,7 +75,7 @@ function main() {
       { "@type": "ListItem", position: 2, name: "العبور الجديدة", item: SITE + "/new-obour-districts/" },
       { "@type": "ListItem", position: 3, name: "خريطة dwg", item: url } ] },
     { "@context": "https://schema.org", "@type": "DigitalDocument", name: "المخطط التفصيلي الكامل — العبور والعبور الجديدة",
-      url: `${SITE}/downloads/obour-new-obour-master-plan.dwg`, fileFormat: "application/acad",
+      url: "https://github.com/oudainfo-beep/new-obour-city-guide/releases/download/map-files/obour-new-obour-master-plan.dwg", fileFormat: "application/acad",
       contentSize: "74 MB", inLanguage: "ar-EG",
       description: "خريطة العبور والعبور الجديدة بصيغة أوتوكاد dwg — كل الأحياء 1-29 بحدود القطع والشوارع واستعمالات الأراضي",
       publisher: { "@id": SITE + "/#org" } },
@@ -89,7 +89,7 @@ function main() {
 
   const body = `<main><section class="page-hero"><div class="grid-bg" aria-hidden="true"></div><div class="wrap hero-layout"><div class="hero-copy-block"><span class="tag">⌖ ملفات كاد · للمهندسين</span><h1>${h1}</h1><p>${description}</p></div></div></section><section class="section"><div class="wrap content-grid"><article data-rich="68">
 <p>تبحث عن <strong>خريطة العبور الجديدة dwg</strong> أو مخطط العبور بصيغة أوتوكاد؟ وصلت للمكان الصح — نوفر <strong>المخطط التفصيلي الكامل</strong> للعبور والعبور الجديدة للتحميل المجاني: كل الأحياء <strong>1-29</strong> بحدود القطع والشوارع والمحاور واستعمالات الأراضي، بجودة التقريب حتى مستوى القطعة الواحدة.</p>
-<div class="action-card" style="margin:1rem 0"><p><strong>التحميل المباشر:</strong></p><p style="display:flex;gap:.6rem;flex-wrap:wrap"><a class="button" href="${SITE}/downloads/obour-new-obour-master-plan.dwg">⬇ DWG — المخطط الكامل (71 ميجا)</a><a class="button" href="${SITE}/downloads/obour-new-obour-master-plan-dxf.zip">⬇ DXF مضغوط (58 ميجا)</a><a class="button" href="${SITE}/downloads/new-obour-master-plan.pdf">⬇ PDF للطباعة</a><a class="button" href="${SITE}/infographics/new-obour-master-plan-official.png" target="_blank" rel="noopener">⬇ PNG عالي الجودة</a></p></div>
+<div class="action-card" style="margin:1rem 0"><p><strong>التحميل المباشر:</strong></p><p style="display:flex;gap:.6rem;flex-wrap:wrap"><a class="button" href="https://github.com/oudainfo-beep/new-obour-city-guide/releases/download/map-files/obour-new-obour-master-plan.dwg">⬇ DWG — المخطط الكامل (71 ميجا)</a><a class="button" href="https://github.com/oudainfo-beep/new-obour-city-guide/releases/download/map-files/obour-new-obour-master-plan-dxf.zip">⬇ DXF مضغوط (58 ميجا)</a><a class="button" href="${SITE}/downloads/new-obour-master-plan.pdf">⬇ PDF للطباعة</a><a class="button" href="${SITE}/infographics/new-obour-master-plan-official.png" target="_blank" rel="noopener">⬇ PNG عالي الجودة</a></p></div>
 <h2>بيانات الملف</h2>
 <div class="table-wrap"><table><tbody><tr><td><strong>الصيغة</strong></td><td>DWG — AutoCAD 2010 (AC1024) + نسخة DXF مضغوطة</td></tr><tr><td><strong>الحجم</strong></td><td>DWG: 71 ميجابايت · DXF مضغوط: 58 ميجابايت</td></tr><tr><td><strong>التغطية</strong></td><td>العبور + العبور الجديدة كاملة — الأحياء 1-29</td></tr><tr><td><strong>المحتوى</strong></td><td>حدود الأحياء والقطع، الشوارع والمحاور (ومنها الدائري الأوسطي وR2)، استعمالات الأراضي، التسميات</td></tr><tr><td><strong>الاستخدام</strong></td><td>مهني وبحثي مع ذكر المصدر — للاعتماد الرسمي راجع جهاز المدينة</td></tr></tbody></table></div>
 <h2>معاينة المخطط</h2>
