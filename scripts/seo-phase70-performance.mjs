@@ -61,4 +61,19 @@ for (const name of ["site.css", "ux-pack.css", "atlas-body.css", "qa.css", "scho
   cssSaved += orig.length - min.length;
 }
 
-console.log(`[phase70] performance: font preload في ${fontAdded} صفحة · CSS صُغّرت (وفّر ${(cssSaved / 1024).toFixed(1)}KB)`);
+
+// ── 3) تصغير JS الثابتة بـ esbuild (آمن على المنطق) ──
+import { execSync } from "node:child_process";
+let jsSaved = 0;
+for (const name of ["ui.js", "ux-pack.js", "webmcp.js", "qa.js"]) {
+  const p = path.join(cssDir, name);
+  if (!fs.existsSync(p)) continue;
+  const before = fs.statSync(p).size;
+  if (before < 2000) continue;
+  try {
+    execSync(`npx -y esbuild "${p}" --minify --outfile="${p}"`, { stdio: "pipe" });
+    jsSaved += before - fs.statSync(p).size;
+  } catch (e) { console.warn(`[phase70] تخطّي ${name}: ${e.message.slice(0, 80)}`); }
+}
+
+console.log(`[phase70] performance: font preload في ${fontAdded} صفحة · CSS وفّر ${(cssSaved / 1024).toFixed(1)}KB · JS وفّر ${(jsSaved / 1024).toFixed(1)}KB`);
