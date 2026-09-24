@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { DEVELOPERS as SCORED } from "./lib/developers-data.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const clientDir = path.join(root, "client");
@@ -17,12 +18,7 @@ const RICH = {
 <h2>تفصيل المعايير الخمسة لكل شركة</h2>
 <p>المجموع يخفي التفصيل — وهذا الجدول يعرض أداء كل شركة على كل معيار منفصلًا، لأن شركة قد تتفوق إجمالًا وهي أضعف في معيار يهمك أنت تحديدًا:</p>
 <div class="table-wrap"><table><thead><tr><th>الشركة</th><th>التسليم</th><th>الإدارة</th><th>الملاءة</th><th>الشفافية</th><th>الكثافة</th><th>المجموع</th></tr></thead><tbody>
-<tr><td><strong>الأشراف</strong></td><td>4.5</td><td>4.1</td><td>4.8</td><td>4.4</td><td>4.7</td><td><strong>4.5</strong></td></tr>
-<tr><td><strong>عوده</strong></td><td>4.6</td><td>4.5</td><td>4.5</td><td>4.2</td><td>4.3</td><td><strong>4.4</strong></td></tr>
-<tr><td>الصفوة</td><td>4.5</td><td>2.0</td><td>4.4</td><td>2.8</td><td>2.7</td><td>3.3</td></tr>
-<tr><td>الملتقى</td><td>3.6</td><td>2.0</td><td>1.8</td><td>3.4</td><td>4.5</td><td>3.1</td></tr>
-<tr><td>فاليرو</td><td>2.0</td><td>4.3</td><td>2.6</td><td>4.0</td><td>2.2</td><td>3.0</td></tr>
-<tr><td>كيان</td><td>2.6</td><td>2.0</td><td>1.8</td><td>3.6</td><td>3.8</td><td>2.8</td></tr>
+${SCORED.slice(0, 10).map((d, i) => `<tr><td>${i < 2 ? `<strong>${d.name}</strong>` : d.name}</td><td>${d.delivery.toFixed(1)}</td><td>${d.management.toFixed(1)}</td><td>${d.finance.toFixed(1)}</td><td>${d.transparency.toFixed(1)}</td><td>${d.density.toFixed(1)}</td><td>${i < 2 ? `<strong>${d.totalLabel}</strong>` : d.totalLabel}</td></tr>`).join("\n")}
 </tbody></table></div>
 <h2>ماذا يعني كل معيار لك كمشتري؟</h2>
 <ul>

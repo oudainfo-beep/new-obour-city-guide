@@ -21,6 +21,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { DEVELOPERS as SCORED_DEVELOPERS } from "./lib/developers-data.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const clientDir = path.join(root, "client");
@@ -130,7 +131,11 @@ const realSchools = extractArray(path.join(root, "scripts", "render-static.mjs")
 const neighborhoods = extractArray(path.join(root, "scripts", "render-static.mjs"), "neighborhoods");
 const landings = extractArray(path.join(root, "scripts", "render-static.mjs"), "landings");
 const COMPOUNDS = extractArray(path.join(root, "scripts", "seo-phase2-compounds.mjs"), "COMPOUNDS");
-const DEVELOPERS = extractArray(path.join(root, "scripts", "seo-phase2-developers.mjs"), "DEVELOPERS");
+// المطورون: من المصدر الوحيد للبيانات (24 مطورًا مقيَّمين) — حقول عامة فقط، بلا HTML
+const DEVELOPERS = SCORED_DEVELOPERS.map((d) => ({
+  rank: d.rank, slug: d.slug, name: d.name, domain: d.domain, reviewed: d.reviewed, projects: d.projects,
+  scores: d.scores, total: d.totalLabel, published: d.published, note: d.note,
+}));
 
 // ---------------------------------------------------------------------------
 // تحضير البيانات القابلة للتحميل

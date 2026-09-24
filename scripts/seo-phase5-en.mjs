@@ -18,6 +18,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { DEVELOPERS as SCORED } from "./lib/developers-data.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const clientDir = path.join(root, "client");
@@ -501,15 +502,11 @@ function developersPage(chrome) {
 </ul>
 
 <h2>Reference table</h2>
+<p>${SCORED.length} developers active in Obour and New Obour, each scored on the same five criteria from what the company itself publishes (official site or its own press statements); broker claims do not raise a score. Sorted by total; ties are broken by the delivery record, then post-delivery management. Reviewed August 2026 (first six) and September 2026 (the rest).</p>
 <div class="table-wrap"><table class="data-table">
 <thead><tr><th>Developer</th><th>Delivered units</th><th>Management</th><th>Finance</th><th>Transparency</th><th>Density</th><th>Total</th></tr></thead>
 <tbody>
-  <tr><td><a href="/developers/alashraaf/">Al-Ashraaf Real Estate</a> (Arabic)</td><td>4.2</td><td>2.0</td><td>4.5</td><td>2.0</td><td>2.5</td><td>3.0 / 5</td></tr>
-  <tr><td><a href="/developers/ouda/">Ouda Real Estate Development</a> (Arabic)</td><td>4.6</td><td>4.5</td><td>4.5</td><td>4.2</td><td>4.3</td><td>4.4 / 5</td></tr>
-  <tr><td><a href="/developers/alsafwa/">Al-Safwa Urban Development</a> (Arabic)</td><td>4.5</td><td>2.0</td><td>4.4</td><td>2.8</td><td>2.7</td><td>3.3 / 5</td></tr>
-  <tr><td><a href="/developers/elmoltqa/">El-Moltqa Real Estate</a> (Arabic)</td><td>3.6</td><td>2.0</td><td>1.8</td><td>3.4</td><td>4.5</td><td>3.1 / 5</td></tr>
-  <tr><td><a href="/developers/valero/">Valero Developments</a> (Arabic)</td><td>2.0</td><td>4.3</td><td>2.6</td><td>4.0</td><td>2.2</td><td>3.0 / 5</td></tr>
-  <tr><td><a href="/developers/kayan/">Kayan Real Estate</a> (Arabic)</td><td>2.6</td><td>2.0</td><td>1.8</td><td>3.6</td><td>3.8</td><td>2.8 / 5</td></tr>
+${SCORED.map((d) => `  <tr><td>${d.rank}. <a href="/developers/${d.slug}/">${d.nameEn}</a> (Arabic)</td><td>${d.delivery.toFixed(1)}</td><td>${d.management.toFixed(1)}</td><td>${d.finance.toFixed(1)}</td><td>${d.transparency.toFixed(1)}</td><td>${d.density.toFixed(1)}</td><td>${d.totalLabel} / 5</td></tr>`).join("\n")}
 </tbody>
 </table></div>
 
@@ -526,17 +523,8 @@ function developersPage(chrome) {
   <li>Check the approved build ratio and heights on the master plan.</li>
 </ul>
 
-<h2>Developers still being completed</h2>
-<p>These developers have announced projects in Obour or New Obour, but published information is not yet enough to apply the five criteria. We list them by name and source because hiding an existing developer is worse than rating it incompletely. Any company that sends published data can enter the main table.</p>
-<ul>
-  <li><strong>MRS Development</strong> — Vaily Residence, New Obour · official website published</li>
-  <li><strong>Motassem Group</strong> — The Mars, Jeddah Mall, Obour Mall · official website published</li>
-  <li><strong>Town Ten</strong> — Mazaya Developments · official website published</li>
-  <li><strong>Glory Gardens</strong> — Eagle Group · news and intermediary sources, no official website visible</li>
-  <li><strong>O-Kardia</strong> — For You Developments · news and intermediary sources</li>
-  <li><strong>River Park</strong> — Al-Raee Developments · news and intermediary sources</li>
-  <li><strong>Golf City</strong> — Ebdaa Developments · official website published</li>
-</ul>
+<h2>How a developer moves up</h2>
+<p>Every company in the table is scored from its own published record. Any developer that publishes stronger data — delivered units with counts and dates, a named facilities manager, announced financing or partners, written prices and specifications, a build ratio — is re-scored at the next review, and the change is logged on the corrections page.</p>
 
 <h2>Before you commit to a developer</h2>
 <p>Ask for a model contract before reserving, and consult a real-estate lawyer. Some clauses may look standard but carry details that vary by project. Especially for under-construction projects, make sure the contract links delivery to specific construction milestones, not just a calendar date. Keep all payment receipts, request periodic construction updates, and preserve copies of every written communication. These documents become critical if you need to negotiate or escalate later.</p>

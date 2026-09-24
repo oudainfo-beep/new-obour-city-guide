@@ -742,6 +742,7 @@ function developersPage(chrome) {
 </ul>
 
 <h2>Reference table</h2>
+<p>${scored.length} developers active in Obour and New Obour, each scored on the same five criteria from what the company itself publishes (official site or its own press statements); broker claims do not raise a score. Sorted by total; ties are broken by the delivery record, then post-delivery management.</p>
 <div class="table-wrap"><table class="data-table">
 <thead><tr><th>Developer</th><th>Delivered units</th><th>Management</th><th>Finance</th><th>Transparency</th><th>Density</th><th>Total</th></tr></thead>
 <tbody>${scoreRows}</tbody>
@@ -760,9 +761,9 @@ function developersPage(chrome) {
   <li>Check the approved build ratio and heights on the master plan.</li>
 </ul>
 
-<h2>Developers still being completed</h2>
-<p>These developers have announced projects in Obour or New Obour, but published information is not yet enough to apply the five criteria. We list them by name and source because hiding an existing developer is worse than rating it incompletely. Any company that sends published data can enter the main table.</p>
-<ul>${pendingList}</ul>
+${pending.length ? `<h2>Developers still being completed</h2>
+<p>These developers have announced projects in Obour or New Obour, but published information is not yet enough to apply the five criteria. We list them by name and source because hiding an existing developer is worse than rating it incompletely.</p>
+<ul>${pendingList}</ul>` : ""}
 
 <h2>Before you commit to a developer</h2>
 <p>Ask for a model contract before reserving, and consult a real-estate lawyer. Some clauses may look standard but carry details that vary by project. Especially for under-construction projects, make sure the contract links delivery to specific construction milestones, not just a calendar date. Keep all payment receipts, request periodic construction updates, and preserve copies of every written communication. These documents become critical if you need to negotiate or escalate later.</p>

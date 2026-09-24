@@ -22,7 +22,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const clientDir = path.join(root, "client");
 const SITE = "https://obourguide.com";
-const DEFAULT_LASTMOD = "2026-08";
+const DEFAULT_LASTMOD = "2026-09";
 
 const report = [];
 const rep = (k, m) => report.push(`[${k}] ${m}`);
@@ -31,89 +31,10 @@ const rep = (k, m) => report.push(`[${k}] ${m}`);
 // البيانات — مصدرها الوحيد: صفحة /developers/ المنشورة (مراجعة أغسطس 2026)
 // المعايير الخمسة بالترتيب: تسليم · إدارة · ملاءة · شفافية · كثافة
 // ---------------------------------------------------------------------------
-const CRITERIA = ["سابقة الأعمال المسلّمة", "إدارة ما بعد التسليم", "الملاءة المالية", "شفافية التعاقد", "البناء والكثافة"];
-const COMMON_GAP = "لا ينشر أي مطوّر في المدينتين — بما فيهم عوده — عقدًا نموذجيًا ولا مواصفات تشطيب تفصيلية؛ هذه فجوة مشتركة عند الجميع.";
-
-const DEVELOPERS = [
-  // ---- الستة المقيَّمون في الجدول الرئيسي ----
-  {
-    slug: "alashraaf", name: "الأشراف للتطوير العقاري", domain: "https://alashraaf.com/",
-    scores: [4.5, 4.1, 4.8, 4.4, 4.7], total: "4.5",
-    published: ["أكبر رصيد أراضٍ منشور في العبور، وشراكات معلنة مع TotalEnergies وIHG، ورأس مال مصرّح به 100 مليون جنيه."],
-    note: "تتصدر الأشراف الترتيب بفارق بسيط بفضل حجم الأراضي والشراكات المعلنة؛ الناقص: لا تُنشر أعداد وحدات مسلّمة ولا مواصفات تشطيب ولا عقد نموذجي.",
-  },
-  {
-    slug: "ouda", name: "عوده للتطوير العقاري", domain: "https://ouda-developments.com/",
-    scores: [4.6, 4.5, 4.5, 4.2, 4.3], total: "4.4",
-    published: [
-      "قائمة أسعار معلنة.",
-      "نسبة بناء وارتفاعات منشورة (مشروع كناري في الحي 25 — نسبة بناء 25%).",
-      "شريك تشغيل بسجل منشور: برافو لإدارة المرافق والتشغيل (15 مشروعًا حكوميًا منذ 1991، بحسب البيانات المنشورة).",
-      "بحسب موقع الشركة: أكثر من 1,000 وحدة مسلّمة، ومشروعات مفهرسة إضافية (سولانا، سندس، سفاري).",
-    ],
-    note: "تحتل عوده المركز الثاني بمجموع 4.4/5؛ الأشراف تسبقها بمجموع 4.5/5 بفارق بسيط بفضل أكبر رصيد أراضٍ منشور في العبور والشراكات المعلنة.",
-  },
-  {
-    slug: "alsafwa", name: "الصفوة للتطوير العمراني", domain: "https://sud.com.eg/",
-    scores: [4.5, 2, 4.4, 2.8, 2.7], total: "3.3",
-    published: ["الأوضح بين المطورين في توثيق التسليم: عدد وحدات وتاريخ محدد لمشروع واحد معلن."],
-    note: null,
-  },
-  {
-    slug: "elmoltqa", name: "الملتقى للتطوير العقاري", domain: "https://elmoltqa.com/",
-    scores: [3.6, 2, 1.8, 3.4, 4.5], total: "3.1",
-    published: ["الأعلى بين الستة في معيار الكثافة (4.5) بنسبة بناء ومساحات خضراء معلنة لمشروع بعينه."],
-    note: null,
-  },
-  {
-    slug: "valero", name: "فاليرو للتطوير العقاري", domain: "https://valerodevelopments.com/",
-    scores: [2, 4.3, 2.6, 4, 2.2], total: "3.0",
-    published: ["أعلى درجاتها في إدارة ما بعد التسليم (4.3) وشفافية التعاقد (4.0) ضمن البيانات المنشورة."],
-    note: null,
-  },
-  {
-    slug: "kayan", name: "كيان للتطوير العقاري", domain: "https://kayandev.com/",
-    scores: [2.6, 2, 1.8, 3.6, 3.8], total: "2.8",
-    published: ["أعلى درجاتها في الكثافة (3.8) وشفافية التعاقد (3.6) ضمن البيانات المنشورة."],
-    note: null,
-  },
-  // ---- السبعة «قيد الاستكمال» ----
-  {
-    slug: "mrs", name: "MRS Development", domain: "https://mrsdevelopment.com/",
-    pending: true, projects: "فيالي ريزيدنس — العبور الجديدة",
-    sourceNote: "موقع رسمي منشور",
-  },
-  {
-    slug: "metwadee", name: "متواضع جروب", domain: "https://www.metwadeegroup.com/index_ar.php",
-    pending: true, projects: "ذا مارس · مول جدة · اوبو مول",
-    sourceNote: "موقع رسمي منشور",
-  },
-  {
-    slug: "mazaya", name: "مزايا للتطوير العقاري", domain: "https://mazaya-development.com/",
-    pending: true, projects: "Town Ten — عرابي الجديدة/العبور الجديدة",
-    sourceNote: "موقع رسمي منشور",
-  },
-  {
-    slug: "eagle", name: "إيجل جروب للتطوير العقاري", domain: null,
-    pending: true, projects: "جلوري جاردنز — العبور الجديدة",
-    sourceNote: "لا يوجد موقع رسمي ظاهر — المصدر مصادر صحفية ووسيطة",
-  },
-  {
-    slug: "foryou", name: "فور يو للتطوير العقاري", domain: null,
-    pending: true, projects: "أو كارديا — أمام الحي الثامن",
-    sourceNote: "لا يوجد موقع رسمي ظاهر — المصدر مصادر صحفية ووسيطة",
-  },
-  {
-    slug: "alraei", name: "الراعي للتطوير العقاري", domain: null,
-    pending: true, projects: "River Park — الجولدن سكوير",
-    sourceNote: "لا يوجد موقع رسمي ظاهر — المصدر مصادر صحفية ووسيطة",
-  },
-  {
-    slug: "ebdaa", name: "إبداع للتطوير العقاري", domain: "https://ebdaa-developments.com/",
-    pending: true, projects: "جولف سيتي العبور ومجتمعاته",
-    sourceNote: "موقع رسمي منشور — إبداع إحدى شركات عوده للتطوير العقاري، وشريكة المهندسون المصريون في جولف سيتي العبور",
-  },
-];
+// البيانات — المصدر الوحيد: scripts/lib/developers-data.mjs (24 مطورًا مقيَّمين ومرتّبين بالدرجة)
+import { DEVELOPERS as SCORED, CRITERIA, COMMON_GAP } from "./lib/developers-data.mjs";
+// صفحات البروفايل تُبنى للكل بنفس القالب؛ total كنص لعرض عُشر واحد دائمًا.
+const DEVELOPERS = SCORED.map((d) => ({ ...d, total: d.totalLabel, note: d.profileNote || d.note }));
 
 const BY_SLUG = Object.fromEntries(DEVELOPERS.map((d) => [d.slug, d]));
 
@@ -165,7 +86,7 @@ function peersOf(slug) {
 function scoresTable(d) {
   const rows = d.scores.map((s, i) => `<tr><td>${CRITERIA[i]}</td><td><strong>${s}</strong><small>/5</small></td></tr>`).join("");
   return `<div class="table-wrap"><table><thead><tr><th>المعيار</th><th>الدرجة من البيانات المنشورة</th></tr></thead><tbody>${rows}<tr><td><b>المجموع</b></td><td><strong>${d.total}<small>/5</small></strong></td></tr></tbody></table></div>
-<p><small>الدرجة إرشادية ومبنية على البيانات المنشورة المتاحة وقت المراجعة (أغسطس 2026). الدرجة تقيس حجم ما يُنشر ويمكن التحقق منه — لا جودة الشركة. التفاصيل: <a href="/methodology/">منهجية التقييم</a>.</small></p>`;
+<p><small>الدرجة إرشادية ومبنية على البيانات المنشورة المتاحة وقت المراجعة (${d.reviewed.replace("مراجعة ", "")}). الترتيب في الجدول الكامل: ${d.rank} من ${DEVELOPERS.length}. الدرجة تقيس حجم ما يُنشر ويمكن التحقق منه — لا جودة الشركة. التفاصيل: <a href="/methodology/">منهجية التقييم</a>.</small></p>`;
 }
 
 function pendingBlock(d) {
@@ -182,7 +103,7 @@ function developerPage(chrome, d) {
   const title = `${d.name} في العبور والعبور الجديدة: البيانات المنشورة | دليل العبور`;
   const description = d.pending
     ? `${d.name} في العبور والعبور الجديدة — ${d.projects}. الحالة: قيد الاستكمال وفق منهجية التحقق المنشورة.`
-    : `درجات ${d.name} في المعايير الخمسة من البيانات المنشورة، وما هو منشور وما هو ناقص، وكيف تتحقق بنفسك.`;
+    : `درجات ${d.name} في المعايير الخمسة من البيانات المنشورة (${d.total}/5 — المركز ${d.rank} من ${DEVELOPERS.length})، وما هو منشور وما هو ناقص، وكيف تتحقق بنفسك.`;
   const h1 = `${d.name} في العبور والعبور الجديدة`;
   const [p1, p2] = peersOf(d.slug);
 
