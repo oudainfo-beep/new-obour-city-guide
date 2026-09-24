@@ -9,13 +9,39 @@
  * default representation.
  *
  * Response headers: Content-Type: text/markdown + Vary: Accept (cache safety).
+ *
+ * Canonical host guard (added 2026-09-24):
+ *  - new-obour-city-guide.pages.dev (the production *.pages.dev alias) served the whole
+ *    site as an indexable duplicate (no X-Robots-Tag). It now 301s to obourguide.com,
+ *    path + query preserved.
+ *  - Preview deployments (<hash>.new-obour-city-guide.pages.dev) stay reachable for
+ *    review but are sent with X-Robots-Tag: noindex, nofollow.
  */
 
 const WANTS_MD = /text\/markdown/i;
+const CANONICAL_ORIGIN = "https://obourguide.com";
+const PAGES_PROD_HOST = "new-obour-city-guide.pages.dev";
 
 export async function onRequest(context) {
-  const accept = context.request.headers.get("accept") || "";
   const url = new URL(context.request.url);
+  const host = url.hostname.toLowerCase();
+
+  if (host === PAGES_PROD_HOST) {
+    return Response.redirect(CANONICAL_ORIGIN + url.pathname + url.search, 301);
+  }
+
+  const resp = await negotiate(context, url);
+
+  if (host.endsWith(".pages.dev")) {
+    const guarded = new Response(resp.body, resp);
+    guarded.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return guarded;
+  }
+  return resp;
+}
+
+async function negotiate(context, url) {
+  const accept = context.request.headers.get("accept") || "";
 
   // Not a markdown ask → pass through untouched (default = HTML for browsers)
   if (!WANTS_MD.test(accept)) return context.next();

@@ -2,6 +2,12 @@
 (function () {
   "use strict";
   var API = "/api/qa";
+  // واجهة /api/qa غير منشورة على Cloudflare Pages (تحتاج خادم Node — راجع docs/DEPLOY-QA.md).
+  // حتى تُنشر، يعمل الملف «بلا شبكة»: لا أي طلب إلى /api/qa (كانت كل صفحة تطلق 404 يراها
+  // Googlebot وكل زاحف)، ويعرض حالة «المجتمع يبدأ قريبًا» مباشرة.
+  // التفعيل عند جاهزية الخادم: <html data-qa-api="on"> أو window.__QA_API__ = true قبل هذا الملف.
+  var ENABLED = window.__QA_API__ === true || document.documentElement.getAttribute("data-qa-api") === "on";
+  var OFFLINE_MSG = "المجتمع يبدأ قريبًا — الخدمة قيد التشغيل.";
   var me = null;
 
   function esc(s) {
@@ -14,6 +20,7 @@
     catch (e) { return ""; }
   }
   async function api(path, opts) {
+    if (!ENABLED) throw new Error(OFFLINE_MSG); // بلا شبكة: لا fetch إطلاقًا قبل نشر الخادم
     var res = await fetch(API + path, Object.assign({ credentials: "same-origin" }, opts || {}));
     var data = {};
     try { data = await res.json(); } catch (e) {}
@@ -78,6 +85,7 @@
 
   function renderAuthChip() {
     document.querySelectorAll(".qa-user-area").forEach(function (el) {
+      if (!ENABLED) { el.innerHTML = ""; return; } // لا زر تسجيل يقود إلى نموذج لا يعمل
       if (me) {
         el.innerHTML = '<span class="qa-user-chip">👤 ' + esc(me.name) + (me.role === "admin" ? " · مشرف" : "") + " · خروج</span>";
         el.querySelector(".qa-user-chip").onclick = async function () {
@@ -103,6 +111,7 @@
   async function loadBox(box) {
     var topic = box.dataset.topic;
     var list = box.querySelector(".qa-list");
+    if (!ENABLED) { list.innerHTML = '<div class="qa-empty">' + OFFLINE_MSG + "</div>"; return; }
     list.innerHTML = '<div class="qa-empty">يحمّل الأسئلة…</div>';
     try {
       var data = await api("/questions?topic=" + encodeURIComponent(topic));
@@ -178,6 +187,7 @@
       '<textarea class="qa-q-body" placeholder="تفاصيل إضافية (اختياري)…"></textarea>' +
       '<button class="qa-btn qa-send">انشر السؤال</button> <div class="qa-msg"></div></div>';
     box.querySelector(".qa-ask").onclick = function () {
+      if (!ENABLED) { box.querySelector(".qa-list").innerHTML = '<div class="qa-empty">' + OFFLINE_MSG + "</div>"; return; }
       if (!me) return openAuth();
       box.querySelector(".qa-form").classList.toggle("open");
     };
@@ -199,6 +209,7 @@
   if (board) {
     (async function () {
       var latest = board.querySelector(".qa-board-latest");
+      if (!ENABLED) { latest.innerHTML = '<div class="qa-empty">لوحة المجتمع تبدأ مع تشغيل الخادم — تحقق لاحقًا.</div>'; return; }
       try {
         var data = await api("/questions");
         if (!data.questions.length) {
