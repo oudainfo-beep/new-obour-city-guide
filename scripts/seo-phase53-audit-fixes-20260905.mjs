@@ -185,9 +185,13 @@ function trimMeta(html, route) {
 // 4 — robots.txt متسق
 // ---------------------------------------------------------------------------
 
+// Content-Signal (contentsignals.org): إشارة صريحة داخل مجموعة `*` — وهي المجموعة الوحيدة هنا،
+// فكل زاحف يقرؤها (RFC 9309: الزاحف يقرأ فقط المجموعة التي تسمّيه أو `*`).
+// search=yes: الفهرسة والبحث — ai-input=yes: محركات الإجابات/RAG — ai-train=yes: تدريب النماذج.
 const ROBOTS = `# Obour Guide — robots.txt
 # سياسة مفتوحة: الفهرسة ومحركات الإجابات وزواحف تدريب النماذج كلها مسموحة.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://obourguide.com/sitemap.xml

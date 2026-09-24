@@ -1,6 +1,7 @@
 # Obour Guide — robots.txt
 # سياسة مفتوحة: الفهرسة ومحركات الإجابات وزواحف تدريب النماذج كلها مسموحة.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://obourguide.com/sitemap.xml
