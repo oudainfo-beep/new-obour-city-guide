@@ -111,6 +111,19 @@ function build() {
 <circle r="4" class="hx-car is-b"><animateMotion dur="12s" begin="-4s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hx-r2"/></animateMotion></circle>
 <circle r="4.5" class="hx-car is-c"><animateMotion dur="6s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#hx-r3"/></animateMotion></circle>
 <circle r="3.5" class="hx-car"><animateMotion dur="4.5s" begin="-2s" repeatCount="indefinite"><mpath href="#hx-r4"/></animateMotion></circle>
+<circle r="2.6" class="hx-car is-trail"><animateMotion dur="9s" begin="-.35s" repeatCount="indefinite"><mpath href="#hx-r1"/></animateMotion></circle>
+<circle r="3.5" class="hx-car is-b"><animateMotion dur="14s" begin="-9s" repeatCount="indefinite"><mpath href="#hx-r1"/></animateMotion></circle>
+<circle r="3.5" class="hx-car"><animateMotion dur="10s" begin="-3s" repeatCount="indefinite"><mpath href="#hx-r2"/></animateMotion></circle>
+<circle r="2.6" class="hx-car is-trail"><animateMotion dur="10s" begin="-3.4s" repeatCount="indefinite"><mpath href="#hx-r2"/></animateMotion></circle>
+<circle r="4" class="hx-car is-b"><animateMotion dur="7.5s" begin="-3s" repeatCount="indefinite" keyPoints="1;0;1" keyTimes="0;.5;1" calcMode="linear"><mpath href="#hx-r3"/></animateMotion></circle>
+<circle r="3" class="hx-car is-c"><animateMotion dur="5.5s" begin="-1s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#hx-r4"/></animateMotion></circle>
+</g>
+<g class="hx-pins" aria-hidden="true">
+<g class="hx-pin" style="--p:0" transform="translate(215 236)"><circle class="hx-ring" r="9"/><circle class="hx-core" r="4"/></g>
+<g class="hx-pin" style="--p:1" transform="translate(477 116)"><circle class="hx-ring" r="9"/><circle class="hx-core" r="4"/></g>
+<g class="hx-pin" style="--p:2" transform="translate(470 196)"><circle class="hx-ring" r="9"/><circle class="hx-core" r="4"/></g>
+<g class="hx-pin" style="--p:3" transform="translate(70 323)"><circle class="hx-ring" r="9"/><circle class="hx-core" r="4"/></g>
+<g class="hx-pin" style="--p:4" transform="translate(143 112)"><circle class="hx-ring" r="9"/><circle class="hx-core" r="4"/></g>
 </g>
 </svg>`;
 
@@ -124,7 +137,7 @@ function build() {
 <div class="wrap hx-hero-in">
 <div class="hx-copy">
 <p class="hx-live"><span class="hx-dot" aria-hidden="true"></span>محدّث أكتوبر 2026 — ${entries.toLocaleString("en-US")} مدخل خدمة موثّق</p>
-<h1 id="hx-h1">دليلك الكامل للعبور والعبور الجديدة</h1>
+<h1 id="hx-h1">${"دليلك الكامل للعبور والعبور الجديدة".split(" ").map((w, i) => `<span class="hx-w" style="--w:${i}">${w}</span>`).join(" ")}</h1>
 <p class="hx-lead">صيدليات ومستشفيات وعيادات ومدارس ومطاعم وتسوق وخدمات منزلية — بالاسم والعنوان والهاتف والمصدر. ومعها الأحياء والأسعار والمطورون وكل ما تحتاجه قبل الشراء أو الانتقال.</p>
 <form class="hx-search" role="search" action="/search/" method="get">
 <label class="hx-sr" for="hx-q">ابحث في دليل العبور</label>
@@ -135,6 +148,7 @@ function build() {
 </div>
 <figure class="hx-figure">
 ${heroSvg}
+<div class="hx-floats" aria-hidden="true">${[["pharmacies","صيدلية"],["clinics","عيادة ومركزًا طبيًا"],["restaurants","مطعمًا وكافيه"]].filter(([k]) => dirs[k]).map(([k, t], i) => `<span class="hx-float is-${i}"><b>${dirs[k]}</b> ${t}</span>`).join("")}</div>
 <figcaption>مخطط تخطيطي مبسّط وليس خريطة بمقياس — اضغط أي حي لفتح دليله، أو افتح <a href="/map/">الخريطة التفاعلية</a>.</figcaption>
 </figure>
 </div>
@@ -165,11 +179,16 @@ ${heroSvg}
       ["/notary-obour/", "الشهر العقاري"], ["/authority-apartments-obour/", "شقق الجهاز والتنازل"], ["/procedures/", "كل الإجراءات"],
     ]],
   ];
+  const ICONS = [
+    "M8 22 24 9l16 13v17H29V28H19v11H8z",
+    "M24 42s-13-11.5-13-21a13 13 0 0 1 26 0c0 9.5-13 21-13 21zm0-16a5 5 0 1 0 0-10 5 5 0 0 0 0 10z",
+    "M13 6h16l8 8v28H13zM29 6v8h8M18 24h12M18 30h12M18 36h8",
+  ];
   const intentHtml = `<section class="hx-intents" aria-labelledby="hx-int-h">
 <div class="wrap">
 <h2 id="hx-int-h">ماذا تحتاج اليوم؟</h2>
 <div class="hx-int-grid">${intents.map(([h, p, links], k) => `<div class="hx-int" style="--k:${k}">
-<h3>${h}</h3><p>${p}</p>
+<svg class="hx-ico" viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="${ICONS[k]}"/></svg><h3>${h}</h3><p>${p}</p>
 <ul>${links.filter(([href]) => exists(href)).map(([href, t]) => `<li><a href="${href}">${t}</a></li>`).join("")}</ul>
 </div>`).join("")}</div>
 </div>
@@ -246,8 +265,8 @@ ${heroSvg}
   // when loaded async) and use font-display:optional so the Arabic webfonts never reflow the hero.
   html = html.replace(/<link rel="stylesheet" href="(\/static\/site\.css\?v=[^"]+)" media="print" onload="this\.media='all'">/, '<link rel="stylesheet" href="$1">');
   html = html.replace(/display=swap/g, "display=optional");
-  html = html.replace("</head>", `<style id="hx-css">${CSS}</style></head>`);
-  html = html.replace(/<\/body>(?![\s\S]*<\/body>)/, `<script id="hx-js">${JS}</script></body>`);
+  html = html.replace("</head>", `<script>document.documentElement.classList.add('hx-js')</script><style id="hx-css">${CSS}${CSS2}</style></head>`);
+  html = html.replace(/<\/body>(?![\s\S]*<\/body>)/, `<script id="hx-js">${JS}${JS2}</script></body>`);
   fs.writeFileSync(indexPath, html, "utf8");
   log(`homepage rebuilt: ${Math.round(html.length / 1024)}KB, guides=${guides.length}, categories in marquee=${catMap.length}`);
 }
@@ -406,6 +425,92 @@ var wait=del?35:70;if(!del&&ci===w.length){del=true;wait=1700}else if(del&&ci===
 d.querySelectorAll('[data-rail]').forEach(function(b){b.addEventListener('click',function(){var r=d.querySelector('.hx-rail');if(!r)return;var c=r.querySelector('.hx-card');var w=c?c.getBoundingClientRect().width+16:300;r.scrollBy({left:w*(+b.getAttribute('data-rail')),behavior:rm?'auto':'smooth'})})});
 var bar=d.querySelector('.hx-progress');if(bar&&!rm){var tk=false;window.addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){var h=d.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.setProperty('--p',m>0?(h.scrollTop/m).toFixed(4):0);tk=false})},{passive:true})}
 if(plan&&!rm&&matchMedia('(hover:hover) and (pointer:fine)').matches){var fig=plan.parentNode;fig.addEventListener('pointermove',function(e){var r=fig.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;plan.style.transform='perspective(900px) rotateY('+(x*5).toFixed(2)+'deg) rotateX('+(-y*5).toFixed(2)+'deg)'});fig.addEventListener('pointerleave',function(){plan.style.transform=''})}
+})();`;
+
+// ============================================================================
+// «حركة أكثر» (v2): كلمات العنوان، موجة على المخطط، دبابيس نابضة، شارات عائمة،
+// ظهور عند التمرير لكل الأقسام، أيقونات تُرسم، بطاقات بإضاءة تتبع المؤشر وميل،
+// شريط الأدلة يتقدم تلقائيًا، لمعان على شريط الأرقام. كله transform/opacity.
+// ============================================================================
+var CSS2 = `
+.hx-w{display:inline-block;opacity:0;transform:translateY(.55em) rotate(-2deg);filter:blur(6px);animation:hx-word .8s var(--hx-ease) forwards;animation-delay:calc(.15s + var(--w)*.09s)}
+@keyframes hx-word{to{opacity:1;transform:none;filter:blur(0)}}
+.hx-copy>h1{animation:none}
+.hx-glow::after{content:"";position:absolute;inset:auto auto -60% -80%;width:70%;height:70%;background:radial-gradient(closest-side,rgba(194,103,28,.13),transparent 70%);animation:hx-drift 22s ease-in-out infinite alternate-reverse}
+.hx-gridbg{animation:hx-gridmove 30s linear infinite}
+@keyframes hx-gridmove{to{transform:translate(-20px,-20px)}}
+.hx-tile rect{animation:hx-wave 7s ease-in-out infinite;animation-delay:calc(2.2s + var(--i)*.18s)}
+.hx-tile.is-old rect{animation-name:hx-wave-old}
+@keyframes hx-wave{0%,10%,100%{filter:none}4%{filter:brightness(1.35) drop-shadow(0 0 6px rgba(62,142,108,.6))}}
+@keyframes hx-wave-old{0%,10%,100%{fill:var(--hx-sand)}4%{fill:#f7e3c9}}
+.hx-tile:hover rect,.hx-tile:focus-visible rect{animation:none}
+.hx-tile{transition:transform .25s var(--hx-ease)}
+.hx-tile:hover{transform:translateY(-3px)}
+.hx-pin{opacity:0;animation:hx-in .4s forwards;animation-delay:calc(1.9s + var(--p)*.25s)}
+.hx-pin .hx-core{fill:var(--hx-amber);stroke:#fff;stroke-width:2}
+.hx-pin .hx-ring{fill:none;stroke:var(--hx-amber);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:hx-ring 2.4s ease-out infinite;animation-delay:calc(var(--p)*.45s)}
+@keyframes hx-ring{0%{transform:scale(.4);opacity:.9}100%{transform:scale(2.3);opacity:0}}
+.hx-car.is-trail{opacity:0;fill:var(--hx-amber);animation:hx-trail .4s 1.7s forwards}
+@keyframes hx-trail{to{opacity:.35}}
+.hx-floats{position:absolute;inset:0;pointer-events:none}
+.hx-float{position:absolute;display:inline-flex;gap:.3rem;align-items:baseline;padding:.45rem .8rem;border-radius:12px;background:#fff;border:1px solid var(--hx-line);box-shadow:0 12px 26px -12px rgba(18,63,51,.35);font-size:.8rem;color:var(--hx-mute);white-space:nowrap;opacity:0;animation:hx-floatin .7s var(--hx-ease) forwards,hx-bob 5s ease-in-out infinite}
+.hx-float b{font:800 1rem "Noto Kufi Arabic",sans-serif;color:var(--hx-g)}
+.hx-float.is-0{top:-18px;left:5%;animation-delay:2.2s,2.9s}
+.hx-float.is-1{top:-18px;right:6%;animation-delay:2.45s,3.4s}
+.hx-float.is-2{bottom:58px;left:3%;animation-delay:2.7s,3.9s}
+@keyframes hx-floatin{from{opacity:0;transform:translateY(12px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes hx-bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.hx-stats{position:relative;overflow:hidden}
+.hx-stats::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.09) 50%,transparent 70%);transform:translateX(-100%);animation:hx-sheen 5.5s ease-in-out 1.5s infinite;pointer-events:none}
+@keyframes hx-sheen{0%{transform:translateX(100%)}45%,100%{transform:translateX(-100%)}}
+.hx-ico{width:44px;height:44px;margin-bottom:.4rem}
+.hx-ico path{fill:none;stroke:var(--hx-amber);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.4s var(--hx-ease) .2s}
+.hx-js .hx-int:not(.hx-in) .hx-ico path{stroke-dashoffset:1}
+.hx-js .hx-rv{opacity:0;transform:translateY(28px);transition:opacity .75s var(--hx-ease),transform .75s var(--hx-ease);transition-delay:var(--rd,0ms)}
+.hx-js .hx-rv.hx-in{opacity:1;transform:none}
+.hx-js .hx-rv.from-side{transform:translateX(-36px)}
+.hx-js .hx-rv.from-side.hx-in{transform:none}
+.hx-js .hx-rv.zoom{transform:scale(.92)}
+.hx-js .hx-rv.zoom.hx-in{transform:none}
+.hx-int,.hx-card{position:relative;isolation:isolate}
+.hx-int::before,.hx-card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(62,142,108,.14),transparent 65%);opacity:0;transition:opacity .3s;z-index:-1;pointer-events:none}
+.hx-int:hover::before,.hx-card:hover::before{opacity:1}
+.hx-card{transform-style:preserve-3d}
+.hx-track a{transition:background .2s,color .2s,transform .25s var(--hx-ease)}
+.hx-track a:hover{transform:translateY(-3px) scale(1.04)}
+.hx-bars b{display:inline-block;transition:transform .4s var(--hx-ease)}
+.hx-bars.is-in b{animation:hx-popn .5s var(--hx-ease) both;animation-delay:calc(1s + var(--n,0)*.08s)}
+@keyframes hx-popn{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.15)}100%{transform:none;opacity:1}}
+.hx-cta .hx-btn{animation:hx-nudge 4s ease-in-out 3s infinite}
+@keyframes hx-nudge{0%,88%,100%{transform:none}92%{transform:translateY(-4px) rotate(-1.5deg)}96%{transform:translateY(0) rotate(1deg)}}
+.hx-search button{position:relative;overflow:hidden}
+.hx-search button::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(120%);animation:hx-btnshine 4.5s ease-in-out 2.5s infinite}
+@keyframes hx-btnshine{0%{transform:translateX(120%)}30%,100%{transform:translateX(-120%)}}
+.hx-chips a{opacity:0;animation:hx-up .5s var(--hx-ease) forwards}
+.hx-chips a:nth-child(1){animation-delay:.9s}.hx-chips a:nth-child(2){animation-delay:.96s}.hx-chips a:nth-child(3){animation-delay:1.02s}.hx-chips a:nth-child(4){animation-delay:1.08s}.hx-chips a:nth-child(5){animation-delay:1.14s}.hx-chips a:nth-child(6){animation-delay:1.2s}.hx-chips a:nth-child(7){animation-delay:1.26s}
+@media (max-width:900px){.hx-float.is-0{left:3%}.hx-float.is-1{right:3%}}
+@media (max-width:520px){.hx-float{font-size:.72rem;padding:.35rem .6rem}.hx-float b{font-size:.88rem}.hx-float.is-1{display:none}}
+@media (prefers-reduced-motion:reduce){
+.hx-w,.hx-chips a,.hx-pin,.hx-float{opacity:1!important;transform:none!important;filter:none!important;animation:none!important}
+.hx-pin .hx-ring,.hx-tile rect,.hx-gridbg,.hx-stats::after,.hx-search button::after,.hx-cta .hx-btn,.hx-glow::after,.hx-bars.is-in b{animation:none!important}
+.hx-js .hx-rv{opacity:1!important;transform:none!important;transition:none!important}
+.hx-ico path{stroke-dashoffset:0!important;transition:none!important}
+}
+`;
+
+var JS2 = `(function(){
+var d=document,rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var groups=[['.hx-stats-in>div',''],['.hx-intents h2,.hx-devs h2,.hx-guides h2',''],['.hx-int',''],['.hx-dev-copy','from-side'],['.hx-bars','zoom'],['.hx-card',''],['.hx-cta-in>*','']];
+var els=[];groups.forEach(function(g){d.querySelectorAll(g[0]).forEach(function(el,i){el.classList.add('hx-rv');if(g[1])el.classList.add(g[1]);el.style.setProperty('--rd',Math.min(i*90,540)+'ms');els.push(el)})});
+d.querySelectorAll('.hx-bars li').forEach(function(li,i){var b=li.querySelector('b');if(b)b.style.setProperty('--n',i)});
+if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('hx-in')})}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('hx-in');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -5% 0px'});els.forEach(function(e){io.observe(e)})}
+if(rm)return;
+var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+if(fine){d.querySelectorAll('.hx-int,.hx-card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');if(c.classList.contains('hx-card')){var rx=(y/r.height-.5)*-6,ry=(x/r.width-.5)*6;c.style.transform='perspective(700px) rotateX('+rx.toFixed(2)+'deg) rotateY('+ry.toFixed(2)+'deg) translateY(-4px)'}});c.addEventListener('pointerleave',function(){c.style.transform=''})});
+d.querySelectorAll('.hx-btn,.hx-search button').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.25).toFixed(1)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})})}
+var rail=d.querySelector('.hx-rail');if(rail){var paused=false,vis=false,t=null;['pointerenter','focusin','touchstart'].forEach(function(ev){rail.addEventListener(ev,function(){paused=true},{passive:true})});['pointerleave','focusout'].forEach(function(ev){rail.addEventListener(ev,function(){paused=false})});
+new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(rail);
+setInterval(function(){if(paused||!vis||d.hidden)return;var c=rail.querySelector('.hx-card'),w=c?c.getBoundingClientRect().width+16:300,end=Math.abs(rail.scrollLeft)+rail.clientWidth>=rail.scrollWidth-8;if(end)rail.scrollTo({left:0,behavior:'smooth'});else rail.scrollBy({left:-w,behavior:'smooth'})},3800)}
 })();`;
 
 // run last so CSS/JS constants above are initialised
