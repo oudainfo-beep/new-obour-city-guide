@@ -19,7 +19,7 @@ const clientDir = path.join(root, "client");
 const AFTER = '<a href="/developers/">دليل المطورين</a>';
 const LINKS = [
   '<a href="/best-developer-by-city/">أفضل شركة في كل مدينة</a>',
-  '<a href="/top-20-developers-egypt/">أقوى 20 شركة عقارات</a>',
+  '<a href="/best-developers-obour/">أفضل مطورين في العبور</a>',
 ];
 
 function* walk(dir) {
