@@ -8,6 +8,11 @@
  *      (تستثني صفحات المنشآت والقوائم والصفحات الخدمية). التواريخ من WebPage نفسها — لا تواريخ مخترعة.
  *   2) تكمّل image (من og:image) وauthor/mainEntityOfPage لعُقد Article الموجودة الناقصة.
  *   3) تحذف من sitemap.xml أي رابط canonical صفحته يشير لرابط آخر (تكرار).
+ * تدقيق OpenSEO + زحف كامل (21/11 مساءً) أضاف:
+ *   4) الروابط الداخلية لصفحة canonical-ها في مكان آخر تُحوَّل للرابط الـ canonical، وروابط مكسورة معروفة تُصحَّح.
+ *   5) <title> أطول من 60 حرفًا: يُحذف لاحق « | دليل العبور» (og:title كما هو).
+ *   6) تخطّي مستويات العناوين (h2→h4 أو h1→h3): يُدرج عنوان وسيط مخفي بصريًا (للقارئ الآلي وقارئ الشاشة).
+ *   7) روابط mailto تُلف بـ <!--email_off--> كي لا يحوّلها Cloudflare إلى /cdn-cgi/l/email-protection (404 للزواحف).
  * idempotent: تشغيلها مرتين لا يكرر شيئًا.
  */
 import fs from "node:fs";
@@ -72,23 +77,74 @@ function articleFor(html, webPage, url) {
   return a;
 }
 
+const LINK_FIXES = {
+  "/life-guide/": "/living-guide/",
+  "/downloads/obour-new-obour-master-plan.dwg": "/new-obour-map-dwg/",
+};
+const TITLE_MAX = 60;
+const TITLE_SUFFIX = /\s*[|¦]\s*(دليل العبور|Obour Guide)\s*$/;
+const SR_STYLE = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0";
+
+function fixHeadingSkips(html) {
+  const h1 = text((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || "");
+  let prev = 0, inserts = 0, out = "", last = 0;
+  for (const m of html.matchAll(/<h([1-6])[\s>]/g)) {
+    const lvl = +m[1];
+    if (prev && lvl > prev + 1) {
+      let fill = "";
+      for (let l = prev + 1; l < lvl; l++) fill += `<h${l} style="${SR_STYLE}">${h1 ? h1 + " — " : ""}القائمة</h${l}>`;
+      out += html.slice(last, m.index) + fill; last = m.index; inserts++;
+    }
+    prev = lvl;
+  }
+  return inserts ? { html: out + html.slice(last), inserts } : { html, inserts: 0 };
+}
+
+const urlPathOf = (distPublic, file) => {
+  const rel = "/" + path.relative(distPublic, path.dirname(file)).split(path.sep).join("/") + "/";
+  return rel === "//" ? "/" : rel;
+};
+
 export function runArticleSchema(distPublic, report) {
-  let added = 0, enriched = 0;
+  let added = 0, enriched = 0, titles = 0, headings = 0, linksFixed = 0, mails = 0;
   const canonicalElsewhere = new Set();
-  for (const file of walkFiles(distPublic)) {
+  const files = walkFiles(distPublic);
+  // pass 1: خريطة الصفحات التي canonical-ها في مكان آخر
+  const canonMap = { ...LINK_FIXES };
+  for (const file of files) {
+    const urlPath = urlPathOf(distPublic, file);
+    const c = (fs.readFileSync(file, "utf8").match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
+    if (c && c !== SITE + urlPath) { canonicalElsewhere.add(SITE + urlPath); if (c.startsWith(SITE)) canonMap[urlPath] = c.slice(SITE.length); }
+  }
+  for (const file of files) {
     let html = fs.readFileSync(file, "utf8");
-    const rel = "/" + path.relative(distPublic, path.dirname(file)).split(path.sep).join("/") + "/";
-    const urlPath = rel === "//" ? "/" : rel;
+    const urlPath = urlPathOf(distPublic, file);
     const url = SITE + urlPath;
     const canon = (html.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
-    if (canon && canon !== url) canonicalElsewhere.add(url);
+    const before = html;
+
+    // (4) روابط داخلية
+    html = html.replace(/href="(https:\/\/obourguide\.com)?(\/[^"#?]*)([#?][^"]*)?"/g, (m0, host, p, rest) => {
+      const to = canonMap[p]; if (!to) return m0; linksFixed++; return `href="${host || ""}${to}${rest || ""}"`;
+    });
+    // (5) العنوان
+    html = html.replace(/<title>([^<]*)<\/title>/, (m0, t) => {
+      if ([...decode(t)].length <= TITLE_MAX || !TITLE_SUFFIX.test(t)) return m0;
+      titles++; return `<title>${t.replace(TITLE_SUFFIX, "")}</title>`;
+    });
+    // (6) العناوين
+    { const r = fixHeadingSkips(html); if (r.inserts) { html = r.html; headings++; } }
+    // (7) mailto
+    html = html.replace(/(<!--email_off-->)?(<a\b[^>]*href="mailto:[^"]*"[^>]*>[\s\S]*?<\/a>)(<!--\/email_off-->)?/g, (m0, a, link, b) => {
+      if (a) return m0; mails++; return `<!--email_off-->${link}<!--/email_off-->`;
+    });
+    let changed = html !== before;
 
     const blocks = [];
     for (const m of html.matchAll(LD_RE)) { try { blocks.push({ raw: m[0], json: JSON.parse(m[1]) }); } catch { /* تجاهل */ } }
-    if (!blocks.length) continue;
+    if (!blocks.length) { if (changed) fs.writeFileSync(file, html); continue; }
     const all = blocks.flatMap((b) => nodesOf(b.json));
     const types = all.flatMap(typesOf);
-    let changed = false;
 
     // (2) إكمال عُقد Article الموجودة
     const ogImage = meta(html, "property", "og:image") || `${SITE}/brand/og.png`;
@@ -132,4 +188,5 @@ export function runArticleSchema(distPublic, report) {
     report.push(`sitemap: removed ${removed} non-canonical URL(s)`);
   }
   report.push(`article-schema: +${added} Article added, ${enriched} existing Article block(s) completed (image/author/dates)`);
+  report.push(`geo-fixes: ${titles} title(s) shortened, ${headings} page(s) heading-skip filled, ${linksFixed} internal link(s) repointed, ${mails} mailto link(s) shielded`);
 }
