@@ -10,9 +10,11 @@
  *   3) تحذف من sitemap.xml أي رابط canonical صفحته يشير لرابط آخر (تكرار).
  * تدقيق OpenSEO + زحف كامل (21/11 مساءً) أضاف:
  *   4) الروابط الداخلية لصفحة canonical-ها في مكان آخر تُحوَّل للرابط الـ canonical، وروابط مكسورة معروفة تُصحَّح.
- *   5) <title> أطول من 60 حرفًا: يُحذف لاحق « | دليل العبور» (og:title كما هو).
+ *   5) <title> أطول من 60 حرفًا: يُحذف لاحق « | دليل العبور»، ثم إن بقي طويلًا يُقص عند آخر كلمة كاملة ≤ 60
+ *      مع حذف أي رابط/فاصل معلّق في الآخر (og:title كما هو). عنوان /contact/ القصير (24) يُوسَّع.
  *   6) تخطّي مستويات العناوين (h2→h4 أو h1→h3): يُدرج عنوان وسيط مخفي بصريًا (للقارئ الآلي وقارئ الشاشة).
- *   7) روابط mailto تُلف بـ <!--email_off--> كي لا يحوّلها Cloudflare إلى /cdn-cgi/l/email-protection (404 للزواحف).
+ *   7) محتوى <body> يُلف بـ <!--email_off--> كي لا يحوّل Cloudflare أي بريد (رابط mailto أو نص) إلى
+ *      /cdn-cgi/l/email-protection (404 للزواحف). عناوين البريد هنا بيانات تواصل عامة أصلًا.
  * idempotent: تشغيلها مرتين لا يكرر شيئًا.
  */
 import fs from "node:fs";
@@ -83,6 +85,26 @@ const LINK_FIXES = {
 };
 const TITLE_MAX = 60;
 const TITLE_SUFFIX = /\s*[|¦]\s*(دليل العبور|Obour Guide)\s*$/;
+const TITLE_FIXES = {
+  "/contact/": "تواصل معنا: تصحيح بيانات أو إضافة نشاط | دليل العبور",
+  "/en/schools/": "Schools in Obour & New Obour: Fees and Addresses",
+};
+function shortenTitle(t) {
+  let out = t.replace(TITLE_SUFFIX, "");
+  if ([...out].length <= TITLE_MAX) return out;
+  // «الرأس: بند و بند و بند» — احتفظ بالرأس وبأكبر عدد من البنود الكاملة يتسع، وإلا الرأس وحده
+  const ci = out.search(/[:：]/);
+  if (ci > 15) {
+    const head = out.slice(0, ci).trim(), items = out.slice(ci + 1).trim().split(/\s+و(?=\S)/);
+    let tail = "";
+    for (const it of items) { const nt = tail ? tail + " و" + it : it; if ([...`${head}: ${nt}`].length > TITLE_MAX) break; tail = nt; }
+    if (tail) return `${head}: ${tail}`;
+    if ([...head].length <= TITLE_MAX) return head;
+  }
+  const words = out.split(/\s+/); let acc = "";
+  for (const w of words) { const next = acc ? acc + " " + w : w; if ([...next].length > TITLE_MAX) break; acc = next; }
+  return acc.replace(/[\s:—–\-|¦،,(]+$/, "").replace(/\s+(و|في|على|من|عن|إلى|مع|بين|أو|ل)$/, "").replace(/[\s:—–\-|¦،,(]+$/, "") || out;
+}
 const SR_STYLE = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0";
 
 function fixHeadingSkips(html) {
@@ -129,15 +151,17 @@ export function runArticleSchema(distPublic, report) {
     });
     // (5) العنوان
     html = html.replace(/<title>([^<]*)<\/title>/, (m0, t) => {
-      if ([...decode(t)].length <= TITLE_MAX || !TITLE_SUFFIX.test(t)) return m0;
-      titles++; return `<title>${t.replace(TITLE_SUFFIX, "")}</title>`;
+      if (TITLE_FIXES[urlPath]) { if (t === TITLE_FIXES[urlPath]) return m0; titles++; return `<title>${TITLE_FIXES[urlPath]}</title>`; }
+      if ([...decode(t)].length <= TITLE_MAX) return m0;
+      titles++; return `<title>${shortenTitle(t)}</title>`;
     });
     // (6) العناوين
     { const r = fixHeadingSkips(html); if (r.inserts) { html = r.html; headings++; } }
     // (7) mailto
-    html = html.replace(/(<!--email_off-->)?(<a\b[^>]*href="mailto:[^"]*"[^>]*>[\s\S]*?<\/a>)(<!--\/email_off-->)?/g, (m0, a, link, b) => {
-      if (a) return m0; mails++; return `<!--email_off-->${link}<!--/email_off-->`;
-    });
+    if (/@[a-z0-9-]+\.[a-z]/i.test(html.slice(html.indexOf("<body"))) && !html.includes("<!--email_off--><!--body-->")) {
+      html = html.replace(/(<body\b[^>]*>)/, "$1<!--email_off--><!--body-->").replace(/<\/body>(?![\s\S]*<\/body>)/, "<!--/email_off--></body>");
+      mails++;
+    }
     let changed = html !== before;
 
     const blocks = [];
@@ -188,5 +212,5 @@ export function runArticleSchema(distPublic, report) {
     report.push(`sitemap: removed ${removed} non-canonical URL(s)`);
   }
   report.push(`article-schema: +${added} Article added, ${enriched} existing Article block(s) completed (image/author/dates)`);
-  report.push(`geo-fixes: ${titles} title(s) shortened, ${headings} page(s) heading-skip filled, ${linksFixed} internal link(s) repointed, ${mails} mailto link(s) shielded`);
+  report.push(`geo-fixes: ${titles} title(s) shortened, ${headings} page(s) heading-skip filled, ${linksFixed} internal link(s) repointed, ${mails} page(s) email-shielded`);
 }
