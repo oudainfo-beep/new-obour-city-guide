@@ -18,7 +18,9 @@
 import { PAGES, TODAY, loadChrome, writePage, report } from "./daily-20261104/lib.mjs";
 import "./daily-20261104/content-a.mjs";
 import "./daily-20261104/content-b.mjs";
-import "./daily-20261104/content-c.mjs";
+// content-c.mjs was never committed — load it only if present so the build does not fail
+import { existsSync as __exists } from "node:fs";
+if (__exists(new URL("./daily-20261104/content-c.mjs", import.meta.url))) await import("./daily-20261104/content-c.mjs");
 
 const chrome = loadChrome();
 for (const { relDir, builder } of PAGES) writePage(relDir, builder(chrome));
