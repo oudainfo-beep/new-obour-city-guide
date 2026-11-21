@@ -14,6 +14,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { runArticleSchema } from "./seo-phase54b-article-schema.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const distPublic = path.join(root, "dist", "public");
@@ -36,6 +37,7 @@ function patchMapDescription() {
 function main() {
   if (!fs.existsSync(distPublic)) { console.log("phase54: no dist/public — skipped"); return; }
   patchMapDescription();
+  runArticleSchema(distPublic, report);
   console.log("phase54 (post-build) — تمّت:");
   for (const r of report) console.log("  " + r);
 }
